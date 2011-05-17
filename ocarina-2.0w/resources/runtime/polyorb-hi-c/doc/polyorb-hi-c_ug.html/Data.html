@@ -1,0 +1,693 @@
+<html lang="en">
+<head>
+<title>Data - PolyORB-HI-C User's Guide</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="PolyORB-HI-C User's Guide">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="AADL-to-C-transformations.html#AADL-to-C-transformations" title="AADL to C transformations">
+<link rel="prev" href="Subprograms.html#Subprograms" title="Subprograms">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+Copyright (C) 2007-2009, E'cole nationale supe'rieure des
+te'lc'ommunications
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.1 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being ``GNU Free Documentation License'', with the
+Front-Cover Texts being ``PolyORB High Integrity C User's Guide'', and
+with no Back-Cover Texts.  A copy of the license is included in the
+section entitled ``GNU Free Documentation License''.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+body {}
+body {
+	background-color: white;
+	position: absolute;
+	font-size: medium;
+	font-family: Verdana;
+//	padding-left: 7em;
+	top: 3em;
+}
+
+div.navigation {
+	font-size: small; 
+	padding-left: 0; 
+	padding-right: 0; 
+	text-align: right
+}
+
+div#menu {
+	text-align: left;
+	position: fixed;
+	left: 1pt;
+	bottom: auto;
+	top: 2em;
+	right: auto;
+	padding-right: 1ex;
+	padding-left: 1em;
+	padding-top: 1ex;
+	padding-bottom: 1ex;
+	border-width: 3pt;
+	background-color: transparent;  
+	border-color: red; 
+	border-left-style: solid
+}
+
+div#menu span.item {
+	display: block;
+	background-color: transparent;  
+}
+
+table.navigation {
+	font-size: small
+} 
+
+
+/* Paragraphs */
+p, blockquote {
+	color: black; 
+	text-indent: 1em; 
+	text-align: justify
+}
+
+
+p {
+	margin-bottom: .5em; 
+	margin-top: 1px
+}
+
+p kbd 
+{
+  background-color: ivory
+}
+
+div.important {
+	background-color: lightgray; 
+	border-color: red; 
+	border-style: solid;  
+	border-width: 1pt
+}
+p.important {
+	color: red
+}
+p.brut {
+	text-indent: 0
+}
+p.brut:first-letter {
+	font-size: 100%; 
+	font-weight: normal
+}
+
+/* Sections */
+div {
+	border-style: none; 
+	padding-left: 1em; 
+	padding-right: 1em; 
+	margin-top: 2px; 
+	margin-bottom: 2px
+}
+
+
+/* Menus */
+
+div.action {
+	background-color: ivory; 
+	border-color: lightgray; 
+	border-style: solid; 
+	border-width: 1pt 1pt 1pt 1pt; 
+	font-size: small; 
+	text-align: left
+}
+
+div.special 
+{
+  border-color: lightgray; 
+  border-style: solid; 
+  border-width: 0 0 0 4pt
+}
+
+
+/* Docbook special settings */
+
+h3.subtitle {
+	text-align: center
+}
+
+h1.title {
+	margin-bottom: 10pt;
+}
+
+div.authorgroup {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	display: block;
+}
+
+div.author {
+	display: inline;
+}
+
+h3.author {
+	display: inline;
+	font-style: normal;
+	color: black;
+	font-size: medium;
+}
+
+p.copyright {
+	margin-top: 1em;
+	text-align: center;
+}
+
+/* End docbook settings */
+
+
+/* hors-texte */
+
+pre {
+	background-color: whitesmoke;
+	border-color: lightcoral;
+	border-style: solid;
+	border-width: 0pt 1pt 1pt 0pt;
+}
+
+.hors-texte {
+	background-color: lightgray;  
+	border-color: lightcoral; 
+	border-style: solid;
+	border-width: 1pt; 
+	padding-left: 1em; 	
+	padding-right: 1em; 
+	text-align: justify
+}
+
+/* Tables */
+
+table.hors-texte {
+	margin: auto; 
+	font-size: 100%;
+	border-width: 1pt 1pt 1pt 1pt
+}
+
+table.hors-texte td {
+	padding-left: 1ex; 
+	padding-right: 1ex
+}
+
+table.hors-texte tr.sep {
+	padding-top: 1ex
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold;
+  padding: 0pt
+}
+
+h1 {
+	font-size: larger larger larger;
+	text-align: center; 
+	margin-bottom: 24pt
+}
+h2 {
+	font-size: larger larger;
+	margin-left:      0; 
+	margin-top:       24pt; 
+	margin-bottom:    14pt;
+	border-color:     red;
+	border-bottom-style:     solid;
+	border-width:     1pt;
+	padding:          2pt; 
+	margin-left:      0; 
+	margin-right:     0; 
+}
+h3 {
+	font-size: larger;
+	margin-left: 1em; 
+	margin-bottom: 1ex;
+	color: red;	
+}
+h4, h5, h6 {
+	font-size: normal;
+	margin-left: 2em; 
+	margin-bottom: 1em
+}
+
+h4 {
+	text-decoration: underlined
+}
+h5 {
+	font-style: italic
+}
+
+
+h2.special 
+{
+  border-style:     solid;
+  border-width:	    1pt;
+  border-color:     lightgray;
+  padding:          2pt; 
+}
+
+img.flottant {
+	float: right;
+	clear: both;
+	margin: 2em;
+}
+
+/* Lists */
+
+li, dd 
+{
+  text-align: justify
+}
+
+dt {
+	font-style: normal; 
+	margin-top: 1em
+}
+dd {
+	font-style: normal; 
+	margin-left: 4em
+}
+
+dd.sdd {
+	margin-left: 5em
+}
+
+dd ul {margin-top: 0}
+li dl {margin-top: 0}
+ul {list-style-type: square}
+ul ul {list-style-type: disc}
+ul ul ul {list-style-type: circle}
+
+/* Addresses */
+
+address {
+	margin-top: 1ex; margin-bottom: 1ex
+}
+address.poste {
+	font-style: italic
+}
+address.email {
+	font-style: normal
+}
+address.phone {
+	font-style: oblic
+}
+
+/* Links */
+
+a:link, a:visited {
+	color: darkred;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color:  red;
+	padding-bottom: 0px
+}
+
+a:hover, a:active {
+	color: red; 
+	text-decoration: none;
+	border-bottom-color: black;
+	border-bottom-style: solid
+}
+
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Data"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Subprograms.html#Subprograms">Subprograms</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="AADL-to-C-transformations.html#AADL-to-C-transformations">AADL to C transformations</a>
+<hr>
+</div>
+
+<h3 class="section">B.7 Data</h3>
+
+<!--  -->
+<p>The data are the messages exchanged amongst the nodes of the
+distributed application. In this section, we present the AADL
+constructs used to model data. Then we give the C mapping rules to
+generate code from these constructs.
+
+<h4 class="subsection">B.7.1 AADL entities</h4>
+
+<p>AADL <code>data</code> components are used to model data exchanged in the
+distributed application. Properties are used to precise the nature of
+the data.
+
+   <p>To model a data structure (which contains fields of others data types)
+we use data component implementation and we add a subcomponent for
+each field of the structure.
+
+   <p>The simple data types that can be modeled using AADL are (See example
+below):
+     <ul>
+  <li>Booleans
+  <li>Integers
+  <li>Fixed point types
+  <li>Characters
+  <li>Wide characters
+</ul>
+
+<pre class="smallexample">     
+     -- <i> Boolean type</i>
+     
+     <b>data</b> Boolean_Data
+     <b>properties</b>
+       ARAO::Data_Type  =&gt; Boolean;
+     <b>end</b> Boolean_Data;
+     
+     -- <i> Integer type</i>
+     
+     <b>data</b> Integer_Data
+     <b>properties</b>
+       ARAO::Data_Type  =&gt; Integer;
+     <b>end</b> Integer_Data;
+     
+     -- <i> Fixed point type</i>
+     
+     <b>data</b> Fixed_Point_Type
+     <b>properties</b>
+       ARAO::Data_Type    =&gt; Fixed;
+     
+       ARAO::Data_Digits  =&gt; 10;
+       -- <i> The total number of digits is 10</i>
+     
+       ARAO::Data_Scale   =&gt; 4;
+       -- <i> The precision is 10**(-4)</i>
+     <b>end</b> Fixed_Point_Type;
+     
+     -- <i> Character type</i>
+     
+     <b>data</b> Character_Data
+     <b>properties</b>
+       ARAO::Data_Type  =&gt; Character;
+     <b>end</b> Character_Data;
+     
+     -- <i> Wide character type</i>
+     
+     <b>data</b> W_Character_Data
+     <b>properties</b>
+       ARAO::Data_Type  =&gt; Wide_Character;
+     <b>end</b> W_Character_Data;
+     
+     
+</pre>
+   <p>The complex data types that can be modeled using AADL are (See example
+below):
+     <ul>
+  <li>Bounded strings
+  <li>Bounded wide strings
+  <li>Bounded arrays of a type that can be modeled
+  <li>Structure where the fields types are types that can be
+  modeled
+</ul>
+
+<pre class="smallexample">     
+     -- <i>Bounded string type</i>
+     
+     <b>data</b> String_Data
+     <b>properties</b>
+       ARAO::Data_Type  =&gt; String;
+       ARAO::Max_Length =&gt; &lt;User_Defined_Length&gt;;
+     <b>end</b> String_Data;
+     
+     -- <i>Bounded wide string type</i>
+     
+     <b>data</b> W_String_Data
+     <b>properties</b>
+       ARAO::Data_Type  =&gt; Wide_String;
+       ARAO::Max_Length =&gt; &lt;User_Defined_Length&gt;;
+     <b>end</b> W_String_Data;
+     
+     -- <i>Bounded array type: Only the component implementation should be</i>
+     -- <i>used in the ports or parameters!</i>
+     
+     <b>data</b> Data_Array
+     <b>properties</b>
+       ARAO::Length =&gt; &lt;User_Defined_Length&gt;;
+     <b>end</b> Data_Array;
+     
+     <b>data</b> <b>implementation</b> Data_Array.i;
+     <b>subcomponents</b>
+       -- <i>Only one subcomponent</i>
+       Element : <b>data</b> String_Data;
+     <b>end</b> Data_Array.i;
+     
+     -- <i>Data structure type: Only the component implementation should be</i>
+     -- <i>used in the ports or parameters!</i>
+     
+     <b>data</b> Data_Structure
+     <b>end</b> Data_Structure;
+     
+     <b>data</b> <b>implementation</b> Data_Structure.i;
+     <b>subcomponents</b>
+       Component_1 : <b>data</b> String_Data;
+       Component_2 : <b>data</b> W_String_Data;
+       Component_3 : <b>data</b> Data_Array.i;
+     <b>end</b> Data_Structure.i;
+     
+</pre>
+   <p>Data components may also contain subprogram features. Depending on
+the AADL properties given by the user. These component may denote a
+protected object or a non protected object. In either case, they are
+used to model a data structure that can be handled only by the
+subprograms it exports (which are the feature of the data structure).
+
+<pre class="smallexample">     
+     -- <i> Data type of object field</i>
+     
+     <b>data</b> Field_Type
+     <b>properties</b>
+       ARAO::Data_Type  =&gt; Integer;
+     <b>end</b> Field_Type;
+     
+     -- <i> Protected data type</i>
+     
+     <b>data</b> Protected_Object
+     features
+       Update : <b>subprogram</b> Protected_Update;
+       Read   : <b>subprogram</b> Protected_Read;
+     <b>properties</b>
+       ARAO::Object_Kind =&gt; Protected;
+       -- <i> This property tells that we have a protected object type</i>
+     <b>end</b> Protected_Object;
+     
+     -- <i> The implementation of the protected object</i>
+     
+     <b>data</b> <b>implementation</b> Protected_Object.Impl
+     <b>subcomponents</b>
+       Field : <b>data</b> Field_Type;
+     <b>end</b> Protected_Object.Impl;
+     
+     -- <i> Subprograms</i>
+     
+     <b>subprogram</b> Protected_Update
+     features
+       this : <b>requires</b> <b>data</b> <b>access</b> Protected_Object.Impl
+       {required_access =&gt; <b>access</b> Read_Write;}; -- <i> Mandatory</i>
+       P    : <b>in</b> <b>parameter</b> Field_Type;
+     <b>properties</b>
+       <b>source</b>_language =&gt; Ada95;
+       <b>source</b>_name     =&gt; "<i>Repository</i>";
+     <b>end</b> Protected_Update;
+     
+     <b>subprogram</b> Protected_Read
+     features
+       this : <b>requires</b> <b>data</b> <b>access</b> Protected_Object.Impl
+       {required_access =&gt; <b>access</b> Read_Only;}; -- <i> Mandatory</i>
+       P    : <b>out</b> <b>parameter</b> Field_Type;
+     <b>properties</b>
+       <b>source</b>_language =&gt; Ada95;
+       <b>source</b>_name     =&gt; "<i>Repository</i>";
+     <b>end</b> Protected_Read;
+     
+</pre>
+   <p>The example above shows an example of
+a protected data component (<code>Protected_Object.Impl</code>). 
+The object has a single field (subcomponent) which is a simple data
+component. Note that the description of the feature subprograms of
+these data component is a little bit different from the description of
+classic subprograms: each feature subprogram must have a full access
+to the internal structure of the object type. To achieve this, we use
+the <code>require data access</code> facility of AADL. To model a non
+protected data component, user should simply change the
+<code>ARAO::Object_Kind =&gt; Protected;</code> into
+<code>ARAO::Object_Kind =&gt; Non_Protected;</code> in the implementation
+of data component.
+
+<h4 class="subsection">B.7.2 C mapping rules</h4>
+
+<p>Data component declaration are mapped into C type declaration in the
+file <code>types.h</code>. 
+In the following we give the C type corresponding to each data component
+type that could be modeled.
+
+<h5 class="subsubsection">B.7.2.1 Simple types</h5>
+
+<p>Simple data components are mapped into an C type definition whose
+defining identifier is mapped from the component declaration
+identifier (with respect to the naming rules listed
+in <a href="Whole-distributed-application.html#Whole-distributed-application">Whole distributed application</a>) and whose parent subtypes is:
+     <ul>
+  <li><code>int</code> for boolean data types
+  <li><code>int</code> for integer data types
+  <li><code>float</code> for fixed point types
+  <li><code>chat</code> for character data types
+</ul>
+
+<h5 class="subsubsection">B.7.2.2 Bounded strings and wide strings</h5>
+
+<p>Bounded strings and wide strings are not supported in the C generator at this
+time.
+
+<h5 class="subsubsection">B.7.2.3 Bounded arrays</h5>
+
+<p>Bounded arrays and wide strings are not supported in the C generator at this
+time.
+
+<h5 class="subsubsection">B.7.2.4 Data structures</h5>
+
+<p>Data structures are mapped into a C structure defined in the file <samp><span class="file">types.h</span></samp>. 
+The identifier of the record type is mapped from the data component name
+with respect to the naming rules given in <a href="Whole-distributed-application.html#Whole-distributed-application">Whole distributed application</a>. Each field defining identifier is mapped from the
+subcomponent name given in the data component implementation with the
+same naming rules. The type of the field is the C type mapped from
+the data corresponding component. The following example shows the C
+mapping of the data structure defined given earlier in this part.
+
+<pre class="smallexample">     
+     <b>typedef</b> <b>struct</b>
+     {
+        pos_internal_type field1;
+        pos_internal_type field2;
+     
+     } pos_impl;
+     
+</pre>
+   <h5 class="subsubsection">B.7.2.5 Object types</h5>
+
+<p>Protected object types are mapped into an a C structure. We add automatically a
+member in the structure with the type <code>__po_hi_protected_id</code> and the name
+<code>protected_id</code>. This member
+will identify the protected type in the distributed system. All other members of
+the object are declared as in Data Structures (see previous subsection). The
+features subprograms of the object types are declared in the <samp><span class="file">types.h</span></samp>
+file, whereas the body of these functions are defined in the <samp><span class="file">types.c</span></samp>
+file. Moreover, the value of the <code>protected_id</code> must be initialized. This
+is done in the main function (<samp><span class="file">main.c</span></samp>), before the initialization. 
+All the naming conventions given in <a href="Whole-distributed-application.html#Whole-distributed-application">Whole distributed application</a> have to
+be respected. The following example shows the specification of the protected type
+mapped from the <code>Protected_Object.Impl</code> shown earlier in this part. We show
+the files <samp><span class="file">types.h</span></samp>, <samp><span class="file">types.c</span></samp> and <samp><span class="file">main.c</span></samp> (that initialize the
+<code>protected_id</code> member of the structure.
+
+<pre class="smallexample">     
+     #ifndef __TYPES_H_
+     #define __TYPES_H_
+     #include &lt;po_hi_types.h&gt;
+     #include &lt;po_hi_protected.h&gt;
+     <b>typedef</b> <b>int</b> pos_internal_type;
+     
+     <b>typedef</b> <b>struct</b>
+     {
+        __po_hi_protected_t protected_id;
+     
+        pos_internal_type field;
+     
+     } pos_impl;
+     
+     <b>void</b> pos_impl_update
+           (pos_impl* value);
+     
+     <b>void</b> pos_impl_read
+           (pos_impl* value);
+     
+     #endif
+     
+</pre>
+   <pre class="smallexample">     
+     #include &lt;po_hi_protected.h&gt;
+     #include &lt;subprograms.h&gt;
+     /*********************/
+     /* pos_impl_update */
+     /*********************/
+     
+     <b>void</b> pos_impl_update
+           (pos_impl* value)
+     {
+     
+        __po_hi_protected_lock(value-&gt;protected_id);
+        update(&amp;(value-&gt;field));
+        __po_hi_protected_unlock(value-&gt;protected_id);
+     }
+     
+     /*******************/
+     /* pos_impl_read */
+     /*******************/
+     
+     <b>void</b> pos_impl_read
+           (pos_impl* value)
+     {
+     
+        __po_hi_protected_lock(value-&gt;protected_id);
+        read(&amp;(value-&gt;field));
+        __po_hi_protected_unlock(value-&gt;protected_id);
+     }
+     
+     
+     
+</pre>
+   <pre class="smallexample">     
+     #include &lt;activity.h&gt;
+     #include &lt;po_hi_common.h&gt;
+     #include &lt;po_hi_main.h&gt;
+     #include &lt;po_hi_time.h&gt;
+     #include &lt;po_hi_task.h&gt;
+     #include &lt;types.h&gt;
+     extern pos_impl pos_data;
+     /***********************/
+     /* __PO_HI_MAIN_NAME */
+     /***********************/
+     
+     __PO_HI_MAIN_TYPE __PO_HI_MAIN_NAME ()
+     {
+     
+        __po_hi_initialize();
+        __po_hi_create_periodic_task(gnc_tmtc_pos_gnc_th_k,__po_hi_milliseconds(1000),250,gnc_th_job);
+        __po_hi_create_periodic_task(gnc_tmtc_pos_tmtc_th_k,__po_hi_milliseconds(100),190,tmtc_th_job);
+        pos_data.protected_id = 0;
+        __po_hi_wait_initialization();
+        __po_hi_wait_for_tasks();
+        <b>return</b> (__PO_HI_MAIN_RETURN);
+     }
+     
+     
+     
+</pre>
+   <p>Non protected object types are mapped similarly to protected object
+types. The only difference, is that instead of creating a protected
+type, we create a generic parameterless nested package.
+
+<!--  -->
+</body></html>
+

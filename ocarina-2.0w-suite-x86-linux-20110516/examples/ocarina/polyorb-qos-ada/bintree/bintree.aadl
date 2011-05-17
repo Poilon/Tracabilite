@@ -1,0 +1,40 @@
+system bintree
+end bintree;
+
+system implementation bintree.impl
+subcomponents
+  sn : process sender_node.simple {Deployment::port_number => 3200;};
+  
+  --first level
+  tr11 : process transmitter_node.simple {Deployment::port_number => 4001;};
+  tr12 : process transmitter_node.simple {Deployment::port_number => 4002;};
+
+  --second level
+  tr21 : process transmitter_node.simple {Deployment::port_number => 4003;};
+  tr22 : process transmitter_node.simple {Deployment::port_number => 4004;};
+  tr23 : process transmitter_node.simple {Deployment::port_number => 4005;};
+  tr24 : process transmitter_node.simple {Deployment::port_number => 4006;};
+  
+  proc_1 : processor a_processor;
+connections
+  event data port sn.msg_out -> tr11.msg_in;
+  event data port sn.msg_out -> tr12.msg_in;
+
+  event data port tr11.msg_out -> tr21.msg_in;
+  event data port tr11.msg_out -> tr22.msg_in;
+  event data port tr12.msg_out -> tr23.msg_in;
+  event data port tr12.msg_out -> tr24.msg_in;
+
+  event data port tr21.msg_out -> sn.msg_in;
+  event data port tr22.msg_out -> sn.msg_in;
+  event data port tr23.msg_out -> sn.msg_in;
+  event data port tr24.msg_out -> sn.msg_in;
+properties
+  actual_processor_binding => reference proc_1 applies to sn;
+  actual_processor_binding => reference proc_1 applies to tr11;
+  actual_processor_binding => reference proc_1 applies to tr12;
+  actual_processor_binding => reference proc_1 applies to tr21;
+  actual_processor_binding => reference proc_1 applies to tr22;
+  actual_processor_binding => reference proc_1 applies to tr23;
+  actual_processor_binding => reference proc_1 applies to tr24;
+end bintree.impl;

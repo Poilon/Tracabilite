@@ -1,0 +1,46 @@
+@smallexample
+
+-- @i{Bounded string type}
+
+@b{data} String_Data
+@b{properties}
+  ARAO::Data_Type  => String;
+  ARAO::Max_Length => <User_Defined_Length>;
+@b{end} String_Data;
+
+-- @i{Bounded wide string type}
+
+@b{data} W_String_Data
+@b{properties}
+  ARAO::Data_Type  => Wide_String;
+  ARAO::Max_Length => <User_Defined_Length>;
+@b{end} W_String_Data;
+
+-- @i{Bounded array type: Only the component implementation should be}
+-- @i{used in the ports or parameters!}
+
+@b{data} Data_Array
+@b{properties}
+  ARAO::Length => <User_Defined_Length>;
+@b{end} Data_Array;
+
+@b{data} @b{implementation} Data_Array.i;
+@b{subcomponents}
+  -- @i{Only one subcomponent}
+  Element : @b{data} String_Data;
+@b{end} Data_Array.i;
+
+-- @i{Data structure type: Only the component implementation should be}
+-- @i{used in the ports or parameters!}
+
+@b{data} Data_Structure
+@b{end} Data_Structure;
+
+@b{data} @b{implementation} Data_Structure.i;
+@b{subcomponents}
+  Component_1 : @b{data} String_Data;
+  Component_2 : @b{data} W_String_Data;
+  Component_3 : @b{data} Data_Array.i;
+@b{end} Data_Structure.i;
+
+@end smallexample

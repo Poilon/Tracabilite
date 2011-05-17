@@ -1,0 +1,13 @@
+data internal_message
+properties
+  ARAO::data_type => integer;
+end internal_message;
+
+data message
+subcomponents
+  Field : data internal_message;
+features
+  method : subprogram update;
+properties
+  ARAO::Access_Control_Protocol => Protected_Access;
+end message;

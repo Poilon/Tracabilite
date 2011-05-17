@@ -1,0 +1,6 @@
+@subsubsection ARAO.Setup.OA.Multithreaded 
+Set up translation procedures for PolyORB priorities.
+Needed by RTPOA setup. has to be called before
+ARAO.Setup.OA.Multithreaded.Prio.Initialize.
+
+This package defines no subprogram

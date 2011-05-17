@@ -1,0 +1,289 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnvnrnvvnrvvnnnnnrvnnnvnnvnnrnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
+
+U ocarina.transfo.fusions.scheduler%b  ocarina-transfo-fusions-scheduler.adb  c8ffb174 OO PK IS
+W ada%s			ada.ads			ada.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_conversion%s
+W errors%s		errors.adb		errors.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.dynamic_tables%s
+W gnat.heap_sort_g%s
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.me_aadl%s	ocarina-me_aadl.ads	ocarina-me_aadl.ali
+W ocarina.me_aadl.aadl_tree%s  ocarina-me_aadl-aadl_tree.ads  ocarina-me_aadl-aadl_tree.ali
+W ocarina.me_aadl.aadl_tree.nodes%s  ocarina-me_aadl-aadl_tree-nodes.adb  ocarina-me_aadl-aadl_tree-nodes.ali
+W ocarina.me_aadl.aadl_tree.nutils%s  ocarina-me_aadl-aadl_tree-nutils.adb  ocarina-me_aadl-aadl_tree-nutils.ali
+W ocarina.transfo%s	ocarina-transfo.adb	ocarina-transfo.ali
+W ocarina.transfo.fusions%s  ocarina-transfo-fusions.adb  ocarina-transfo-fusions.ali
+W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.memory%s	s-memory.adb		s-memory.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ocarina.transfo.fusions.scheduler%s  ocarina-transfo-fusions-scheduler.ads  0abb6138 EE OO PK IS
+W ocarina.transfo.fusions%s  ocarina-transfo-fusions.adb  ocarina-transfo-fusions.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090727140100 34786013
+D a-finali.ads		20090409150019 bfd2ca79
+D a-filico.ads		20090409150019 4ff02a40
+D a-ioexce.ads		20091130110856 2504b9d2
+D a-stream.ads		20090409150019 34aca5be
+D a-tags.ads		20090409150019 bfa07446
+D a-textio.ads		20091028140912 7065b2f2
+D a-unccon.ads		20070406091342 51e09df2
+D errors.ads		20110516190003 7675b7de
+D gnat.ads		20050905075125 96410e68
+D g-dyntab.ads		20091130102047 277b5efb
+D g-dyntab.adb		20091130100732 3f2c9838
+D g-hesorg.ads		20070606102831 9218d3cf
+D g-hesorg.adb		20080820135520 76eeca6e
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D interfac.ads		20090409150019 a69cad5c
+D i-cstrea.ads		20090409150019 e1e064a9
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-aadl_tree.ads  20110516190002 4be6b0c7
+D ocarina-me_aadl-aadl_tree-nodes.ads  20110516191754 5cf9a699
+D ocarina-me_aadl-aadl_tree-nutils.ads  20110516190002 7898fae7
+D ocarina-me_aadl-aadl_tree-nutils.adb  20110516190002 1764ba82
+D ocarina-transfo.ads	20110516190004 95ca43ed
+D ocarina-transfo-fusions.ads  20110516190004 0d94afa9
+D ocarina-transfo-fusions-scheduler.ads  20110516190004 072fce91
+D ocarina-transfo-fusions-scheduler.adb  20110516190004 4c9e1a4f
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-crtl.ads		20091130102047 bf835650
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-ficobl.ads		20090409150019 8bb681e5
+D s-finimp.ads		20090409150019 90fd9896
+D s-finroo.ads		20090409150019 1408f9d1
+D s-imgint.ads		20090409150019 f77d133c
+D s-memory.ads		20090417131547 c68306b3
+D s-parame.ads		20091130110856 6cdeed25
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-secsta.ads		20090707124243 d2c357fb
+D s-soflin.ads		20090729085153 61e5c9e8
+D s-stache.ads		20090417130712 481f9e9d
+D s-stalib.ads		20090422095703 9cbc334a
+D s-stoele.ads		20090417130712 a4d57c26
+D s-stoele.adb		20090417130712 49ef69d7
+D s-stratt.ads		20090409150019 fef7c1da
+D s-traent.ads		20090417130712 a66ef260
+D s-unstyp.ads		20090409150019 c0f9fae5
+D s-wchcon.ads		20090417130712 30c48dc1
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+D utils.ads		20110516190003 96e9264b
+X 1 ada.ads
+16K9*Ada 19e8 31|40r6 460r11
+X 8 a-textio.ads
+49K13*Text_IO 472e16 31|40w10 460r15
+52P9*File_Type(370R9) 31|480r12
+87U14*Create 31|486r7
+88p7 File{52P9} 31|486r15
+90s7 Name{string} 31|486r27
+99U14*Close 31|534r7
+242U14*Put 31|516r13 518r13
+260U14*Put_Line 31|488r7 489r7 490r7 491r7 492r7 493r7 499r7 501r7 502r7
+. 503r7 506r7 507r7 522r13 524r13 530r7 531r7 532r7 533r7
+X 10 errors.ads
+38K9*Errors 73e11 31|37w6 47r8
+41U14*DE=41:38 31|265r13 360r13 447r10 553r13
+X 11 gnat.ads
+36K9*GNAT 39e9 31|39r6 57r28 64r30
+X 12 g-dyntab.ads
+53+9 Table_Component_Type 31|58r7 65r7
+54I9 Table_Index_Type 31|59r7 66r7
+56*4 Table_Low_Bound{54I9} 31|60r7 67r7
+57i4 Table_Initial{positive} 31|61r7 68r7
+58i4 Table_Increment{natural} 31|62r7 69r7
+60k14*Dynamic_Tables 225e24 31|39w11 57r33 64r35
+94A9*Table_Type(31|53R9)<integer>
+96A12*Big_Table_Type{94A9[31|57]}<integer>
+105P9*Table_Ptr(96A12[31|57])
+113R9*Instance 31|75r31[64] 82r49[57] 122r49[57] 126r38[57] 136r38[57] 168r26[57]
+. 394r28[57]
+114p7*Table{105P9[31|57]} 31|147r56[57] 151r21[57] 152r15[57] 156r25[57]
+. 157r18[57] 161r15[57] 411r29[57] 434r33[57] 513r29[64]
+124U14*Init 31|175r16[57] 382r18[64]
+129V13*Last{integer} 31|404r20[57] 410r23[57] 512r19[64] 521r19[64]
+142U14*Free 31|436r16[57] 568r18[64]
+146i4*First{integer} 31|139r36[57] 396r30[57] 403r14[57] 409r17[57] 434r40[57]
+. 510r13[64] 515r18[64] 530r52[64]
+166U14*Append 31|183r22[57] 423r33[64]
+X 21 namet.ads
+38K9*Namet 237e10 31|38w6 48r8
+78V13*Get_Name_String{string} 31|265r27 466r10 467r10 469r10 470r40 473r21
+. 475r26 477r26 488r31 491r34 499r34 501r31 503r37 504r32 506r32 507r32 516r34
+. 518r34 531r32 533r31 554r17
+95V13*Get_String_Name{53|184I9} 31|463r41 465r41 468r41 472r41 475r9 477r9
+. 478r43
+X 22 ocarina.ads
+34K9*Ocarina 63e12 30|36r9 71r5 31|34r6 35r6 36r6 41r6 43r14 44r8 45r8 46r8
+. 50r24 51r24 208r11 242r11 287r11 572r5
+X 23 ocarina-me_aadl.ads
+34K17*ME_AADL 102e20 31|34w14 35r14 36r14 44r16 45r16 46r16 50r32
+X 24 ocarina-me_aadl-aadl_tree.ads
+34K25*AADL_Tree 35e30 31|35r22 36r22 45r24 46r24 50r40
+X 25 ocarina-me_aadl-aadl_tree-nodes.ads
+12K35*Nodes 1877e36 31|35w32 45r34 50r50
+46n7*K_Subcomponent_Access{14E9} 31|223r27 258r27
+57n7*K_Subprogram_Call_Sequence{14E9} 31|210r45 244r45 543r45
+1427V13*Kind{14E9} 31|210r22 223r10 244r22 258r10 543r22
+1433V13*Next_Node{53|197I9} 31|185r15 196r15 318r15 552r22
+1436V13*First_Node{53|197I9} 31|179r12 191r12 220r27 255r27 299r12 551r15
+1445V13*Name{53|184I9} 31|265r44 516r51 518r51 554r34
+1466V13*Identifier{53|197I9} 31|265r50 516r57 518r57 554r40
+1499V13*Entity{53|197I9} 31|219r18 224r21 254r18 557r24
+1556V13*Modes{53|210I9} 31|548r19 551r27
+1574V13*Calls{53|210I9} 31|171r20 179r24 191r24 295r20 299r24
+1580V13*Container_Component{53|197I9} 31|259r18
+1583V13*Entity_Ref{53|197I9} 31|219r26 224r29 254r26
+1625V13*In_Modes{53|197I9} 31|547r14 548r26 551r34
+1655V13*Subprogram_Calls{53|210I9} 31|215r20 221r28 250r20 256r28
+X 26 ocarina-me_aadl-aadl_tree-nutils.ads
+38K35*Nutils 120e37 31|36w32 46r34
+76V13*Is_Empty{boolean} 31|171r10 215r10 250r10 295r10 548r9
+X 28 ocarina-transfo.ads
+37K17*Transfo 22|34k9 28|90e20 30|36r17 71r13 31|41r14 43r22 51r32 208r19
+. 242r19 287r19 572r13
+X 29 ocarina-transfo-fusions.ads
+36K25*Fusions 28|37k17 29|117e28 30|36r25 71r21 31|41w22 43r30 51r40 208r27
+. 242r27 287r27 572r21
+61i4*Transfo_Priority{53|184I9} 31|270r47 272r48
+66i4*CS_Period{53|184I9} 31|227r44 228r61
+67i4*Period{53|184I9} 31|322r43 323r60
+72i4*Raw_Priority{53|184I9} 31|261r44 263r48
+80V13*Is_Defined_Property{boolean} 31|227r14 261r17 270r17 322r17
+85V13*Get_Integer_Property{53|259M9} 31|228r30 263r20 272r17 323r33
+X 30 ocarina-transfo-fusions-scheduler.ads
+36K33*Scheduler 29|36k25 30|71l29 71e38 31|43b38 572l29 572t38
+38i4*Min_Priority{53|51I9}
+39i4*Max_Priority{53|51I9}
+42U14*Initialize 43>7 43>19 43>33 31|341b14 383l8 383t18
+43i7 New_Thread{53|197I9} 31|342b7 381r17
+43i19 Old_Thread_1{53|197I9} 31|342b19 352r27
+43i33 Old_Thread_2{53|197I9} 31|342b33 353r27
+48U14*Generate_Schedule 31|389b14 437l8 437t25
+51U14*Print_Schedule 51>30 51>44 31|458b14 535l8 535t22
+51i30 Package_Name{53|184I9} 31|458b30 466r27
+51i44 Thread_Inst_Name{53|184I9} 31|458b44 467r27
+55V13*Find_Initial_Mode{53|197I9} 31|443b13 452l8 452t25
+58U14*Free 31|566b14 570l8 570t12
+61V13*Get_Quantum{natural} 31|112b13 116l8 116t19
+64V13*Get_Call_Sequence_Period{natural} 64>39 31|206b13 234l8 234t32 301r26
+. 412r23
+64i39 Call_Sequence{53|197I9} 31|206b39 210r28 215r38 221r46
+67V13*Get_Call_Sequence_Priority{natural} 68>7 31|144r17 147r23 240b13 279l8
+. 279t34
+68i7 Call_Sequence{53|197I9} 31|240b41 244r28 250r38 256r46
+X 31 ocarina-transfo-fusions-scheduler.adb
+50K12 ATN=50:50 557r20
+51K12 OTF=51:40 227r10 228r26 261r13 263r16 270r13 272r13 322r13 323r29
+53R9 Node_Ref 55e14 58r31 65r31 169r17 420r34
+54i7*Node{53|197I9} 147r67 151r32 152m26 156r36 157m29 161m26 182m17 411r41
+. 422m26 434r47 513r40
+57K12 CS_Table[12|60] 82r40 122r40 126r29 136r29 139r27 168r17 175r7 183r13
+. 391r11 394r19 436r7
+64K12 Mode_Table[12|60] 75r20 382r7 423r22 461r11 568r7
+71i4 Quantum{natural} 115r14 363m13 368m13 372m16 374m16 377r50 431r25
+72i4 Hyperperiod{natural} 364m13 369m13 377m13 408r20
+73i4 Initial_Mode{53|197I9} 350m7 434m7 446r14 451r31 569m7
+74i4 Thread{53|197I9} 171r27 179r31 191r31 381m7
+75r4 Mode_Schedule{12|113R9[64]} 382m24 423m41 512r25 513r15 513r29 521r25
+. 568m24
+77V13 Get_Single_Mode{53|197I9} 77>30 181r22 193r22 422r34 451r14 541b13
+. 560l8 560t23
+77i30 Call_Sequence{53|197I9} 541b30 543r28 547r24 548r36 551r44 554r52
+82V13 Sort_Call_Sequences{12|113R9[57]} 122b13 200l8 200t27 400r20
+85V13 Compute_GCD{53|51I9} 85>26 85>30 98b13 104r17 106l8 106t19 307r27 372r36
+. 374r36
+85i26 V1{53|51I9} 98b26 102r17 104r34
+85i30 V2{53|51I9} 98b30 101r10 104r30 104r41
+88U14 Get_Thread_Quantum 88>34 88<49 88<54 285b14 335l8 335t26 352r7 353r7
+88i34 Thr{53|197I9} 285b34 295r27 299r31 322r38 323r55
+88i49 GCD{natural} 285b49 323m13 324r20 327m13 333m7
+88i54 LCM{natural} 285b54 294m7 324m13 328m13 334m7
+124U17 Insert 125>10 126=10 127=10 134b17 164l11 164t17 194r13
+125i10 Call_Seq{53|197I9} 135b10 144r45 152r34
+126r10 List{12|113R9[57]} 136b10 147r51 147r56 151r16 151r21 152r10 152r15
+. 156r20 156r25 157r13 157r18 161r10 161r15
+127i10 Real_Size{natural} 137b10 146r22 155r22 163m10 163r23
+139i10 It{natural} 146r16 147r63 148m13 148r19 151r28 152r22 153m10 153r16
+. 155r16 156r32 157r25 159m13 159r19 161r22
+140i10 Per{natural} 144m10 147r75
+141i10 CS{53|197I9} 151m10 157r37 158m13 161r34
+142i10 CS2{53|197I9} 156m13 158r19
+166i7 S{natural} 190m7 194m33
+167i7 C{53|197I9} 179m7 180r22 181r39 185m10 185r26 191m7 192r22 193r39 194r21
+. 196m10 196r26
+168r7 CS_List{12|113R9[57]} 175m22 183m30 194m24 199r14
+169r7 Ref{53R9} 182m13 183r39
+212i7 Per{natural} 228m10 233r14
+213i7 Wrapper{53|197I9} 219m7 223r16 224m10 224r41 227r35 228r52
+246i7 Per{natural} 262m13 271m10 275m10 278r14
+247i7 Wrapper{53|197I9} 254m7 258r16 259r39 270r38 272r39
+248i7 Data{53|197I9} 259m10 261r38 263r42 265r62
+289i7 C{53|197I9} 299m7 300r22 301r52 318m10 318r26
+290i7 Tmp_GCD{53|51I9} 305r13 307m16 311r49 314m13 321r10 333r23
+291i7 Tmp_LCM{53|51I9} 307r49 311m16 311r38 315m13 334r23
+292i7 Current{53|51I9} 301m10 306r16 307r40 311r28 313r16 314r24 315r24
+344i7 Th1_GCD{natural} 352m41 355r10 368r24 372r54 374r69
+345i7 Th2_GCD{natural} 353m41 356r13 363r24 367r13 372r69 374r54
+346i7 Th1_LCM{natural} 352m50 369r28 371r16 377r29
+347i7 Th2_LCM{natural} 353m50 364r28 371r26 377r39
+393i7 Iter{natural} 408r13 418r19 431m10 431r18
+394r7 Sorted_CS{12|113R9[57]} 400m7 404r26 410r29 411r19 411r29 434r23 434r33
+. 436m22
+395i7 CS{53|197I9} 411m13 412r49 422r51
+396i7 Ptr{natural} 403m7 404r13 405m10 405r17 409m10 410r16 411r36 428m13
+. 428r20
+397i7 CS_Per{natural} 412m13 414r16 418r28
+420r22 Ref{53R9} 422m22 423r56
+463i7 Scheduler{53|184I9} 488r48 504r49
+465i7 Thread_Name{53|184I9} 469r27 473r38 475r43 477r43
+468i7 Sched_Base{53|184I9} 470r57 471r41
+470a7 Sched_File=470:69{string} 486r35
+471i7 Pkg_Name{53|184I9} 491r51 533r48
+472i7 Type_Name{53|184I9} 499r51 507r49
+474i7 Mode_Type{53|184I9} 501r48 506r49
+476i7 Inst_Pkg{53|184I9} 503r54
+478i7 Function_name{53|184I9} 531r49
+480p7 FD{8|52P9} 486m23 488r17 489r17 490r17 491r17 492r17 493r17 499r17
+. 501r17 502r17 503r17 506r17 507r17 516r18 518r18 522r23 524r23 530r17 531r17
+. 532r17 533r17 534m14
+481i7 M{53|197I9} 513m10 516r69 518r69
+482i7 It{natural} 510m7 512r13 513r36 515r13 521r13 527m10 527r16 530r47
+545i7 M{53|197I9} 551m10 552r33 557r32
+X 53 types.ads
+51I9*Int<integer> 30|38r19 39r19 31|85r35 85r47 98r35 98r47 290r18 291r18
+. 292r18 301r21 372r49 372r64 374r49 374r64 530r31 530r42
+184I9*Name_Id<integer> 30|51r63 31|458r63 463r30 465r30 468r30 471r30 472r30
+. 474r30 476r30 478r32
+197I9*Node_Id<51I9> 30|43r48 55r38 64r55 68r23 31|54r14 73r20 74r20 77r46
+. 77r62 88r40 125r22 135r22 141r16 142r16 167r17 206r55 213r17 240r57 247r17
+. 248r17 285r40 289r18 342r48 395r19 443r38 481r12 541r46 541r62 545r11
+198i4*No_Node{197I9} 31|182r25 350r23 549r17 569r23
+200V13*Present{boolean} 31|180r13 181r13 192r13 193r13 300r13 552r13
+203V13*No{boolean} 31|446r10 547r10
+210I9*List_Id<197I9>
+259M9*Unsigned_Long_Long
+

@@ -1,0 +1,5 @@
+@smallexample
+
+@b{type} Data_Array_i @b{is} @b{array} (1 .. <User_Defined_Length>) @b{of} String_Data;
+
+@end smallexample

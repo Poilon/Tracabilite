@@ -1,0 +1,899 @@
+<html lang="en">
+<head>
+<title>Subprogram components mapping - PolyORB AADL personality User's Guide</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="PolyORB AADL personality User's Guide">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Components-mapping-rules.html#Components-mapping-rules" title="Components mapping rules">
+<link rel="prev" href="Data-components-mapping.html#Data-components-mapping" title="Data components mapping">
+<link rel="next" href="Thread-components-mapping.html#Thread-components-mapping" title="Thread components mapping">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+Copyright (C) 2003-2009 E'cole
+nationale supe'rieure des te'le'communications
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.1 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being ``GNU Free Documentation License'', with the
+Front-Cover Texts being ``PolyORB High Integrity User's Guide'', and
+with no Back-Cover Texts.  A copy of the license is included in the
+section entitled ``GNU Free Documentation License''.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+body {}
+body {
+	background-color: white;
+	position: absolute;
+	font-size: medium;
+	font-family: Verdana;
+//	padding-left: 7em;
+	top: 3em;
+}
+
+div.navigation {
+	font-size: small; 
+	padding-left: 0; 
+	padding-right: 0; 
+	text-align: right
+}
+
+div#menu {
+	text-align: left;
+	position: fixed;
+	left: 1pt;
+	bottom: auto;
+	top: 2em;
+	right: auto;
+	padding-right: 1ex;
+	padding-left: 1em;
+	padding-top: 1ex;
+	padding-bottom: 1ex;
+	border-width: 3pt;
+	background-color: transparent;  
+	border-color: red; 
+	border-left-style: solid
+}
+
+div#menu span.item {
+	display: block;
+	background-color: transparent;  
+}
+
+table.navigation {
+	font-size: small
+} 
+
+
+/* Paragraphs */
+p, blockquote {
+	color: black; 
+	text-indent: 1em; 
+	text-align: justify
+}
+
+
+p {
+	margin-bottom: .5em; 
+	margin-top: 1px
+}
+
+p kbd 
+{
+  background-color: ivory
+}
+
+div.important {
+	background-color: lightgray; 
+	border-color: red; 
+	border-style: solid;  
+	border-width: 1pt
+}
+p.important {
+	color: red
+}
+p.brut {
+	text-indent: 0
+}
+p.brut:first-letter {
+	font-size: 100%; 
+	font-weight: normal
+}
+
+/* Sections */
+div {
+	border-style: none; 
+	padding-left: 1em; 
+	padding-right: 1em; 
+	margin-top: 2px; 
+	margin-bottom: 2px
+}
+
+
+/* Menus */
+
+div.action {
+	background-color: ivory; 
+	border-color: lightgray; 
+	border-style: solid; 
+	border-width: 1pt 1pt 1pt 1pt; 
+	font-size: small; 
+	text-align: left
+}
+
+div.special 
+{
+  border-color: lightgray; 
+  border-style: solid; 
+  border-width: 0 0 0 4pt
+}
+
+
+/* Docbook special settings */
+
+h3.subtitle {
+	text-align: center
+}
+
+h1.title {
+	margin-bottom: 10pt;
+}
+
+div.authorgroup {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	display: block;
+}
+
+div.author {
+	display: inline;
+}
+
+h3.author {
+	display: inline;
+	font-style: normal;
+	color: black;
+	font-size: medium;
+}
+
+p.copyright {
+	margin-top: 1em;
+	text-align: center;
+}
+
+/* End docbook settings */
+
+
+/* hors-texte */
+
+pre {
+	background-color: whitesmoke;
+	border-color: lightcoral;
+	border-style: solid;
+	border-width: 0pt 1pt 1pt 0pt;
+}
+
+.hors-texte {
+	background-color: lightgray;  
+	border-color: lightcoral; 
+	border-style: solid;
+	border-width: 1pt; 
+	padding-left: 1em; 	
+	padding-right: 1em; 
+	text-align: justify
+}
+
+/* Tables */
+
+table.hors-texte {
+	margin: auto; 
+	font-size: 100%;
+	border-width: 1pt 1pt 1pt 1pt
+}
+
+table.hors-texte td {
+	padding-left: 1ex; 
+	padding-right: 1ex
+}
+
+table.hors-texte tr.sep {
+	padding-top: 1ex
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold;
+  padding: 0pt
+}
+
+h1 {
+	font-size: larger larger larger;
+	text-align: center; 
+	margin-bottom: 24pt
+}
+h2 {
+	font-size: larger larger;
+	margin-left:      0; 
+	margin-top:       24pt; 
+	margin-bottom:    14pt;
+	border-color:     red;
+	border-bottom-style:     solid;
+	border-width:     1pt;
+	padding:          2pt; 
+	margin-left:      0; 
+	margin-right:     0; 
+}
+h3 {
+	font-size: larger;
+	margin-left: 1em; 
+	margin-bottom: 1ex;
+	color: red;	
+}
+h4, h5, h6 {
+	font-size: normal;
+	margin-left: 2em; 
+	margin-bottom: 1em
+}
+
+h4 {
+	text-decoration: underlined
+}
+h5 {
+	font-style: italic
+}
+
+
+h2.special 
+{
+  border-style:     solid;
+  border-width:	    1pt;
+  border-color:     lightgray;
+  padding:          2pt; 
+}
+
+img.flottant {
+	float: right;
+	clear: both;
+	margin: 2em;
+}
+
+/* Lists */
+
+li, dd 
+{
+  text-align: justify
+}
+
+dt {
+	font-style: normal; 
+	margin-top: 1em
+}
+dd {
+	font-style: normal; 
+	margin-left: 4em
+}
+
+dd.sdd {
+	margin-left: 5em
+}
+
+dd ul {margin-top: 0}
+li dl {margin-top: 0}
+ul {list-style-type: square}
+ul ul {list-style-type: disc}
+ul ul ul {list-style-type: circle}
+
+/* Addresses */
+
+address {
+	margin-top: 1ex; margin-bottom: 1ex
+}
+address.poste {
+	font-style: italic
+}
+address.email {
+	font-style: normal
+}
+address.phone {
+	font-style: oblic
+}
+
+/* Links */
+
+a:link, a:visited {
+	color: darkred;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color:  red;
+	padding-bottom: 0px
+}
+
+a:hover, a:active {
+	color: red; 
+	text-decoration: none;
+	border-bottom-color: black;
+	border-bottom-style: solid
+}
+
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Subprogram-components-mapping"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Thread-components-mapping.html#Thread-components-mapping">Thread components mapping</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Data-components-mapping.html#Data-components-mapping">Data components mapping</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Components-mapping-rules.html#Components-mapping-rules">Components mapping rules</a>
+<hr>
+</div>
+
+<h4 class="subsection">A.1.2 Subprogram components mapping</h4>
+
+<p>AADL subprograms are mapped to Ada procedures. In case of data-owned
+subprograms, they are managed in the related generated package, as
+seen in <a href="Data-components-mapping.html#Data-components-mapping">Data components mapping</a>.  The parameters of the
+procedure are mapped from the subprogram features with respect to the
+following rules:
+
+     <ul>
+<li>The parameter name is mapped from the parameter feature name
+
+     <li>The parameter type is mapped from the parameter feature data type as
+specified in <a href="Data-components-mapping.html#Data-components-mapping">Data components mapping</a>
+
+     <li>The parameter orientation is the same as the feature orientation
+(&ldquo;in&rdquo;, &ldquo;out&rdquo; or &ldquo;in out&rdquo;). 
+</ul>
+
+   <p>The body of the mapped procedure depend on the nature of the
+subprogram component. Subprogram components can be classified in many
+kind depending on the value of the <code>Source_Language</code>,
+<code>Source_Name</code> and <code>Source_Text</code> standard AADL properties and
+the existence or not of call sequences in the subprogram
+implementation. There are four kinds of subprogram components:
+
+     <ol type=1 start=1>
+<li>The empty subprograms. 
+<li>The opaque subprograms. 
+<li>The pure call sequence subprograms. 
+<li>The hybrid subprograms.
+        </ol>
+
+<h5 class="subsubsection">A.1.2.1 Mapping of empty subprograms</h5>
+
+<p>Empty subprograms correspond to subprograms for which there is neither
+<code>Source_Language</code> nor <code>Source_Name</code> nor <code>Source_Text</code>
+values nor call sequences. Such kind of subprogram components has no
+particular utility. For example:
+
+<pre class="smallexample">     
+     <b>subprogram</b> sp
+     <b>features</b>
+       e : <b>in</b> <b>parameter</b> message;
+       s : <b>out</b> <b>parameter</b> message;
+     <b>end</b> sp;
+     
+</pre>
+   <p>is en empty subprogram. A possible Ada implementation for this
+subprogram could be:
+
+<pre class="smallexample">     
+     <b>procedure</b> sp (e : <b>in</b> message; s : <b>out</b> message) <b>is</b>
+       NYI : <b>exception</b>;
+     <b>begin</b>
+       <b>raise</b> NYI;
+     <b>end</b> sp;
+     
+</pre>
+   <h5 class="subsubsection">A.1.2.2 Mapping of opaque subprograms</h5>
+
+<p>Opaque subprograms are the simplest &ldquo;useful&rdquo; subprogram components
+(in code generation point of view). For these subprograms, the
+<code>Source_Language</code> property indicates the programming language of
+the implementation (C or Ada95). The <code>Source_Name</code> property indicates
+the name of the subprogram implementing the subprogram:
+     <ul>
+<li>for Ada95 subprograms, the value of the <code>Source_Name</code> property
+is the <b>fully qualified name</b> of the subprogram
+(e.g. <code>My_Package.My_Spg</code>). If the package is stored in a file
+named according to the GNAT Ada compiler conventions, there is no need
+to give a <code>Source_Text</code> property for Ada95 subprograms. Otherwise
+the <code>Source_Text</code> property is necessary for the compiler to fetch
+the implementation files.
+
+     <li>for C subprograms, the value of the <code>Source_Name</code> property is the
+<b>name</b> of the C subprogram implementing the AADL subprogram. The
+<code>Source_Text</code> is mandatory for this kind of subprogram and it
+must give one of the following information:
+          <ul>
+<li>the path to the <code>.c</code> source file that contains the implementation
+of the subprogram.
+
+          <li>the path to one or more precompiled object files (<code>.o</code>) that
+implement the AADL subprogram.
+
+          <li>the path to one or more precompiled <code>C</code> library (<code>.a</code>) that
+implement the AADL subprogram. 
+</ul>
+     These information can be used together, for example may give the
+<code>C</code> source file that implements the AADL subprogram, an object
+file that contains entities used by the <code>C</code> file and a library
+that is necessary to the <code>C</code> sources or the objects.
+
+   </ul>
+
+   <p>In this case, the code generation consist of creating a shell for the
+implementation code. In the case of Ada subprograms, the generated
+subprogram renames the implementation subprogram (using the Ada95
+renaming facility). Example:
+
+<pre class="smallexample">     
+     <b>subprogram</b> sp
+     <b>features</b>
+       e : <b>in</b>  <b>parameter</b> message;
+       s : <b>out</b> <b>parameter</b> message;
+     <b>end</b> sp;
+     
+     <b>subprogram</b> <b>implementation</b> sp.impl
+     <b>properties</b>
+       Source_Language =&gt; Ada95;
+       Source_Name     =&gt; "<i>Repository.Sp_Impl</i>";
+     <b>end</b> sp.impl;
+     
+</pre>
+   <p>The generated code for the <code>sp.impl</code> component is:
+
+<pre class="smallexample">     
+     <b>with</b> Repository;
+     ...
+     <b>procedure</b> sp_impl (e : <b>in</b> message; s : <b>out</b> message)
+       <b>renames</b> Repository.Sp_Impl;
+     
+</pre>
+   <p>The code of the <code>Repository.sp_impl</code> procedure is provided by the
+architecture and must be conform with the <code>sp.impl</code> signature. The
+coherence between the two subprograms will be verified by the Ada95
+compiler.
+
+   <p>The fact that the hand-written code is not inserted in the generated
+shell allows this code to be written in a programming language other
+than Ada95. Thus, if the implementation code is C we have this
+situation:
+
+<pre class="smallexample">     
+     <b>subprogram</b> sp
+     <b>features</b>
+       e : <b>in</b> <b>parameter</b> message;
+       s : <b>out</b> <b>parameter</b> message;
+     <b>end</b> sp;
+     
+     <b>subprogram</b> <b>implementation</b> sp.impl
+     <b>properties</b>
+       Source_Language =&gt; C;
+       Source_Name     =&gt; "<i>implem</i>";
+     <b>end</b> sp.impl;
+     
+</pre>
+   <p>The <code>Source_Name</code> value is interpreted as the name of the C
+subprogram implementing the AADL subprogram. The generated code for
+the <code>sp.impl</code> component is:
+
+<pre class="smallexample">     
+     <b>procedure</b> sp_impl (e : <b>in</b> message; s : <b>out</b> message);
+     <b>pragma</b> Import (C, sp_impl, "<i>implem</i>");
+     
+</pre>
+   <p>This approach will allow us to have a certain flexibility by
+separating the generated code and the hand-written code. We can modify
+the AADL description without affecting the hand-written code (the
+signature should not be modified of course).
+
+<h5 class="subsubsection">A.1.2.3 Mapping of pure call sequence subprograms</h5>
+
+<p>In addition to the opaque approach which consist of delegating all the
+subprogram body writing to the user, AADL allows to model subprogram
+as a pure call sequence to other subprograms. Example:
+
+<pre class="smallexample">     
+     <b>subprogram</b> spA
+     <b>features</b>
+       s : <b>out</b> <b>parameter</b> message;
+     <b>end</b> spA;
+     
+     <b>subprogram</b> spB
+     <b>features</b>
+       s : <b>out</b> <b>parameter</b> message;
+     <b>end</b> spB;
+     
+     <b>subprogram</b> spC
+     <b>features</b>
+       e : <b>in</b>  <b>parameter</b> message;
+       s : <b>out</b> <b>parameter</b> message;
+     <b>end</b> spC;
+     
+     <b>subprogram</b> spA.impl
+     <b>calls</b> {
+       call1 : <b>subprogram</b> spB;
+       call2 : <b>subprogram</b> spC;};
+     <b>connections</b>
+       cnx1 : <b>parameter</b> call1.s -&gt; call2.e;
+       cnx2 : <b>parameter</b> call2.s -&gt; s;
+     <b>end</b> spA.impl;
+     
+</pre>
+   <p>In this case, the subprogram connects together a number of other
+subprograms. In addition to the call sequence, the connections clause
+completes the description by specifying the connections between
+parameters. The pure sequence call model allows to generate complete
+code : the calls in the call sequence corresponds to Ada95 procedure
+calls and the connections between parameters correspond to eventual
+intermediary variables. The Ada95 code generated for the subprogram
+<code>spA.impl</code> is:
+
+<pre class="smallexample">     
+     <b>procedure</b> spA_impl (s : <b>out</b> message) <b>is</b>
+        cnx1 : message;
+     <b>begin</b>
+        spB (cnx1);
+        spC (cnx1, s);
+     <b>end</b> spA_impl;
+     
+</pre>
+   <p>Note that in case of pure call sequence subprograms, the AADL
+subprogram must contain only one call sequence. If there are more than
+one call sequence, it's impossible - in this case - to determine the
+relation between them.
+
+<h5 class="subsubsection">A.1.2.4 Mapping of hybrid subprograms</h5>
+
+<p>The two last kinds of subprogram components describe even an opaque
+implementation for which all the functional part is written by the
+user or a pure call sequence for which all the functional part is
+given by the AADL description. These two cases are relatively simple to
+implement. However, they don't offer much flexibility. In the general
+case we want to integrate the maximum of information within the AADL
+description in order to get an easy assembling of the distributed
+application components. However, AADL does not provide control
+structures (conditions, loops). The best way is to combine the opaque
+model and the pure call sequence model.
+
+   <p>To illustrate the problem, let's consider the following example: A
+subprogram <code>spA</code> receives an input integer value . The subprogram
+behavior depends on the a value:
+
+     <ul>
+<li>If a &lt; 4, then a is given to another subprogram <code>spB</code>;
+
+     <li>Else, <code>spA</code> calls a third subprogram called <code>spC</code> which give its
+return value to <code>spB</code>
+</ul>
+
+   <p>In all cases, the return value of <code>spB</code> is given to a forth
+subprogram <code>spD</code>; the return value of <code>spD</code> is returned by
+<code>spA</code>.
+
+   <p>The behavior of <code>spA</code> is illustrated by this algorithm:
+
+<pre class="smallexample">     
+     <b>if</b> a &lt; 4 <b>then</b>
+       b &lt;- spB (a)
+     <b>else</b>
+       c &lt;- spC ()
+       b &lt;- spB (c)
+     <b>end</b> <b>if</b>
+     
+     d &lt;- spD (b)
+     <b>return</b> d
+     
+</pre>
+   <p>We assume that the subprograms <code>spB</code>, <code>spC</code> and <code>spD</code> are
+correctly defined.
+
+   <p>We have three call sequences. AADL allows only to describe the
+architectural aspects of the algorithm (the connections between the
+different subprograms). The AADL source corresponding to the last
+example is:
+
+<pre class="smallexample">     
+     <b>data</b> <b>in</b>t
+     <b>properties</b>
+       GAIA::Data_Type =&gt; Integer;
+     <b>end</b> <b>in</b>t;
+     
+     <b>subprogram</b> spA
+     <b>features</b>
+       a : in <b>parameter</b> <b>in</b>t;
+       d : <b>out</b> <b>parameter</b> <b>in</b>t;
+     <b>end</b> spA;
+     
+     <b>subprogram</b> spB
+     <b>features</b>
+       e : in <b>parameter</b> <b>in</b>t;
+       s : <b>out</b> <b>parameter</b> <b>in</b>t;
+     <b>end</b> spB;
+     
+     <b>subprogram</b> spC
+     <b>features</b>
+       s : <b>out</b> <b>parameter</b> <b>in</b>t;
+     <b>end</b> spC;
+     
+     <b>subprogram</b> spD
+     <b>features</b>
+       e : in <b>parameter</b> <b>in</b>t;
+       s : <b>out</b> <b>parameter</b> <b>in</b>t;
+     <b>end</b> spD;
+     
+     <b>subprogram</b> <b>implementation</b> spA.impl
+     <b>properties</b>
+       Source_Language =&gt; Ada95;
+       Source_Name     =&gt; "<i>Repository.SpA_Impl</i>"
+     <b>calls</b>
+       seq1 : {spB1 : <b>subprogram</b> spB;};
+       seq2 : {spC2 : <b>subprogram</b> spC;
+               spB2 : <b>subprogram</b> spB;};
+       seq3 : {spD3 : <b>subprogram</b> spD;};
+     <b>connections</b>
+       cnx1 : <b>parameter</b> a -&gt; apB1.e;
+       cnx2 : <b>parameter</b> spB1.s -&gt; spD3.e;
+     
+       cnx3 : <b>parameter</b> spC2.s -&gt; spB2.e;
+       cnx4 : <b>parameter</b> spB2.s -&gt; spD3.e;
+     
+       cnx5 : <b>parameter</b> spd3.s -&gt; d;
+     <b>end</b> spA.impl;
+     
+</pre>
+   <p>The first remark is that the subprogram implementation contains at the
+same time the <code>Source_[Language|Name]</code> (and a possible
+<code>Source_Text</code>) properties and call sequences. The hand-written
+code describes the algorithm. This algorithm should be able to handle
+each call sequence as being a block and must be as simple as possible:
+the user should not know the content of the call sequence.
+
+   <p>The generated code for each block (call sequence) is almost identical
+to the generated code for pure call sequence. For each block, a
+subprogram is generated. To make things simple for the user, these
+subprograms have the same signature (one parameter called Status):
+
+<pre class="smallexample">     
+     <b>type</b> SpA_Impl_Status <b>is</b> <b>record</b>
+       a, b, c, d : <b>in</b>t;
+     <b>end</b> <b>record</b>;
+     
+     <b>procedure</b> SpA_Seq1 (in <b>out</b> Status : spA_impl_Status) <b>is</b>
+     <b>begin</b>
+        spB (Status.a, Status.b);
+     <b>end</b> SpA_Seq1;
+     
+     <b>procedure</b> SpA_Seq2 (in <b>out</b> Status : spA_impl_Status) <b>is</b>
+     <b>begin</b>
+        spC (Status.c);
+        spB (Status.c, Status.b);
+     <b>end</b> SpA_Seq2;
+     
+     <b>procedure</b> SpA_Seq3 (in <b>out</b> Status : spA_impl_Status) <b>is</b>
+     <b>begin</b>
+        spD (Status.b, d);
+     <b>end</b> SpA_Seq3;
+     
+</pre>
+   <p>The generated code for the <code>spA.impl</code> subprogram is very simple:
+
+<pre class="smallexample">     
+     <b>procedure</b> SpA_Impl (a : in int; d : <b>out</b> <b>in</b>t) <b>is</b>
+        Status : spA_impl_Status;
+     <b>begin</b>
+        Status.a := a;
+        Repository.SpA_Impl
+          (Status,
+           SpA_Seq1'Access,
+           SpA_Seq2'Access,
+           SpA_Seq3'Access);
+        d := Status.d;
+     <b>end</b> SpA_Impl;
+     
+</pre>
+   <p>The subprogram which describes the algorithm and which should be
+written by the user is relatively simple, and does not require any
+knowledge of the call sequences contents:
+
+<pre class="smallexample">     
+     <b>type</b> SpA_Impl_Call_Sequence <b>is</b> <b>access</b>
+       <b>procedure</b> (in <b>out</b> Status : spA_impl_Status);
+     
+     <b>procedure</b> SpA_Impl
+       (Status : <b>in</b> <b>out</b> spA_impl_Status,
+        seq1   : spA_impl_Call_Sequence,
+        seq2   : spA_impl_Call_Sequence,
+        seq3   : spA_impl_Call_Sequence)
+     <b>is</b>
+     <b>begin</b>
+        <b>if</b> Status.a &gt; 4 <b>then</b>
+           seq1.all (Status);
+        <b>else</b>
+           seq2.all (Status);
+        <b>end</b> <b>if</b>;
+        seq3.all (Status);
+     <b>end</b> SpA_Impl;
+     
+</pre>
+   <h5 class="subsubsection">A.1.2.5 Data access</h5>
+
+<p>If a subprogram has a <code>requires access</code> feature to a data, this
+data is added to the parameters list, with the mode corresponding to
+data access rights (i.e. <code>read-only</code> =&gt; <code>in</code>,
+<code>write-only</code> =&gt; <code>out</code> and <code>read-write</code> =&gt; <code>in
+out</code>).
+
+   <p>In the specific case of subprograms requiring protected data access,
+user should provides different data depending on subprograms' nature.
+
+   <p>If the subprogram is a &ldquo;method&rdquo; of the protected object (i.e. if it
+appears in its <code>features</code> field), then the user should provides an
+implementation of the subprogram which take the subprogram access as
+the first parameter, with the mode chosen following the rule described
+above. The parameter's name must always be <code>this</code>. This parameter
+type must always be of the protected data type internal type
+(cf. <a href="Data-components-mapping.html#Data-components-mapping">Data components mapping</a>).
+
+   <p>If the subprogram is a not &ldquo;method&rdquo; of the protected object, user
+work depends of the accessed data's <code>Actual_Lock_Implementation</code>
+property, which defines shared variables update policy. This policy
+could be either synchronous (<code>synchronous_lock</code>) or asynchronous
+(<code>asynchronous_lock</code>). Default is asynchronous update policy.
+
+   <p>The user must write a subprogram implementation complying to the
+following rules :
+     <ul>
+<li>For each <i>asynchronous policy</i>-defined data accessed, add an
+parameter at beginning of the data's protected type. 
+<li>For each <i>synchronous policy</i>-defined data accessed, add an
+parameter at beginning of the subprogram's parameter list of the data's
+protected type internal type. 
+</ul>
+   Note that accessed data (found in the subprogram component's
+<code>features</code> field) must always be parsed in the same order they are
+declared in the AADL specification. In any case, mode is still chosen
+accordingly to the rule describe above.
+
+   <p>Note that only opaque subprograms currently support synchronous data
+update policy.
+
+   <p>If synchronous policy is chosen for a data update policy, the user
+should be aware that access protection is ensured by the runtime code
+(cf. <a href="Thread-components-mapping.html#Thread-components-mapping">Thread components mapping</a>).
+
+   <p>Here is an example of data-owned specification of a protected object :
+
+<pre class="smallexample">     
+     <b>data</b> <b>in</b>ternal_data
+     <b>properties</b>
+       ARAO::data_type =&gt; <b>in</b>teger;
+     <b>end</b> <b>in</b>ternal_data;
+     
+     <b>data</b> shared_data
+     <b>features</b>
+       method : <b>subprogram</b> update;
+     <b>properties</b>
+       Concurrency_Control_Protocol =&gt; Protected_Access;
+       ARAO::Actual_Lock_Implementation =&gt; Synchronous_Lock;
+     <b>end</b> shared_data;
+     
+     <b>data</b> <b>implementation</b> shared_data.i
+     <b>subcomponents</b>
+       Field : <b>data</b> <b>in</b>ternal_data;
+     <b>end</b> shared_data.i;
+     
+     -- <i> subprograms</i>
+     
+     <b>subprogram</b> update
+     <b>features</b>
+       this : <b>requires</b> <b>data</b> <b>access</b> shared_data.i;
+     <b>properties</b>
+       <b>source</b>_language =&gt; Ada95;
+       <b>source</b>_name =&gt; "<i>Repository</i>";
+     <b>end</b> update;
+     
+</pre>
+   <p>The user provides :
+
+<pre class="smallexample">     
+       <b>procedure</b> Update (Field : <b>in</b> <b>out</b> Partition.Internal_Data;
+                         I : <b>in</b> Partition.message);
+     
+        ------------
+        -- <i>Update --</i>
+        ------------
+     
+        <b>procedure</b> Update (Field : <b>in</b> <b>out</b> Partition.Internal_Data;
+                          I : <b>in</b> Partition.message)
+        <b>is</b>
+           <b>use</b> Partition;
+        <b>begin</b>
+           Field := Partition.Internal_Data (Integer (Field) + Integer (I));
+        <b>end</b> Update;
+     
+</pre>
+   <p>And Ocarina will generate the following implementation for the
+access-protected subprogram :
+
+<pre class="smallexample">     
+     ------------
+     -- <i>update --</i>
+     ------------
+     
+     <b>procedure</b> Update
+       (This : <b>in</b> <b>out</b> Partition.Shared_Data_I;
+        I : Partition.Message)
+     <b>is</b>
+     <b>begin</b>
+        PolyORB.Tasking.Mutexes.Enter
+          (This.Mutex);
+        Repository.Update
+          (Field =&gt; This.Field,
+           I =&gt; I);
+        PolyORB.Tasking.Mutexes.Leave
+          (This.Mutex);
+     <b>end</b> Update;
+     
+</pre>
+   <h5 class="subsubsection">A.1.2.6 AADL Properties support</h5>
+
+<p>Available properties for subprogram components can be found in SAE
+AS5506, in 5.2 page 56 and in Appendix A, pages 197-218.
+
+   <p><table summary=""><tr align="left"><td valign="top" width="40%">Actual_Memory_Binding
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Actual_Subprogram_Call
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Client_Subprogram_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Compute_Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Compute_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Concurrency_Control_Protocol
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Queue_Processing_Protocol
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Queue_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Recover_Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Recover_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Server_Subprogram_Call_Binding
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Source_Code_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Source_Data_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Source_Heap_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Source_Stack_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Source_Language
+</td><td valign="top" width="60%">Supported (Ada)
+<br></td></tr><tr align="left"><td valign="top" width="40%">Source_Name
+</td><td valign="top" width="60%">Supported
+<br></td></tr><tr align="left"><td valign="top" width="40%">Source_Text
+</td><td valign="top" width="60%">Supported
+   <br></td></tr></table>
+
+   </body></html>
+

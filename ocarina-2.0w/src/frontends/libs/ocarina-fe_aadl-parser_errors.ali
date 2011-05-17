@@ -1,0 +1,381 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnvnnnnnnnrnnnnrvvnnnnnrnnnnvnnnnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.fe_aadl.parser_errors%b  ocarina-fe_aadl-parser_errors.adb  749a8248 NE OO PK IS
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+W charset%s		charset.adb		charset.ali
+W interfaces%s		interfac.ads		interfac.ali
+W locations%s		locations.adb		locations.ali
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.fe_aadl%s	ocarina-fe_aadl.adb	ocarina-fe_aadl.ali
+W ocarina.fe_aadl.lexer%s  ocarina-fe_aadl-lexer.adb  ocarina-fe_aadl-lexer.ali
+W output%s		output.adb		output.ali
+W system%s		system.ads		system.ali
+W system.img_enum_new%s	s-imenne.adb		s-imenne.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ocarina.fe_aadl.parser_errors%s  ocarina-fe_aadl-parser_errors.ads  7ea670d2 EE NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.fe_aadl%s	ocarina-fe_aadl.adb	ocarina-fe_aadl.ali
+W ocarina.me_aadl%s	ocarina-me_aadl.ads	ocarina-me_aadl.ali
+W ocarina.me_aadl.tokens%s  ocarina-me_aadl-tokens.adb  ocarina-me_aadl-tokens.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-charac.ads		20070912115821 506ce725
+D a-chahan.ads		20090409232307 dcb15e96
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D charset.ads		20110516190003 5a17a088
+D gnat.ads		20050905075125 96410e68
+D g-os_lib.ads		20090409232307 c015094d
+D g-table.ads		20080408064830 4cacb2f1
+D interfac.ads		20090409232307 a69cad5c
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-fe_aadl.ads	20110516190002 a9954967
+D ocarina-fe_aadl-lexer.ads  20110516190002 b70ccc7d
+D ocarina-fe_aadl-parser_errors.ads  20110516190002 3c139e93
+D ocarina-fe_aadl-parser_errors.adb  20110516190002 4da29703
+D ocarina-files.ads	20110516190002 e29905b0
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-tokens.ads  20110516190002 dd4fcdfa
+D output.ads		20110516190003 77634540
+D system.ads		20110401034433 15e10948
+D s-imenne.ads		20090409232307 97a402ea
+D s-os_lib.ads		20090409232307 719f619c
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-secsta.ads		20090409232307 7bae3621
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-string.ads		20090409232307 04f2ee70
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 1 ada.ads
+16K9*Ada 19e8 17|34r6 229r31
+X 2 a-charac.ads
+16K13*Characters 18e19 17|34r10 229r35
+X 3 a-chahan.ads
+36K24*Handling 144e28 17|34w21 229r46
+63V13*To_Upper{character} 17|229r55
+X 6 charset.ads
+34K9*Charset 52e12 17|37w6 48r8
+42U14*To_Lower 17|223r13 262r13
+X 11 locations.ads
+36K9*Locations 74e14 17|36w6 46r8
+52V13*Image{string} 17|60r18
+X 12 namet.ads
+38K9*Namet 237e10 17|38w6 47r8
+165U14*Write_Name 17|94r7
+X 13 ocarina.ads
+34K9*Ocarina 63e12 16|36r6 36r34 38r9 333r5 17|40r6 42r14 45r8 272r5
+X 14 ocarina-fe_aadl.ads
+36K17*FE_AADL 13|34k9 14|46e20 16|38r17 333r13 17|40r14 42r22 45r16 272r13
+X 15 ocarina-fe_aadl-lexer.ads
+44K25*Lexer 92e26 17|40w22 45r24
+51r4*Token_Location=51:58{11|38R9} 17|60r25
+61V13*Current_Token_Image{string} 17|76r19 96r19 142r19 171r19
+X 16 ocarina-fe_aadl-parser_errors.ads
+38K25*Parser_Errors 14|36k17 16|333l21 333e34 17|42b30 272l21 272t34
+42E9*Parsing_Code 257e41 281r19 283r26 288r44 289r26 293r44 296r26 303r50
+. 305r32 311r54 313r36 318r55 320r37 327r27 17|50r43 58r43 70r44 86r20 106r14
+. 127r24 152r25 181r19 195r27 196r27
+43n7*PC_None_Statement{42E9}
+44n7*PC_Items_List{42E9} 17|206r15
+45n7*PC_Classifier_Reference{42E9}
+46n7*PC_Identifiers{42E9}
+47n7*PC_Defining_Identifier{42E9}
+48n7*PC_Defining_Name{42E9}
+50n7*PC_AADL_Specification{42E9} 17|203r15
+51n7*PC_AADL_Declaration{42E9} 17|200r15
+52n7*PC_Package_Specification{42E9}
+53n7*PC_Package_Declarations{42E9}
+54n7*PC_Package_Name{42E9}
+55n7*PC_Annex_Library{42E9}
+56n7*PC_Annex_Subclause{42E9}
+57n7*PC_Annex_Path{42E9}
+59n7*PC_Array_Dimensions{42E9}
+60n7*PC_Array_Dimension_Size{42E9}
+61n7*PC_Array_Selection{42E9}
+63n7*PC_Reference_Category{42E9}
+64n7*PC_Classifier_Category{42E9}
+65n7*PC_Computed_Term{42E9}
+67n7*PC_Component{42E9}
+68n7*PC_Component_Category{42E9}
+69n7*PC_Unique_Component_Type_Identifier{42E9}
+70n7*PC_Component_Type{42E9}
+71n7*PC_Component_Type_Extension{42E9}
+72n7*PC_Unique_Component_Impl_Name{42E9}
+73n7*PC_Component_Implementation{42E9}
+74n7*PC_Component_Implementation_Extension{42E9}
+76n7*PC_Connections{42E9}
+77n7*PC_Connection{42E9}
+78n7*PC_Connection_Refinement{42E9}
+79n7*PC_Connection_Reference{42E9}
+80n7*PC_Data_Connection{42E9}
+81n7*PC_Data_Connection_Refinement{42E9}
+82n7*PC_Event_Connection{42E9}
+83n7*PC_Event_Connection_Refinement{42E9}
+84n7*PC_Event_Data_Connection{42E9}
+85n7*PC_Event_Data_Connection_Refinement{42E9}
+86n7*PC_Feature_Group_Connection{42E9}
+87n7*PC_Feature_Group_Connection_Refinement{42E9}
+88n7*PC_Parameter_Connection{42E9}
+89n7*PC_Parameter_Connection_Refinement{42E9}
+90n7*PC_Access_Connection{42E9}
+91n7*PC_Access_Connection_Refinement{42E9}
+93n7*PC_Features{42E9}
+94n7*PC_Refines_Type{42E9}
+95n7*PC_Feature{42E9}
+96n7*PC_Feature_Refinement{42E9}
+97n7*PC_Parameters{42E9}
+98n7*PC_Parameter{42E9}
+99n7*PC_Parameter_Refinement{42E9}
+101n7*PC_Port_Connection{42E9}
+102n7*PC_Port_Connection_Refinement{42E9}
+104n7*PC_Flow_Identifier{42E9}
+105n7*PC_Subcomponent_Flow_Identifier{42E9}
+106n7*PC_Flow_Specifications{42E9}
+107n7*PC_Flow_Spec{42E9}
+108n7*PC_Flow_Spec_Refinement{42E9}
+109n7*PC_Flow_Source_Spec{42E9}
+110n7*PC_Flow_Source_Spec_Refinement{42E9}
+111n7*PC_Flow_Sink_Spec{42E9}
+112n7*PC_Flow_Sink_Spec_Refinement{42E9}
+113n7*PC_Flow_Path_Spec{42E9}
+114n7*PC_Flow_Path_Spec_Refinement{42E9}
+115n7*PC_End_To_End_Flow_Spec{42E9}
+116n7*PC_End_To_End_Flow_Refinement{42E9}
+118n7*PC_Flow_Implementations{42E9}
+119n7*PC_Flow_Implementation{42E9}
+120n7*PC_Flow_Implementation_Refinement{42E9}
+121n7*PC_Flow_Path_Implementation{42E9}
+122n7*PC_Flow_Path_Implementation_Refinement{42E9}
+123n7*PC_Flow_Sink_Implementation{42E9}
+124n7*PC_Flow_Sink_Implementation_Refinement{42E9}
+125n7*PC_Flow_Source_Implementation{42E9}
+126n7*PC_Flow_Source_Implementation_Refinement{42E9}
+128n7*PC_Feature_Group_Spec{42E9}
+129n7*PC_Feature_Group_Refinement{42E9}
+130n7*PC_Feature_Group_Type{42E9}
+131n7*PC_Feature_Group_Type_Extension{42E9}
+132n7*PC_Feature_Group_Or_Port_Group_Or_Port_Spec{42E9}
+133n7*PC_Feature_Refinement_Or_Feature_Group_Refinement{42E9}
+134n7*PC_Unique_Feature_Group_Type_Reference{42E9}
+135n7*PC_Feature_Group_Or_Port_Group_Refinement{42E9}
+136n7*PC_Port_Group_Spec_Or_Feature_Group_Spec{42E9}
+137n7*PC_Port_Spec_Or_Feature_Group_Spec{42E9} 17|212r15
+138n7*PC_Port_Refinement_Or_Feature_Group_Refinement{42E9} 17|215r15
+140n7*PC_Mode{42E9}
+141n7*PC_Mode_Refinement{42E9}
+142n7*PC_In_Modes{42E9}
+143n7*PC_In_Modes_And_Transitions{42E9}
+144n7*PC_Mode_Or_Mode_Transition{42E9} 17|209r15
+145n7*PC_Mode_Or_Transition{42E9}
+146n7*PC_Mode_Transition{42E9}
+147n7*PC_Mode_Transition_Trigger{42E9}
+148n7*PC_Requires_Modes_Subclause{42E9}
+150n7*PC_Name_Visibility_Declaration{42E9}
+151n7*PC_Alias_Declaration{42E9}
+152n7*PC_Import_Declaration{42E9}
+154n7*PC_Port_Type{42E9}
+155n7*PC_Port_Group_Spec{42E9}
+156n7*PC_Port_Group_Refinement{42E9}
+157n7*PC_Port_Group_Type{42E9}
+158n7*PC_Port_Group_Type_Extension{42E9}
+159n7*PC_Port_Spec{42E9}
+160n7*PC_Port_Refinement{42E9}
+161n7*PC_Unique_Port_Group_Type_Reference{42E9}
+162n7*PC_Unique_Port_Identifier{42E9}
+163n7*PC_Port_Refinement_Or_Port_Group_Refinement{42E9}
+165n7*PC_Properties{42E9}
+166n7*PC_Property_Set{42E9}
+167n7*PC_Property_Declaration{42E9}
+169n7*PC_Property_Type{42E9}
+170n7*PC_Property_Type_Declaration{42E9}
+171n7*PC_Property_Type_Designator{42E9}
+172n7*PC_Unique_Property_Type_Identifier{42E9}
+174n7*PC_Prototype{42E9}
+175n7*PC_Prototype_Refinement{42E9}
+176n7*PC_Prototype_Or_Prototype_Refinement{42E9}
+177n7*PC_Prototype_Bindings{42E9}
+178n7*PC_Prototype_Binding{42E9}
+180n7*PC_Enumeration_Type{42E9}
+181n7*PC_Units_Type{42E9}
+182n7*PC_Unit_Definition{42E9}
+183n7*PC_Number_Type{42E9}
+184n7*PC_Range_Type{42E9}
+185n7*PC_Number_Range{42E9}
+186n7*PC_Real_Range{42E9}
+187n7*PC_Integer_Range{42E9}
+188n7*PC_Classifier_Type{42E9}
+189n7*PC_Reference_Type{42E9}
+190n7*PC_Referable_Element_Category{42E9}
+192n7*PC_Record_Type{42E9}
+193n7*PC_Record_Term{42E9}
+194n7*PC_Record_Type_Element{42E9}
+195n7*PC_Record_Term_Element{42E9}
+197n7*PC_Property_Definition_Declaration{42E9}
+198n7*PC_Single_Valued_Property{42E9}
+199n7*PC_Multi_Valued_Property{42E9}
+201n7*PC_Property_Owner_Category{42E9}
+202n7*PC_Property_Owner_Or_Category{42E9}
+204n7*PC_Contained_Element_Path{42E9}
+205n7*PC_Contained_Element{42E9}
+206n7*PC_Named_Element{42E9}
+207n7*PC_Named_Element_Category{42E9}
+208n7*PC_Named_Element_Component{42E9}
+209n7*PC_Named_Element_Component_With_Access{42E9}
+210n7*PC_Named_Element_Flow{42E9}
+211n7*PC_Named_Element_Feature{42E9}
+212n7*PC_Named_Element_End_To_End_Flow{42E9}
+213n7*PC_Named_Element_Identifier{42E9}
+214n7*PC_Named_Element_Mode{42E9}
+215n7*PC_Named_Element_Port_Or_Access_Or_Event{42E9}
+217n7*PC_Property_Constant{42E9}
+218n7*PC_Unique_Property_Constant_Identifier{42E9}
+219n7*PC_Single_Valued_Property_Constant{42E9}
+220n7*PC_Multi_Valued_Property_Constant{42E9}
+221n7*PC_Constant_Signed_Integer_Value{42E9}
+222n7*PC_Constant_Signed_Real_Value{42E9}
+223n7*PC_Constant_String_Value{42E9}
+224n7*PC_Constant_Property_Value{42E9}
+226n7*PC_Property_Association{42E9}
+227n7*PC_Access_Property_Association{42E9}
+228n7*PC_Contained_Property_Association{42E9}
+229n7*PC_Property_Association_Or_Contained_Property_Association{42E9} 17|219r15
+231n7*PC_Property_Expression{42E9}
+232n7*PC_Property_List_Value{42E9}
+233n7*PC_Property_Term{42E9}
+234n7*PC_Boolean_Property_Term{42E9}
+235n7*PC_Component_Classifier_Term{42E9}
+236n7*PC_Reference_Term{42E9}
+237n7*PC_Boolean_Term{42E9}
+238n7*PC_Boolean_Or_Record_Term{42E9}
+239n7*PC_Number_Range_Term{42E9}
+240n7*PC_Integer_Range_Term{42E9}
+241n7*PC_Real_Range_Term{42E9}
+243n7*PC_Data_Subprogram_Spec{42E9}
+244n7*PC_Data_Subprogram_Refinement{42E9}
+245n7*PC_Server_Subprogram{42E9}
+246n7*PC_Server_Subprogram_Refinement{42E9}
+247n7*PC_Subprogram_Call{42E9}
+248n7*PC_Subprogram_Call_Sequences{42E9}
+249n7*PC_Subprogram_Call_Sequence{42E9}
+250n7*PC_Called_Subprogram{42E9}
+252n7*PC_Subcomponents{42E9}
+253n7*PC_Subcomponent{42E9}
+254n7*PC_Subcomponent_Refinement{42E9}
+255n7*PC_Subcomponent_Access{42E9}
+256n7*PC_Subcomponent_Access_Refinement{42E9}
+257n7*PC_Subcomponent_Access_Classifier{42E9}
+261E9*Error_Message_Code 278e44 282r19 283r52 294r49 297r31 330r27 17|107r19
+. 182r19 242r27 243r21
+262n7*EMC_Access_Property_Association_Is_Not_Allowed{261E9} 17|246r15
+263n7*EMC_Contained_Property_Association_Is_Not_Allowed{261E9} 17|249r15
+264n7*EMC_Memory_Access_Connection_Is_Not_Allowed{261E9}
+265n7*EMC_Debug{261E9}
+266n7*EMC_Invalid_Range{261E9}
+267n7*EMC_List_Is_Empty{261E9}
+268n7*EMC_No_Defining_Identifier{261E9}
+269n7*EMC_Refinement_Is_Not_Allowed{261E9}
+270n7*EMC_Extends_Incompatible_Entity{261E9}
+271n7*EMC_Not_Allowed_In_AADL_V1{261E9}
+272n7*EMC_Not_Allowed_In_AADL_V2{261E9}
+273n7*EMC_Port_Group_Not_Allowed_In_AADL_V2{261E9}
+274n7*EMC_Mode_Transition_Not_Allowed_In_Requires_Modes{261E9}
+275n7*EMC_Feature_Group_Not_Allowed_In_AADL_V1{261E9}
+276n7*EMC_Odd_Number_Of_Element_Expected{261E9} 17|252r15
+277n7*EMC_At_Least_Tow_Elements_Expected{261E9} 17|255r15
+278n7*EMC_At_Least_Three_Elements_Expected{261E9} 17|258r15
+280U14*Display_Parsing_Error 281>7 282>7 284r14 17|180b14 189l8 189t29
+281e7 Code{42E9} 17|181b7 186r29
+282e7 Error_Msg{261E9} 17|182b7 187r26
+283U14*DPE=284:14
+283e19 Code{42E9}
+283e40 Error_Msg{261E9}
+288U14*Display_Parsing_Error 288>37 289r48 17|70b14 79l8 79t29
+288e37 Code{42E9} 17|70b37 73r29
+289U14*DPE=289:48
+289e19 Code{42E9}
+293U14*Display_Parsing_Error 293>37 294>37 295>37 298r55 17|105b14 120l8
+. 120t29
+293e37 Code{42E9} 17|106b7 112r29
+294e37 Error_Msg{261E9} 17|107b7 117r26
+295e37 Current_Token{20|40E9} 17|108b7 115r32
+296U14*DPE=298:55
+296e19 Code{42E9}
+297e19 Error_Msg{261E9}
+298e19 Current_Token{20|40E9}
+303U14*Display_Parsing_Error 303>37 304>37 306r49 17|85b14 99l8 99t29
+303e37 Code{42E9} 17|86b7 91r29
+304i37 Identifier{30|184I9} 17|87b7 94r19
+305U14*DPE=306:49
+305e19 Code{42E9}
+306i19 Identifier{30|184I9}
+311U14*Display_Parsing_Error 311>37 312>37 314r56 17|126b14 145l8 145t29
+311e37 Code{42E9} 17|127b7 132r29
+312e37 Expected_Token{20|40E9} 17|128b7 134r10 138r35
+313U14*DPE=314:56
+313e19 Code{42E9}
+314e19 Expected_Token{20|40E9}
+318U14*Display_Parsing_Error 318>37 319>37 322r14 17|151b14 174l8 174t29
+318e37 Code{42E9} 17|152b7 158r29
+319a37 Expected_Tokens{20|184A9} 17|153b7 161r16 163r21 164r35 169r32
+320U14*DPE=322:14
+320e19 Code{42E9}
+321a19 Expected_Tokens{20|184A9}
+327V13*Image{string} 327>20 17|62r18 195b13 236l8 236t13
+327e20 Code{42E9} 17|195b20 196r47 199r12
+330V13*Image{string} 330>20 17|117r19 187r19 242b13 270l8 270t13
+330e20 Code{261E9} 17|242b20 243r47 245r12
+X 17 ocarina-fe_aadl-parser_errors.adb
+50U14 Display_Parsing_Code 50>36 51r19 58b14 64l8 64t28 73r7 91r7 112r7 132r7
+. 158r7 186r7
+50e36 Code{16|42E9} 58b36 62r25
+155i7 Index{integer} 161m7 163r13 164r52 166m10 166r19 169r49
+196a7 S{string} 223m23 224r22 225r19 229m22 229r65 234r20 234r28
+197b7 Capital{boolean} 226m19 228r22 231m19
+224i17 I{integer} 225r22 229r25 229r68
+243a7 S{string} 262m23 263r22 264r19 265m19 268r20 268r28
+263i17 I{integer} 264r22 265r22
+X 19 ocarina-me_aadl.ads
+34K17*ME_AADL 16|36r14 36r42 19|102e20
+X 20 ocarina-me_aadl-tokens.ads
+36K25*Tokens 16|36w22 36r50 20|271e27
+40E9*Token_Type 16|295r53 298r35 312r54 314r36 17|108r23 128r24 20|179e7
+42n7*T_Identifier{40E9} 17|134r27
+184A9*Token_List_Type(40E9)<integer> 16|319r55 321r37 17|153r25
+268V13*Quoted_Image{string} 17|115r18 138r21 164r21 169r18
+X 21 output.ads
+42K9*Output 17|39w6 44r8 21|105e11
+52U14*Set_Standard_Error 17|72r7 90r7 111r7 131r7 157r7 185r7
+57U14*Set_Standard_Output 17|78r7 98r7 119r7 144r7 173r7 188r7
+81U14*Write_Str 17|60r7 61r7 62r7 63r7 75r7 93r7 95r7 114r7 115r7 135r10
+. 137r10 138r10 141r7 159r7 164r10 165r10 169r7 170r7
+87U14*Write_Line 17|76r7 96r7 117r7 142r7 171r7 187r7
+X 30 types.ads
+36K9*Types 16|34w6 34r22 30|306e10
+184I9*Name_Id<integer> 16|304r50 306r32 17|87r20
+

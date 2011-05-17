@@ -1,0 +1,31 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.me_real%s	ocarina-me_real.ads	23253e5b NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-me_real.ads	20110516190002 4b14dbfa
+D system.ads		20110401034433 15e10948
+D s-scaval.ads		20090409232307 1bd0ed08
+X 1 ocarina.ads
+34K9*Ocarina 63e12 2|34r9 35r5
+X 2 ocarina-me_real.ads
+34K17*ME_REAL 1|34k9 2|35l13 35e20
+

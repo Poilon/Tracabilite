@@ -1,0 +1,207 @@
+data msg_int
+properties 
+  Data_Model::Data_Representation => integer;
+end msg_int;
+
+data record_msg
+end record_msg;
+
+data implementation record_msg.basic
+subcomponents
+  field_1 : data msg_int;
+  field_2 : data msg_int;
+properties
+  Data_Model::Data_Representation => struct;
+end record_msg.basic;
+
+--  subprograms
+
+subprogram send_message
+features
+  msg_out : out parameter msg_int;
+properties
+  source_language => Ada95;
+  source_name => "Repository.Send_Message";
+end send_message;
+
+subprogram recv_1
+properties
+  source_language => C;
+  source_name     => "void_proc";
+  source_text     => ("receive.c");
+end recv_1;
+
+subprogram recv_2
+features
+  msg_in : in parameter msg_int;
+properties
+  source_language => C;
+  source_name     => "receive";
+  source_text     => ("receive.c");
+end recv_2;
+
+subprogram recv_3
+features
+  msg_in : in parameter msg_int;
+  msg_out : out parameter msg_int;
+properties
+  source_language => C;
+  source_name     => "transmit";
+  source_text     => ("receive.c");
+end recv_3;
+
+subprogram recv_4
+features
+  msg_in : in parameter msg_int;
+  msg_out : out parameter record_msg.basic;
+properties
+  source_language => C;
+  source_name     => "transmit_record";
+  source_text     => ("receive2.c");
+end recv_4;
+
+subprogram recv_5
+features
+  msg_in : in parameter record_msg.basic;
+properties
+  source_language => C;
+  source_name     => "receive_record";
+  source_text     => ("receive2.c");
+end recv_5;
+
+--  sender threads
+
+thread sender
+features
+  msg_out : out event data port msg_int;
+properties
+  Dispatch_Protocol => Periodic;
+  Period => 1000 Ms;
+end sender;
+
+thread implementation sender.simple
+calls {
+  sp1 : subprogram send_message;
+};
+connections
+  parameter sp1.msg_out -> msg_out;
+end sender.simple;
+
+--  receiver threads
+
+thread receiver
+features
+  msg_in : in event data port msg_int;
+properties
+  Dispatch_Protocol => Aperiodic;
+end receiver;
+
+thread implementation receiver.simple
+calls {
+  sp1 : subprogram recv_1;
+};
+end receiver.simple;
+
+thread implementation receiver.impl2
+calls {
+  sp1 : subprogram recv_2;
+};
+connections
+  parameter msg_in -> sp1.msg_in;
+end receiver.impl2;
+
+--  Wrapper for threads
+
+subprogram Wrapper
+features
+  msg_in : in parameter msg_int;
+end Wrapper;
+
+--  Wrapper implementation for thread receiver.impl3
+
+subprogram implementation Wrapper.impl3
+calls {
+  sp1 : subprogram recv_3;
+  sp2 : subprogram recv_2;
+};
+connections
+  parameter msg_in      -> sp1.msg_in;
+  parameter sp1.msg_out -> sp2.msg_in;
+end Wrapper.impl3;
+
+thread implementation receiver.impl3
+calls {
+  sp : subprogram Wrapper.impl3;
+};
+connections
+  parameter msg_in -> sp.msg_in;
+end receiver.impl3;
+
+--  Wrapper implementation for thread receiver.impl4
+
+subprogram implementation Wrapper.impl4
+calls {
+  sp1 : subprogram recv_4;
+  sp2 : subprogram recv_5;
+};
+connections
+  parameter msg_in      -> sp1.msg_in;
+  parameter sp1.msg_out -> sp2.msg_in;
+end Wrapper.impl4;
+
+thread implementation receiver.impl4
+calls {
+   sp : subprogram Wrapper.impl4;
+};
+connections
+  parameter msg_in -> sp.msg_in;
+end receiver.impl4;
+
+--  receiver processes
+
+process receiver_node
+features
+  msg_in : in event data port msg_int;
+end receiver_node;
+
+process implementation receiver_node.simple
+subcomponents
+  th1 : thread receiver.simple;
+connections
+  event data port msg_in -> th1.msg_in;
+end receiver_node.simple;
+
+process implementation receiver_node.impl2
+subcomponents
+  th1 : thread receiver.impl2;
+connections
+  event data port msg_in -> th1.msg_in;
+end receiver_node.impl2;
+
+process implementation receiver_node.impl3
+subcomponents
+  th1 : thread receiver.impl3;
+connections
+  event data port msg_in -> th1.msg_in;
+end receiver_node.impl3;
+
+process implementation receiver_node.impl4
+subcomponents
+  th1 : thread receiver.impl4;
+connections
+  event data port msg_in -> th1.msg_in;
+end receiver_node.impl4;
+
+--  sender processes
+
+process sender_node
+features
+  msg_out : out event data port msg_int;
+end sender_node;
+
+process implementation sender_node.simple
+subcomponents
+  th1 : thread sender.simple;
+connections
+  event data port th1.msg_out -> msg_out;
+end sender_node.simple;

@@ -1,0 +1,16 @@
+@smallexample
+
+@b{process} A
+features
+  Out_Port : @b{out} @b{event} @b{data} @b{port} Simple_Type;
+@b{end} A;
+
+@b{process} @b{implementation} A.Impl
+@b{subcomponents}
+  Pinger : @b{thread} P.Impl;
+@b{connections}
+  @b{event} @b{data} @b{port} Pinger.Data_Source -> Out_Port;
+@b{end} A.Impl;
+
+
+@end smallexample

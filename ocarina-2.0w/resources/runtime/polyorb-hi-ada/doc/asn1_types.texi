@@ -1,0 +1,12 @@
+@smallexample
+
+@b{data}  ASN1_Type
+@b{properties}
+    -- @i{Name of the ASN.1 source file:}
+    Source_Text => ("@i{my_types.asn}");
+    Source_Language => ASN1;
+    -- @i{name of the corresponding data type in the source file:}
+    Type_Source_Name => "@i{My_Type}";
+@b{end} T_POS;
+
+@end smallexample

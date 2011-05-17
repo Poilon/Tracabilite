@@ -1,0 +1,40 @@
+@smallexample
+
+@b{package} @b{body} PolyORB.Parameters.Partition @b{is}
+
+   @b{type} Parameter_Entry @b{is}
+      @b{record}
+         Key : PolyORB.Utils.Strings.String_Ptr;
+         Val : PolyORB.Utils.Strings.String_Ptr;
+      @b{end} @b{record};
+
+   Conf_Table : @b{constant} @b{array} (1 .. 2)
+     @b{of} Parameter_Entry :=
+     ((new Standard.String'
+        ("@i{polyorb.protocols.iiop.default_addr}"),
+      @b{new} Standard.String'
+        ("@i{127.0.0.1}")),
+      (new Standard.String'
+        ("@i{polyorb.protocols.iiop.default_port}"),
+      @b{new} Standard.String'
+        ("@i{3200}")));
+
+   @b{type} Partition_Source @b{is}
+     @b{new} PolyORB.Parameters.Parameters_Source @b{with} @b{null} @b{record};
+
+   The_Partition_Source : @b{aliased} Partition_Source;
+
+   @b{function} Get_Conf
+     (Source : @b{access} Partition_Source;
+      Section : Standard.String;
+      Key : Standard.String)
+     @b{return} Standard.String;
+   -- @i{ Called by PolyORB Initialization}
+   -- @i{ return the configuration data as in the Conf_Table array}
+
+   @b{procedure} Initialize;
+   -- @i{ Initialize PolyORB by registerering Get_Conf function}
+
+@b{end} PolyORB.Parameters.Partition;
+
+@end smallexample

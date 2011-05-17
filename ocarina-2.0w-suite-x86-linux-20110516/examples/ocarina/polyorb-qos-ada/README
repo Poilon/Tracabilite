@@ -1,0 +1,9 @@
+To generate the distributed application, just run the corresponding script
+ generate_XXX.sh with a scenario file as a command line argument
+
+REQUIREMENTS : 
+1 : Ocarina must be properly installed, and the Ocarina bin directory must 
+    be in the PATH environment variable
+2 : PolyORB must be installed in order to compile the sources, the PolyORB
+    bin directory must be in the PATH environment variable
+

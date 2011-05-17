@@ -1,0 +1,20 @@
+system ring
+end ring;
+
+system implementation ring.udpimpl
+subcomponents
+  sn : process sender_node.simple {Deployment::port_number => 3200;};
+  tr1 : process transmitter_node.simple {Deployment::port_number => 4001;};
+  tr2 : process transmitter_node.simple {Deployment::port_number => 4002;};
+  proc_1 : processor a_processor;
+connections
+  event data port sn.msg_out -> tr1.msg_in;
+  event data port tr1.msg_out -> tr2.msg_in;
+  event data port tr2.msg_out -> sn.msg_in;
+properties
+  actual_processor_binding => reference proc_1 applies to sn;
+  actual_processor_binding => reference proc_1 applies to tr1;
+  actual_processor_binding => reference proc_1 applies to tr2;
+  Deployment::protocol => diop;
+end ring.udpimpl;
+

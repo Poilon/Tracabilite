@@ -1,0 +1,25 @@
+This example has been taken from a technical note on the 3ADL: 
+"ASSERT 3ADL Illustration"
+
+Distribution: 	ASSERT 
+Prepared by:  	DVT Methodoloy & Process  Working Group
+Release type:	Internal  Project Release : 1St release dated  14/July /05 
+Approved by:  	ESA TEC
+
+July 2006
+
+The use of port groups has been replaced by simple data ports to match the Ocarina mapping patterns
+
+              ------------
+
+features tested :
+
+SCENARIO :
+	   
+   - Multiples threads by process   
+   - Periodic and aperiodic tasks
+   - Single-call sequence
+   - Unicast inter-process and inter-thread connexions
+
+   Code generation specific :
+     - Node Location

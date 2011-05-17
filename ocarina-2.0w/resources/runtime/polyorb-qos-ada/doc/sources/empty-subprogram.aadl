@@ -1,0 +1,5 @@
+subprogram sp
+features
+  e : in parameter message;
+  s : out parameter message;
+end sp;

@@ -1,0 +1,87 @@
+@smallexample
+
+------------------------------------------------------------------------------
+-- @i{                                                                         --}
+-- @i{                         PolyORB HI COMPONENTS                           --}
+-- @i{                                                                         --}
+-- @i{                   P O L Y O R B _ H I . O U T P U T                     --}
+-- @i{                                                                         --}
+-- @i{                                S p e c                                  --}
+-- @i{                                                                         --}
+-- @i{              Copyright (C) 2006-2008, GET-Telecom Paris.                --}
+-- @i{                                                                         --}
+-- @i{PolyORB HI is free software; you  can  redistribute  it and/or modify it --}
+-- @i{under terms of the GNU General Public License as published by the Free   --}
+-- @i{Software Foundation; either version 2, or (at your option) any later.    --}
+-- @i{PolyORB HI is distributed  in the hope that it will be useful, but       --}
+-- @i{WITHOUT ANY WARRANTY;  without even the implied warranty of              --}
+-- @i{MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General --}
+-- @i{Public License for more details. You should have received  a copy of the --}
+-- @i{GNU General Public  License  distributed with PolyORB HI; see file       --}
+-- @i{COPYING. If not, write  to the Free  Software Foundation, 51 Franklin    --}
+-- @i{Street, Fifth Floor, Boston, MA 02111-1301, USA.                         --}
+-- @i{                                                                         --}
+-- @i{As a special exception,  if other files  instantiate  generics from this --}
+-- @i{unit, or you link  this unit with other files  to produce an executable, --}
+-- @i{this  unit  does not  by itself cause  the resulting  executable  to  be --}
+-- @i{covered  by the  GNU  General  Public  License.  This exception does not --}
+-- @i{however invalidate  any other reasons why  the executable file  might be --}
+-- @i{covered by the  GNU Public License.                                      --}
+-- @i{                                                                         --}
+-- @i{               PolyORB HI is maintained by GET Telecom Paris             --}
+-- @i{                                                                         --}
+------------------------------------------------------------------------------
+
+-- @i{ Debug facility of PolyORB HI}
+
+@b{with} PolyORB_HI.Streams;
+
+@b{package} PolyORB_HI.Output @b{is}
+   @b{pragma} Elaborate_Body;
+
+   @b{use} PolyORB_HI.Streams;
+
+   @b{type} Verbosity @b{is}
+     (Verbose,
+      -- @i{ Developer interest only, should never be displayed}
+      -- @i{ in a production environment.}
+
+      Normal,
+      -- @i{ Informational message indicating progress of normal}
+      -- @i{ operation.}
+
+      Error
+      -- @i{ Indication that an abnormal condition has been identified}
+      );
+
+   Current_Mode : @b{constant} Verbosity := Normal;
+   -- @i{ Curent debug level}
+
+   @b{procedure} Put_Line (Mode : in Verbosity := Normal; Text : @b{in} String);
+   -- @i{ Display Text iff Mode is greater than Current_Mode. This}
+   -- @i{ routine is thread-safe.}
+
+   @b{procedure} Put_Line (Text : @b{in} String);
+   -- @i{ As above but displays the message reguards less the mode}
+
+   @b{procedure} Unprotected_Put_Line (Text : @b{in} String);
+   -- @i{ As above but this routine is not thread-safe}
+
+   @b{procedure} Put (Mode : in Verbosity := Normal; Text : @b{in} String);
+   -- @i{ Display Text iff Mode is greater than Current_Mode. This}
+   -- @i{ routine is thread-safe.}
+
+   @b{procedure} Put (Text : @b{in} String);
+   -- @i{ As above but displays the message reguards less the mode}
+
+   @b{procedure} Unprotected_Put (Text : @b{in} String);
+   -- @i{ As above but this routine is not thread-safe}
+
+   @b{procedure} Dump (Stream : Stream_Element_Array; Mode : Verbosity := Verbose);
+   -- @i{ Dump the content of Stream in an hexadecimal format}
+
+@b{private}
+   -- @i{ implementation removed}
+@b{end} PolyORB_HI.Output;
+
+@end smallexample

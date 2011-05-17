@@ -1,0 +1,31 @@
+@smallexample
+
+@b{package} Partition @b{is}
+
+   @b{type} Integer_Type @b{is} @b{new} Integer;
+   @b{type} Counter_Type @b{is} @b{private};
+
+   @b{procedure} Build
+     (This : @b{out} Partition.Integer_Type);
+
+   @b{procedure} Get_Field
+     (This  : @b{in} Message;
+      Value : @b{out} Partition.Integer_Type);
+
+   @b{procedure} Set_Field
+     (This  : @b{in} @b{out} Message;
+      Value : @b{in} Partition.Integer_Type);
+
+   @b{procedure} Increment
+     (This : @b{in} @b{out} Counter_Type);
+
+@b{private}
+   @b{type} Counter_Type @b{is}
+      @b{record}
+         Field : Partition.Integer_Type;
+         Mutex : PolyORB.Tasking.Mutexes.Mutex_Access;
+      @b{end} @b{record};
+
+@b{end} Partition;
+
+@end smallexample

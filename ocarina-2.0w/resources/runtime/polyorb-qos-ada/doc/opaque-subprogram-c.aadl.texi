@@ -1,0 +1,15 @@
+@smallexample
+
+@b{subprogram} sp
+@b{features}
+  e : @b{in} @b{parameter} message;
+  s : @b{out} @b{parameter} message;
+@b{end} sp;
+
+@b{subprogram} @b{implementation} sp.impl
+@b{properties}
+  Source_Language => C;
+  Source_Name     => "@i{implem}";
+@b{end} sp.impl;
+
+@end smallexample

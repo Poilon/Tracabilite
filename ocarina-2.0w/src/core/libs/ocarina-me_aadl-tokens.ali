@@ -1,0 +1,256 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrvnnnrvvnnnnnrnnnnnnnvnnrnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
+
+U ocarina.me_aadl.tokens%b  ocarina-me_aadl-tokens.adb  25724045 NE OO PK IS
+W charset%s		charset.adb		charset.ali
+W interfaces%s		interfac.ads		interfac.ali
+W namet%s		namet.adb		namet.ali
+W ocarina.me_aadl%s	ocarina-me_aadl.ads	ocarina-me_aadl.ali
+W system.string_ops_concat_3%s  s-sopco3.adb	s-sopco3.ali
+
+U ocarina.me_aadl.tokens%s  ocarina-me_aadl-tokens.ads  80cfda88 EB EE OO PK IS
+W ocarina.me_aadl%s	ocarina-me_aadl.ads	ocarina-me_aadl.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W types%s		types.adb		types.ali
+
+D charset.ads		20110516190003 5a17a088
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20080408064830 4cacb2f1
+D interfac.ads		20090409232307 a69cad5c
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-tokens.ads  20110516190002 dd4fcdfa
+D ocarina-me_aadl-tokens.adb  20110516190002 42159d33
+D system.ads		20110401034433 15e10948
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 1 charset.ads
+34K9*Charset 52e12 9|35w6 40r8
+42U14*To_Lower 9|237r10 255r10
+X 5 namet.ads
+38K9*Namet 237e10 9|34w6 39r8
+57a4*Name_Buffer{string} 9|237m20 255m20
+64i4*Name_Len{natural} 9|237r38 255r38
+78V13*Get_Name_String{string} 9|58r14
+104V13*Name_Find{16|184I9} 9|234r30 238r31 252r33 256r31
+153U14*Set_Str_To_Name_Buffer 9|233r7 251r7
+161U14*Set_Name_Table_Byte 9|238r10 256r10
+X 6 ocarina.ads
+34K9*Ocarina 63e12 8|36r9 271r5 9|37r14 277r5
+36n31*AADL_V1{36E9} 9|187r15
+36n40*AADL_V2{36E9} 9|192r15
+42e4*AADL_Version{36E9} 9|186r12
+X 7 ocarina-me_aadl.ads
+34K17*ME_AADL 6|34k9 7|102e20 8|36r17 271r13 9|37r22 277r13
+X 8 ocarina-me_aadl-tokens.ads
+36K25*Tokens 7|34k17 8|38r27 271l21 271e27 9|37b30 277l21 277t27
+40E9*Token_Type 179e7 181r34 181r50 182r34 182r50 184r57 188r36 191r28 194r33
+. 197r33 200r30 203r28 206r34 238r28 258r24 268r31 9|42r33 56r24 231r33 238r48
+. 265r31
+41n7*T_Error{40E9} 9|67r18
+42n7*T_Identifier{40E9} 9|68r18 268r15
+46n7*T_Quotation_Mark{40E9} 9|70r18
+47n7*T_Number_Sign{40E9} 9|71r18
+48n7*T_Underline{40E9} 9|72r18
+50n7*T_Comma{40E9} 201r12 9|74r18
+52n7*T_Plus{40E9} 189r12 9|76r18
+53n7*T_Minus{40E9} 9|77r18
+54n7*T_Multiply{40E9} 9|78r18
+55n7*T_Divide{40E9} 189r22 9|79r18
+57n7*T_Dot{40E9} 9|81r18
+58n7*T_Colon{40E9} 9|82r18
+59n7*T_Semicolon{40E9} 9|83r18
+60n7*T_Less_Than_Sign{40E9} 9|84r18
+61n7*T_Equals_Sign{40E9} 9|85r18
+62n7*T_Greater_Than_Sign{40E9} 9|86r18
+64n7*T_Association{40E9} 9|88r18
+65n7*T_Additive_Association{40E9} 9|89r18
+66n7*T_Direct_Connection{40E9} 9|90r18
+67n7*T_Bidirect_Connection{40E9} 9|195r24
+68n7*T_Delayed_Connection{40E9} 9|190r24
+69n7*T_Interval{40E9} 9|91r18
+70n7*T_Colon_Colon{40E9} 9|92r18
+72n7*T_Left_Parenthesis{40E9} 195r12 9|94r18
+73n7*T_Left_Square_Bracket{40E9} 9|96r18
+74n7*T_Left_Curly_Bracket{40E9} 9|98r18
+75n7*T_Left_Step_Bracket{40E9} 9|100r18
+76n7*T_Begin_Annex{40E9} 195r34 9|102r18
+78n7*T_Right_Parenthesis{40E9} 198r12 9|95r18
+79n7*T_Right_Square_Bracket{40E9} 9|97r18
+80n7*T_Right_Curly_Bracket{40E9} 9|99r18
+81n7*T_Right_Step_Bracket{40E9} 9|101r18
+82n7*T_End_Annex{40E9} 198r35 201r23 9|103r18
+86n7*T_AADLBoolean{40E9} 207r12 9|105r18
+87n7*T_AADLInteger{40E9} 9|106r18
+88n7*T_AADLReal{40E9} 9|107r18
+89n7*T_AADLString{40E9} 9|108r18
+90n7*T_Abstract{40E9} 9|193r24
+91n7*T_Access{40E9} 9|109r18
+92n7*T_All{40E9} 9|110r18
+93n7*T_And{40E9} 9|111r18
+94n7*T_Annex{40E9} 9|112r18
+95n7*T_Applies{40E9} 9|113r18
+96n7*T_Binding{40E9} 9|114r18
+97n7*T_Bus{40E9} 9|115r18
+98n7*T_Calls{40E9} 9|116r18
+99n7*T_Classifier{40E9} 9|117r18
+100n7*T_Compute{40E9} 9|194r24
+101n7*T_Connections{40E9} 9|118r18
+102n7*T_Constant{40E9} 9|119r18
+103n7*T_Data{40E9} 9|120r18
+104n7*T_Delta{40E9} 9|121r18
+105n7*T_Device{40E9} 9|122r18
+106n7*T_End{40E9} 9|123r18
+107n7*T_Enumeration{40E9} 9|124r18
+108n7*T_Event{40E9} 9|125r18
+109n7*T_Extends{40E9} 9|126r18
+110n7*T_False{40E9} 192r12 9|128r18
+111n7*T_True{40E9} 192r23 9|129r18
+112n7*T_Feature{40E9} 9|196r24
+113n7*T_Features{40E9} 9|131r18
+114n7*T_Flow{40E9} 9|132r18
+115n7*T_Flows{40E9} 9|133r18
+116n7*T_Group{40E9} 9|134r18
+117n7*T_Implementation{40E9} 9|135r18
+118n7*T_In{40E9} 9|136r18
+119n7*T_Inherit{40E9} 9|137r18
+120n7*T_Initial{40E9} 9|138r18
+121n7*T_Inverse{40E9} 9|139r18
+122n7*T_Is{40E9} 9|140r18
+123n7*T_List{40E9} 9|141r18
+124n7*T_Memory{40E9} 9|142r18
+125n7*T_Mode{40E9} 9|143r18
+126n7*T_Modes{40E9} 9|144r18
+127n7*T_None{40E9} 9|145r18
+128n7*T_Not{40E9} 9|146r18
+129n7*T_Of{40E9} 9|147r18
+130n7*T_Or{40E9} 9|148r18
+131n7*T_Out{40E9} 9|149r18
+132n7*T_Package{40E9} 9|150r18
+133n7*T_Parameter{40E9} 9|151r18
+134n7*T_Path{40E9} 9|152r18
+135n7*T_Port{40E9} 9|153r18
+136n7*T_Private{40E9} 9|154r18
+137n7*T_Process{40E9} 9|155r18
+138n7*T_Processor{40E9} 9|156r18
+139n7*T_Properties{40E9} 9|157r18
+140n7*T_Property{40E9} 9|158r18
+141n7*T_Prototypes{40E9} 9|197r24
+142n7*T_Provides{40E9} 9|159r18
+143n7*T_Public{40E9} 9|160r18
+144n7*T_Range{40E9} 9|161r18
+145n7*T_Record{40E9} 9|198r24
+146n7*T_Reference{40E9} 9|162r18
+147n7*T_Refined{40E9} 9|163r18
+148n7*T_Refines{40E9} 9|164r18
+149n7*T_Renames{40E9} 9|199r24
+150n7*T_Requires{40E9} 9|165r18
+151n7*T_Self{40E9} 9|200r24
+152n7*T_Server{40E9} 9|166r18 189r24
+153n7*T_Set{40E9} 9|167r18
+154n7*T_Sink{40E9} 9|168r18
+155n7*T_Source{40E9} 9|169r18
+156n7*T_Subcomponents{40E9} 9|170r18
+157n7*T_Subprogram{40E9} 9|171r18
+158n7*T_System{40E9} 9|172r18
+159n7*T_Thread{40E9} 9|173r18
+160n7*T_To{40E9} 9|174r18
+161n7*T_Type{40E9} 9|175r18
+162n7*T_Units{40E9} 9|176r18
+163n7*T_Value{40E9} 9|188r24
+164n7*T_Virtual{40E9} 9|201r24
+165n7*T_With{40E9} 207r29 9|202r24
+169n7*T_Real_Literal{40E9} 204r12 9|178r18 269r34
+170n7*T_Integer_Literal{40E9} 204r30 9|179r18 269r14
+174n7*T_String_Literal{40E9} 9|181r18 269r51
+175n7*T_Comment{40E9} 9|182r18
+176n7*T_Raw_Text{40E9}
+178n7*T_EOF{40E9} 9|184r18
+181N4*First_Token_Pos
+182N4*Last_Token_Pos
+184A9*Token_List_Type(40E9)<integer>
+188E12*Binary_Operator_Type{40E9}
+191E12*Boolean_Type{40E9}
+194E12*Opening_Delimiter{40E9}
+197E12*Closing_Delimiter{40E9}
+200E12*Delimiter_Type{40E9}
+203E12*Numeric_Type{40E9}
+206E12*Reserved_Word_Type{40E9} 210r6 210r30 212r6 212r30 9|236r19
+209N4*First_Reserved_Word_Pos
+211N4*Last_Reserved_Word_Pos
+214E9*Property_Owner_Token 227e7 230r35 239r28 9|50r15 247r15 257r37
+215n7*POT_Error{214E9} 9|213r33
+216n7*POT_Call{214E9} 231r12 9|214r33
+217n7*POT_Connection{214E9} 9|215r33
+218n7*POT_Component{214E9} 9|216r33
+219n7*POT_Element{214E9} 9|217r33
+220n7*POT_Instance{214E9} 9|218r33
+221n7*POT_Named{214E9} 9|219r33
+222n7*POT_Prototype{214E9} 9|220r33
+223n7*POT_Sequence{214E9} 9|221r33
+224n7*POT_Specification{214E9} 9|222r33
+225n7*POT_Subcomponent{214E9} 9|223r33
+226n7*POT_Transition{214E9} 231r24 9|224r33
+230E12*Property_Owner_Type{214E9} 233r36 234r7 235r36 236r7 9|254r19
+233N4*First_PO_Type_Pos
+235N4*Last_PO_Type_Pos
+238a4*Token_Image(16|184I9) 9|58r31 234m7
+239a4*Token_PO_Image(16|184I9) 9|252m7
+242i4*Max_Number_Of_Digits{integer}
+246m4*Integer_Literal_Value{16|259M9}
+249f4*Float_Literal_Value{long_long_float}
+252m4*Numeric_Literal_Base{16|250M9}
+255i4*Numeric_Literal_Exp{integer}
+258V13*Image{string} 258>20 9|56b13 59l8 59t13 270r20 273r26
+258e20 T{40E9} 9|56b20 58r44
+261U14*Init_Tokens 9|65b14 205l8 205t19
+264U14*Init_Property_Owner_Tokens 9|211b14 225l8 225t34
+268V13*Quoted_Image{string} 268>27 9|265b13 275l8 275t20
+268e27 T{40E9} 9|265b27 267r12 270r27 273r33
+X 9 ocarina-me_aadl-tokens.adb
+42U14 New_Token 42>25 42>45 67r7 68r7 70r7 71r7 72r7 74r7 76r7 77r7 78r7
+. 79r7 81r7 82r7 83r7 84r7 85r7 86r7 88r7 89r7 90r7 91r7 92r7 94r7 95r7 96r7
+. 97r7 98r7 99r7 100r7 101r7 102r7 103r7 105r7 106r7 107r7 108r7 109r7 110r7
+. 111r7 112r7 113r7 114r7 115r7 116r7 117r7 118r7 119r7 120r7 121r7 122r7
+. 123r7 124r7 125r7 126r7 128r7 129r7 131r7 132r7 133r7 134r7 135r7 136r7
+. 137r7 138r7 139r7 140r7 141r7 142r7 143r7 144r7 145r7 146r7 147r7 148r7
+. 149r7 150r7 151r7 152r7 153r7 154r7 155r7 156r7 157r7 158r7 159r7 160r7
+. 161r7 162r7 163r7 164r7 165r7 166r7 167r7 168r7 169r7 170r7 171r7 172r7
+. 173r7 174r7 175r7 176r7 178r7 179r7 181r7 182r7 184r7 188r13 189r13 190r13
+. 193r13 194r13 195r13 196r13 197r13 198r13 199r13 200r13 201r13 202r13 231b14
+. 240l8 240t17
+42e25 Token{8|40E9} 231b25 234r20 236r10 238r64
+42s45 Image{string} 231b45 233r31
+49U14 New_Property_Owner_Token 50>7 50>37 213r7 214r7 215r7 216r7 217r7 218r7
+. 219r7 220r7 221r7 222r7 223r7 224r7 246b14 259l8 259t32
+50e7 Token{8|214E9} 247b7 252r23 254r10 257r63
+50s37 Image{string} 248b7 251r31
+X 16 types.ads
+36K9*Types 8|34w6 34r21 16|306e10
+68M9*Byte 9|238r42 257r31
+184I9*Name_Id<integer> 8|238r43 239r53
+250M9*Unsigned_Short_Short 8|252r28
+259M9*Unsigned_Long_Long 8|246r28
+

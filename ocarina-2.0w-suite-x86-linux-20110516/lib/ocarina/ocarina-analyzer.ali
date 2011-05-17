@@ -1,0 +1,128 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P SS ZX
+R nnvnnnnnnnnnnnnnnnvnrnnvnrvvnnnnnrnnnnvnnvnnrnnnnnnnnnnvnnvnvnnnnnnnnnnnnnnnn
+
+U ocarina.analyzer%b	ocarina-analyzer.adb	f9d31d52 OO PK IS
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W charset%s		charset.adb		charset.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.table%s
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.analyzer%s	ocarina-analyzer.adb	ocarina-analyzer.ali
+W ocarina.analyzer.aadl%s  ocarina-analyzer-aadl.adb  ocarina-analyzer-aadl.ali
+W ocarina.analyzer.real%s  ocarina-analyzer-real.adb  ocarina-analyzer-real.ali
+W output%s		output.adb		output.ali
+W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.memory%s	s-memory.adb		s-memory.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ocarina.analyzer%s	ocarina-analyzer.ads	a7c0350b EE NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D charset.ads		20110516190003 5a17a088
+D gnat.ads		20050905075125 96410e68
+D g-os_lib.ads		20090409150019 c015094d
+D g-speche.ads		20090417131547 4ca03910
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D namet.ads		20110516190003 e03fb004
+D namet.adb		20110516190003 6b7d4c38
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-analyzer.ads	20110516190002 f99eba76
+D ocarina-analyzer.adb	20110516190002 d6039c56
+D ocarina-analyzer-aadl.ads  20110516190002 4064ff59
+D ocarina-analyzer-real.ads  20110516190002 f48dcf2b
+D output.ads		20110516190003 77634540
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-memory.ads		20090417131547 c68306b3
+D s-os_lib.ads		20091027135146 6320e1c3
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-secsta.ads		20090707124243 d2c357fb
+D s-stalib.ads		20090422095703 9cbc334a
+D s-stoele.ads		20090417130712 a4d57c26
+D s-stoele.adb		20090417130712 49ef69d7
+D s-string.ads		20090417130712 14d97e8c
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 4 charset.ads
+34K9*Charset 52e12 14|34w6 45r8
+43V13*To_Lower{string} 14|106r29
+X 5 gnat.ads
+36K9*GNAT 39e9 14|38r6 54r29
+X 8 g-table.ads
+58k14*Table 206e15 14|38w11 54r34
+106A9*Table_Type(14|49R9)<29|51I9>
+108A12*Big_Table_Type{106A9[14|54]}<29|51I9>
+117P9*Table_Ptr(108A12[14|54])
+122p4*Table{117P9[14|54]} 14|63r34[54] 64r30[54] 108r23[54] 118r20[54] 119r20[54]
+135U14*Init 14|91r17[54]
+142V13*Last{29|51I9} 14|62r45[54] 107r45[54] 118r37[54] 119r37[54]
+159i4*First{29|51I9} 14|62r26[54] 107r26[54]
+171U14*Increment_Last 14|116r20[54]
+X 10 namet.ads
+38K9*Namet 237e10 14|35w6 46r8
+78V13*Get_Name_String{string} 14|70r23
+95V13*Get_String_Name{29|184I9} 14|106r12
+104V13*Name_Find{29|184I9} 14|118r55
+153U14*Set_Str_To_Name_Buffer 14|117r10
+X 12 ocarina.ads
+34K9*Ocarina 63e12 13|36r9 56r5 14|40r6 41r6 43r14 81r7 82r7 92r7 93r7 123r5
+X 13 ocarina-analyzer.ads
+36K17*Analyzer 12|34k9 13|56l13 56e21 14|40r14 41r14 43b22 81r15 82r15 92r15
+. 93r15 123l13 123t21
+40P9*Analyzer_Subprogram(boolean) 54r18 14|51r18 102r18
+41i7 AADL_Root{29|197I9}
+44V13*Analyze{boolean} 44>22 44>42 14|60b13 73l8 73t15
+44i22 Language{29|184I9} 14|60b22 63r13 70r40
+44i42 Root{29|197I9} 14|60b42 64r50
+46U14*Init_Analyzers 14|79b14 83l8 83t22
+49U14*Reset_Analyzers 14|89b14 94l8 94t23
+52U14*Register_Analyzer 53>7 54>7 14|100b14 121l8 121t25
+53s7 Language{string} 14|101b7 106r39 110r61 115r10 117r34
+54p7 Analyzer{40P9} 14|102b7 119r55
+X 14 ocarina-analyzer.adb
+49R9 Analyzer_Record 52e14 54r41
+50i7*Language{29|184I9} 63r44 108r33 118m43
+51p7*Analyzer{13|40P9} 64r40 119m43
+54K12 Analyzers[8|58] 62r16 62r35 63r24 64r20 91r7 107r16 107r35 108r13 116r10
+. 118r10 118r27 119r10 119r27
+62i11 P<integer> 63r41 64r37
+104i7 N{29|184I9} 106m7 108r44
+107i11 B<integer> 108r30
+X 15 ocarina-analyzer-aadl.ads
+36K26*AADL 14|40w23 81r24 92r24 15|62e26
+38U14*Init 14|81r29
+40U14*Reset 14|92r29
+X 16 ocarina-analyzer-real.ads
+36K26*REAL 14|41w23 82r24 93r24 16|60e26
+38U14*Init 14|82r29
+40U14*Reset 14|93r29
+X 17 output.ads
+42K9*Output 14|36w6 47r8 17|105e11
+52U14*Set_Standard_Error 14|68r7 109r13
+57U14*Set_Standard_Output 14|71r7 111r13
+87U14*Write_Line 14|69r7 110r13
+X 29 types.ads
+36K9*Types 13|34w6 38r8 29|306e10
+51I9*Int<integer>
+57I12*Nat{51I9} 14|54r58
+184I9*Name_Id<integer> 13|44r33 14|50r18 60r33 104r11
+197I9*Node_Id<51I9> 13|41r19 44r49 14|60r49
+

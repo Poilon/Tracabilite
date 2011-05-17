@@ -1,0 +1,162 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.be_aadl_ba.thread_dispatch%b  ocarina-be_aadl_ba-thread_dispatch.adb  1c48e096 NE OO PK IS
+W interfaces%s		interfac.ads		interfac.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.be_aadl_ba%s	ocarina-be_aadl_ba.adb	ocarina-be_aadl_ba.ali
+W ocarina.be_aadl_ba.expressions%s  ocarina-be_aadl_ba-expressions.adb  ocarina-be_aadl_ba-expressions.ali
+W ocarina.be_aadl_ba.identifiers%s  ocarina-be_aadl_ba-identifiers.adb  ocarina-be_aadl_ba-identifiers.ali
+W ocarina.me_aadl_ba%s	ocarina-me_aadl_ba.ads	ocarina-me_aadl_ba.ali
+W ocarina.me_aadl_ba.ba_tree%s  ocarina-me_aadl_ba-ba_tree.ads  ocarina-me_aadl_ba-ba_tree.ali
+W ocarina.me_aadl_ba.ba_tree.nodes%s  ocarina-me_aadl_ba-ba_tree-nodes.adb  ocarina-me_aadl_ba-ba_tree-nodes.ali
+W ocarina.me_aadl_ba.ba_tree.nutils%s  ocarina-me_aadl_ba-ba_tree-nutils.adb  ocarina-me_aadl_ba-ba_tree-nutils.ali
+W output%s		output.adb		output.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+
+U ocarina.be_aadl_ba.thread_dispatch%s  ocarina-be_aadl_ba-thread_dispatch.ads  b285185c EE NE OO PK IS
+W ocarina.be_aadl_ba%s	ocarina-be_aadl_ba.adb	ocarina-be_aadl_ba.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D gnat.ads		20050905075125 96410e68
+D g-os_lib.ads		20090409232307 c015094d
+D g-table.ads		20080408064830 4cacb2f1
+D interfac.ads		20090409232307 a69cad5c
+D locations.ads		20110516190003 a3dd4cff
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-be_aadl_ba.ads  20110516190004 be077c03
+D ocarina-be_aadl_ba-expressions.ads  20110516190004 2040bf18
+D ocarina-be_aadl_ba-identifiers.ads  20110516190004 230c7268
+D ocarina-be_aadl_ba-thread_dispatch.ads  20110516190004 0c82645f
+D ocarina-be_aadl_ba-thread_dispatch.adb  20110516190004 3ac8a068
+D ocarina-me_aadl_ba.ads  20110516190002 34273658
+D ocarina-me_aadl_ba-ba_tree.ads  20110516190002 a4cd2059
+D ocarina-me_aadl_ba-ba_tree-nodes.ads  20110516191755 e6e7c350
+D ocarina-me_aadl_ba-ba_tree-nutils.ads  20110516190002 8ced5999
+D ocarina-me_aadl_ba-tokens.ads  20110516190002 4d271924
+D output.ads		20110516190003 77634540
+D system.ads		20110401034433 15e10948
+D s-assert.ads		20090409232307 5f25a194
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-os_lib.ads		20090409232307 719f619c
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-stalib.ads		20090409232307 52b793d5
+D s-string.ads		20090409232307 04f2ee70
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 9 ocarina.ads
+34K9*Ocarina 63e12 13|34r9 38r5 14|36r6 37r6 38r6 40r6 41r6 43r14 47r8 48r8
+. 49r8 50r8 51r8 214r5
+X 10 ocarina-be_aadl_ba.ads
+40K17*BE_AADL_BA 9|34k9 10|67e23 13|34r17 38r13 14|40r14 41r14 43r22 50r16
+. 51r16 214r13
+42a4*Bug_Str{string} 14|134r43
+55U14 Print_Tokens 14|68r7
+59U14 Print_Token 14|94r13 131r30 132r30 133r30 154r13 156r13 166r10 176r16
+. 178r16 187r10 206r10
+X 11 ocarina-be_aadl_ba-expressions.ads
+34K28*Expressions 44e35 14|41w25 51r27
+40U14*Print_Integer_Value 14|151r10
+41U14*Print_Behavior_Time 14|120r10
+X 12 ocarina-be_aadl_ba-identifiers.ads
+34K28*Identifiers 42e35 14|40w25 50r27
+36U14*Print_Identifier 14|182r13 202r7 208r10
+39U14*Print_Identifier_With_Value 14|162r10 169r10
+X 13 ocarina-be_aadl_ba-thread_dispatch.ads
+34K28*Thread_Dispatch 10|40k17 13|38l24 38e39 14|43b33 214l24 214t39
+36U14*Print_Dispatch_Condition 36>40 14|63b14 75l8 75t32
+36i40 Node{28|197I9} 14|63b40 64r28 65r66 70r73 72r38 73r44
+X 14 ocarina-be_aadl_ba-thread_dispatch.adb
+53U14 Print_Dispatch_Logical_Expressions 53>50 70r7 81b14 98l8 98t42
+53i50 List{28|210I9} 81b50 82r36 86r32
+54U14 Print_Dispatch_Trigger 54>50 89r10 104b14 122l8 122t30
+54i50 Node{28|197I9} 104b38 105r28 108r49 110r43 113r51 115r53 118r34 120r46
+55U14 Print_Dispatch_Trigger_Kind 55>50 115r10 128b14 136l8 136t35
+55m50 Trigger_Kind{28|68M9} 128b43 130r39
+56U14 Print_Dispatch_Trigger_Conjunction 56>50 109r10 142b14 189l8 189t42
+56i50 Node{28|197I9} 142b50 143r28 148r28 151r40 153r24 155r27 160r43 162r63
+. 164r52 168r60
+57U14 Print_Frozen_Ports 57>50 73r10 195b14 212l8 212t26
+57i50 List{28|210I9} 195b34 196r36 200r32
+84i7 List_Node{28|197I9} 86m7 88r22 89r34 91m10 91r34 92r22
+145b7 Is_Numeral{boolean} 149m10 175r16
+146i7 List_Node{28|197I9} 168m10 169r39 171m10 171r34 172r25 182r31 184m13
+. 184r37
+198i7 List_Node{28|197I9} 200m7 202r25 204m7 204r31 205r22 208r28 210m10
+. 210r34
+X 15 ocarina-me_aadl_ba.ads
+34K17*ME_AADL_BA 14|36w14 37r14 38r14 47r16 48r16 49r16 15|129e23
+48E9*Dispatch_Trigger_Kind 14|113r10 130r12 15|53e19
+50n7*TRI_No_Kind{48E9} 14|113r61
+51n7*TRI_Abort{48E9} 14|131r15
+52n7*TRI_Stop{48E9} 14|132r15
+53n7*TRI_Timeout{48E9} 14|133r15
+X 16 ocarina-me_aadl_ba-ba_tree.ads
+34K28*BA_Tree 14|37r25 38r25 48r27 49r27 16|35e31
+X 17 ocarina-me_aadl_ba-ba_tree-nodes.ads
+12K36*Nodes 14|37w33 49r35 17|855e37
+28n7*K_Dispatch_Condition{14E9} 14|64r36
+29n7*K_Dispatch_Trigger{14E9} 14|105r36
+30n7*K_Dispatch_Trigger_Conjunction{14E9} 14|143r36
+576V13*Kind{14E9} 14|64r22 105r22 143r22
+582V13*Next_Node{28|197I9} 14|91r23 171r23 184r26 204r20 210r23
+585V13*First_Node{28|197I9} 14|86r20 168r23 200r20
+675V13*Dispatch_Logical_Expressions{28|210I9} 14|65r36 70r43
+678V13*Frozen_Ports{28|210I9} 14|72r24 73r30
+681V13*Dispatch_Trigger_Conjunction{28|197I9} 14|108r19 110r13
+684V13*Trigger_Kind{28|68M9} 14|113r37 115r39
+687V13*Behavior_Time{28|197I9} 14|118r19 120r31
+690V13*Dispatch_Trigger_Event{28|197I9} 14|160r19 162r39
+693V13*Dispatch_Trigger_Events{28|210I9} 14|164r27 168r35
+696V13*Numeral{28|197I9} 14|148r19 151r31
+699V13*Is_Ormore{boolean} 14|153r13
+702V13*Is_Orless{boolean} 14|155r16
+X 18 ocarina-me_aadl_ba-ba_tree-nutils.ads
+39K36*Nutils 14|38w33 48r35 18|101e38
+77V13*Is_Empty{boolean} 14|65r26 72r14 82r26 164r17 196r26
+X 19 ocarina-me_aadl_ba-tokens.ads
+50n7*T_Comma{40E9} 14|176r29 206r23
+62n7*T_Left_Parenthesis{40E9} 14|166r23
+68n7*T_Right_Parenthesis{40E9} 14|187r23
+108n7*T_And{40E9} 14|178r29
+109n7*T_Or{40E9} 14|94r26
+130n7*T_Abort{40E9} 14|131r43
+136n7*T_Dispatch{40E9} 14|68r28
+145n7*T_On{40E9} 14|68r22
+146n7*T_Ormore{40E9} 14|154r26
+147n7*T_Orless{40E9} 14|156r26
+153n7*T_Stop{40E9} 14|132r43
+154n7*T_Timeout{40E9} 14|133r43
+X 20 output.ads
+42K9*Output 14|34w6 45r8 20|105e11
+87U14*Write_Line 14|134r30
+103U14*Write_Space 14|93r13 95r13 114r10 119r10 161r10 165r10 181r13 201r7
+. 207r10
+X 28 types.ads
+51I9*Int<integer>
+68M9*Byte 14|55r65 128r58
+197I9*Node_Id<51I9> 13|36r47 14|54r57 56r57 63r47 84r19 104r45 142r57 146r20
+. 198r19
+200V13*Present{boolean} 14|88r13 92r13 108r10 118r10 148r10 160r10 172r16
+. 205r13
+210I9*List_Id<197I9> 14|53r57 57r57 81r57 195r41
+

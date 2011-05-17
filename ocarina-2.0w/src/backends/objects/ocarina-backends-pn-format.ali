@@ -1,0 +1,39 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.backends.pn.format%s  ocarina-backends-pn-format.ads  b313927f NE OO PK IS
+W ocarina.backends.pn%s	ocarina-backends-pn.adb	ocarina-backends-pn.ali
+
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-backends.ads	20110516190004 d555a6b1
+D ocarina-backends-pn.ads  20110516190004 33999f61
+D ocarina-backends-pn-format.ads  20110516190004 808a0d1e
+D system.ads		20110401034433 15e10948
+D s-scaval.ads		20090409232307 1bd0ed08
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 1 ocarina.ads
+34K9*Ocarina 63e12 4|34r9 36r5
+X 2 ocarina-backends.ads
+43K17*Backends 1|34k9 2|100e21 4|34r17 36r13
+X 3 ocarina-backends-pn.ads
+38K26*PN 2|43k17 3|51e24 4|34r26 36r22
+X 4 ocarina-backends-pn-format.ads
+34K29*Format 3|38k26 4|36l25 36e31
+

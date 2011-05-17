@@ -1,0 +1,25 @@
+system man_in_the_middle
+end man_in_the_middle;
+
+system implementation man_in_the_middle.impl
+subcomponents
+  --  Extremities
+  ext_1 : process extremity.first  {Deployment::port_number => 4001;};
+  ext_2 : process extremity.second {Deployment::port_number => 4002;};
+
+  --  Intermediary part
+  inter : process intermediary.simple {Deployment::port_number => 4000;};
+
+  --  Processor
+  proc_1 : processor the_processor;
+connections
+  event data port inter.first_msg_out  -> ext_1.msg_in;
+  event data port inter.second_msg_out -> ext_2.msg_in;
+
+  event data port ext_1.msg_out -> inter.first_msg_in;
+  event data port ext_2.msg_out -> inter.second_msg_in;
+properties
+  actual_processor_binding => reference proc_1 applies to inter;
+  actual_processor_binding => reference proc_1 applies to ext_1;
+  actual_processor_binding => reference proc_1 applies to ext_2;
+end man_in_the_middle.impl;

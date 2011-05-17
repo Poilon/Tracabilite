@@ -1,0 +1,20 @@
+@smallexample
+
+#include <types.h>
+#include <subprograms.h>
+@b{void} user_do_ping_spg 
+      (simple_type* data_source);
+/*****************/
+/* do_ping_spg */ 
+/*****************/
+
+@b{void} do_ping_spg 
+      (simple_type* data_source)
+@{
+
+   user_do_ping_spg(data_source);
+@}
+
+
+
+@end smallexample

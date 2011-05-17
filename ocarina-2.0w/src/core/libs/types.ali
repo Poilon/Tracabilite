@@ -1,0 +1,130 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnvnnnnnnnnnnnnnnnnrvnvnrvvvnnnnrnnnnnnnvnnrnnnnnnnvnnnnvvnnvnnnnnnnnnnnnnnn
+
+U types%b		types.adb		cc1aad8d NE OO PK IS
+
+U types%s		types.ads		50d897f5 BN NE OO PR PK IS
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W unchecked_deallocation%s
+
+D system.ads		20110401034433 15e10948
+D s-scaval.ads		20090409232307 1bd0ed08
+D types.ads		20110516190003 366f6adc
+D types.adb		20110516190003 fa75c751
+D unchdeal.ads		20070406091342 66b7fd29
+X 3 types.ads
+36K9*Types 37r22 306l5 306e10 4|34b14 78l5 78t10
+51I9*Int<integer> 57r19 57r34 62r19 62r34 124r25 141r43 151r44 197r24 218r25
+54I9*Dint<long_long_integer> 60r20 60r36
+57I12*Nat{51I9}
+60I12*Dnat{54I9}
+62I12*Pos{51I9}
+65M9*Word
+68M9*Byte 69r8 217r28 224r24 231r28
+72M9*size_t
+84e4*EOF{character}
+94E12*Graphic_Character{character}
+97E12*Line_Terminator{character}
+100E12*Upper_Half_Character{character}
+104P9*Character_Ptr(character)
+105P9*String_Ptr(string) 108r58 111r48 4|67r48
+108U14*Free[5|20] 4|71r13
+111U14*Change_If_Empty 111=31 111>60 112r19 4|67b14 76l8 76t23
+111p31 Str_Ptr{105P9} 4|67b31 69r10 69r33 70r13 71m19 74m10
+111s60 Value{string} 4|67b60 74r33
+124I9*Text_Ptr<51I9> 127r31
+127A9*Text_Buffer(character)<124I9> 130r39 134r50
+130P9*Text_Buffer_Ptr(127A9) 134r63
+134U14*Free[5|20]
+141I9*Logical_Line_Number<integer> 142r8 148r30
+148i4*No_Line_Number{141I9}
+151I9*Physical_Line_Number<integer> 152r8
+157I9*Column_Number<short_integer> 158r8 162r32
+162i4*No_Column_Number{157I9}
+177N4*Names_Low_Bound 184r26 190r34 194r40
+180N4*Names_High_Bound 184r45
+184I9*Name_Id<integer> 185r8 190r23 194r29
+188a4*No_Str{string}
+190i4*No_Name{184I9}
+194i4*First_Name_Id{184I9}
+197I9*Node_Id<51I9> 198r23 200r26 203r21 210r24 214r21 233r26 4|40r21 49r26
+198i4*No_Node{197I9} 214r32 4|42r18 51r19
+200V13*Present{boolean} 200>22 4|49b13 52l8 52t15
+200i22 E{197I9} 4|49b22 51r14
+203V13*No{boolean} 203>17 4|40b13 43l8 43t10
+203i17 E{197I9} 4|40b17 42r14
+206V13*Safe_XOR{boolean} 206>23 206>40 4|58b13 61l8 61t16
+206b23 Right{boolean} 4|58b23 60r15 60r67
+206b40 Left{boolean} 4|58b40 60r34 60r49
+210I9*List_Id<197I9> 211r23
+211i4*No_List{210I9}
+213R9*Node_List 215e14
+214i7*First{197I9}
+214i14*Last{197I9}
+217M9*Operator_Id<68M9>
+218I9*Value_Id<51I9>
+220N4*Mode_In 224r35
+221N4*Mode_Inout
+222N4*Mode_Out 224r46
+224M9*Mode_Id<68M9>
+226N4*Pragma_Id 231r39
+227N4*Pragma_Prefix
+228N4*Pragma_Version
+229N4*Pragma_Unrecognized 231r52
+231M9*Pragma_Type<68M9>
+233I9*Base_Type<197I9>
+235I9*Short_Short<short_short_integer> 236r8 274r23 275r23
+238I9*Short<short_integer> 239r8 276r23 277r23
+241I9*Long<integer> 242r8 278r23 279r23
+244I9*Long_Long<long_long_integer> 245r8 280r23 281r23
+247M9*Octet 248r8 282r23 283r23
+250M9*Unsigned_Short_Short 251r8 284r23 285r23
+253M9*Unsigned_Short 254r8 286r23 287r23
+256M9*Unsigned_Long 257r8 288r23 289r23
+259M9*Unsigned_Long_Long 260r8 290r23 291r23 294r16 296r16 299r16 301r16
+270F9*Float<short_float>
+271F9*Double<long_float>
+272F9*Long_Double<long_long_float>
+274N4*FSS
+275N4*LSS
+276N4*FS
+277N4*LS
+278N4*FL
+279N4*LL
+280N4*FLL
+281N4*LLL
+282N4*FO
+283N4*LO
+284N4*FUSS
+285N4*LUSS
+286N4*FUS
+287N4*LUS
+288N4*FUL
+289N4*LUL
+290N4*FULL
+291N4*LULL
+293V13*Shift_Left{259M9} 294>7 295>7 303b30
+294m7 Value{259M9}
+295i7 Amount{natural}
+298V13*Shift_Right{259M9} 299>7 300>7 304b30
+299m7 Value{259M9}
+300i7 Amount{natural}
+X 5 unchdeal.ads
+20u11*Unchecked_Deallocation 3|34w6 108r26 134r26
+

@@ -1,0 +1,110 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnvnnvnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U locations%b		locations.adb		9a0d35f7 NE OO PK IS
+W gnat%s		gnat.ads		gnat.ali
+W gnat.directory_operations%s  g-dirope.adb	g-dirope.ali
+W namet%s		namet.adb		namet.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W types%s		types.adb		types.ali
+
+U locations%s		locations.ads		95b22623 EE NE OO PK IS
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-charac.ads		20070912115821 506ce725
+D a-chlat1.ads		20070912115821 e9ee6d0a
+D a-string.ads		20070406091342 87b4230b
+D a-strmap.ads		20090409232307 5253a637
+D a-unccon.ads		20070406091342 51e09df2
+D gnat.ads		20050905075125 96410e68
+D g-dirope.ads		20080408065739 92471343
+D g-table.ads		20080408064830 4cacb2f1
+D locations.ads		20110516190003 a3dd4cff
+D locations.adb		20110516190003 7dc7b093
+D namet.ads		20110516190003 e03fb004
+D system.ads		20110401034433 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-secsta.ads		20090409232307 7bae3621
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-unstyp.ads		20090409232307 c0f9fae5
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 7 gnat.ads
+36K9*GNAT 39e9 11|34r6 96r32 99r32 121r32 124r32
+X 8 g-dirope.ads
+49K14*Directory_Operations 277e30 11|34w11 96r37 99r37 121r37 124r37
+51A12*Dir_Name_Str{string}<integer>
+115V13*Dir_Name{51A12} 11|99r58 124r58
+124V13*Base_Name{string} 11|96r58 121r58
+X 10 locations.ads
+36K9*Locations 74l5 74e14 11|39b14 128l5 128t14
+38R9*Location 47e14 49r27 50r9 52r26 57r23 66r21 11|45r26 89r23 114r21
+39i7*Base_Name{21|184I9} 11|53r14 63r37 95m11 120m11
+40i7*Dir_Name{21|184I9} 11|98m11 123m11
+41i7*Line{21|51I9} 11|65r55 101m11 119m11
+42i7*First_Pos{21|124I9} 11|47r42 102m11
+43i7*Last_Pos{21|124I9} 11|47r27 103m11
+44i7*Scan{21|124I9} 11|104m11
+45i7*EOF{21|124I9} 11|105m11
+46p7*Buffer{21|130P9} 11|106m11
+49r4*No_Location{38R9}
+52V13*Image{string} 52>20 11|45b13 82l8 82t13
+52r20 Loc{38R9} 11|45b20 47r23 47r38 53r10 63r33 65r51
+56U14*Initialize 57=7 58>7 59>7 60>7 11|88b14 107l8 107t18
+57r7 Loc{38R9} 11|89b7 95m7 98m7 101m7 102m7 103m7 104m7 105m7 106m7
+58i7 Name{21|184I9} 11|90b7 97r58 100r58
+59i7 Size{21|51I9} 11|91b7 105r40
+60p7 Buffer{21|130P9} 11|92b7 106r24
+65U14*Update_Name_And_Line 66=7 67>7 68>7 11|113b14 126l8 126t28
+66r7 Loc{38R9} 11|114b7 119m7 120m7 123m7
+67i7 Name{21|184I9} 11|115b7 122r58 125r58
+68i7 Line{21|51I9} 11|116b7 119r24
+X 11 locations.adb
+46i7 Column{21|57I12} 67r13 70r40
+48i7 Backup{21|184I9} 61m10 75r13 76r36
+50i7 Result{21|184I9} 71m10 80r40
+X 12 namet.ads
+38K9*Namet 11|36w6 61r20 63r10 64r10 65r10 66r10 68r13 70r10 71r20 76r13
+. 80r17 96r9 97r35 99r9 100r35 121r9 122r35 124r9 125r35 12|237e10
+72U14*Get_Name_String 11|63r16 76r19
+78V13*Get_Name_String{string} 11|80r23 97r41 100r41 122r41 125r41
+95V13*Get_String_Name{21|184I9} 11|96r15 99r15 121r15 124r15
+104V13*Name_Find{21|184I9} 11|61r26 71r26
+124U14*Add_Char_To_Name_Buffer 11|64r16 66r16 68r19
+133U14*Add_Nat_To_Name_Buffer 11|65r16 70r16
+X 21 types.ads
+36K9*Types 10|34w6 39r19 40r19 41r19 42r19 43r19 44r19 45r19 46r19 50r19
+. 50r34 58r16 59r16 60r16 67r14 68r14 11|37w6 37r22 37r37 37r48 46r25 47r12
+. 48r16 50r16 53r26 54r17 65r40 75r23 90r16 91r16 92r16 105r24 115r14 116r14
+. 21|306e10
+51I9*Int<integer> 10|41r25 59r22 68r20 11|37r43 91r22 116r20
+57I12*Nat{51I9} 11|46r31 47r18 65r46
+124I9*Text_Ptr<51I9> 10|42r25 43r25 44r25 45r25 11|37r54 105r30
+127A9*Text_Buffer(character)<124I9>
+130P9*Text_Buffer_Ptr(127A9) 10|46r25 60r22 11|92r22
+184I9*Name_Id<integer> 10|39r25 40r25 58r22 67r20 11|37r28 48r22 50r22 90r22
+. 115r20
+188a4*No_Str{string} 11|54r23
+190i4*No_Name{184I9} 10|50r25 50r40 11|53r32 75r29
+

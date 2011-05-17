@@ -1,0 +1,21 @@
+@smallexample
+
+------------
+-- @i{update --}
+------------
+
+@b{procedure} Update
+  (This : @b{in} @b{out} Partition.Shared_Data_I;
+   I : Partition.Message)
+@b{is}
+@b{begin}
+   PolyORB.Tasking.Mutexes.Enter
+     (This.Mutex);
+   Repository.Update
+     (Field => This.Field,
+      I => I);
+   PolyORB.Tasking.Mutexes.Leave
+     (This.Mutex);
+@b{end} Update;
+
+@end smallexample

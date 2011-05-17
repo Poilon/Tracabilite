@@ -1,0 +1,1040 @@
+<html lang="en">
+<head>
+<title>Standard AADL property files - Ocarina: A Compiler for the AADL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Ocarina: A Compiler for the AADL">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="AADL-modes-for-Emacs-and-vim.html#AADL-modes-for-Emacs-and-vim" title="AADL modes for Emacs and vim">
+<link rel="next" href="Ocarina-AADL-property-files.html#Ocarina-AADL-property-files" title="Ocarina AADL property files">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+Copyright (C) 2003-2007 E'cole
+nationale supe'rieure des te'le'communications
+
+Permission is granted to make and distribute verbatim copies of this
+entire document without royalty provided the copyright notice and
+this permission are preserved.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+body {}
+body {
+	background-color: white;
+	position: absolute;
+	font-size: medium;
+	font-family: Verdana;
+//	padding-left: 7em;
+	top: 3em;
+}
+
+div.navigation {
+	font-size: small; 
+	padding-left: 0; 
+	padding-right: 0; 
+	text-align: right
+}
+
+div#menu {
+	text-align: left;
+	position: fixed;
+	left: 1pt;
+	bottom: auto;
+	top: 2em;
+	right: auto;
+	padding-right: 1ex;
+	padding-left: 1em;
+	padding-top: 1ex;
+	padding-bottom: 1ex;
+	border-width: 3pt;
+	background-color: transparent;  
+	border-color: red; 
+	border-left-style: solid
+}
+
+div#menu span.item {
+	display: block;
+	background-color: transparent;  
+}
+
+table.navigation {
+	font-size: small
+} 
+
+
+/* Paragraphs */
+p, blockquote {
+	color: black; 
+	text-indent: 1em; 
+	text-align: justify
+}
+
+
+p {
+	margin-bottom: .5em; 
+	margin-top: 1px
+}
+
+p kbd 
+{
+  background-color: ivory
+}
+
+div.important {
+	background-color: lightgray; 
+	border-color: red; 
+	border-style: solid;  
+	border-width: 1pt
+}
+p.important {
+	color: red
+}
+p.brut {
+	text-indent: 0
+}
+p.brut:first-letter {
+	font-size: 100%; 
+	font-weight: normal
+}
+
+/* Sections */
+div {
+	border-style: none; 
+	padding-left: 1em; 
+	padding-right: 1em; 
+	margin-top: 2px; 
+	margin-bottom: 2px
+}
+
+
+/* Menus */
+
+div.action {
+	background-color: ivory; 
+	border-color: lightgray; 
+	border-style: solid; 
+	border-width: 1pt 1pt 1pt 1pt; 
+	font-size: small; 
+	text-align: left
+}
+
+div.special 
+{
+  border-color: lightgray; 
+  border-style: solid; 
+  border-width: 0 0 0 4pt
+}
+
+
+/* Docbook special settings */
+
+h3.subtitle {
+	text-align: center
+}
+
+h1.title {
+	margin-bottom: 10pt;
+}
+
+div.authorgroup {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	display: block;
+}
+
+div.author {
+	display: inline;
+}
+
+h3.author {
+	display: inline;
+	font-style: normal;
+	color: black;
+	font-size: medium;
+}
+
+p.copyright {
+	margin-top: 1em;
+	text-align: center;
+}
+
+/* End docbook settings */
+
+
+/* hors-texte */
+
+pre {
+	background-color: whitesmoke;
+	border-color: lightcoral;
+	border-style: solid;
+	border-width: 0pt 1pt 1pt 0pt;
+}
+
+.hors-texte {
+	background-color: lightgray;  
+	border-color: lightcoral; 
+	border-style: solid;
+	border-width: 1pt; 
+	padding-left: 1em; 	
+	padding-right: 1em; 
+	text-align: justify
+}
+
+/* Tables */
+
+table.hors-texte {
+	margin: auto; 
+	font-size: 100%;
+	border-width: 1pt 1pt 1pt 1pt
+}
+
+table.hors-texte td {
+	padding-left: 1ex; 
+	padding-right: 1ex
+}
+
+table.hors-texte tr.sep {
+	padding-top: 1ex
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold;
+  padding: 0pt
+}
+
+h1 {
+	font-size: larger larger larger;
+	text-align: center; 
+	margin-bottom: 24pt
+}
+h2 {
+	font-size: larger larger;
+	margin-left:      0; 
+	margin-top:       24pt; 
+	margin-bottom:    14pt;
+	border-color:     red;
+	border-bottom-style:     solid;
+	border-width:     1pt;
+	padding:          2pt; 
+	margin-left:      0; 
+	margin-right:     0; 
+}
+h3 {
+	font-size: larger;
+	margin-left: 1em; 
+	margin-bottom: 1ex;
+	color: red;	
+}
+h4, h5, h6 {
+	font-size: normal;
+	margin-left: 2em; 
+	margin-bottom: 1em
+}
+
+h4 {
+	text-decoration: underlined
+}
+h5 {
+	font-style: italic
+}
+
+
+h2.special 
+{
+  border-style:     solid;
+  border-width:	    1pt;
+  border-color:     lightgray;
+  padding:          2pt; 
+}
+
+img.flottant {
+	float: right;
+	clear: both;
+	margin: 2em;
+}
+
+/* Lists */
+
+li, dd 
+{
+  text-align: justify
+}
+
+dt {
+	font-style: normal; 
+	margin-top: 1em
+}
+dd {
+	font-style: normal; 
+	margin-left: 4em
+}
+
+dd.sdd {
+	margin-left: 5em
+}
+
+dd ul {margin-top: 0}
+li dl {margin-top: 0}
+ul {list-style-type: square}
+ul ul {list-style-type: disc}
+ul ul ul {list-style-type: circle}
+
+/* Addresses */
+
+address {
+	margin-top: 1ex; margin-bottom: 1ex
+}
+address.poste {
+	font-style: italic
+}
+address.email {
+	font-style: normal
+}
+address.phone {
+	font-style: oblic
+}
+
+/* Links */
+
+a:link, a:visited {
+	color: darkred;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color:  red;
+	padding-bottom: 0px
+}
+
+a:hover, a:active {
+	color: red; 
+	text-decoration: none;
+	border-bottom-color: black;
+	border-bottom-style: solid
+}
+
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Standard-AADL-property-files"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Ocarina-AADL-property-files.html#Ocarina-AADL-property-files">Ocarina AADL property files</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="AADL-modes-for-Emacs-and-vim.html#AADL-modes-for-Emacs-and-vim">AADL modes for Emacs and vim</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="appendix">Appendix A Standard AADL property files</h2>
+
+<!--  -->
+<h3 class="section">A.1 AADL Project</h3>
+
+<pre class="smallexample">     
+     --******************************************************
+     -- <i>  AADL Standard AADL_V1.0</i>
+     -- <i> Appendix A (normative)</i>
+     -- <i> Predeclared Property Sets</i>
+     -- <i> 03Nov04</i>
+     -- <i> Revised 14May06</i>
+     --******************************************************
+     
+     <b>property</b> <b>set</b> AADL_Project <b>is</b>
+     
+       Default_Active_Thread_Handling_Protocol : <b>constant</b>
+          Supported_Active_Thread_Handling_Protocols =&gt; abort;
+       -- <i>one of the choices of Supported_Active_Thread_Handling_Protocols.</i>
+     
+       Supported_Active_Thread_Handling_Protocols: <b>type</b> <b>enumeration</b>
+         (abort,
+          complete_one_flush_queue,
+          complete_one_transfer_queue,
+          complete_one_preserve_queue,
+          complete_all);
+       -- <i>a subset may be supported.</i>
+     
+       Supported_Connection_Protocols: <b>type</b> <b>enumeration</b>
+         (HTTP,
+          HTTPS,
+          UDP,
+          IP_TCP);
+       -- <i>The following are example protocols.</i>
+       -- <i>(HTTP, HTTPS, UDP, IP_TPC);</i>
+     
+       Supported_Concurrency_Control_Protocols: <b>type</b> <b>enumeration</b>
+         (NoneSpecified,
+          Read_Only,
+          Protected_Access,
+          Priority_Ceiling);
+       -- <i>phf : NoneSpecified instead of None</i>
+       -- <i>The following are example concurrency control protocols.</i>
+       -- <i>(Interrupt_Masking, Maximum_Priority, Priority_Inheritance,</i>
+       -- <i> Priority_Ceiling)</i>
+     
+       Supported_Dispatch_Protocols: <b>type</b> <b>enumeration</b>
+         (Periodic,
+          Aperiodic,
+          Sporadic,
+          Hybrid,
+          Background);
+       -- <i>The following are protocols for which the semantics are defined.</i>
+       -- <i>(Periodic, Sporadic, Aperiodic, Hybrid, Background);</i>
+     
+       Supported_Hardware_Source_Languages: <b>type</b> <b>enumeration</b>
+         (VHDL);
+       -- <i>The following is an example hardware description language.</i>
+       -- <i>(VHDL)</i>
+     
+       -- <i>phf A26: added</i>
+       Supported_Queue_Processing_Protocols: <b>type</b> <b>enumeration</b>
+         (FIFO);
+       -- <i>The Supported_Queue_Processing_Protocols property enumeration</i>
+       -- <i>type specifies the set of queue processing protocols that are</i>
+       -- <i>supported.</i>
+     
+       Supported_Scheduling_Protocols: <b>type</b> <b>enumeration</b>
+         (PARAMETRIC_PROTOCOL,
+          EARLIEST_DEADLINE_FIRST_PROTOCOL,
+          LEAST_LAXITY_FIRST_PROTOCOL,
+          RATE_MONOTONIC_PROTOCOL,
+          DEADLINE_MONOTONIC_PROTOCOL,
+          ROUND_ROBIN_PROTOCOL,
+          TIME_SHARING_BASED_ON_WAIT_TIME_PROTOCOL,
+          POSIX_1003_HIGHEST_PRIORITY_FIRST_PROTOCOL,
+          D_OVER_PROTOCOL,
+          MAXIMUM_URGENCY_FIRST_BASED_ON_LAXITY_PROTOCOL,
+          MAXIMUM_URGENCY_FIRST_BASED_ON_DEADLINE_PROTOCOL,
+          TIME_SHARING_BASED_ON_CPU_USAGE_PROTOCOL,
+          NO_SCHEDULING_PROTOCOL,
+          HIERARCHICAL_CYCLIC_PROTOCOL,
+          HIERARCHICAL_ROUND_ROBIN_PROTOCOL,
+          HIERARCHICAL_FIXED_PRIORITY_PROTOCOL,
+          HIERARCHICAL_PARAMETRIC_PROTOCOL);
+       -- <i>The following are example scheduling protocols.</i>
+       -- <i>(RMS, EDF, Sporadicserver, SlackServer, ARINC653)</i>
+     
+       Supported_Source_Languages: <b>type</b> <b>enumeration</b>
+         (Ada95,
+          Ada,     -- <i>alias for Ada95</i>
+          Ada05,   -- <i>alias for Ada95</i>
+          ASN1,
+          C,
+          Lustre,
+          Lustre5, -- <i>alias for Lustre</i>
+          Lustre6, -- <i>alias for Lustre</i>
+          RTSJ,    -- <i>Real Time Specification for Java</i>
+          SCADE6,  -- <i>alias for Lustre</i>
+          SDL,
+          Simulink,
+          Simulink_6_5);
+       -- <i>The following are example software source languages.</i>
+       -- <i>( Ada95, C, Simulink_6_5 )</i>
+     
+       Max_Aadlinteger: <b>constant</b> <b>aadlinteger</b> =&gt; 2#1#e32;
+     
+       Max_Base_Address: <b>constant</b> <b>aadlinteger</b> =&gt; 512;
+     
+       Max_Memory_Size: <b>constant</b> <b>aadlinteger</b> Size_Units =&gt; 2#1#e32 B;
+     
+       Max_Queue_Size: <b>constant</b> <b>aadlinteger</b> =&gt; 512;
+     
+       Max_Thread_Limit: <b>constant</b> <b>aadlinteger</b> =&gt; 32;
+     
+       Max_Time: <b>constant</b> <b>aadlinteger</b> Time_Units =&gt; 1000 hr;
+     
+       Max_Urgency: <b>constant</b> <b>aadlinteger</b> =&gt; 12;
+     
+       Max_Word_Count: <b>constant</b> <b>aadlinteger</b> =&gt; 2#1#e32;
+     
+       Max_Word_Space: <b>constant</b> <b>aadlinteger</b> =&gt; 64;
+     
+       Size_Units	: <b>type</b> <b>units</b> (
+         Bits,
+         B     =&gt; Bits  * 8,
+         KB    =&gt; B     * 1000,
+         MB    =&gt; KB    * 1000,
+         GB    =&gt; MB    * 1000);
+     
+       Time_Units : <b>type</b> <b>units</b> (
+         ps,
+         Ns    =&gt; ps  * 1000,
+         Us    =&gt; Ns  * 1000,
+         Ms    =&gt; Us  * 1000,
+         Sec   =&gt; Ms  * 1000,
+         Min   =&gt; Sec * 60,
+         Hr    =&gt; Min * 60);
+     
+     <b>end</b> AADL_Project;
+     
+</pre>
+<h3 class="section">A.2 AADL Properties</h3>
+
+<pre class="smallexample">     
+     --******************************************************
+     -- <i>  AADL Standard AADL_V1.0</i>
+     -- <i> Appendix A (normative)</i>
+     -- <i> Predeclared Property Sets</i>
+     -- <i> 03Nov04</i>
+     -- <i> Update to reflect current standard on 28Mar06</i>
+     --******************************************************
+     
+     <b>property</b> <b>set</b> AADL_Properties <b>is</b>
+     
+       ----------------------------------------------------
+       ----------------------------------------------------
+       Activate_Deadline: Time
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Activate_Execution_Time: Time_Range
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Activate_Entrypoint: <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Active_Thread_Handling_Protocol: <b>in</b>herit
+         Supported_Active_Thread_Handling_Protocols
+       =&gt; <b>value</b>(Default_Active_Thread_Handling_Protocol)
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>);
+       ----------------------------------------------------
+     
+       Active_Thread_Queue_Handling_Protocol: <b>in</b>herit <b>enumeration</b>
+         (flush,
+          hold)
+       =&gt; flush
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>);
+       ----------------------------------------------------
+     
+       Actual_Connection_Binding: <b>in</b>herit <b>list</b> <b>of</b> <b>reference</b>
+         (bus,
+          <b>process</b>or,
+          <b>device</b>)
+       <b>applies</b> <b>to</b>
+         (port <b>connections</b>,
+          <b>port</b> <b>group</b> <b>connections</b>,  -- <i> ENST: Added</i>
+          <b>thread</b>,
+          <b>thread</b> <b>group</b>,
+          <b>process</b>,
+          <b>system</b>);
+       ----------------------------------------------------
+     
+       Actual_Latency: Time
+       <b>applies</b> <b>to</b> (flow);
+       ----------------------------------------------------
+     
+       Actual_Memory_Binding: <b>in</b>herit <b>reference</b> (memory)
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, process, <b>system</b>, <b>process</b>or,
+       <b>data</b> port, <b>event</b> <b>data</b> <b>port</b>, <b>subprogram</b>);
+       ----------------------------------------------------
+     
+       Actual_Processor_Binding: <b>in</b>herit <b>reference</b> (processor)
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>);
+       -----------------------------------------------------
+     
+       Actual_Subprogram_Call: <b>reference</b> (server <b>subprogram</b>)
+       <b>applies</b> <b>to</b> (subprogram);
+       -----------------------------------------------------
+     
+       Actual_Subprogram_Call_Binding: <b>in</b>herit <b>list</b> <b>of</b> <b>reference</b>
+         (bus,
+          <b>process</b>or,
+          <b>memory</b>,
+          <b>device</b>)
+       <b>applies</b> <b>to</b> (subprogram);
+       -----------------------------------------------------
+     
+       Actual_Throughput: Data_Volume
+       <b>applies</b> <b>to</b> (flow);
+       -----------------------------------------------------
+     
+       Aggregate_Data_Port: <b>aadlboolean</b> =&gt; <b>false</b>
+       <b>applies</b> <b>to</b> (port <b>group</b>);
+       ----------------------------------------------------
+     
+       Allowed_Access_Protocol: <b>list</b> <b>of</b> <b>enumeration</b>
+         (Memory_Access,
+          Device_Access)
+       <b>applies</b> <b>to</b> (bus);
+       ----------------------------------------------------
+     
+       Allowed_Connection_Binding: <b>in</b>herit <b>list</b> <b>of</b> <b>reference</b>
+         (bus,
+          <b>process</b>or,
+          <b>device</b>)
+       <b>applies</b> <b>to</b> (port <b>connections</b>, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>);
+       ----------------------------------------------------
+     
+       Allowed_Connection_Binding_Class: <b>in</b>herit <b>list</b> <b>of</b> <b>classifier</b>
+         (processor,
+          <b>bus</b>,
+          <b>device</b>)
+       <b>applies</b> <b>to</b> (port <b>connections</b>, thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>);
+       ----------------------------------------------------
+     
+       Allowed_Connection_Protocol: <b>list</b> <b>of</b> <b>enumeration</b>
+         (Data_Connection,
+          Event_Connection,
+          Event_Data_Connection,
+          Data_Access_Connection,
+          Server_Subprogram_Call)
+       <b>applies</b> <b>to</b> (bus, <b>device</b>);
+       ----------------------------------------------------
+     
+       Allowed_Dispatch_Protocol: <b>list</b> <b>of</b> Supported_Dispatch_Protocols
+       <b>applies</b> <b>to</b> (processor);
+       ----------------------------------------------------
+     
+       Allowed_Memory_Binding: <b>in</b>herit <b>list</b> <b>of</b> <b>reference</b>
+         (memory,
+          <b>system</b>,
+          <b>process</b>or)
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>, <b>device</b>, <b>data</b> <b>port</b>,
+       <b>event</b> <b>data</b> <b>port</b>, <b>subprogram</b>, <b>process</b>or);
+       ----------------------------------------------------
+     
+       Allowed_Memory_Binding_Class: <b>in</b>herit <b>list</b> <b>of</b> <b>classifier</b>
+         (memory,
+          <b>system</b>,
+          <b>process</b>or)
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>, <b>device</b>, <b>data</b> <b>port</b>,
+       <b>event</b> <b>data</b> <b>port</b>, <b>subprogram</b>, <b>process</b>or);
+       ----------------------------------------------------
+     
+       Allowed_Message_Size: Size_Range
+       <b>applies</b> <b>to</b> (bus);
+       ----------------------------------------------------
+     
+       Allowed_Period: <b>list</b> <b>of</b> Time_Range
+       <b>applies</b> <b>to</b> (processor, <b>system</b>);
+       ----------------------------------------------------
+     
+       Allowed_Processor_Binding: <b>in</b>herit <b>list</b> <b>of</b> <b>reference</b>
+         (processor,
+          <b>system</b>)
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>, <b>device</b>);
+       ----------------------------------------------------
+     
+       Allowed_Processor_Binding_Class: <b>in</b>herit <b>list</b> <b>of</b> <b>classifier</b>
+         (processor,
+          <b>system</b>)
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>, <b>device</b>);
+       ----------------------------------------------------
+     
+       Allowed_Subprogram_Call: <b>list</b> <b>of</b> <b>reference</b>
+         (server <b>subprogram</b>)
+       <b>applies</b> <b>to</b> (subprogram);
+       ----------------------------------------------------
+     
+       Allowed_Subprogram_Call_Binding: <b>in</b>herit <b>list</b> <b>of</b> <b>reference</b>
+         (bus,
+          <b>process</b>or,
+          <b>device</b>)
+       <b>applies</b> <b>to</b> (subprogram, thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>);
+       ----------------------------------------------------
+     
+       Assign_Time: Time
+       <b>applies</b> <b>to</b> (processor, <b>bus</b>);
+       ----------------------------------------------------
+     
+       Assign_Byte_Time: Time
+       <b>applies</b> <b>to</b> (processor, <b>bus</b>);
+       ----------------------------------------------------
+     
+       Assign_Fixed_Time: Time
+       <b>applies</b> <b>to</b> (processor, <b>bus</b>);
+       ----------------------------------------------------
+     
+       Available_Memory_Binding: <b>in</b>herit <b>list</b> <b>of</b> <b>reference</b>
+         (memory,
+          <b>system</b>)
+       <b>applies</b> <b>to</b> (system);
+       ----------------------------------------------------
+     
+       Available_Processor_Binding: <b>in</b>herit <b>list</b> <b>of</b> <b>reference</b>
+         (processor,
+          <b>system</b>)
+       <b>applies</b> <b>to</b> (system);
+       ----------------------------------------------------
+     
+       Base_Address: <b>access</b> <b>aadlinteger</b> 0 .. <b>value</b>(Max_Base_Address)
+       <b>applies</b> <b>to</b> (memory);
+       ----------------------------------------------------
+     
+       Client_Subprogram_Execution_Time: Time
+       <b>applies</b> <b>to</b> (subprogram);
+       ----------------------------------------------------
+     
+       Clock_Jitter: Time
+       <b>applies</b> <b>to</b> (processor, <b>system</b>);
+       ----------------------------------------------------
+     
+       Clock_Period: Time
+       <b>applies</b> <b>to</b> (processor, <b>system</b>);
+       ----------------------------------------------------
+     
+       Clock_Period_Range: Time_Range
+       <b>applies</b> <b>to</b> (processor, <b>system</b>);
+       ----------------------------------------------------
+     
+       Compute_Deadline: Time
+       <b>applies</b> <b>to</b> (thread, <b>device</b>, <b>subprogram</b>, event port, <b>event</b> <b>data</b> <b>port</b>);
+       ----------------------------------------------------
+     
+       Compute_Entrypoint: <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (thread, <b>subprogram</b>, event port, <b>event</b> <b>data</b> <b>port</b>);
+       ----------------------------------------------------
+     
+       Compute_Execution_Time: Time_Range
+       <b>applies</b> <b>to</b> (thread, <b>device</b>, <b>subprogram</b>, event port, <b>event</b> <b>data</b> <b>port</b>);
+       ----------------------------------------------------
+     
+       Concurrency_Control_Protocol: Supported_Concurrency_Control_Protocols
+         =&gt; NoneSpecified
+       <b>applies</b> <b>to</b> (data);
+       ----------------------------------------------------
+     
+       Connection_Protocol: Supported_Connection_Protocols
+       <b>applies</b> <b>to</b> (connections);
+       ----------------------------------------------------
+     
+       Data_Volume: <b>type</b> <b>aadlinteger</b> 0 bitsps .. <b>value</b>(Max_Aadlinteger)
+       <b>units</b>
+         (bitsps,
+          Bps    =&gt; bitsps * 8,
+          Kbps   =&gt; Bps    * 1000,
+          Mbps   =&gt; Kbps   * 1000,
+          Gbps   =&gt; Mbps   * 1000 );
+       ----------------------------------------------------
+     
+       Deactivate_Deadline: Time
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Deactivate_Execution_Time: Time_Range
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Deactivate_Entrypoint: <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Deadline: <b>in</b>herit Time =&gt; <b>value</b>(Period)
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>, <b>device</b>);
+       ----------------------------------------------------
+     
+       Dequeue_Protocol: <b>enumeration</b>
+         (OneItem,
+          AllItems)
+          =&gt; OneItem
+       <b>applies</b> <b>to</b> (event port, <b>event</b> <b>data</b> <b>port</b>);
+       ----------------------------------------------------
+     
+       Device_Dispatch_Protocol: Supported_Dispatch_Protocols
+         =&gt; Aperiodic
+       <b>applies</b> <b>to</b> (device);
+       ----------------------------------------
+     
+       Device_Register_Address: <b>aadlinteger</b>
+       <b>applies</b> <b>to</b> (port, <b>port</b> <b>group</b>);
+       ----------------------------------------------------
+     
+       Dispatch_Protocol: Supported_Dispatch_Protocols
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Expected_Latency: Time
+       <b>applies</b> <b>to</b> (flow);
+       ----------------------------------------------------
+     
+       Expected_Throughput: Data_Volume
+       <b>applies</b> <b>to</b> (flow);
+       ----------------------------------------------------
+     
+       Finalize_Deadline: Time
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Finalize_Execution_Time: Time_Range
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Finalize_Entrypoint: <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Hardware_Description_Source_Text: <b>in</b>herit <b>list</b> <b>of</b> <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (memory, <b>bus</b>, <b>device</b>, <b>process</b>or, <b>system</b>);
+       ----------------------------------------------------
+     
+       Hardware_Source_Language: Supported_Hardware_Source_Languages
+       <b>applies</b> <b>to</b> (memory, <b>bus</b>, <b>device</b>, <b>process</b>or, <b>system</b>);
+       ----------------------------------------------------
+     
+       Initialize_Deadline: Time
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Initialize_Execution_Time: Time_Range
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Initialize_Entrypoint: <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Latency: Time
+       <b>applies</b> <b>to</b> (flow, <b>connections</b>);
+       ----------------------------------------------------
+     
+       Load_Deadline: Time
+       <b>applies</b> <b>to</b> (process, <b>system</b>);
+       ----------------------------------------------------
+     
+       Load_Time: Time_Range
+       <b>applies</b> <b>to</b> (process, <b>system</b>);
+       ----------------------------------------------------
+     
+       Memory_Protocol: <b>enumeration</b>
+         (read_only,
+          write_only,
+          read_write)
+          =&gt; read_write
+       <b>applies</b> <b>to</b> (memory);
+       ----------------------------------------------------
+     
+       Not_Collocated: <b>list</b> <b>of</b> <b>reference</b>
+         (data,
+          <b>thread</b>,
+          <b>process</b>,
+          <b>system</b>,
+          <b>connections</b>)
+       <b>applies</b> <b>to</b> (data, <b>thread</b>, <b>process</b>, <b>system</b>, <b>connections</b>);
+       ----------------------------------------------------
+     
+       Overflow_Handling_Protocol: <b>enumeration</b>
+         (DropOldest,
+          DropNewest,
+          Error)
+          =&gt; DropOldest
+       <b>applies</b> <b>to</b> (event port, <b>event</b> <b>data</b> <b>port</b>, <b>subprogram</b>);
+       ----------------------------------------------------
+     
+       Period: <b>in</b>herit Time
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>, <b>device</b>);
+       ----------------------------------------------------
+     
+       Process_Swap_Execution_Time: Time_Range
+       <b>applies</b> <b>to</b> (processor);
+       ----------------------------------------------------
+     
+       Propagation_Delay: Time_Range
+       <b>applies</b> <b>to</b> (bus);
+       ----------------------------------------------------
+     
+       Provided_Access : <b>access</b> <b>enumeration</b>
+         (read_only,
+          write_only,
+          read_write,
+          by_method)
+          =&gt; read_write
+       <b>applies</b> <b>to</b> (data, <b>bus</b>);
+       ----------------------------------------------------
+     
+       Queue_Processing_Protocol: Supported_Queue_Processing_Protocols
+         =&gt; FIFO
+       <b>applies</b> <b>to</b> (event port, <b>event</b> <b>data</b> <b>port</b>, <b>subprogram</b>);
+       ----------------------------------------------------
+     
+       Queue_Size: <b>aadlinteger</b> 0 .. <b>value</b>(Max_Queue_Size)
+         =&gt; 0
+       <b>applies</b> <b>to</b> (event port, <b>event</b> <b>data</b> <b>port</b>, <b>subprogram</b>);
+       ----------------------------------------------------
+     
+       Read_Time: <b>list</b> <b>of</b> Time_Range
+       <b>applies</b> <b>to</b> (memory);
+       ----------------------------------------------------
+     
+       Recover_Deadline: Time
+       <b>applies</b> <b>to</b> (thread, <b>server</b> <b>subprogram</b>);
+       ----------------------------------------------------
+     
+       Recover_Execution_Time: Time_Range
+       <b>applies</b> <b>to</b> (thread, <b>server</b> <b>subprogram</b>);
+       ----------------------------------------------------
+     
+       Recover_Entrypoint: <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (thread);
+       ----------------------------------------------------
+     
+       Required_Access : <b>access</b> <b>enumeration</b>
+         (read_only,
+          write_only,
+          read_write,
+          by_method)
+          =&gt; read_write
+       <b>applies</b> <b>to</b> (data, <b>bus</b>);
+       ----------------------------------------------------
+     
+       Required_Connection : <b>aadlboolean</b> =&gt; <b>true</b>
+       <b>applies</b> <b>to</b> (port);
+       ----------------------------------------------------
+     
+       Runtime_Protection : <b>in</b>herit <b>aadlboolean</b> =&gt; <b>true</b>
+       <b>applies</b> <b>to</b> (process, <b>system</b>);
+       ----------------------------------------------------
+     
+       Scheduling_Protocol: <b>list</b> <b>of</b> Supported_Scheduling_Protocols
+       <b>applies</b> <b>to</b> (processor);
+       ----------------------------------------------------
+     
+       Server_Subprogram_Call_Binding: <b>in</b>herit <b>list</b> <b>of</b> <b>reference</b>
+         (thread,
+          <b>process</b>or)
+       <b>applies</b> <b>to</b> (subprogram, thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>);
+       ----------------------------------------------------
+       Size: <b>type</b> <b>aadlinteger</b> 0 B .. <b>value</b> (Max_Memory_Size) <b>units</b> Size_Units;
+     
+       -- <i> OLD DECLARATION:</i>
+       -- <i> Size: type aadlinteger 0 B .. value (Max_Memory_Size);</i>
+       -- <i> This is wrong according to the AADL standard 1.0 page 150:</i>
+     
+       -- <i> "An aadlinteger property type represents an integer value or an</i>
+       -- <i> integer value and its measurement unit.  If an units clause is</i>
+       -- <i> present, then the value is a pair of values, and unit may only</i>
+       -- <i> be one of the enumeration literals specified in the units</i>
+       -- <i> clause. *IF AN UNITS CLAUSE IS ABSENT, THEN THE VALUE IS AN</i>
+       -- <i> INTEGER VALUE*. If a simple range is present, then the integer</i>
+       -- <i> value must be an element of the specified range"</i>
+     
+       ----------------------------------------------------
+       Size_Range: <b>type</b> <b>range</b> <b>of</b> Size;
+       ----------------------------------------------------
+     
+       Source_Code_Size: Size
+       <b>applies</b> <b>to</b> (data, thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>, <b>subprogram</b>,
+       <b>process</b>or, <b>device</b>);
+       ----------------------------------------------------
+     
+       Source_Data_Size: Size
+       <b>applies</b> <b>to</b> (data, <b>subprogram</b>, thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>,
+       <b>process</b>or, <b>device</b>);
+       ----------------------------------------------------
+     
+       Source_Heap_Size: Size
+       <b>applies</b> <b>to</b> (thread, <b>subprogram</b>);
+       ----------------------------------------------------
+     
+       Source_Language: <b>in</b>herit Supported_Source_Languages
+       <b>applies</b> <b>to</b> (subprogram, <b>data</b>, thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>bus</b>,
+       <b>device</b>, <b>process</b>or, <b>system</b>);
+       ----------------------------------------------------
+     
+       Source_Name: <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (data, <b>port</b>, <b>subprogram</b>, <b>parameter</b>);
+       ----------------------------------------------------
+     
+       Source_Stack_Size: Size
+       <b>applies</b> <b>to</b> (thread, <b>subprogram</b>, <b>process</b>or, <b>device</b>);
+       ----------------------------------------------------
+     
+       Source_Text: <b>in</b>herit <b>list</b> <b>of</b> <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (data, <b>port</b>, <b>subprogram</b>, thread, <b>thread</b> <b>group</b>, <b>process</b>,
+       <b>system</b>, <b>memory</b>, <b>bus</b>, <b>device</b>, <b>process</b>or, <b>parameter</b>, <b>port</b> <b>group</b>);
+       ----------------------------------------------------
+     
+       Startup_Deadline: <b>in</b>herit Time
+       <b>applies</b> <b>to</b> (processor, <b>system</b>);
+       ----------------------------------------------------
+     
+       Subprogram_Execution_Time: Time_Range
+       <b>applies</b> <b>to</b> (subprogram);
+       ----------------------------------------------------
+     
+       Supported_Source_Language: <b>list</b> <b>of</b> Supported_Source_Languages
+       <b>applies</b> <b>to</b> (processor, <b>system</b>);
+       ----------------------------------------------------
+     
+       Synchronized_Component: <b>in</b>herit <b>aadlboolean</b> =&gt; <b>true</b>
+       <b>applies</b> <b>to</b> (thread, <b>thread</b> <b>group</b>, <b>process</b>, <b>system</b>);
+       ----------------------------------------------------
+     
+       Thread_Limit: <b>aadlinteger</b> 0 .. <b>value</b>(Max_Thread_Limit)
+         =&gt; <b>value</b>(Max_Thread_Limit)
+       <b>applies</b> <b>to</b> (processor);
+       ----------------------------------------------------
+     
+       Thread_Swap_Execution_Time: Time_Range
+       <b>applies</b> <b>to</b> (processor, <b>system</b>);
+       ----------------------------------------------------
+     
+       Throughput: Data_Volume
+       <b>applies</b> <b>to</b> (flow, <b>connections</b>);
+       ----------------------------------------------------
+     
+       Time: <b>type</b> <b>aadlinteger</b> 0 ps .. <b>value</b>(Max_Time) <b>units</b> Time_Units;
+     
+       -- <i> OLD DECLARATION:</i>
+       -- <i> Time: type aadlinteger 0 ps .. value(Max_Time);</i>
+       -- <i> This is wrong according to the AADL standard 1.0 page 150:</i>
+     
+       -- <i> "An aadlinteger property type represents an integer value or an</i>
+       -- <i> integer value and its measurement unit.  If an units clause is</i>
+       -- <i> present, then the value is a pair of values, and unit may only</i>
+       -- <i> be one of the enumeration literals specified in the units</i>
+       -- <i> clause. *IF AN UNITS CLAUSE IS ABSENT, THEN THE VALUE IS AN</i>
+       -- <i> INTEGER VALUE*. If a simple range is present, then the integer</i>
+       -- <i> value must be an element of the specified range"</i>
+     
+       ------------------------------------------------------
+     
+       Time_Range: <b>type</b> <b>range</b> <b>of</b> Time;
+       ------------------------------------------------------
+     
+       Transmission_Time: <b>list</b> <b>of</b> Time_Range
+       <b>applies</b> <b>to</b> (bus);
+       ------------------------------------------------------
+     
+       Type_Source_Name: <b>aadlstring</b>
+       <b>applies</b> <b>to</b> (data, <b>port</b>, <b>subprogram</b>);
+       ------------------------------------------------------
+     
+       Urgency: <b>aadlinteger</b> 0 .. <b>value</b>(Max_Urgency)
+       <b>applies</b> <b>to</b> (port);
+       ----------------------------------------------------
+     
+       Word_Count: <b>aadlinteger</b> 0 .. <b>value</b>(Max_Word_Count)
+       <b>applies</b> <b>to</b> (memory);
+       ----------------------------------------------------
+     
+       Word_Size: Size =&gt; 8 bits
+       <b>applies</b> <b>to</b> (memory);
+       ----------------------------------------------------
+     
+       Word_Space: <b>aadlinteger</b> 1 .. <b>value</b>(Max_Word_Space) =&gt; 1
+       <b>applies</b> <b>to</b> (memory);
+       ----------------------------------------------------
+     
+       Write_Time: <b>list</b> <b>of</b> Time_Range
+       <b>applies</b> <b>to</b> (memory);
+       ----------------------------------------------------
+       ----------------------------------------------------
+     <b>end</b> AADL_Properties;
+     
+</pre>
+<!--  -->
+</body></html>
+

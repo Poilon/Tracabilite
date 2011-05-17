@@ -1,0 +1,227 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrvvnnnnnrnnnnnnnvnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.real_expander%b  ocarina-real_expander.adb  49556a6d NE OO PK IS
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.analyzer%s	ocarina-analyzer.adb	ocarina-analyzer.ali
+W ocarina.analyzer.real%s  ocarina-analyzer-real.adb  ocarina-analyzer-real.ali
+W ocarina.analyzer.real.finder%s  ocarina-analyzer-real-finder.adb  ocarina-analyzer-real-finder.ali
+W ocarina.builder%s	ocarina-builder.ads	ocarina-builder.ali
+W ocarina.builder.real%s  ocarina-builder-real.adb  ocarina-builder-real.ali
+W ocarina.me_real%s	ocarina-me_real.ads	ocarina-me_real.ali
+W ocarina.me_real.real_tree%s  ocarina-me_real-real_tree.ads  ocarina-me_real-real_tree.ali
+W ocarina.me_real.real_tree.nodes%s  ocarina-me_real-real_tree-nodes.adb  ocarina-me_real-real_tree-nodes.ali
+W ocarina.me_real.real_tree.nutils%s  ocarina-me_real-real_tree-nutils.adb  ocarina-me_real-real_tree-nutils.ali
+W ocarina.me_real.real_tree.utils%s  ocarina-me_real-real_tree-utils.adb  ocarina-me_real-real_tree-utils.ali
+W ocarina.real_values%s	ocarina-real_values.adb	ocarina-real_values.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ocarina.real_expander%s  ocarina-real_expander.ads  3bc30c71 EE NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-charac.ads		20070912115821 506ce725
+D a-chahan.ads		20090409150019 dcb15e96
+D a-except.ads		20090727140100 34786013
+D a-finali.ads		20090409150019 bfd2ca79
+D a-filico.ads		20090409150019 4ff02a40
+D a-ioexce.ads		20091130110856 2504b9d2
+D a-llftio.ads		20070406091342 8fa2a9b5
+D a-llftio.ads		20070406091342 8fa2a9b5
+D a-numeri.ads		20080324174807 1cf3e608
+D a-ngelfu.ads		20070406091342 46fb4d9b
+D a-stream.ads		20090409150019 34aca5be
+D a-tags.ads		20090409150019 bfa07446
+D a-textio.ads		20091028140912 7065b2f2
+D a-tiflau.ads		20090409150019 ce2abdd4
+D a-tiflio.ads		20090409150019 5d91823c
+D a-tiflio.adb		20090409150019 e2036cd2
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D charset.ads		20110516190003 5a17a088
+D gnat.ads		20050905075125 96410e68
+D g-dyntab.ads		20091130102047 277b5efb
+D g-dyntab.adb		20091130100732 3f2c9838
+D g-hesorg.ads		20070606102831 9218d3cf
+D g-os_lib.ads		20090409150019 c015094d
+D g-speche.ads		20090417131547 4ca03910
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D interfac.ads		20090409150019 a69cad5c
+D i-cstrea.ads		20090409150019 e1e064a9
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D namet.adb		20110516190003 6b7d4c38
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-aadl_values.ads  20110516190002 2db3d7ef
+D ocarina-analyzer.ads	20110516190002 f99eba76
+D ocarina-analyzer-real.ads  20110516190002 f48dcf2b
+D ocarina-analyzer-real-finder.ads  20110516190002 aaff929b
+D ocarina-builder.ads	20110516190002 04a77d1b
+D ocarina-builder-real.ads  20110516190002 cefe1905
+D ocarina-files.ads	20110516190002 e29905b0
+D ocarina-instances.ads	20110516190002 f54a56e8
+D ocarina-instances-real_checker.ads  20110516190002 1c5a6973
+D ocarina-instances-real_checker-queries.ads  20110516190002 39efe8bd
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-aadl_tree.ads  20110516190002 4be6b0c7
+D ocarina-me_aadl-aadl_tree-nodes.ads  20110516191754 5cf9a699
+D ocarina-me_real.ads	20110516190002 4b14dbfa
+D ocarina-me_real-real_tree.ads  20110516190002 1be7d4ef
+D ocarina-me_real-real_tree-debug.ads  20110516190002 b3ce8d89
+D ocarina-me_real-real_tree-nodes.ads  20110516191755 fbcd7f5f
+D ocarina-me_real-real_tree-nutils.ads  20110516190002 f29d8eba
+D ocarina-me_real-real_tree-utils.ads  20110516190002 81c4b8ab
+D ocarina-me_real-tokens.ads  20110516190002 e09e1416
+D ocarina-real_expander.ads  20110516190002 659d830c
+D ocarina-real_expander.adb  20110516190002 53e758c7
+D ocarina-real_values.ads  20110516190002 7385c372
+D ocarina-real_values.adb  20110516190002 3c3202fd
+D output.ads		20110516190003 77634540
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-crtl.ads		20091130102047 bf835650
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-exnllf.ads		20090409150019 47d2870b
+D s-fatgen.ads		20090409150019 87841279
+D s-fatgen.adb		20091130102823 b3f7146b
+D s-fatllf.ads		20090409150019 67594a9a
+D s-ficobl.ads		20090409150019 8bb681e5
+D s-finimp.ads		20090409150019 90fd9896
+D s-finroo.ads		20090409150019 1408f9d1
+D s-imenne.ads		20090417131547 ef3ea0ac
+D s-imgint.ads		20090409150019 f77d133c
+D s-imgllu.ads		20090409150019 cdaaf4dd
+D s-imgllu.adb		20090409150019 332e1f63
+D s-imguns.ads		20090409150019 f4154b29
+D s-imguns.adb		20090409150019 af7fdd2a
+D s-memory.ads		20090417131547 c68306b3
+D s-os_lib.ads		20091027135146 6320e1c3
+D s-parame.ads		20091130110856 6cdeed25
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-secsta.ads		20090707124243 d2c357fb
+D s-soflin.ads		20090729085153 61e5c9e8
+D s-stache.ads		20090417130712 481f9e9d
+D s-stalib.ads		20090422095703 9cbc334a
+D s-stoele.ads		20090417130712 a4d57c26
+D s-stoele.adb		20090417130712 49ef69d7
+D s-stratt.ads		20090409150019 fef7c1da
+D s-string.ads		20090417130712 14d97e8c
+D s-traent.ads		20090417130712 a66ef260
+D s-unstyp.ads		20090409150019 c0f9fae5
+D s-wchcon.ads		20090417130712 30c48dc1
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 32 namet.ads
+38K9*Namet 237e10 56|40w6 48r8
+104V13*Name_Find{92|184I9} 56|190r26
+153U14*Set_Str_To_Name_Buffer 56|189r13
+X 34 ocarina.ads
+34K9*Ocarina 63e12 55|36r9 47r5 56|34r6 35r6 36r6 37r6 38r6 39r6 42r14 43r8
+. 44r8 45r8 46r8 47r8 185r14 198r5
+X 36 ocarina-analyzer.ads
+36K17*Analyzer 56e21 56|38r14 47r16
+X 37 ocarina-analyzer-real.ads
+36K26*REAL 60e26 56|38r23 47r25
+X 38 ocarina-analyzer-real-finder.ads
+38K31*Finder 57e33 56|38w28 47r30
+46V13*Compute_Expression_Type{92|218I9} 56|84r21 133r27
+54b4*Is_Dependant{boolean} 56|114m13 156r16
+X 39 ocarina-builder.ads
+34K17*Builder 35e20 56|37r14 46r16
+X 40 ocarina-builder-real.ads
+38K25*REAL 54e25 56|37w22 46r24
+42V13*Make_Set{92|197I9} 56|150r20
+46V13*Make_Set_Reference{92|197I9} 56|88r17 93r17 143r20
+48V13*Make_Anonymous_Set{92|197I9} 56|86r17 142r20
+50V13*Make_Variable{92|197I9} 56|100r20 122r26 166r29 173r29 191r26
+X 48 ocarina-me_real.ads
+34K17*ME_REAL 35e20 56|34r14 35r14 36r14 43r16 44r16 45r16
+X 49 ocarina-me_real-real_tree.ads
+34K25*REAL_Tree 35e30 56|34r22 35r22 36r22 43r24 44r24 45r24
+X 51 ocarina-me_real-real_tree-nodes.ads
+12K35*Nodes 572e36 56|34w32 43r34
+21n7*K_Set_Reference{14E9} 56|85r29
+39n7*K_Set_Declaration{14E9} 56|108r27
+41n7*K_Theorem{14E9} 56|57r39 68r33
+370V13*Kind{14E9} 56|57r22 68r22 85r10 108r13
+376V13*Next_Node{92|197I9} 56|179r18
+379V13*Name{92|184I9} 56|101r10 118r25 122r41 165r28 172r28
+382V13*First_Node{92|197I9} 56|70r31
+391V13*Identifier{92|197I9} 56|101r16 118r31
+398U14*Set_Set_Reference 56|90r10 95r10
+407U14*Set_Set_Expression 56|87r10
+413U14*Set_Dependant 56|157r16
+415V13*Referenced_Set{92|197I9} 56|94r35
+416U14*Set_Referenced_Set 56|89r10 94r10 144r13 151r13
+425U14*Set_Var_Type 56|102r7 123r13 192r13
+434U14*Set_Referenced_Var 56|103r7 124r13 167r16 174r16
+439V13*Var_Ref{92|197I9} 56|165r34 167r36 172r34 174r36
+442V13*Is_Global{92|218I9} 56|163r16
+490V13*Variable_Ref{92|197I9} 56|103r27
+493V13*Range_Variable{92|197I9} 56|90r29 95r29 101r28
+496V13*Range_Set{92|197I9} 56|83r19
+502V13*Parametrized_Expr{92|197I9} 56|118r43
+511V13*Local_Variable{92|197I9} 56|122r47 124r33
+515U14*Set_Local_Set 56|145r13
+517V13*Local_Set_Expression{92|197I9} 56|134r16
+520V13*Range_Declaration{92|197I9} 56|83r30 90r45 95r45 101r44 103r41
+523V13*Declarations{92|210I9} 56|70r43
+532V13*Used_Set{92|210I9} 56|91r36 146r39 152r39
+535V13*Used_Var{92|210I9} 56|104r39 168r48 193r45
+X 52 ocarina-me_real-real_tree-nutils.ads
+42K35*Nutils 106e37 56|36w32 45r34
+86U14*Append_Variable_To_Global_Variables 56|175r16
+101U14*Append_Node_To_List 56|91r10 104r7 146r13 152r13 168r16 193r13
+X 53 ocarina-me_real-real_tree-utils.ads
+40K35*Utils 184e36 56|35w32 44r34
+146N4*RT_Element 56|102r32 123r38
+149N4*RT_Unknown 56|192r38
+X 55 ocarina-real_expander.ads
+36K17*REAL_Expander 34|34k9 55|47l13 47e26 56|42b22 198l13 198t26
+39U14*Expand 39>22 40<22 56|54b14 60l8 60t14
+39i22 Theorem{92|197I9} 56|54b22 57r28 59r29
+40b22 Success{boolean} 56|55b22 59m38
+44U14*Build_Used_Sets_List 44>36 44<49 56|59r7 66b14 196l8 196t28
+44i36 R{92|197I9} 56|66b36 68r28 70r57 83r49 90r64 91r46 95r64 101r63 103r60
+. 104r49 146r49 152r49 168r58 193r55
+44b49 Success{boolean} 56|66b49 79m7 136m16
+X 56 ocarina-real_expander.adb
+70i7 Decl{92|197I9} 106r22 108r19 118r62 122r63 124r49 134r38 145r28 151r33
+. 163r27 165r43 167r45 172r43 174r45 179m10 179r29
+71i7 Expr_Value{92|218I9} 84m7 86r37 133m13 135r16 142r40 150r40
+72i7 Set_Name{92|184I9} 118m13 150r30 165m16 166r44 172m16 173r44
+73i7 Set{92|197I9} 86m10 87r30 89r35 91r31 142m13 144r38 146r34 150m13 151r39
+. 152r34 157r31
+74i7 Interval{92|197I9} 83m7 84r46 85r16 87r35 94r51
+75i7 Ref{92|197I9} 88m10 89r30 90r69 93m10 94r30 95r69 143m13 144r33 145r34
+76i7 Range_Var{92|197I9} 100m7 102r21 103r65 104r28
+77i7 Local_Var{92|197I9} 122m13 123r27 124r56 166m16 167r52 168r37 173m16
+. 174r52 175r53 191m13 192r27 193r34
+186i10 Arg_Name{92|184I9} 190m13 191r41
+188i14 I{integer} 189r54
+X 57 ocarina-real_values.ads
+37K17*REAL_Values 56|39w14 185r22 57|188e24
+135V13*Image{string} 56|189r47
+X 92 types.ads
+36K9*Types 55|34w6 37r8 92|306e10
+51I9*Int<integer>
+184I9*Name_Id<integer> 56|72r20 186r21
+197I9*Node_Id<51I9> 55|39r32 44r40 56|54r32 66r40 70r20 73r20 74r20 75r20
+. 76r20 77r20
+200V13*Present{boolean} 56|106r13
+210I9*List_Id<197I9>
+218I9*Value_Id<51I9> 56|71r20 135r29 157r36 163r35
+

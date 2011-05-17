@@ -1,0 +1,61 @@
+system type_tree
+end type_tree;
+
+system implementation type_tree.impl
+subcomponents
+  sn : process sender_only.simple;
+  
+  -- first level
+
+  tr1 : process bool_transmitter_p.impl_1 {Deployment::port_number => 4001;};
+  tr2 : process int_transmitter_p.impl_1 {Deployment::port_number => 4002;};
+  tr3 : process float_transmitter_p.impl_1 {Deployment::port_number => 4003;};
+  tr4 : process str_transmitter_p.impl_1 {Deployment::port_number => 4004;};
+
+  -- second level (simple receivers)
+
+  r1 : process bool_receiver_p.impl_1 {Deployment::port_number => 4005;};
+  r2 : process int_receiver_p.impl_1 {Deployment::port_number => 4006;};
+  r3 : process float_receiver_p.impl_1 {Deployment::port_number => 4007;};
+  r4 : process str_receiver_p.impl_1 {Deployment::port_number => 4008;};
+
+  -- second level (record transmitter and receiver)
+  
+  tr5 : process record_transmitter_p.impl_1 {Deployment::port_number => 4009;};
+  r5  : process record_receiver_p.impl_1 {Deployment::port_number => 4010;};
+
+  proc_1 : processor a_processor;
+connections
+  --  Sender <-> Simple Transmitters
+  event data port sn.msg_out -> tr1.msg_in;
+  event data port sn.msg_out -> tr2.msg_in;
+  event data port sn.msg_out -> tr3.msg_in;
+  event data port sn.msg_out -> tr4.msg_in;
+
+  --  Simple Transmitters <-> Simple receivers
+  event data port tr1.msg_out -> r1.msg_in;
+  event data port tr2.msg_out -> r2.msg_in;
+  event data port tr3.msg_out -> r3.msg_in;
+  event data port tr4.msg_out -> r4.msg_in;
+
+  --  Simple Transmitters <-> Record Transmitter
+  event data port tr1.msg_out -> tr5.msg_in_bool;
+  event data port tr2.msg_out -> tr5.msg_in_int;
+  event data port tr3.msg_out -> tr5.msg_in_float;
+  event data port tr4.msg_out -> tr5.msg_in_str;
+
+  --  Record Transmitter <-> Record Receiver
+  event data port tr5.msg_out_rec -> r5.msg_in;
+properties
+  actual_processor_binding => reference proc_1 applies to sn;
+  actual_processor_binding => reference proc_1 applies to tr1;
+  actual_processor_binding => reference proc_1 applies to tr2;
+  actual_processor_binding => reference proc_1 applies to tr3;
+  actual_processor_binding => reference proc_1 applies to tr4;
+  actual_processor_binding => reference proc_1 applies to tr5;
+  actual_processor_binding => reference proc_1 applies to r1;
+  actual_processor_binding => reference proc_1 applies to r2;
+  actual_processor_binding => reference proc_1 applies to r3;
+  actual_processor_binding => reference proc_1 applies to r4;
+  actual_processor_binding => reference proc_1 applies to r5;
+end type_tree.impl;

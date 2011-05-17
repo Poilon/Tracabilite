@@ -1,0 +1,108 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.be_aadl.components.prototypes%b  ocarina-be_aadl-components-prototypes.adb  b33956c7 NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.be_aadl%s	ocarina-be_aadl.adb	ocarina-be_aadl.ali
+W ocarina.be_aadl.components%s  ocarina-be_aadl-components.adb  ocarina-be_aadl-components.ali
+W ocarina.be_aadl.identifiers%s  ocarina-be_aadl-identifiers.adb  ocarina-be_aadl-identifiers.ali
+W ocarina.me_aadl%s	ocarina-me_aadl.ads	ocarina-me_aadl.ali
+W ocarina.me_aadl.aadl_tree%s  ocarina-me_aadl-aadl_tree.ads  ocarina-me_aadl-aadl_tree.ali
+W ocarina.me_aadl.aadl_tree.nodes%s  ocarina-me_aadl-aadl_tree-nodes.adb  ocarina-me_aadl-aadl_tree-nodes.ali
+W output%s		output.adb		output.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+
+U ocarina.be_aadl.components.prototypes%s  ocarina-be_aadl-components-prototypes.ads  a3970b0b EE NE OO PK IS
+W ocarina.be_aadl.components%s  ocarina-be_aadl-components.adb  ocarina-be_aadl-components.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D gnat.ads		20050905075125 96410e68
+D g-os_lib.ads		20090409232307 c015094d
+D g-table.ads		20080408064830 4cacb2f1
+D locations.ads		20110516190003 a3dd4cff
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-be_aadl.ads	20110516190004 1e80fdef
+D ocarina-be_aadl-components.ads  20110516190004 51db025c
+D ocarina-be_aadl-components-prototypes.ads  20110516190004 f24c0957
+D ocarina-be_aadl-components-prototypes.adb  20110516190004 85af77f7
+D ocarina-be_aadl-identifiers.ads  20110516190004 ef40cbbe
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-aadl_tree.ads  20110516190002 4be6b0c7
+D ocarina-me_aadl-aadl_tree-nodes.ads  20110516191754 5cf9a699
+D ocarina-me_aadl-tokens.ads  20110516190002 dd4fcdfa
+D output.ads		20110516190003 77634540
+D system.ads		20110401034433 15e10948
+D s-assert.ads		20090409232307 5f25a194
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-os_lib.ads		20090409232307 719f619c
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-stalib.ads		20090409232307 52b793d5
+D s-string.ads		20090409232307 04f2ee70
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 8 ocarina.ads
+34K9*Ocarina 63e12 11|34r9 40r6 12|36r6 37r6 39r14 42r8 43r8 44r8 91r5
+X 9 ocarina-be_aadl.ads
+40K17*BE_AADL 8|34k9 9|87e20 11|34r17 40r14 12|37r14 39r22 43r16 44r16 91r13
+69U14 Print_Token 12|65r7 80r7
+76U14 Print_Item_Refined_To 12|56r7
+X 10 ocarina-be_aadl-components.ads
+34K25*Components 9|40k17 10|41e31 11|34r25 40r22 12|39r30 43r24 91r21
+39U14*Print_Component_Category 12|58r7 82r7
+X 11 ocarina-be_aadl-components-prototypes.ads
+34K36*Prototypes 10|34k25 11|40l33 40e43 12|39b41 91l32 91t42
+36U14*Print_Prototype 36>31 12|50b14 67l8 67t23
+36i31 Node{26|197I9} 12|50b31 51r28 52r55 56r30 58r43
+38U14*Print_Prototype_Bindings 38>40 12|73b14 89l8 89t32
+38i40 Node{26|197I9} 12|73b40 74r28 75r55 78r37 82r43
+X 12 ocarina-be_aadl-components-prototypes.adb
+52i7 Class_Ref{26|197I9} 60r19 62r34
+75i7 Class_Ref{26|197I9} 84r19 86r34
+X 13 ocarina-be_aadl-identifiers.ads
+34K25*Identifiers 12|37w22 44r24 13|41e32
+36U14*Print_Identifier 12|78r7
+39U14*Print_Entity_Reference 12|62r10 86r10
+X 14 ocarina-me_aadl.ads
+34K17*ME_AADL 12|36r14 42r16 14|102e20
+X 15 ocarina-me_aadl-aadl_tree.ads
+34K25*AADL_Tree 12|36r22 42r24 15|35e30
+X 16 ocarina-me_aadl-aadl_tree-nodes.ads
+12K35*Nodes 12|36w32 42r34 16|1877e36
+38n7*K_Prototype{14E9} 12|51r36
+39n7*K_Binding_Prototype{14E9} 12|74r36
+1427V13*Kind{14E9} 12|51r22 74r22
+1466V13*Identifier{26|197I9} 12|78r25
+1535V13*Category{26|68M9} 12|58r33 82r33
+1583V13*Entity_Ref{26|197I9} 12|52r43 75r43
+X 17 ocarina-me_aadl-tokens.ads
+59n7*T_Semicolon{40E9} 12|65r20
+64n7*T_Association{40E9} 12|80r20
+X 18 output.ads
+42K9*Output 12|34w6 41r8 18|105e11
+70U14*Write_Eol 12|66r7
+102U14*Write_Indentation 12|55r7
+103U14*Write_Space 12|57r7 61r10 79r7 81r7 85r10
+X 26 types.ads
+51I9*Int<integer>
+68M9*Byte
+197I9*Node_Id<51I9> 11|36r38 38r47 12|50r38 52r32 73r47 75r32
+200V13*Present{boolean} 12|60r10 84r10
+

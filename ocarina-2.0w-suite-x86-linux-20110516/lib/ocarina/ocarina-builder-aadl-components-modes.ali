@@ -1,0 +1,134 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.builder.aadl.components.modes%b  ocarina-builder-aadl-components-modes.adb  f89dbac4 NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.builder.aadl.components%s  ocarina-builder-aadl-components.adb  ocarina-builder-aadl-components.ali
+W ocarina.me_aadl%s	ocarina-me_aadl.ads	ocarina-me_aadl.ali
+W ocarina.me_aadl.aadl_tree%s  ocarina-me_aadl-aadl_tree.ads  ocarina-me_aadl-aadl_tree.ali
+W ocarina.me_aadl.aadl_tree.nodes%s  ocarina-me_aadl-aadl_tree-nodes.adb  ocarina-me_aadl-aadl_tree-nodes.ali
+W ocarina.me_aadl.aadl_tree.nutils%s  ocarina-me_aadl-aadl_tree-nutils.adb  ocarina-me_aadl-aadl_tree-nutils.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+
+U ocarina.builder.aadl.components.modes%s  ocarina-builder-aadl-components-modes.ads  0ede7880 EE NE OO PK IS
+W ocarina.builder.aadl.components%s  ocarina-builder-aadl-components.adb  ocarina-builder-aadl-components.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-builder.ads	20110516190002 04a77d1b
+D ocarina-builder-aadl.ads  20110516190002 ad3a7356
+D ocarina-builder-aadl-components.ads  20110516190002 c8abd019
+D ocarina-builder-aadl-components-modes.ads  20110516190002 c675a899
+D ocarina-builder-aadl-components-modes.adb  20110516190002 1a894e23
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-aadl_tree.ads  20110516190002 4be6b0c7
+D ocarina-me_aadl-aadl_tree-nodes.ads  20110516191754 5cf9a699
+D ocarina-me_aadl-aadl_tree-nutils.ads  20110516190002 7898fae7
+D ocarina-me_aadl-aadl_tree-nutils.adb  20110516190002 1764ba82
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-memory.ads		20090417131547 c68306b3
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-stalib.ads		20090422095703 9cbc334a
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+D utils.ads		20110516190003 96e9264b
+X 6 locations.ads
+36K9*Locations 74e14 12|76r13 13|70r13 109r13 137r13
+38R9*Location 47e14 12|49r13 63r13 76r23 13|70r23 109r23 137r23
+X 8 ocarina.ads
+34K9*Ocarina 63e12 12|37r9 82r5 13|34r6 35r6 37r14 48r11 49r11 55r20 61r28
+. 75r11 76r11 113r11 114r11 115r11 143r11 144r11 145r11 160r5
+X 9 ocarina-builder.ads
+34K17*Builder 8|34k9 9|35e20 12|37r17 82r13 13|37r22 113r19 143r19 160r13
+X 10 ocarina-builder-aadl.ads
+34K25*AADL 9|34k17 10|35e25 12|37r25 82r21 13|37r30 113r27 143r27 160r21
+X 11 ocarina-builder-aadl-components.ads
+39K30*Components 10|34k25 11|213e36 12|37r30 82r26 13|37r35 113r32 143r32
+. 160r26
+140V13*Add_Mode{boolean} 13|95r18 123r18
+141i7 Component{25|197I9} 13|123r28
+142i7 Mode{25|197I9} 13|123r52
+X 12 ocarina-builder-aadl-components-modes.ads
+37K41*Modes 11|39k30 12|82l37 82e42 13|37b46 160l37 160t42
+39V13*Add_Property_Association{boolean} 40>7 41>7 13|43b13 63l8 63t32
+40i7 Mode{25|197I9} 13|44b7 51r22 52r37 55r64 56r26 61r72
+41i7 Property_Association{25|197I9} 13|45b7 53r22 57r52 60r28
+48V13*Add_New_Mode{25|197I9} 49>7 50>7 51>7 13|69b13 102l8 102t20
+49r7 Loc{6|38R9} 13|70b7 86r73 88r33
+50i7 Identifier{25|197I9} 13|71b7 78r22 79r37 89r29 90r33
+51i7 Component{25|197I9} 13|72b7 80r22 81r38 82r36 95r28
+62V13*Add_New_Mode_Transition{25|197I9} 63>7 64>7 13|108b13 130l8 130t31
+63r7 Loc{6|38R9} 13|109b7 120r63
+64i7 Component{25|197I9} 13|110b7 117r22 118r37 123r41
+75V13*Add_New_Mode_Transition_Trigger{25|197I9} 76>7 77>7 78>7 79>7 13|136b13
+. 158l8 158t39
+76r7 Loc{6|38R9} 13|137b7 149r71
+77i7 Identifier{25|197I9} 13|138b7 147r22 152r29
+78b7 Is_Self{boolean} 13|139b7 153r26
+79b7 Is_Processor{boolean} 13|140b7 154r31
+X 13 ocarina-builder-aadl-components-modes.adb
+84i7 Node{25|197I9} 88m7 89r23 90r45 92r27 93r49 93r56 95r39 98r17
+85b7 Success{boolean} 95m7 97r10
+86i7 Property_Scop{25|197I9} 92r33
+120i7 Node{25|197I9} 123r60 126r17
+121b7 Success{boolean} 123m7 125r10
+149i7 Node{25|197I9} 152r23 153r20 154r25 156r14
+X 14 ocarina-me_aadl.ads
+34K17*ME_AADL 13|34r14 35r14 48r19 49r19 55r28 61r36 75r19 76r19 114r19 115r19
+. 144r19 145r19 14|102e20
+X 15 ocarina-me_aadl-aadl_tree.ads
+34K25*AADL_Tree 13|34r22 35r22 48r27 49r27 55r36 61r44 75r27 76r27 114r27
+. 115r27 144r27 145r27 15|35e30
+X 16 ocarina-me_aadl-aadl_tree-nodes.ads
+12K35*Nodes 13|34w32 48r37 55r46 61r54 75r37 114r37 144r37 16|1877e36
+16n7*K_List_Id{14E9} 13|57r36
+18n7*K_Scope_Definition{14E9} 13|86r53
+19n7*K_Identifier{14E9} 13|79r51
+34n7*K_Component_Type{14E9} 13|82r49
+35n7*K_Component_Implementation{14E9} 13|81r51 118r50
+48n7*K_Mode{14E9} 13|52r45 88r25
+49n7*K_Mode_Transition{14E9} 13|120r44
+51n7*K_Mode_Transition_Trigger{14E9} 13|149r44
+1427V13*Kind{14E9} 13|52r31 79r31 81r32 82r30 118r31
+1430V13*Loc{6|38R9} 13|57r47
+1443U14*Set_Corresponding_Entity 13|90r7 93r7
+1467U14*Set_Identifier 13|89r7 152r7
+1472V13*Property_Scope{25|197I9} 13|93r33
+1473U14*Set_Property_Scope 13|92r7
+1520V13*Properties{25|210I9} 13|55r52 61r60
+1521U14*Set_Properties 13|56r10
+1644U14*Set_Is_Self 13|153r7
+1647U14*Set_Is_Processor 13|154r7
+X 17 ocarina-me_aadl-aadl_tree-nutils.ads
+38K35*Nutils 13|35w32 49r37 76r37 115r37 145r37 17|120e37
+50U14*Append_Node_To_List 13|60r7
+76V13*Is_Empty{boolean} 13|55r10
+86V13*New_Node{25|197I9} 13|86r43 88r15 120r34 149r34
+89V13*New_List{25|210I9} 13|57r26
+X 25 types.ads
+36K9*Types 12|77r20 80r13 13|44r14 45r30 71r20 72r19 73r13 110r19 111r13
+. 138r20 141r13 25|306e10
+51I9*Int<integer>
+197I9*Node_Id<51I9> 12|40r14 41r30 50r20 51r19 52r13 64r19 65r13 77r26 80r19
+. 13|44r20 45r36 71r26 72r25 73r19 84r14 86r32 110r25 111r19 120r23 138r26
+. 141r19 149r23
+198i4*No_Node{197I9} 13|51r30 53r46 78r36 80r35 100r17 117r35 128r17 147r36
+210I9*List_Id<197I9>
+

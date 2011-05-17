@@ -1,0 +1,338 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnvnnvnrvnvnrvvnnnnnrnnnnvnnvnnrnnnnnnnnnnvnnvnvvnnnnnnnnnnnnnnn
+
+U ocarina.fe_aadl_ba.lexer%b  ocarina-fe_aadl_ba-lexer.adb  22775dc4 OO PK IS
+W ada%s			ada.ads			ada.ali
+W ada.characters%s	a-charac.ads		a-charac.ali
+W ada.characters.handling%s  a-chahan.adb	a-chahan.ali
+W charset%s		charset.adb		charset.ali
+W errors%s		errors.adb		errors.ali
+W interfaces%s		interfac.ads		interfac.ali
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.aadl_values%s	ocarina-aadl_values.adb	ocarina-aadl_values.ali
+W ocarina.fe_aadl_ba%s	ocarina-fe_aadl_ba.adb	ocarina-fe_aadl_ba.ali
+W system.img_uns%s	s-imguns.adb		s-imguns.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.string_ops%s	s-strops.adb		s-strops.ali
+W system.string_ops_concat_3%s  s-sopco3.adb	s-sopco3.ali
+W system.string_ops_concat_4%s  s-sopco4.adb	s-sopco4.ali
+W system.unsigned_types%s  s-unstyp.ads		s-unstyp.ali
+
+U ocarina.fe_aadl_ba.lexer%s  ocarina-fe_aadl_ba-lexer.ads  5e50eac0 EE OO PK IS
+W locations%s		locations.adb		locations.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.fe_aadl_ba%s	ocarina-fe_aadl_ba.adb	ocarina-fe_aadl_ba.ali
+W ocarina.files%s	ocarina-files.adb	ocarina-files.ali
+W ocarina.me_aadl_ba%s	ocarina-me_aadl_ba.ads	ocarina-me_aadl_ba.ali
+W ocarina.me_aadl_ba.tokens%s  ocarina-me_aadl_ba-tokens.adb  ocarina-me_aadl_ba-tokens.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-charac.ads		20070912115821 506ce725
+D a-chahan.ads		20090409232307 dcb15e96
+D a-except.ads		20090409232307 b54b55de
+D a-unccon.ads		20070406091342 51e09df2
+D charset.ads		20110516190003 5a17a088
+D errors.ads		20110516190003 7675b7de
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20080408064830 4cacb2f1
+D interfac.ads		20090409232307 a69cad5c
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-aadl_values.ads  20110516190002 2db3d7ef
+D ocarina-fe_aadl_ba.ads  20110516190002 17ec478e
+D ocarina-fe_aadl_ba-lexer.ads  20110516190002 73b097f9
+D ocarina-fe_aadl_ba-lexer.adb  20110516190002 6c98e416
+D ocarina-files.ads	20110516190002 e29905b0
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-aadl_tree.ads  20110516190002 4be6b0c7
+D ocarina-me_aadl-aadl_tree-nodes.ads  20110516191754 5cf9a699
+D ocarina-me_aadl_ba.ads  20110516190002 34273658
+D ocarina-me_aadl_ba-tokens.ads  20110516190002 4d271924
+D system.ads		20110401034433 15e10948
+D s-imguns.ads		20090409232307 f4154b29
+D s-parame.ads		20090409232307 f32e56e9
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-secsta.ads		20090409232307 7bae3621
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 1 ada.ads
+16K9*Ada 19e8 17|34r6 175r16 227r16 651r19
+X 2 a-charac.ads
+16K13*Characters 18e19 17|34r10 175r20 227r20 651r23
+X 3 a-chahan.ads
+36K24*Handling 144e28 17|34w21 175r31 227r31 651r34
+46V13*Is_Graphic{boolean} 17|651r43
+63V13*To_Upper{character} 17|175r40 227r40
+X 6 charset.ads
+34K9*Charset 52e12 17|36w6 356r11 682r11
+36V13*Is_Alphabetic_Character{boolean} 17|875r19
+39V13*Is_Identifier_Character{boolean} 17|377r13
+44V13*To_Lower{character} 17|370r32 378r35
+X 7 errors.ads
+38K9*Errors 73e11 17|37w6 46r8
+41U14*DE=41:38 17|190r16 208r10 241r16 259r10 298r10 346r10 440r16 447r16
+. 491r19 655r19 659r22 879r19
+43U14*DW=43:38 17|329r16 541r19 553r19 567r22 585r13 593r10
+62a4*Error_Loc(11|38R9) 17|189m16 207m10 240m16 258m10 297m10 328m16 345m10
+. 439m16 446m16 490m19 540m19 552m19 566m22 584m13 592m10 654m19 878m19
+X 11 locations.ads
+36K9*Locations 74e14 16|37w6 37r25
+38R9*Location 47e14 16|49r27 58r52 61r38 64r37 17|425r22 602r19 896r16
+43i7*Last_Pos{38|124I9} 17|689m25
+44i7*Scan{38|124I9} 17|175r73 182m28 182r51 198m28 198r51 227r73 233m28 233r51
+. 249m28 249r51 280r39 288m28 288r51 290m28 290r51 315r39 321r51 322m37 322r60
+. 336m28 336r51 338m28 338r51 370r65 373r72 375m22 375r45 377r61 378r68 382r35
+. 384m25 384r48 433r39 436m28 436r51 461r48 464r53 471m37 471r60 487r45 494m34
+. 494r57 499r44 502m28 502r51 517r39 520m28 520r51 521r42 526m31 526r54 530m34
+. 530r57 601r55 614r26 619r67 637r39 646m28 646r51 658r37 663m31 663r54 689r52
+. 690r28 695r38 700m31 700r54 704m31 704r54 708m31 708r54 712m31 712r54 716m31
+. 716r54 720m31 720r54 724m31 724r54 728m31 728r54 730r42 732r45 733m34 733r57
+. 740m31 740r54 742r42 743m34 743r57 745r45 746m37 746r60 756m31 756r54 760m31
+. 760r54 762r42 763m34 763r57 770m31 770r54 772r42 773m34 773r57 775r45 776m34
+. 776r57 783m31 783r54 787m31 787r54 788r42 789m34 789r57 796m31 796r54 800m31
+. 800r54 802r42 803m34 803r57 805r45 806m34 806r57 813m31 813r54 817m31 817r54
+. 818r42 819m34 819r57 820r45 821m37 821r60 824m37 824r60 832m31 832r54 833r42
+. 834m34 834r57 835r45 836m37 836r60 839m37 839r60 847m31 847r54 851m31 851r54
+. 855m31 855r54 859m31 859r54 860r42 861m34 861r57 868m31 868r54 875r67 879r63
+. 881m34 881r57
+45i7*EOF{38|124I9} 17|658r59 690r50
+X 12 namet.ads
+38K9*Namet 237e10 17|38w6 45r8
+64i4*Name_Len{natural} 17|365m7 406m10 635m7 670r10
+78V13*Get_Name_String{string} 17|124r37 151r32
+87V13*Get_Name_Table_Byte{38|68M9} 17|390r12
+104V13*Name_Find{38|184I9} 17|388r21 390r33 412r32 620r28 673r34
+124U14*Add_Char_To_Name_Buffer 17|370r7 378r10 409r13 642r16 652r19
+149U14*Add_Str_To_Name_Buffer 17|368r7
+153U14*Set_Str_To_Name_Buffer 17|619r10
+X 13 ocarina.ads
+34K9*Ocarina 63e12 16|39r6 40r6 40r37 42r9 49r44 59r14 62r14 65r14 68r14
+. 86r5 17|40r6 42r14 47r8 134r17 141r17 441r22 448r22 557r26 938r5
+X 14 ocarina-aadl_values.ads
+40K17*AADL_Values 149e24 17|40w14 134r25 141r25 441r30 448r30 557r34
+107V13*Power{long_long_float} 17|557r46
+114V13*Image{string} 17|441r42 448r42
+120V13*Image{string} 17|134r37
+126V13*Image{string} 17|141r37
+X 15 ocarina-fe_aadl_ba.ads
+36K17*FE_AADL_BA 13|34k9 15|46e23 16|42r17 86r13 17|42r22 938r13
+X 16 ocarina-fe_aadl_ba-lexer.ads
+42K28*Lexer 15|36k17 16|86l24 86e29 17|42b33 938l24 938t29
+48e4*Token{23|40E9} 17|122r12 127r45 130r47 155r27 172m7 192m16 209m10 224m7
+. 243m16 260m10 277m7 299m10 312m7 347m10 394m13 400m10 432r10 443m16 450m16
+. 460r19 474r25 505r16 537r16 576m13 578m13 608r13 608r31 623m7 668m7 684m7
+. 686r13 691m13 705m16 709m16 713m16 717m16 721m16 725m16 734m19 736m19 747m22
+. 749m22 752m19 757m16 764m19 766m19 774m19 777m19 779m19 784m16 790m19 792m19
+. 797m16 804m19 807m19 809m19 814m16 822m22 825m22 828m19 837m22 840m22 843m19
+. 848m16 852m16 856m16 862m19 864m19 869m16 898r10 902r13 906r13 908r16 913r21
+. 920r10
+49r4*Token_Location=49:58{11|38R9} 17|175r58 182r13 182r36 189r33 198r13
+. 198r36 207r27 227r58 233r13 233r36 240r33 249r13 249r36 258r27 280r24 288r13
+. 288r36 290r13 290r36 297r27 315r24 321r36 322r22 322r45 328r33 336r13 336r36
+. 338r13 338r36 345r27 370r50 373r57 375r7 375r30 377r46 378r53 382r20 384r10
+. 384r33 433r24 436r13 436r36 439r33 446r33 461r33 464r38 471r22 471r45 487r30
+. 490r36 494r19 494r42 499r29 502r13 502r36 517r24 520r13 520r36 521r27 526r16
+. 526r39 530r19 530r42 540r36 552r36 584r30 592r27 601r40 637r24 646r13 646r36
+. 654r36 658r22 658r44 663r16 663r39 689r10 689r37 690r13 690r35 695r23 700r16
+. 700r39 704r16 704r39 708r16 708r39 712r16 712r39 716r16 716r39 720r16 720r39
+. 724r16 724r39 728r16 728r39 730r27 732r30 733r19 733r42 740r16 740r39 742r27
+. 743r19 743r42 745r30 746r22 746r45 756r16 756r39 760r16 760r39 762r27 763r19
+. 763r42 770r16 770r39 772r27 773r19 773r42 775r30 776r19 776r42 783r16 783r39
+. 787r16 787r39 788r27 789r19 789r42 796r16 796r39 800r16 800r39 802r27 803r19
+. 803r42 805r30 806r19 806r42 813r16 813r39 817r16 817r39 818r27 819r19 819r42
+. 820r30 821r22 821r45 824r22 824r45 832r16 832r39 833r27 834r19 834r42 835r30
+. 836r22 836r45 839r22 839r45 847r16 847r39 851r16 851r39 855r16 855r39 859r16
+. 859r39 860r27 861r19 861r42 868r16 868r39 875r52 878r36 879r48 881r19 881r42
+. 896r28
+50i4*Token_Name{38|184I9} 17|388m7 393r13
+51i4*Token_Display_Name{38|184I9} 17|124r54 412m10
+52i4*String_Literal_Value{38|184I9} 17|147r16 151r49 671m10 673m10
+53i4*Raw_Text_Value{38|184I9} 17|617m10 620m10
+55V13*Current_Token_Image{string} 17|120b13 157l8 157t27
+58V13*Load_File=59:28{11|38R9}
+58i24 File_Name{38|184I9}
+61U14*Save_Lexer=62:28 17|525r16 605r10 903r10
+61r26 State{11|38R9}
+64U14*Restore_Lexer=65:28 17|609r13 923r10
+64r29 State{11|38R9}
+67V13*End_Of_File=68:28{boolean}
+70U14*Scan_Token 17|606r10 681b14 885l8 885t18 904r10
+73U14*Scan_Raw_Text 73>29 17|600b14 624l8 624t21
+73e29 T{23|40E9} 17|600b29 608r21
+77U14*Skip_Tokens 78>7 79>7 17|891b14 925l8 925t19 934r10
+78e7 Delimiter{23|40E9} 17|892b7 898r18 913r29
+79b7 Include_Delimiter{boolean} 17|893b7 921r21
+83U14*Skip_Tokens 83>27 17|931b14 936l8 936t19
+83a27 Delimiters{23|176A9} 17|931b27 933r20 934r23
+X 17 ocarina-fe_aadl_ba-lexer.adb
+49a4 Prefix{string} 368r31
+53a4 Display_Name_Buffer{string} 373m7 381m10 409r38
+56i4 Display_Name_Len{natural} 372m7 373r28 380m10 380r30 381r31 408r24
+59m4 Max_Integer_Value{38|259M9} 583r37
+62U14 Scan_Based_Fraction_Value 62>41 163b14 211l8 211t33 472r22
+62m41 Base{38|250M9} 163b41 171r57 188r25 191r48 202r49
+66U14 Scan_Based_Integer_Value 66>40 217b14 262l8 262t32 458r16
+66m40 Base{38|250M9} 217b40 239r25 242r48 252r59
+71U14 Scan_Decimal_Fraction_Value 268b14 301l8 301t35 503r13
+74U14 Scan_Decimal_Integer_Value 307b14 349l8 349t34 428r7 535r13
+83U14 Scan_Identifier 355b14 414l8 414t23 876r19
+96U14 Scan_Numeric_Literal_Value 420b14 594l8 594t34 872r16
+105U14 Scan_String_Literal_Value 630b14 675l8 675t33 701r16
+164e7 Ch{character} 175m10 177r13 178r37 179r16 180r37 181r16 187r13 190r33
+. 208r35
+165i7 Size{integer} 197m13 197r21 206r10
+166m7 Digit{38|250M9} 178m13 180m13 188r16 201r54
+167f7 Factor{long_long_float} 171m7 201r63 202m13 202r23
+218e7 Ch{character} 227m10 228r13 229r37 230r16 231r37 232r16 238r13 241r33
+. 259r35
+219i7 Size{integer} 248m13 248r21 257r10
+220m7 Digit{38|250M9} 229m13 231m13 239r16 253r35
+269e7 Ch{character} 280m10 282r13 283r37 289r16 298r43
+270i7 Size{integer} 287m13 287r23 296r10
+271m7 Digit{38|250M9} 283m13 285r32
+272f7 Factor{long_long_float} 276m7 285r42 286m13 286r23
+308e7 Ch{character} 315m10 316r13 320r22 320r47 321m22 333r33 337r16 346r43
+309i7 Size{integer} 317r16 334m16 334r24 344r10
+358m7 B{38|68M9} 390m7 392r10 393r61 394r41
+359b7 Is_Identifier{boolean} 401m10 404r10
+408i14 I{integer} 409r59
+421e7 Ch{character} 433m10 435r13 461m19 463r22 487m16 489r19 498r16 517m10
+. 519r13 519r30 521m13 523r16 529r19
+422b7 Is_Real{boolean} 470m22 501m13 559r19 575r13 582r14
+423m7 Int_Save{38|259M9} 534m13 563r58
+424b7 Exp_Sign{boolean} 524m16 528m16 545r19 565r22
+425r7 Exp_Sign_Loc{11|38R9} 525m28 566r39
+426f7 Factor{long_long_float} 557m16 560r66 563r70
+601i7 First_Pos{38|124I9} 614r10 619r50
+602r7 Loc{11|38R9} 605m22 609r28 614r22 619r63
+631b7 Quoted{boolean} 640r16 641m16 644m16 648r16
+632e7 Ch{character} 637m10 639r13 651r55 652r44 655r52
+895i7 Braces{integer} 907m13 907r23 909m13 909r23 912r20
+896r7 Loc{11|38R9} 903m22 923r25
+933i11 Index{integer} 934r35
+X 18 ocarina-files.ads
+43K17*Files 16|39w14 49r52 59r22 62r22 65r22 68r22 17|47r16 18|80e18
+47p4*Buffer{38|130P9} 17|175r50 227r50 280r16 315r16 321r28 370r42 373r49
+. 377r38 378r45 382r12 433r16 461r25 464r30 487r22 499r21 517r16 521r19 619r42
+. 637r16 695r15 730r19 732r22 742r19 745r22 762r19 772r19 775r22 788r19 802r19
+. 805r22 818r19 820r22 833r19 835r22 860r19 875r44 879r40
+48r4*Buffer_Location{11|38R9} 16|49m58
+56V13*Load_File{11|38R9} 16|59r28
+59U14*Save_Location 16|62r28
+63U14*Restore_Location 16|65r28
+67U14*New_Line 17|697r16
+71U14*Skip_Line 17|731r19
+74U14*Skip_Spaces 17|687r10
+77V13*End_Of_File{boolean} 16|68r28
+X 22 ocarina-me_aadl_ba.ads
+34K17*ME_AADL_BA 16|40r14 40r45 22|129e23
+X 23 ocarina-me_aadl_ba-tokens.ads
+36K28*Tokens 16|40w25 40r56 23|248e30
+40E9*BA_Token_Type 16|48r27 73r33 78r27 17|393r42 394r22 600r33 892r27 23|174e7
+41n7*T_Error{40E9} 17|192r25 209r19 243r25 260r19 299r19 347r19 432r19 443r25
+. 450r25 460r28 474r34 505r25 537r25 684r22 686r21
+42n7*T_Identifier{40E9} 17|123r15 400r19
+46n7*T_Quotation_Mark{40E9} 17|126r15
+47n7*T_Number_Sign{40E9} 17|705r25
+48n7*T_Underline{40E9} 17|709r25
+50n7*T_Comma{40E9} 17|721r25
+52n7*T_Dot{40E9} 17|766r28
+53n7*T_Colon{40E9} 17|779r28
+54n7*T_Semicolon{40E9} 17|784r25
+55n7*T_Colon_Colon{40E9} 17|774r28
+56n7*T_Assignment{40E9} 17|777r28
+57n7*T_Interval{40E9} 17|764r28
+59n7*T_Greater_Greater_Than{40E9} 17|804r28
+60n7*T_Tick{40E9} 17|852r25
+62n7*T_Left_Parenthesis{40E9} 17|713r25
+63n7*T_Left_Square_Bracket{40E9} 17|814r25
+64n7*T_Left_Curly_Bracket{40E9} 17|840r31 843r28
+65n7*T_Begin_Annex{40E9} 17|837r31
+66n7*T_Left_Step_Bracket{40E9} 17|734r28
+68n7*T_Right_Parenthesis{40E9} 17|717r25
+69n7*T_Right_Square_Bracket{40E9} 17|825r31 828r28
+70n7*T_Right_Curly_Bracket{40E9} 17|848r25
+71n7*T_End_Annex{40E9} 17|747r31
+72n7*T_Right_Step_Bracket{40E9} 17|822r31
+74n7*T_Interrogative{40E9} 17|856r25
+75n7*T_Exclamation{40E9} 17|864r28
+79n7*T_Less_Than_Sign{40E9} 17|792r28
+80n7*T_Equals_Sign{40E9} 17|797r25
+81n7*T_Greater_Than_Sign{40E9} 17|809r28
+82n7*T_Greater_Or_Equal{40E9} 17|807r28
+83n7*T_Less_Or_Equal{40E9} 17|790r28
+84n7*T_Non_Equal{40E9} 17|862r28
+88n7*T_Plus{40E9} 17|725r25
+89n7*T_Minus{40E9} 17|736r28
+91n7*T_Concat{40E9} 17|869r25
+95n7*T_Multiply{40E9} 17|752r28
+96n7*T_Divide{40E9} 17|757r25
+102n7*T_Exponent{40E9} 17|749r31
+126n7*T_False{40E9} 17|126r35
+130n7*T_Abort{40E9} 17|129r15
+159n7*T_None{40E9} 17|129r26
+163n7*T_Real_Literal{40E9} 17|132r15 172r16 277r16 576r22
+164n7*T_Integer_Literal{40E9} 17|139r15 224r16 312r16 578r22
+168n7*T_String_Literal{40E9} 17|146r15 668r16
+170n7*T_Raw_Text{40E9} 17|623r16
+173n7*T_EOF{40E9} 17|608r39 691r22 902r22 920r18
+176A9*BA_Token_List_Type(40E9)<integer> 16|83r40 17|931r40
+201E12*BA_Opening_Delimiter{40E9} 17|906r22
+204E12*BA_Closing_Delimiter{40E9} 17|908r25
+216N4*BA_First_Reserved_Word_Pos 17|392r15
+218N4*BA_Last_Reserved_Word_Pos 17|392r45
+221a4*BA_Token_Image(38|184I9) 17|393r26
+223i4*Max_Number_Of_Digits{integer} 17|317r24
+227m4*Integer_Literal_Value{38|259M9} 17|141r44 223m7 244m16 251m13 252r15
+. 311m7 332m16 332r41 438r16 441r49 445r19 448r49 454r40 478r44 509r35 534r25
+. 538r19 546r52 548r51 562m19 583r13
+230f4*Float_Literal_Value{long_long_float} 17|134r44 170m7 193m16 200m13
+. 201r15 275m7 284m13 284r36 477m25 477r48 508m16 508r39 560m19 560r44
+233m4*Numeric_Literal_Base{38|250M9} 17|135r44 142r44 429m7 453m16 458r42
+. 472r49 558r28
+236i4*Numeric_Literal_Exp{integer} 17|136r44 143r44 430m7 546m19 548m19 551r19
+. 558r51
+239V13*Image{string} 17|155r20
+245V13*Quoted_Image{string} 17|127r31 130r33
+X 38 types.ads
+36K9*Types 16|36w6 36r25 38|306e10
+51I9*Int<integer>
+68M9*Byte 17|358r23
+124I9*Text_Ptr<51I9> 17|601r28
+127A9*Text_Buffer(character)<124I9>
+130P9*Text_Buffer_Ptr(127A9)
+184I9*Name_Id<integer> 16|50r27 51r27 52r27 53r27 58r36
+190i4*No_Name{184I9} 17|147r39 617r28 671r34
+250M9*Unsigned_Short_Short 17|62r48 66r47 163r48 166r16 191r20 217r47 220r15
+. 242r20 271r16 454r18
+259M9*Unsigned_Long_Long 17|59r33 252r39 253r15 423r22 539r18 563r21
+

@@ -1,0 +1,15 @@
+@smallexample
+
+@b{procedure} SpA_Impl (a : in int; d : @b{out} @b{in}t) @b{is}
+   Status : spA_impl_Status;
+@b{begin}
+   Status.a := a;
+   Repository.SpA_Impl
+     (Status,
+      SpA_Seq1'Access,
+      SpA_Seq2'Access,
+      SpA_Seq3'Access);
+   d := Status.d;
+@b{end} SpA_Impl;
+
+@end smallexample

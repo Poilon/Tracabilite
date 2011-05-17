@@ -1,0 +1,17 @@
+@smallexample
+
+@b{data} @b{in}teger_type
+@b{properties}
+  ARAO::data_type => @b{in}teger;
+@b{end} @b{in}teger_type;
+
+@b{data} structure
+@b{end} structure;
+
+@b{data} @b{implementation} structure.impl
+@b{subcomponents}
+  d1 : @b{data} @b{in}teger_type;
+  d2 : @b{data} @b{in}teger_type;
+@b{end} structure.impl;
+
+@end smallexample

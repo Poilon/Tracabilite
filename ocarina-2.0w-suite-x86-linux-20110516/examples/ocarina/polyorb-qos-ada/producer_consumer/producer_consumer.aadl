@@ -1,0 +1,16 @@
+system PC_Simple
+end PC_Simple;
+
+system implementation PC_Simple.Impl
+subcomponents
+  pr_A : process A.Impl {Deployment::port_number => 4001;};
+  pr_B : process B.Impl {Deployment::port_number => 4002;};
+
+  CPU : processor the_processor;
+connections
+  data port pr_A.Alpha -> pr_B.Beta;
+  data port pr_B.Alpha -> pr_A.Beta;
+properties
+  actual_processor_binding => reference CPU applies to pr_A;
+  actual_processor_binding => reference CPU applies to pr_B;
+end PC_Simple.Impl;

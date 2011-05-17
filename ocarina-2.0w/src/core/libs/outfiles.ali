@@ -1,0 +1,76 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnvnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U outfiles%b		outfiles.adb		fd38433a NE OO PK IS
+W namet%s		namet.adb		namet.ali
+W output%s		output.adb		output.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+
+U outfiles%s		outfiles.ads		bd9c1a6e EE NE OO PK IS
+W gnat%s		gnat.ads		gnat.ali
+W gnat.os_lib%s		g-os_lib.ads		g-os_lib.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-uncdea.ads		20070406091342 dc667e6d
+D gnat.ads		20050905075125 96410e68
+D g-os_lib.ads		20090409232307 c015094d
+D g-table.ads		20080408064830 4cacb2f1
+D namet.ads		20110516190003 e03fb004
+D outfiles.ads		20110516190003 4be679ff
+D outfiles.adb		20110516190003 2182cf81
+D output.ads		20110516190003 77634540
+D system.ads		20110401034433 15e10948
+D s-os_lib.ads		20090409232307 719f619c
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-string.ads		20090409232307 04f2ee70
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 3 gnat.ads
+36K9*GNAT 39e9 7|34r6 34r23
+X 4 g-os_lib.ads
+51K14*OS_Lib=51:36 7|34w11 34r28
+X 6 namet.ads
+38K9*Namet 237e10 8|34w6 34r18
+57a4*Name_Buffer{string} 8|54r32
+64i4*Name_Len{natural} 8|54r50
+72U14*Get_Name_String 8|49r13
+X 7 outfiles.ads
+37K9*Outfiles 48l5 48e13 8|37b14 82l5 82t13
+39b4*Print_On_Stdout{boolean} 8|45r14 76r14
+41V13*Set_Output{11|170I9} 41>25 8|43b13 68l8 68t18
+41i25 File_Name{14|184I9} 8|43b25 49r30
+45U14*Release_Output 45>30 8|74b14 80l8 80t22
+45i30 Fd{11|170I9} 8|74b30 76r39 77r17
+X 8 outfiles.adb
+47i13 Fd{11|170I9} 54m13 56r16 62r25 63r20
+X 9 output.ads
+42K9*Output 8|35w6 35r18 9|105e11
+49U14*Set_Output 8|62r13
+57U14*Set_Standard_Output 8|78r10
+X 11 s-os_lib.ads
+170I9*File_Descriptor<integer> 7|41r53 45r35 8|43r53 47r18 74r35
+178i4*Invalid_FD{170I9} 8|56r21 67r14 76r45
+181n26*Text{181E9} 8|54r61
+204V13*Create_File{170I9} 8|54r19
+265U14*Close 8|77r10
+X 14 types.ads
+36K9*Types 7|35w6 35r23 14|306e10
+184I9*Name_Id<integer> 7|41r37 8|43r37
+

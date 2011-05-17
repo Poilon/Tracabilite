@@ -1,0 +1,106 @@
+@subsubsection Ocarina.Builder.AADL.Properties 
+
+
+This package defines the following subprograms:
+
+@strong{Add_New_Property_Set}: Either Single_Value /= No_Node and Mulitple_Values = No_Node,
+then we have a single valued constant; or Single_Value =
+No_Node, then we have a muli valued constant
+
+@example
+@b{function }Add_New_Property_Set
+     (Loc       : Location;
+      Name      : Node_Id;
+      Namespace : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Add_New_Property_Constant_Declaration}: Either Single_Value /= No_Node and Mulitple_Values = No_Node,
+then we have a single valued constant; or Single_Value =
+No_Node, then we have a muli valued constant
+
+@example
+@b{function }Add_New_Property_Constant_Declaration
+     (Loc             : Location;
+      Name            : Node_Id;
+      Property_Set    : Node_Id;
+      Constant_Type   : Node_Id;
+      Unit_Identifier : Node_Id;
+      Single_Value    : Node_Id;
+      Multiple_Values : List_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Add_New_Property_Type_Declaration}: Either Applies_To_All is set to True and Applies_To is empty,
+or Applies_To_All is False and Applies_To is not empty
+
+@example
+@b{function }Add_New_Property_Type_Declaration
+     (Loc             : Location;
+      Name            : Node_Id;
+      Property_Set    : Node_Id;
+      Type_Designat@b{or }: Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Add_New_Property_Definition_Declaration}: Either Applies_To_All is set to True and Applies_To is empty,
+or Applies_To_All is False and Applies_To is not empty
+
+@example
+@b{function }Add_New_Property_Definition_Declaration
+     (Loc                     : Location;
+      Name                    : Node_Id;
+      Property_Set            : Node_Id;
+      Is_Inherit              : Boolean;
+      Is_Access               : Boolean;
+      Single_Default_Value    : Node_Id;
+      Multiple_Default_Value  : List_Id;
+      Property_Name_Type      : Node_Id;
+      Property_Type_Is_A_List : Boolean;
+      Applies_To_All          : Boolean;
+      Applies_To              : List_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Add_New_Property_Association}: If Check_For_Conflicts is set to True, then the function checks
+whether there is a property association of that name
+already. If override is set to True and there is a conflict,
+then it is overridden by the new association. Else the new
+association is ignored. If Check_For_Conflicts is set to False,
+then the value of Override is ignored.
+
+@example
+@b{function }Add_New_Property_Association
+     (Loc                 : Location;
+      Name                : Node_Id;
+      Property_Name       : Node_Id;
+      Container           : Node_Id;
+      In_Binding          : Node_Id;
+      In_Modes            : Node_Id;
+      Property_Value      : Node_Id;
+      Is_Constant         : Boolean;
+      Is_Access           : Boolean;
+      Is_Additive         : Boolean;
+      Applies_To          : List_Id;
+      Check_For_Conflicts : Boolean := False;
+      Override            : Boolean := False)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Add_New_Contained_Element_Path}: 
+
+@example
+@b{function }Add_New_Contained_Element_Path
+     (Loc             : Location;
+      Container       : Node_Id;
+      Applies_To_Elts : List_Id;
+      Annex_Path : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+

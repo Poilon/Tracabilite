@@ -1,0 +1,40 @@
+@smallexample
+
+-- @i{ protected data type declaration}
+
+@b{data} @b{in}ternal_data
+@b{properties}
+  ARAO::data_type => @b{in}teger;
+@b{end} @b{in}ternal_data;
+
+@b{data} shared_data
+@b{properties}
+  Concurrency_Control_Protocol => Protected_Access;
+@b{end} shared_data;
+
+@b{data} @b{implementation} shared_data.i
+@b{subcomponents}
+  Field : @b{data} @b{in}ternal_data;
+@b{end} shared_data.i;
+
+-- @i{ Process declaration}
+
+@b{process} transmitter_node
+@b{features}
+  msg_in : @b{in} @b{event} @b{data} @b{port} message;
+  msg_out : @b{out} @b{event} @b{data} @b{port} message;
+@b{end} transmitter_node;
+
+@b{process} @b{implementation} transmitter_node.complex
+@b{subcomponents}
+  th1 : @b{thread} transmitter.simple;
+  th2 : @b{thread} transmitter.simple;
+  sh_mem : @b{data} shared_data.i;
+@b{connections}
+  @b{event} @b{data} @b{port} msg_in -> th1.msg_in;
+  @b{event} @b{data} @b{port} th1.msg_out -> th2.msg_in;
+  @b{event} @b{data} @b{port} th2.msg_out -> msg_out;
+  @b{data} @b{access} sh_mem -> th1.mem;
+  @b{data} @b{access} sh_mem -> th2.mem;
+@b{end} transmitter_node.complex;
+@end smallexample

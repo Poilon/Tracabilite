@@ -1,0 +1,174 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnvnnnnnnnnnnnnnnnnrnnvnrnvvnnnnrnnnnvnnvnnrnnnnnnnnnnvnnvnvvnnnnnnnnnnnnnnn
+
+U ocarina.files%b	ocarina-files.adb	b1661c24 NE OO PK IS
+W errors%s		errors.adb		errors.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.os_lib%s		g-os_lib.ads		g-os_lib.ali
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.options%s	ocarina-options.adb	ocarina-options.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.string_ops%s	s-strops.adb		s-strops.ali
+
+U ocarina.files%s	ocarina-files.ads	53b674c3 BN EE OO PK IS
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W gnat%s		gnat.ads		gnat.ali
+W gnat.table%s
+W interfaces%s		interfac.ads		interfac.ali
+W locations%s		locations.adb		locations.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.memory%s	s-memory.adb		s-memory.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D errors.ads		20110516190003 7675b7de
+D gnat.ads		20050905075125 96410e68
+D g-os_lib.ads		20090409232307 c015094d
+D g-table.ads		20080408064830 4cacb2f1
+D g-table.adb		20080820135520 18951c21
+D interfac.ads		20090409232307 a69cad5c
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-files.ads	20110516190002 e29905b0
+D ocarina-files.adb	20110516190002 500b4ba2
+D ocarina-options.ads	20110516190002 55ab5ca1
+D system.ads		20110401034433 15e10948
+D s-assert.ads		20090409232307 5f25a194
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-memory.ads		20090409232307 04574b64
+D s-os_lib.ads		20090409232307 719f619c
+D s-parame.ads		20090409232307 f32e56e9
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-secsta.ads		20090409232307 7bae3621
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
+D s-string.ads		20090409232307 04f2ee70
+D s-traent.ads		20090409232307 bd5f2753
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 5 errors.ads
+38K9*Errors 73e11 15|36w6 46r8
+41U14*DE=41:38 15|126r10 143r13
+X 6 gnat.ads
+36K9*GNAT 39e9 14|38r6 45r27 15|34r6 44r8
+X 7 g-os_lib.ads
+51K14*OS_Lib=51:36 15|34w11 44r13
+X 8 g-table.ads
+58k14*Table 203e15 14|38w11 45r32
+106A9*Table_Type(34|184I9)<integer>
+108A12*Big_Table_Type{106A9[14|45]}<34|51I9>
+117P9*Table_Ptr(108A12[16|73])
+122p4*Table{117P9[14|45]} 15|67r48[14|45] 193r41[16|73]
+142V13*Last{34|51I9} 15|66r29[14|45] 192r56[16|73]
+159i4*First{integer} 15|192r33[16|73]
+179U14*Append 15|73r18[14|45]
+X 11 locations.ads
+36K9*Locations 74e14 14|41w6 41r25
+38R9*Location 47e14 14|48r22 56r52 59r41 63r40 15|114r52 162r40 172r41
+41i7*Line{34|51I9} 15|107m23 107r52
+42i7*First_Pos{34|124I9} 15|105m23
+43i7*Last_Pos{34|124I9} 15|106m23
+44i7*Scan{34|124I9} 15|84r30 93r34 94r42 96m26 96r51 100m26 100r51 105r52
+. 106r52 135m23 138r48 147m26 147r50 211r29 212r39 220m26 220r50 230r29 231r39
+. 233m32 233r56
+45i7*EOF{34|124I9} 15|84r53 211r53 230r53
+46p7*Buffer{34|130P9} 15|165r32
+49r4*No_Location{38R9} 15|127r17 144r20
+56U14*Initialize 15|154r7
+X 12 namet.ads
+38K9*Namet 237e10 15|37w6 47r8
+57a4*Name_Buffer{string} 15|60r17 122m7 124m31 186r27 197r30
+64i4*Name_Len{natural} 15|59r10 60r30 60r46 122r20 186r45 197r48
+72U14*Get_Name_String 15|58r7 121r7 185r7 193r10
+78V13*Get_Name_String{string} 15|126r36 143r39
+82U14*Get_Name_String_And_Append 15|195r10
+104V13*Name_Find{34|184I9} 15|64r35 198r20
+124U14*Add_Char_To_Name_Buffer 15|194r10
+149U14*Add_Str_To_Name_Buffer 15|62r10
+X 13 ocarina.ads
+34K9*Ocarina 63e12 14|43r9 80r5 15|39r6 39r33 41r14 242r5
+X 14 ocarina-files.ads
+43K17*Files 13|34k9 14|80l13 80e18 15|41b22 242l13 242t18
+45K12*Sources[8|58] 15|66r21 67r40 73r10
+47p4*Buffer{34|130P9} 15|93r10 94r18 133m7 138m24 154r61 165m7 212r15 231r15
+48r4*Buffer_Location{11|38R9} 15|84r14 84r37 93r18 94r26 96m10 96r35 100m10
+. 100r35 105m7 105r36 106m7 106r36 107m7 107r36 135m7 138r32 147m10 147r34
+. 154m19 155r14 164m7 174r16 211r13 211r37 212r23 220m10 220r34 230r13 230r37
+. 231r23 233m16 233r40
+52U14*Add_File_To_Parse_List 52>38 15|53b14 75l8 75t30
+52i38 File_Name{34|184I9} 15|53b38 58r24
+54V13*Search_File{34|184I9} 54>26 15|181b13 203l8 203t19
+54i26 File_Name{34|184I9} 15|181b26 185r24 187r17 195r38
+56V13*Load_File{11|38R9} 56>24 15|114b13 156l8 156t17
+56i24 File_Name{34|184I9} 15|114b24 121r24 126r53 143r56 154r36
+59U14*Save_Location 59<29 60r19 15|172b14 175l8 175t21
+59r29 State{11|38R9} 15|172b29 174m7
+63U14*Restore_Location 63>32 64r19 15|162b14 166l8 166t24
+63r32 State{11|38R9} 15|162b32 164r26 165r26
+67U14*New_Line 15|91b14 108l8 108t16 214r16 235r16
+71U14*Skip_Line 15|209b14 222l8 222t17
+74U14*Skip_Spaces 15|83r7 228b14 240l8 240t19
+77V13*End_Of_File{boolean} 15|81b13 85l8 85t19
+X 15 ocarina-files.adb
+54i7 File_Name_With_Extension{34|184I9} 64m7 67r13 73r26
+55b7 Do_Add{boolean} 68m13 72r10
+66i11 J<integer> 67r55
+115i7 File_Desc{21|170I9} 124m7 125r10 132r39 138r13 151r14
+116i7 Result{integer} 137m10 140r20 142r13 147r67 148r30
+117i7 Length{integer} 132m7 133r49 138r63 140r29 148m10 148r21 154r52
+192i11 Path{integer} 193r48
+X 16 ocarina-options.ads
+38K17*Options 15|39w14 39r41 16|96e20
+73K12*Library_Paths[8|58] 15|192r19 192r42 193r27
+X 21 s-os_lib.ads
+170I9*File_Descriptor<integer> 15|115r19
+178i4*Invalid_FD{170I9} 15|125r22
+181n18*Binary{181E9} 15|124r52
+265U14*Close 15|151r7
+361V13*Read{integer} 15|137r20
+390V13*File_Length{long_integer} 15|132r26
+452V13*Is_Regular_File{boolean} 15|186r10 197r13
+587V13*Open_Read{170I9} 15|124r20
+873e4*Directory_Separator{character} 15|194r35
+X 34 types.ads
+36K9*Types 14|40w6 40r25 34|306e10
+51I9*Int<integer> 15|154r47
+57I12*Nat{51I9} 14|45r48
+124I9*Text_Ptr<51I9> 15|133r39 147r57
+127A9*Text_Buffer(character)<124I9> 15|133r21
+130P9*Text_Buffer_Ptr(127A9) 14|47r22
+184I9*Name_Id<integer> 14|45r39 52r50 54r38 54r54 56r36 15|53r50 54r34 114r36
+. 181r38 181r54
+190i4*No_Name{184I9} 15|202r14
+

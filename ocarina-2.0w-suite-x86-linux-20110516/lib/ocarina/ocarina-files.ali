@@ -1,0 +1,163 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P SS ZX
+R nnnvnnnnnnnnnnnnnnnnrnnvnrvvvnnnnrnnnnvnnvnnrnnnnnnnnnnvnnvnvvnnnnnnnnnnnnnnn
+
+U ocarina.files%b	ocarina-files.adb	b1661c24 NE OO PK IS
+W errors%s		errors.adb		errors.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.os_lib%s		g-os_lib.ads		g-os_lib.ali
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.options%s	ocarina-options.adb	ocarina-options.ali
+W system%s		system.ads		system.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ocarina.files%s	ocarina-files.ads	b0f698fe BN EE OO PK IS
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s
+W gnat%s		gnat.ads		gnat.ali
+W gnat.table%s
+W locations%s		locations.adb		locations.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.memory%s	s-memory.adb		s-memory.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090727140100 34786013
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D errors.ads		20110516190003 7675b7de
+D gnat.ads		20050905075125 96410e68
+D g-os_lib.ads		20090409150019 c015094d
+D g-speche.ads		20090417131547 4ca03910
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D namet.adb		20110516190003 6b7d4c38
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-files.ads	20110516190002 e29905b0
+D ocarina-files.adb	20110516190002 500b4ba2
+D ocarina-options.ads	20110516190002 55ab5ca1
+D output.ads		20110516190003 77634540
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-memory.ads		20090417131547 c68306b3
+D s-os_lib.ads		20091027135146 6320e1c3
+D s-parame.ads		20091130110856 6cdeed25
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-secsta.ads		20090707124243 d2c357fb
+D s-stalib.ads		20090422095703 9cbc334a
+D s-stoele.ads		20090417130712 a4d57c26
+D s-stoele.adb		20090417130712 49ef69d7
+D s-string.ads		20090417130712 14d97e8c
+D s-traent.ads		20090417130712 a66ef260
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 5 errors.ads
+38K9*Errors 73e11 16|36w6 46r8
+41U14*DE=41:38 16|126r10 143r13
+X 6 gnat.ads
+36K9*GNAT 39e9 15|38r6 45r27 16|34r6 44r8
+X 7 g-os_lib.ads
+51K14*OS_Lib=51:36 16|34w11 44r13
+X 9 g-table.ads
+58k14*Table 206e15 15|38w11 45r32
+106A9*Table_Type(32|184I9)<32|51I9>
+108A12*Big_Table_Type{106A9[15|45]}<32|51I9>
+117P9*Table_Ptr(108A12[17|73])
+122p4*Table{117P9[15|45]} 16|67r48[15|45] 193r41[17|73]
+142V13*Last{32|51I9} 16|66r29[15|45] 192r56[17|73]
+159i4*First{integer} 16|192r33[17|73]
+179U14*Append 16|73r18[15|45]
+X 11 locations.ads
+36K9*Locations 74e14 15|41w6 41r25
+38R9*Location 47e14 15|48r22 56r52 59r41 63r40 16|114r52 162r40 172r41
+41i7*Line{32|51I9} 16|107m23 107r52
+42i7*First_Pos{32|124I9} 16|105m23
+43i7*Last_Pos{32|124I9} 16|106m23
+44i7*Scan{32|124I9} 16|84r30 93r34 94r42 96m26 96r51 100m26 100r51 105r52
+. 106r52 135m23 138r48 147m26 147r50 211r29 212r39 220m26 220r50 230r29 231r39
+. 233m32 233r56
+45i7*EOF{32|124I9} 16|84r53 211r53 230r53
+46p7*Buffer{32|130P9} 16|165r32
+49r4*No_Location{38R9} 16|127r17 144r20
+56U14*Initialize 16|154r7
+X 12 namet.ads
+38K9*Namet 237e10 16|37w6 47r8
+57a4*Name_Buffer{string} 16|60r17 122m7 124m31 186r27 197r30
+64i4*Name_Len{natural} 16|59r10 60r30 60r46 122r20 186r45 197r48
+72U14*Get_Name_String 16|58r7 121r7 185r7 193r10
+78V13*Get_Name_String{string} 16|126r36 143r39
+82U14*Get_Name_String_And_Append 16|195r10
+104V13*Name_Find{32|184I9} 16|64r35 198r20
+124U14*Add_Char_To_Name_Buffer 16|194r10
+149U14*Add_Str_To_Name_Buffer 16|62r10
+X 14 ocarina.ads
+34K9*Ocarina 63e12 15|43r9 80r5 16|39r6 39r33 41r14 242r5
+X 15 ocarina-files.ads
+43K17*Files 14|34k9 15|80l13 80e18 16|41b22 242l13 242t18
+45K12*Sources[9|58] 16|66r21 67r40 73r10
+47p4*Buffer{32|130P9} 16|93r10 94r18 133m7 138m24 154r61 165m7 212r15 231r15
+48r4*Buffer_Location{11|38R9} 16|84r14 84r37 93r18 94r26 96m10 96r35 100m10
+. 100r35 105m7 105r36 106m7 106r36 107m7 107r36 135m7 138r32 147m10 147r34
+. 154m19 155r14 164m7 174r16 211r13 211r37 212r23 220m10 220r34 230r13 230r37
+. 231r23 233m16 233r40
+52U14*Add_File_To_Parse_List 52>38 16|53b14 75l8 75t30
+52i38 File_Name{32|184I9} 16|53b38 58r24
+54V13*Search_File{32|184I9} 54>26 16|181b13 203l8 203t19
+54i26 File_Name{32|184I9} 16|181b26 185r24 187r17 195r38
+56V13*Load_File{11|38R9} 56>24 16|114b13 156l8 156t17
+56i24 File_Name{32|184I9} 16|114b24 121r24 126r53 143r56 154r36
+59U14*Save_Location 59<29 60r19 16|172b14 175l8 175t21
+59r29 State{11|38R9} 16|172b29 174m7
+63U14*Restore_Location 63>32 64r19 16|162b14 166l8 166t24
+63r32 State{11|38R9} 16|162b32 164r26 165r26
+67U14*New_Line 16|91b14 108l8 108t16 214r16 235r16
+71U14*Skip_Line 16|209b14 222l8 222t17
+74U14*Skip_Spaces 16|83r7 228b14 240l8 240t19
+77V13*End_Of_File{boolean} 16|81b13 85l8 85t19
+X 16 ocarina-files.adb
+54i7 File_Name_With_Extension{32|184I9} 64m7 67r13 73r26
+55b7 Do_Add{boolean} 68m13 72r10
+66i11 J<integer> 67r55
+115i7 File_Desc{23|168I9} 124m7 125r10 132r39 138r13 151r14
+116i7 Result{integer} 137m10 140r20 142r13 147r67 148r30
+117i7 Length{integer} 132m7 133r49 138r63 140r29 148m10 148r21 154r52
+192i11 Path{integer} 193r48
+X 17 ocarina-options.ads
+38K17*Options 16|39w14 39r41 17|96e20
+73K12*Library_Paths[9|58] 16|192r19 192r42 193r27
+X 23 s-os_lib.ads
+168I9*File_Descriptor<integer> 16|115r19
+176i4*Invalid_FD{168I9} 16|125r22
+179n18*Binary{179E9} 16|124r52
+280U14*Close 16|151r7
+376V13*Read{integer} 16|137r20
+405V13*File_Length{long_integer} 16|132r26
+467V13*Is_Regular_File{boolean} 16|186r10 197r13
+602V13*Open_Read{168I9} 16|124r20
+888e4*Directory_Separator{character} 16|194r35
+X 32 types.ads
+36K9*Types 15|40w6 40r25 32|306e10
+51I9*Int<integer> 16|154r47
+57I12*Nat{51I9} 15|45r48
+124I9*Text_Ptr<51I9> 16|133r39 147r57
+127A9*Text_Buffer(character)<124I9> 16|133r21
+130P9*Text_Buffer_Ptr(127A9) 15|47r22
+184I9*Name_Id<integer> 15|45r39 52r50 54r38 54r54 56r36 16|53r50 54r34 114r36
+. 181r38 181r54
+190i4*No_Name{184I9} 16|202r14
+

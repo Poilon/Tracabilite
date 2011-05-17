@@ -1,0 +1,73 @@
+@subsubsection Ocarina.Builder.AADL.Annexes 
+This package provides functions to build annex nodes into the AADL
+tree.
+
+This package defines the following subprograms:
+
+@strong{Set_Annex_Content}: Set the text of the annex. Annex is the Node_Id of the annex
+library or subclause, returned by Add_New_Annex_Subclause or
+Add_New_Annex_Library. Text is the Name_Id referencing the text
+of the annex. Return True is everything went right, else False.
+
+@example
+@b{function }Set_Annex_Content
+     (Annex : Types.Node_Id;
+      Text  : Types.Name_Id)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Add_New_Annex_Subclause}: Create a new annex subclause. An annex subclause can be
+inserted into a component declaration (type or implementation)
+or a port group declaration. Loc is the location of the annex
+in the parsed text. Annex_Name is the name of the annex
+subclause. Namespace is the component or the port group where
+the annex must be inserted. This functions returns the Node_Id
+of the newly created annex subclause node, or No_Node if
+something went wrong.
+
+@example
+@b{function }Add_New_Annex_Subcla@b{use }     (Loc        : Locations.Location;
+      Annex_Name : Types.Node_Id;
+      Namespace  : Types.Node_Id;
+      In_Modes   : Types.Node_Id)
+     @b{return }Types.Node_Id;
+@end example
+
+
+@strong{Add_New_Annex_Library}: Create a new annex library. An annex library can be inserted
+into a package or the top level AADL specification (i.e. the
+unnamed namespace). Loc is the location of the annex in the
+parsed text. Annex_Name is the name of the annex
+library. Namespace is the package specification or the top
+level AADL specification where the annex must be inserted. This
+functions returns the Node_Id of the newly created annex
+library node, or No_Node if something went wrong.
+
+@example
+@b{function }Add_New_Annex_Library
+     (Loc        : Locations.Location;
+      Annex_Name : Types.Node_Id;
+      Namespace  : Types.Node_Id;
+      Is_Private : Boolean             := False)
+     @b{return }Types.Node_Id;
+@end example
+
+
+@strong{Add_New_Annex_Path}: Create a new annex path node. Loc is the location of the annex
+path in the parsed text. Container is the namespace which contain
+the annex path declaration. Annex_Identifier is the identifier of
+the annex path, it maybe No_Node. List_Identifiers is the list of
+identifiers declared. This function returns the Node_Id of the
+newly created annex path node, or No_Node if something went wrong.
+
+@example
+@b{function }Add_New_Annex_Path
+     (Loc              : Locations.Location;
+      Container        : Types.Node_Id;
+      Annex_Identifier : Types.Node_Id;
+      List_Identifiers : Types.List_Id)
+     @b{return }Types.Node_Id;
+@end example
+
+

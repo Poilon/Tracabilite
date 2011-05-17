@@ -1,0 +1,507 @@
+<html lang="en">
+<head>
+<title>Core parsing and printing facilities - Ocarina: A Compiler for the AADL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Ocarina: A Compiler for the AADL">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="The-Ocarina-Core-Library.html#The-Ocarina-Core-Library" title="The Ocarina Core Library">
+<link rel="prev" href="API-to-build-and-manipulate-AADL-instances.html#API-to-build-and-manipulate-AADL-instances" title="API to build and manipulate AADL instances">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+Copyright (C) 2003-2007 E'cole
+nationale supe'rieure des te'le'communications
+
+Permission is granted to make and distribute verbatim copies of this
+entire document without royalty provided the copyright notice and
+this permission are preserved.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+body {}
+body {
+	background-color: white;
+	position: absolute;
+	font-size: medium;
+	font-family: Verdana;
+//	padding-left: 7em;
+	top: 3em;
+}
+
+div.navigation {
+	font-size: small; 
+	padding-left: 0; 
+	padding-right: 0; 
+	text-align: right
+}
+
+div#menu {
+	text-align: left;
+	position: fixed;
+	left: 1pt;
+	bottom: auto;
+	top: 2em;
+	right: auto;
+	padding-right: 1ex;
+	padding-left: 1em;
+	padding-top: 1ex;
+	padding-bottom: 1ex;
+	border-width: 3pt;
+	background-color: transparent;  
+	border-color: red; 
+	border-left-style: solid
+}
+
+div#menu span.item {
+	display: block;
+	background-color: transparent;  
+}
+
+table.navigation {
+	font-size: small
+} 
+
+
+/* Paragraphs */
+p, blockquote {
+	color: black; 
+	text-indent: 1em; 
+	text-align: justify
+}
+
+
+p {
+	margin-bottom: .5em; 
+	margin-top: 1px
+}
+
+p kbd 
+{
+  background-color: ivory
+}
+
+div.important {
+	background-color: lightgray; 
+	border-color: red; 
+	border-style: solid;  
+	border-width: 1pt
+}
+p.important {
+	color: red
+}
+p.brut {
+	text-indent: 0
+}
+p.brut:first-letter {
+	font-size: 100%; 
+	font-weight: normal
+}
+
+/* Sections */
+div {
+	border-style: none; 
+	padding-left: 1em; 
+	padding-right: 1em; 
+	margin-top: 2px; 
+	margin-bottom: 2px
+}
+
+
+/* Menus */
+
+div.action {
+	background-color: ivory; 
+	border-color: lightgray; 
+	border-style: solid; 
+	border-width: 1pt 1pt 1pt 1pt; 
+	font-size: small; 
+	text-align: left
+}
+
+div.special 
+{
+  border-color: lightgray; 
+  border-style: solid; 
+  border-width: 0 0 0 4pt
+}
+
+
+/* Docbook special settings */
+
+h3.subtitle {
+	text-align: center
+}
+
+h1.title {
+	margin-bottom: 10pt;
+}
+
+div.authorgroup {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	display: block;
+}
+
+div.author {
+	display: inline;
+}
+
+h3.author {
+	display: inline;
+	font-style: normal;
+	color: black;
+	font-size: medium;
+}
+
+p.copyright {
+	margin-top: 1em;
+	text-align: center;
+}
+
+/* End docbook settings */
+
+
+/* hors-texte */
+
+pre {
+	background-color: whitesmoke;
+	border-color: lightcoral;
+	border-style: solid;
+	border-width: 0pt 1pt 1pt 0pt;
+}
+
+.hors-texte {
+	background-color: lightgray;  
+	border-color: lightcoral; 
+	border-style: solid;
+	border-width: 1pt; 
+	padding-left: 1em; 	
+	padding-right: 1em; 
+	text-align: justify
+}
+
+/* Tables */
+
+table.hors-texte {
+	margin: auto; 
+	font-size: 100%;
+	border-width: 1pt 1pt 1pt 1pt
+}
+
+table.hors-texte td {
+	padding-left: 1ex; 
+	padding-right: 1ex
+}
+
+table.hors-texte tr.sep {
+	padding-top: 1ex
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold;
+  padding: 0pt
+}
+
+h1 {
+	font-size: larger larger larger;
+	text-align: center; 
+	margin-bottom: 24pt
+}
+h2 {
+	font-size: larger larger;
+	margin-left:      0; 
+	margin-top:       24pt; 
+	margin-bottom:    14pt;
+	border-color:     red;
+	border-bottom-style:     solid;
+	border-width:     1pt;
+	padding:          2pt; 
+	margin-left:      0; 
+	margin-right:     0; 
+}
+h3 {
+	font-size: larger;
+	margin-left: 1em; 
+	margin-bottom: 1ex;
+	color: red;	
+}
+h4, h5, h6 {
+	font-size: normal;
+	margin-left: 2em; 
+	margin-bottom: 1em
+}
+
+h4 {
+	text-decoration: underlined
+}
+h5 {
+	font-style: italic
+}
+
+
+h2.special 
+{
+  border-style:     solid;
+  border-width:	    1pt;
+  border-color:     lightgray;
+  padding:          2pt; 
+}
+
+img.flottant {
+	float: right;
+	clear: both;
+	margin: 2em;
+}
+
+/* Lists */
+
+li, dd 
+{
+  text-align: justify
+}
+
+dt {
+	font-style: normal; 
+	margin-top: 1em
+}
+dd {
+	font-style: normal; 
+	margin-left: 4em
+}
+
+dd.sdd {
+	margin-left: 5em
+}
+
+dd ul {margin-top: 0}
+li dl {margin-top: 0}
+ul {list-style-type: square}
+ul ul {list-style-type: disc}
+ul ul ul {list-style-type: circle}
+
+/* Addresses */
+
+address {
+	margin-top: 1ex; margin-bottom: 1ex
+}
+address.poste {
+	font-style: italic
+}
+address.email {
+	font-style: normal
+}
+address.phone {
+	font-style: oblic
+}
+
+/* Links */
+
+a:link, a:visited {
+	color: darkred;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color:  red;
+	padding-bottom: 0px
+}
+
+a:hover, a:active {
+	color: red; 
+	text-decoration: none;
+	border-bottom-color: black;
+	border-bottom-style: solid
+}
+
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Core-parsing-and-printing-facilities"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="API-to-build-and-manipulate-AADL-instances.html#API-to-build-and-manipulate-AADL-instances">API to build and manipulate AADL instances</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="The-Ocarina-Core-Library.html#The-Ocarina-Core-Library">The Ocarina Core Library</a>
+<hr>
+</div>
+
+<h4 class="subsection">6.1.6 Core parsing and printing facilities</h4>
+
+<h5 class="subsubsection">6.1.6.1 Parser</h5>
+
+<p>The main parsing function is the <code>Ocarina.Parser.Parse</code>
+function. This function selects automatically the right parser
+depending on the file suffix: If the file suffix is &ldquo;.aadl&rdquo;, then
+the parsing function used is
+<code>Ocarina.AADL.Parser.Process</code>. Therefore, the input files given
+to the Parse function must have valid suffixes.
+
+   <p>The return value of the <code>Ocarina.Parser.Parse</code> function is the node
+corresponding to the root of the tree. If something went wrong during
+the parsing, the return value is <code>No_Node</code>. The first parameter
+given to the <code>Ocarina.Parser.Parse</code> function is the name of the file
+to parse. The second parameter corresponds to the tree root, this way,
+it's possible to parse many files by calling the function several
+times and by giving to it the same root as second parameter. After
+each call, the returned value is the old tree to which are added the
+AADL entities of the last parsed file. Hence Ocarina supports multiple
+file AADL descriptions.
+
+<h5 class="subsubsection">6.1.6.2 Printer</h5>
+
+<p>Unlike the parsing facility, the printing facility cannot be selected
+automatically. The user must precise which printer he wants to use.
+
+   <p>The data structure <code>Ocarina.Printer.Output_Options</code> contains a field
+named <code>Printer_Name</code> which allows to select a registered
+printer. There are other fields in this structure, they allow to
+configure some printing options (output file, output directory...).
+
+<h5 class="subsubsection">6.1.6.3 Using the parser and the printer</h5>
+
+<p>The user should not directly use the parsing and printing subprogram
+supplied by each module. To parse a file, the function that should be
+used is <code>Ocarina.Parser.Parse</code>. To print a file, the user must
+specify the printer options in a variable of type
+<code>Ocarina.Printer.Output_Options</code>, then call the
+<code>Ocarina.Printer.Print</code> function with the Root of the AADL tree
+and the options variable as parameters. Here is a sample code that
+shows how to initialize Ocarina, parse and print a set of AADL
+files. The example describes a classical way to use the Ocarina
+libraries to build a basic program that loops indefinitely and parses
+at each iteration all the AADL files given to its command line. If the
+parsing has been successful, the program prints the AADL sources
+corresponding to the built AADL syntax tree. The example illustrates
+also the <em>Reset</em> capabilities of Ocarina allowing to reinitialize
+all the Ocarina engines at the end of an iteration in order to use
+them in the incoming iteration.
+
+<pre class="smallexample">     
+     ------------------------------------------------------------------------------
+     -- <i>                                                                         --</i>
+     -- <i>                          OCARINA COMPONENTS                             --</i>
+     -- <i>                                                                         --</i>
+     -- <i>                P A R S E _ A N D _ P R I N T _ A A D L                  --</i>
+     -- <i>                                                                         --</i>
+     -- <i>                                B o d y                                  --</i>
+     -- <i>                                                                         --</i>
+     -- <i>              Copyright (C) 2007-2008, GET-Telecom Paris.                --</i>
+     -- <i>                                                                         --</i>
+     -- <i>Ocarina  is free software;  you  can  redistribute  it and/or  modify    --</i>
+     -- <i>it under terms of the GNU General Public License as published by the     --</i>
+     -- <i>Free Software Foundation; either version 2, or (at your option) any      --</i>
+     -- <i>later version. Ocarina is distributed  in  the  hope  that it will be    --</i>
+     -- <i>useful, but WITHOUT ANY WARRANTY;  without even the implied warranty of  --</i>
+     -- <i>MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General --</i>
+     -- <i>Public License for more details. You should have received  a copy of the --</i>
+     -- <i>GNU General Public License distributed with Ocarina; see file COPYING.   --</i>
+     -- <i>If not, write to the Free Software Foundation, 51 Franklin Street, Fifth --</i>
+     -- <i>Floor, Boston, MA 02111-1301, USA.                                       --</i>
+     -- <i>                                                                         --</i>
+     -- <i>As a special exception,  if other files  instantiate  generics from this --</i>
+     -- <i>unit, or you link  this unit with other files  to produce an executable, --</i>
+     -- <i>this  unit  does not  by itself cause  the resulting  executable to be   --</i>
+     -- <i>covered  by the  GNU  General  Public  License. This exception does not  --</i>
+     -- <i>however invalidate  any other reasons why the executable file might be   --</i>
+     -- <i>covered by the GNU Public License.                                       --</i>
+     -- <i>                                                                         --</i>
+     -- <i>                Ocarina is maintained by the Ocarina team                --</i>
+     -- <i>                      (ocarina-users@@listes.enst.fr)                     --</i>
+     -- <i>                                                                         --</i>
+     ------------------------------------------------------------------------------
+     
+     <b>with</b> Ada.Command_Line;
+     <b>with</b> GNAT.OS_Lib;
+     
+     <b>with</b> Types;
+     <b>with</b> Namet;
+     
+     <b>with</b> Ocarina.Configuration;
+     <b>with</b> Ocarina.Parser;
+     <b>with</b> Ocarina.Printers;
+     <b>with</b> Ocarina.Analyzer;
+     
+     <b>procedure</b> Parse_And_Print_AADL <b>is</b>
+     
+        <b>use</b> Types;
+        <b>use</b> Namet;
+     
+        Root              : Node_Id;
+        Printer_Options   : Ocarina.Printers.Output_Options :=
+          Ocarina.Printers.Default_Output_Options;
+        Analysis_Options  : <b>constant</b> Ocarina.Analyzer.Analyzer_Options :=
+          Ocarina.Analyzer.Default_Analyzer_Options;
+        Success           : Boolean;
+     
+     <b>begin</b>
+        <b>loop</b>
+           -- <i> Initialization step</i>
+     
+           Ocarina.Initialize;
+           Ocarina.Configuration.Init_Modules;
+     
+           -- <i> Parse the aadl source file, the right parser is selected</i>
+           -- <i> automatically depending on the file suffix. It is important</i>
+           -- <i> that the root node is set to No_Node at the very beginning</i>
+           -- <i> or parsing.</i>
+     
+           Root := No_Node;
+     
+           <b>for</b> J <b>in</b> 1 .. Ada.Command_Line.Argument_Count <b>loop</b>
+              -- <i> Parse the file corresponding to the Jth argument opf the</i>
+              -- <i> commant line and enrich the global AADL tree.</i>
+     
+              Root := Ocarina.Parser.Parse (Ada.Command_Line.Argument (J), Root);
+           <b>end</b> <b>loop</b>;
+     
+           -- <i> If something went wrong, Root = No_Node</i>
+     
+           <b>if</b> Root /= No_Node <b>then</b>
+              -- <i> Analyze the tree</i>
+     
+              Success := Ocarina.Analyzer.Analyze_Model (Root, Analysis_Options);
+     
+              <b>if</b> Success <b>then</b>
+                 -- <i> Select the printer</i>
+     
+                 Set_Str_To_Name_Buffer ("<i>aadl</i>");
+                 Printer_Options.Printer_Name := Name_Find;
+     
+                 -- <i> Print to an AADL File</i>
+     
+                 Success := Ocarina.Printers.Print
+                   (Root    =&gt; Root,
+                    Options =&gt; Printer_Options);
+              <b>else</b>
+                 GNAT.OS_Lib.OS_Exit (1);
+              <b>end</b> <b>if</b>;
+           <b>else</b>
+              GNAT.OS_Lib.OS_Exit (1);
+           <b>end</b> <b>if</b>;
+     
+           -- <i> Pause for 1 second</i>
+     
+           <b>delay</b> 1.0;
+     
+           -- <i> Reset step</i>
+     
+           Ocarina.Configuration.Reset_Modules;
+           Ocarina.Reset;
+        <b>end</b> <b>loop</b>;
+     
+     <b>end</b> Parse_And_Print_AADL;
+     
+</pre>
+   </body></html>
+

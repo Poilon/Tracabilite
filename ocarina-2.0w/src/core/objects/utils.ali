@@ -1,0 +1,119 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrvvnnnnnrnnnnvnnvnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U utils%b		utils.adb		02f41535 NE OO PK IS
+W charset%s		charset.adb		charset.ali
+W namet%s		namet.adb		namet.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.string_ops_concat_3%s  s-sopco3.adb	s-sopco3.ali
+
+U utils%s		utils.ads		a0864c97 EE NE OO PK IS
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D charset.ads		20110516190003 5a17a088
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20080408064830 4cacb2f1
+D namet.ads		20110516190003 e03fb004
+D system.ads		20110401034433 15e10948
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-secsta.ads		20090409232307 7bae3621
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+D utils.ads		20110516190003 96e9264b
+D utils.adb		20110516190003 2e3523f2
+X 3 charset.ads
+34K9*Charset 52e12 19|34w6 34r21
+42U14*To_Lower 19|191r7
+47U14*To_Upper 19|205r7
+X 6 namet.ads
+38K9*Namet 237e10 19|35w6 35r21
+57a4*Name_Buffer{string} 19|87r22 90r16 113r22 115r37 191m17 205m17
+64i4*Name_Len{natural} 19|84r17 86r10 90r43 110r17 112r10 113r35 113r60 115r55
+. 191r35 205r35
+72U14*Get_Name_String 19|66r7 85r7 111r7 190r7 204r7
+78V13*Get_Name_String{string} 19|169r22 178r22 224r36 225r36
+82U14*Get_Name_String_And_Append 19|52r7
+104V13*Name_Find{16|184I9} 19|53r14 68r14 91r20 116r20 160r14 192r14 206r14
+124U14*Add_Char_To_Name_Buffer 19|159r7
+129U14*Set_Char_To_Name_Buffer 19|157r7
+149U14*Add_Str_To_Name_Buffer 19|67r7 158r7
+153U14*Set_Str_To_Name_Buffer 19|51r7 83r7 89r13 109r7 115r13
+X 16 types.ads
+36K9*Types 306e10 18|34w6 34r21
+184I9*Name_Id<integer> 18|40r16 41r13 45r16 46r13 50r16 51r13 58r16 59r13
+. 69r62 70r25 71r25 71r63 74r28 74r44 75r28 75r44 77r29 77r43 19|47r16 48r13
+. 62r16 63r13 77r16 78r13 103r16 104r13 155r62 167r25 176r25 176r63 185r27
+. 185r43 199r27 199r43 213r29 213r43
+190i4*No_Name{184I9} 19|187r14 188r17 201r14 202r17 215r15 219r15
+X 18 utils.ads
+36K9*Utils 80l5 80e10 19|37b14 240l5 240t10
+38V13*Add_Prefix_To_Name{16|184I9} 39>7 40>7 19|45b13 54l8 54t26
+39s7 Prefix{string} 19|46b7 51r31
+40i7 Name{16|184I9} 19|47b7 52r35
+43V13*Add_Suffix_To_Name{16|184I9} 44>7 45>7 19|60b13 69l8 69t26
+44s7 Suffix{string} 19|61b7 67r31
+45i7 Name{16|184I9} 19|62b7 66r24
+48V13*Remove_Prefix_From_Name{16|184I9} 49>7 50>7 19|75b13 95l8 95t31
+49s7 Prefix{string} 19|76b7 81r31 83r31 88r13
+50i7 Name{16|184I9} 19|77b7 85r24 94r14
+56V13*Remove_Suffix_From_Name{16|184I9} 57>7 58>7 19|101b13 120l8 120t31
+57s7 Suffix{string} 19|102b7 107r31 109r31 114r13
+58i7 Name{16|184I9} 19|103b7 111r24 119r14
+64U14*Capitalize 64=26 19|126b14 140l8 140t18
+64s26 S{string} 19|126b26 129r16 132r16 133m16 133r55 136r13
+68V13*Quoted{string} 68>21 68>33 19|146b13 149l8 149t14 169r14
+68s21 S{string} 19|146b21 148r25
+68e33 D{character} 19|146b33 148r20 148r35
+69V13*Quoted{16|184I9} 69>21 69>33 19|155b13 161l8 161t14 178r14
+69s21 S{string} 19|155b21 158r31
+69e33 D{character} 19|155b33 157r32 159r32
+70V13*Quoted{string} 70>21 70>34 19|167b13 170l8 170t14
+70i21 N{16|184I9} 19|167b21 169r39
+70e34 D{character} 19|167b34 169r43
+71V13*Quoted{16|184I9} 71>21 71>34 19|176b13 179l8 179t14
+71i21 N{16|184I9} 19|176b21 178r39
+71e34 D{character} 19|176b34 178r43
+74V13*To_Lower{16|184I9} 74>24 19|185b13 193l8 193t16
+74i24 N{16|184I9} 19|185b23 187r10 190r24
+75V13*To_Upper{16|184I9} 75>24 19|199b13 207l8 207t16
+75i24 N{16|184I9} 19|199b23 201r10 204r24
+77V13*Is_Prefix{boolean} 77>24 77>38 19|213b13 238l8 238t17
+77i24 N1{16|184I9} 19|213b24 215r10 224r53
+77i38 N2{16|184I9} 19|213b38 219r10 225r53
+X 19 utils.adb
+39N4 Up_To_Low 133r64
+80i7 Length{natural} 84m7 86r21 87r40 90r33
+81a7 Temp_Str{string} 87m10 88r22
+106i7 Length{natural} 110m7 112r21 113r46 115r66
+107a7 Temp_Str{string} 113m10 114r22
+127b7 Up{boolean} 130r13 131m13 137m13
+129i11 I{integer} 132r19 133r19 133r58 136r16
+224a10 S1{string} 227r13 230r24 231r16
+225a10 S2{string} 227r26 231r26
+230i14 I{integer} 231r20 231r30
+

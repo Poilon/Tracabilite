@@ -1,0 +1,438 @@
+<html lang="en">
+<head>
+<title>Mapping Patterns - Ocarina: A Compiler for the AADL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="Ocarina: A Compiler for the AADL">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Petri-Net-Mapping-Rules.html#Petri-Net-Mapping-Rules" title="Petri Net Mapping Rules">
+<link rel="next" href="Examples.html#Examples" title="Examples">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+Copyright (C) 2003-2007 E'cole
+nationale supe'rieure des te'le'communications
+
+Permission is granted to make and distribute verbatim copies of this
+entire document without royalty provided the copyright notice and
+this permission are preserved.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+body {}
+body {
+	background-color: white;
+	position: absolute;
+	font-size: medium;
+	font-family: Verdana;
+//	padding-left: 7em;
+	top: 3em;
+}
+
+div.navigation {
+	font-size: small; 
+	padding-left: 0; 
+	padding-right: 0; 
+	text-align: right
+}
+
+div#menu {
+	text-align: left;
+	position: fixed;
+	left: 1pt;
+	bottom: auto;
+	top: 2em;
+	right: auto;
+	padding-right: 1ex;
+	padding-left: 1em;
+	padding-top: 1ex;
+	padding-bottom: 1ex;
+	border-width: 3pt;
+	background-color: transparent;  
+	border-color: red; 
+	border-left-style: solid
+}
+
+div#menu span.item {
+	display: block;
+	background-color: transparent;  
+}
+
+table.navigation {
+	font-size: small
+} 
+
+
+/* Paragraphs */
+p, blockquote {
+	color: black; 
+	text-indent: 1em; 
+	text-align: justify
+}
+
+
+p {
+	margin-bottom: .5em; 
+	margin-top: 1px
+}
+
+p kbd 
+{
+  background-color: ivory
+}
+
+div.important {
+	background-color: lightgray; 
+	border-color: red; 
+	border-style: solid;  
+	border-width: 1pt
+}
+p.important {
+	color: red
+}
+p.brut {
+	text-indent: 0
+}
+p.brut:first-letter {
+	font-size: 100%; 
+	font-weight: normal
+}
+
+/* Sections */
+div {
+	border-style: none; 
+	padding-left: 1em; 
+	padding-right: 1em; 
+	margin-top: 2px; 
+	margin-bottom: 2px
+}
+
+
+/* Menus */
+
+div.action {
+	background-color: ivory; 
+	border-color: lightgray; 
+	border-style: solid; 
+	border-width: 1pt 1pt 1pt 1pt; 
+	font-size: small; 
+	text-align: left
+}
+
+div.special 
+{
+  border-color: lightgray; 
+  border-style: solid; 
+  border-width: 0 0 0 4pt
+}
+
+
+/* Docbook special settings */
+
+h3.subtitle {
+	text-align: center
+}
+
+h1.title {
+	margin-bottom: 10pt;
+}
+
+div.authorgroup {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	display: block;
+}
+
+div.author {
+	display: inline;
+}
+
+h3.author {
+	display: inline;
+	font-style: normal;
+	color: black;
+	font-size: medium;
+}
+
+p.copyright {
+	margin-top: 1em;
+	text-align: center;
+}
+
+/* End docbook settings */
+
+
+/* hors-texte */
+
+pre {
+	background-color: whitesmoke;
+	border-color: lightcoral;
+	border-style: solid;
+	border-width: 0pt 1pt 1pt 0pt;
+}
+
+.hors-texte {
+	background-color: lightgray;  
+	border-color: lightcoral; 
+	border-style: solid;
+	border-width: 1pt; 
+	padding-left: 1em; 	
+	padding-right: 1em; 
+	text-align: justify
+}
+
+/* Tables */
+
+table.hors-texte {
+	margin: auto; 
+	font-size: 100%;
+	border-width: 1pt 1pt 1pt 1pt
+}
+
+table.hors-texte td {
+	padding-left: 1ex; 
+	padding-right: 1ex
+}
+
+table.hors-texte tr.sep {
+	padding-top: 1ex
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold;
+  padding: 0pt
+}
+
+h1 {
+	font-size: larger larger larger;
+	text-align: center; 
+	margin-bottom: 24pt
+}
+h2 {
+	font-size: larger larger;
+	margin-left:      0; 
+	margin-top:       24pt; 
+	margin-bottom:    14pt;
+	border-color:     red;
+	border-bottom-style:     solid;
+	border-width:     1pt;
+	padding:          2pt; 
+	margin-left:      0; 
+	margin-right:     0; 
+}
+h3 {
+	font-size: larger;
+	margin-left: 1em; 
+	margin-bottom: 1ex;
+	color: red;	
+}
+h4, h5, h6 {
+	font-size: normal;
+	margin-left: 2em; 
+	margin-bottom: 1em
+}
+
+h4 {
+	text-decoration: underlined
+}
+h5 {
+	font-style: italic
+}
+
+
+h2.special 
+{
+  border-style:     solid;
+  border-width:	    1pt;
+  border-color:     lightgray;
+  padding:          2pt; 
+}
+
+img.flottant {
+	float: right;
+	clear: both;
+	margin: 2em;
+}
+
+/* Lists */
+
+li, dd 
+{
+  text-align: justify
+}
+
+dt {
+	font-style: normal; 
+	margin-top: 1em
+}
+dd {
+	font-style: normal; 
+	margin-left: 4em
+}
+
+dd.sdd {
+	margin-left: 5em
+}
+
+dd ul {margin-top: 0}
+li dl {margin-top: 0}
+ul {list-style-type: square}
+ul ul {list-style-type: disc}
+ul ul ul {list-style-type: circle}
+
+/* Addresses */
+
+address {
+	margin-top: 1ex; margin-bottom: 1ex
+}
+address.poste {
+	font-style: italic
+}
+address.email {
+	font-style: normal
+}
+address.phone {
+	font-style: oblic
+}
+
+/* Links */
+
+a:link, a:visited {
+	color: darkred;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color:  red;
+	padding-bottom: 0px
+}
+
+a:hover, a:active {
+	color: red; 
+	text-decoration: none;
+	border-bottom-color: black;
+	border-bottom-style: solid
+}
+
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Mapping-Patterns"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Examples.html#Examples">Examples</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Petri-Net-Mapping-Rules.html#Petri-Net-Mapping-Rules">Petri Net Mapping Rules</a>
+<hr>
+</div>
+
+<h3 class="section">7.1 Mapping Patterns</h3>
+
+<p>The AADL elements to map into Petri nets are the software
+components. Indeed, execution platform components are used to model
+the deployment of the software components; such deployment information
+is not to in the scope of Petri nets.  AADL threads and AADL
+subprograms are the most important components, since they can host
+subprogram call sequences: they describe the actual execution flows in
+the architecture.  AADL processes and systems are actually boxes
+containing threads or other components, hence they do not provide any
+&ldquo;active&rdquo; semantics; data components are not active components
+either. The following table lists the main rules of the mapping:
+
+<h4 class="subsection">7.1.1 Component Features</h4>
+
+<pre class="example">     feature : <b>in</b> <b>data</b> <b>port</b>;
+</pre>
+   <div class="block-image"><img src="images/feature.png" alt="images/feature.png"></div>
+
+<h4 class="subsection">7.1.2 Subprograms</h4>
+
+<pre class="example">     <b>subprogram</b> a_subprogram
+     <b>features</b>
+       input_1 : <b>in</b> <b>parameter</b>;
+       input_2 : <b>in</b> <b>parameter</b>;
+       output : <b>out</b> <b>parameter</b>;
+     <b>end</b> a_subprogram;
+</pre>
+   <div class="block-image"><img src="images/subprogram.png" alt="images/subprogram.png"></div>
+
+<h4 class="subsection">7.1.3 Other Components</h4>
+
+<pre class="example">     <b>process</b> a_process
+     <b>features</b>
+       input_1 : <b>in</b> <b>data</b> <b>port</b>;
+       input_2 : <b>in</b> <b>data</b> <b>port</b>;
+       output : <b>out</b> <b>data</b> <b>port</b>;
+     end a_process;
+</pre>
+   <div class="block-image"><img src="images/component.png" alt="images/component.png"></div>
+
+<h4 class="subsection">7.1.4 Connections</h4>
+
+<pre class="example">     connection : <b>data</b> <b>port</b> output -&gt; input;
+</pre>
+   <div class="block-image"><img src="images/connection.png" alt="images/connection.png"></div>
+
+<h4 class="subsection">7.1.5 Subprogram Connections</h4>
+
+<pre class="example">     connection : <b>parameter</b> output -&gt; input;
+</pre>
+   <div class="block-image"><img src="images/spg_connection.png" alt="images/spg_connection.png"></div>
+
+   <p>This mapping mainly consists of translating the AADL execution flows
+into Petri nets. Components that do not have any subcomponents nor
+call sequences are modeled by a transition that consumes inputs and
+produces outputs. Component features are modeled by places. Tokens
+stored in input features are to be consumed by the components or
+connections; tokens produced by component or connection transitions
+are stored in output features. Components that have subcomponents are
+modeled by merging the transition with the models of the
+subcomponents.
+
+   <p>We model a place per feature. This systematic approach help the user
+identify the translation between AADL models and corresponding Petri
+nets. In addition, it facilitates the expansions of the feature
+places. For example, we might want to describe the queue protocols
+defined by the AADL properties: in this case we would replace each
+place by Petri nets modeling FIFOs or whatever type of queue is
+specified by the AADL properties.
+
+   <p>Connections between features are modeled by transitions. We
+distinguish connections between subprograms parameters and between
+other component ports.
+
+   <p>If an AADL port is connected to several other ports at a time, the
+Petri net transition shall be connected to all the corresponding
+places: a token will be sent to each target place, thus modeling the
+fact that each destination port receives the output of the initial
+port.
+
+   <p>Connections of subprograms parameters are slightly more
+complex. Indeed, output places of subprograms model variables, that
+can be read many times. Therefore, a subprogram produces two tokens:
+one that carries the output value and the control information, and an
+extra one that only carries the value. The extra token is stored in a
+place where subprograms from other call sequences can get it&mdash;the
+transition shall put the token back into the place. In order to ensure
+the correct replacement of the token whenever a new value is produced
+by the subprogram, the subprogram itself consumes its old extra output
+token to produce the new one.
+
+   <p>Call sequences are made of subprograms that are connected. We use an
+extra token to model the execution control. There is a single
+execution control token in each thread or subprogram, thus reflecting
+the fact that there is no concurrency in call sequences, and in threads
+and subprograms in general.
+
+   </body></html>
+

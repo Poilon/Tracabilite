@@ -1,0 +1,299 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrvvnnnnnrnnnnvnnvnnrnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.me_real.real_tree.utils%b  ocarina-me_real-real_tree-utils.adb  dfa5cbb5 NE OO PK IS
+W charset%s		charset.adb		charset.ali
+W errors%s		errors.adb		errors.ali
+W namet%s		namet.adb		namet.ali
+W ocarina.me_real.real_tree%s  ocarina-me_real-real_tree.ads  ocarina-me_real-real_tree.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ocarina.me_real.real_tree.utils%s  ocarina-me_real-real_tree-utils.ads  ff1c9f07 EE NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.me_real%s	ocarina-me_real.ads	ocarina-me_real.ali
+W ocarina.me_real.real_tree%s  ocarina-me_real-real_tree.ads  ocarina-me_real-real_tree.ali
+W ocarina.me_real.real_tree.debug%s  ocarina-me_real-real_tree-debug.adb  ocarina-me_real-real_tree-debug.ali
+W ocarina.me_real.tokens%s  ocarina-me_real-tokens.adb  ocarina-me_real-tokens.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090727140100 34786013
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D charset.ads		20110516190003 5a17a088
+D errors.ads		20110516190003 7675b7de
+D gnat.ads		20050905075125 96410e68
+D g-os_lib.ads		20090409150019 c015094d
+D g-speche.ads		20090417131547 4ca03910
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D namet.adb		20110516190003 6b7d4c38
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-files.ads	20110516190002 e29905b0
+D ocarina-me_real.ads	20110516190002 4b14dbfa
+D ocarina-me_real-real_tree.ads  20110516190002 1be7d4ef
+D ocarina-me_real-real_tree-debug.ads  20110516190002 b3ce8d89
+D ocarina-me_real-real_tree-nodes.ads  20110516191755 fbcd7f5f
+D ocarina-me_real-real_tree-utils.ads  20110516190002 81c4b8ab
+D ocarina-me_real-real_tree-utils.adb  20110516190002 923cd44c
+D ocarina-me_real-tokens.ads  20110516190002 e09e1416
+D output.ads		20110516190003 77634540
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-memory.ads		20090417131547 c68306b3
+D s-os_lib.ads		20091027135146 6320e1c3
+D s-parame.ads		20091130110856 6cdeed25
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-secsta.ads		20090707124243 d2c357fb
+D s-stalib.ads		20090422095703 9cbc334a
+D s-stoele.ads		20090417130712 a4d57c26
+D s-stoele.adb		20090417130712 49ef69d7
+D s-string.ads		20090417130712 14d97e8c
+D s-traent.ads		20090417130712 a66ef260
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 5 charset.ads
+34K9*Charset 52e12 22|34w6 34r21
+43V13*To_Lower{string} 22|48r30
+X 6 errors.ads
+38K9*Errors 73e11 22|35w6 35r21
+41U14*DE=41:38 22|190r13 242r13 332r13 407r13
+X 13 namet.ads
+38K9*Namet 237e10 22|36w6 36r21
+64i4*Name_Len{natural} 22|117r31
+78V13*Get_Name_String{string} 22|48r40 104r22 113r22 118r30
+95V13*Get_String_Name{38|184I9} 22|50r14
+104V13*Name_Find{38|184I9} 22|95r14 140r24
+124U14*Add_Char_To_Name_Buffer 22|94r7
+129U14*Set_Char_To_Name_Buffer 22|92r7
+149U14*Add_Str_To_Name_Buffer 22|93r7
+153U14*Set_Str_To_Name_Buffer 22|138r7
+X 15 ocarina.ads
+34K9*Ocarina 63e12 21|37r6 38r6 40r9 43r8 171r14 184r5 22|38r14 412r5
+X 17 ocarina-me_real.ads
+34K17*ME_REAL 15|34k9 17|35e20 21|37r14 38r14 40r17 43r16 171r22 184r13 22|38r22
+. 412r13
+X 18 ocarina-me_real-real_tree.ads
+34K25*REAL_Tree 17|34k17 18|35e30 21|38r22 40r25 171r30 184r21 22|38r30 412r21
+X 19 ocarina-me_real-real_tree-debug.ads
+38K35*Debug 82e36 21|38w32 171r40
+74V13*Image{string} 21|171r46
+X 21 ocarina-me_real-real_tree-utils.ads
+40K35*Utils 18|34k25 21|184l31 184e36 22|38b40 412l31 412t36
+47m4*OV_Invalid{38|217M9}
+48m4*OV_Equal{38|217M9} 152r12
+49m4*OV_Not{38|217M9}
+50m4*OV_And{38|217M9}
+51m4*OV_Or{38|217M9}
+52m4*OV_Greater{38|217M9}
+53m4*OV_Less_Equal{38|217M9}
+54m4*OV_Greater_Equal{38|217M9}
+55m4*OV_Less{38|217M9}
+56m4*OV_Minus{38|217M9}
+57m4*OV_Plus{38|217M9}
+58m4*OV_Star{38|217M9} 152r24
+59m4*OV_Modulo{38|217M9}
+60m4*OV_Slash{38|217M9}
+61m4*OV_Different{38|217M9}
+62m4*OV_Power{38|217M9}
+63m4*OV_If_Then_Else{38|217M9}
+64m4*OV_Affect{38|217M9}
+68N4*SV_No_Type 22|188r20 191r20 239r15
+69N4*SV_Generic
+70N4*SV_Processor_Set 155r12 22|152r20 203r15
+71N4*SV_Virtual_Processor_Set 22|154r20 205r15
+72N4*SV_Virtual_Bus_Set 22|174r20 225r15
+73N4*SV_Process_Set 22|156r20 207r15
+74N4*SV_Thread_Set 22|158r20 209r15
+75N4*SV_Threadgroup_Set 22|160r20 211r15
+76N4*SV_Subprogram_Call_Set 22|162r20 213r15
+77N4*SV_Sequence_Call_Set 22|164r20 215r15
+78N4*SV_Subprogram_Set 22|166r20 217r15
+79N4*SV_Data_Set 22|168r20 219r15
+80N4*SV_Memory_Set 22|170r20 221r15
+81N4*SV_Bus_Set 22|172r20 223r15
+82N4*SV_Connection_Set 22|176r20 227r15
+83N4*SV_Device_Set 22|178r20 229r15
+84N4*SV_System_Set 22|180r20 231r15
+85N4*SV_End_To_End_Flows_Set 22|184r20 235r15
+86N4*SV_Local_Set 155r32 22|186r20 237r15
+87N4*SV_Abstract_Set 22|182r20 233r15
+91N4*FC_Is_Subcomponent_Of 22|256r20 346r15
+92N4*FC_Is_Bound_To 22|258r20 348r15
+93N4*FC_Is_Connected_To 22|264r20 350r15
+94N4*FC_Is_Called_By 22|270r20 356r15
+95N4*FC_Is_Accessed_By 22|274r20 364r15
+96N4*FC_Is_Connecting_To 22|266r20 352r15
+97N4*FC_Is_Passing_Through 22|284r20 368r15
+98N4*FC_Is_Calling 22|272r20 362r15
+99N4*FC_Is_Provided_Class 22|260r20 358r15
+100N4*FC_Is_Predecessor_Of 22|262r20 360r15
+101N4*FC_Is_Accessing_To 22|276r20 366r15
+103N4*FC_Get_Property_Value 22|278r20 370r15
+104N4*FC_Get_System_Property_Value 22|268r20 354r15
+105N4*FC_Cardinal 22|282r20 374r15
+106N4*FC_First 22|314r20 398r15
+107N4*FC_Last 22|316r20 398r26
+108N4*FC_Property_Exists 22|280r20 372r15
+109N4*FC_Expr 22|312r20 386r15
+110N4*FC_Int 22|304r20
+111N4*FC_Float 22|306r20
+112N4*FC_List 22|302r20 400r15
+113N4*FC_Max 22|296r20 382r15
+114N4*FC_Min 22|298r20 380r15
+115N4*FC_Is_In 22|286r20 390r15
+116N4*FC_LCM 22|290r20 392r15
+117N4*FC_GCD 22|288r20 394r15
+118N4*FC_Non_Null 22|292r20 396r15
+119N4*FC_Head 22|328r20 402r15
+120N4*FC_Queue 22|330r20 404r15
+121N4*FC_Size 22|294r20 376r15
+122N4*FC_All_Equals 22|300r20 378r15
+123N4*FC_Product 22|310r20 384r15
+124N4*FC_Sum 22|308r20 388r15
+126N4*FC_MMax 22|318r20
+127N4*FC_MMin 22|320r20
+128N4*FC_MAll_Equals 22|322r20
+129N4*FC_MProduct 22|324r20
+130N4*FC_MSum 22|326r20
+132N4*FC_Unknown 22|333r20
+136N4*RT_Boolean 158r12 22|347r20 349r20 351r20 353r20 357r20 359r20 361r20
+. 363r20 365r20 367r20 369r20 373r20 379r20 391r20
+137N4*RT_Integer 22|375r20 377r20 393r20 395r20 397r20
+138N4*RT_Float 22|381r20 383r20 385r20 389r20 399r20
+139N4*RT_String
+140N4*RT_Float_List 22|387r20
+141N4*RT_Int_List
+142N4*RT_String_List
+143N4*RT_Bool_List
+144N4*RT_Range
+145N4*RT_Range_List
+146N4*RT_Element
+147N4*RT_Element_List
+148N4*RT_Error 22|408r20
+149N4*RT_Unknown 158r26 22|355r20 371r20 401r20 403r20 405r20
+151M12*Operator_Values{38|217M9}
+154M12*Predefined_Set_Values{38|68M9}
+157I12*Return_Type{38|218I9} 182r53 22|342r53
+160V13*To_Lower{38|184I9} 160>23 22|46b13 51l8 51t16 140r14
+160i23 Str{38|184I9} 22|46b23 48r57
+162U14*Capitalize 162=26 22|57b14 75l8 75t18
+162s26 S{string} 22|57b26 60r16 63r16 64m16 64r55 67r16 68m16 68r55 71r13
+164V13*Quoted{string} 164>21 164>33 22|81b13 84l8 84t14 104r14
+164s21 S{string} 22|81b21 83r25
+164e33 D{character} 22|81b33 83r20 83r35
+165V13*Quoted{38|184I9} 165>21 165>33 22|90b13 96l8 96t14 113r14
+165s21 S{string} 22|90b21 93r31
+165e33 D{character} 22|90b33 92r32 94r32
+166V13*Quoted{string} 166>21 166>34 22|102b13 105l8 105t14
+166i21 N{38|184I9} 22|102b21 104r39
+166e34 D{character} 22|102b34 104r43
+167V13*Quoted{38|184I9} 167>21 167>34 22|111b13 114l8 114t14
+167i21 N{38|184I9} 22|111b21 113r39
+167e34 D{character} 22|111b34 113r43
+170V13*Image=171:46{string}
+170i20 Node{38|197I9}
+173V13*Remove_Prefix{38|184I9} 173>28 22|116b13 141l8 141t21
+173i28 N{38|184I9} 22|116b28 118r47
+176V13*Translate_Predefined_Sets{38|218I9} 176>40 22|147b13 193l8 193t33
+176e40 T{23|45E9} 22|147b40 150r12
+178V13*Translate_Predefined_Sets{23|45E9} 178>40 22|199b13 245l8 245t33
+178i40 T{38|218I9} 22|199b40 202r12
+180V13*Translate_Function_Code{38|218I9} 180>38 22|251b13 336l8 336t31
+180e38 T{23|45E9} 22|251b38 254r12
+182V13*Get_Returned_Type{157I12} 182>32 22|342b13 410l8 410t25
+182i32 T{38|218I9} 22|342b32 345r12
+X 22 ocarina-me_real-real_tree-utils.adb
+40N4 Up_To_Low 64r64 68r64
+48a7 N{string} 50r31
+58b7 Up{boolean} 61r13 62m13 72m13
+60i11 I{integer} 63r19 64r19 64r58 67r19 68r19 68r58 71r16
+117i7 M{natural} 125r21 138r43
+118a7 S{string} 126r13 138r31
+119b7 P{boolean} 127r16 129m16 131m16 134m13
+120i7 L{natural} 128m16 138r34
+125i11 I{integer} 126r16 128r21
+X 23 ocarina-me_real-tokens.ads
+40K25*Tokens 21|37w22 43r24 23|249e27
+45E9*Token_Type 21|176r44 178r61 180r42 22|147r44 199r61 251r42 23|188e13
+89n7*T_Processor_Set{45E9} 22|151r15 204r20
+90n7*T_Virtual_Processor_Set{45E9} 22|153r15 206r20
+91n7*T_Virtual_Bus_Set{45E9} 22|173r15 226r20
+92n7*T_Process_Set{45E9} 22|155r15 208r20
+93n7*T_Thread_Set{45E9} 22|157r15 210r20
+94n7*T_Threadgroup_Set{45E9} 22|159r15 212r20
+95n7*T_Subprogram_Call_Set{45E9} 22|161r15 214r20
+96n7*T_Sequence_Call_Set{45E9} 22|163r15 216r20
+97n7*T_Subprogram_Set{45E9} 22|165r15 218r20
+98n7*T_Data_Set{45E9} 22|167r15 220r20
+99n7*T_Memory_Set{45E9} 22|169r15 222r20
+100n7*T_Bus_Set{45E9} 22|171r15 224r20
+101n7*T_Connection_Set{45E9} 22|175r15 228r20
+102n7*T_Device_Set{45E9} 22|177r15 230r20
+103n7*T_End_To_End_Flows_Set{45E9} 22|183r15 236r20
+104n7*T_System_Set{45E9} 22|179r15 232r20
+105n7*T_Abstract_Set{45E9} 22|181r15 234r20
+106n7*T_Unknown_Set{45E9} 22|187r15 240r20 243r20
+107n7*T_Local_Set{45E9} 22|185r15 238r20
+111n7*T_Is_Subcomponent_Of{45E9} 22|255r15
+112n7*T_Is_Bound_To{45E9} 22|257r15
+113n7*T_Is_Connected_To{45E9} 22|263r15
+114n7*T_Is_Called_By{45E9} 22|269r15
+115n7*T_Is_Accessed_By{45E9} 22|273r15
+116n7*T_Is_Accessing_To{45E9} 22|275r15
+117n7*T_Is_Passing_Through{45E9} 22|283r15
+118n7*T_Is_Calling{45E9} 22|271r15
+119n7*T_Is_Provided_Class{45E9} 22|259r15
+120n7*T_Is_Predecessor_Of{45E9} 22|261r15
+121n7*T_Is_Connecting_To{45E9} 22|265r15
+125n7*T_Get_Property_Value{45E9} 22|277r15
+126n7*T_Get_System_Property_Value{45E9} 22|267r15
+127n7*T_Cardinal{45E9} 22|281r15
+128n7*T_First{45E9} 22|313r15
+129n7*T_Property_Exists{45E9} 22|279r15
+130n7*T_Last{45E9} 22|315r15
+131n7*T_Expr{45E9} 22|311r15
+132n7*T_Size{45E9} 22|293r15
+133n7*T_Float{45E9} 22|305r15
+134n7*T_List{45E9} 22|301r15
+135n7*T_Head{45E9} 22|327r15
+136n7*T_Queue{45E9} 22|329r15
+137n7*T_Integer{45E9} 22|303r15
+138n7*T_Max{45E9} 22|295r15
+139n7*T_Min{45E9} 22|297r15
+140n7*T_Is_In{45E9} 22|285r15
+141n7*T_LCM{45E9} 22|289r15
+142n7*T_GCD{45E9} 22|287r15
+143n7*T_Non_Null{45E9} 22|291r15
+144n7*T_All_Equals{45E9} 22|299r15
+145n7*T_Product{45E9} 22|309r15
+146n7*T_Sum{45E9} 22|307r15
+150n7*T_MMax{45E9} 22|317r15
+151n7*T_MProduct{45E9} 22|323r15
+152n7*T_MMin{45E9} 22|319r15
+153n7*T_MAll_Equals{45E9} 22|321r15
+154n7*T_MSum{45E9} 22|325r15
+X 38 types.ads
+36K9*Types 21|36w6 42r8 38|306e10
+51I9*Int<integer>
+68M9*Byte 21|154r37
+184I9*Name_Id<integer> 21|160r29 160r45 165r62 166r25 167r25 167r63 173r32
+. 173r48 22|46r29 46r45 90r62 102r25 111r25 111r63 116r32 116r48
+197I9*Node_Id<51I9> 21|170r27
+217M9*Operator_Id<68M9> 21|47r32 48r32 49r32 50r32 51r32 52r32 53r32 54r32
+. 55r32 56r32 57r32 58r32 59r32 60r32 61r32 62r32 63r32 64r32 151r31
+218I9*Value_Id<51I9> 21|157r27 176r63 178r44 180r61 182r36 22|147r63 199r44
+. 251r61 342r36
+

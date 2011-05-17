@@ -1,0 +1,198 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.builder.aadl_ba.specifications%b  ocarina-builder-aadl_ba-specifications.adb  e8650cf0 NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.builder.aadl_ba%s  ocarina-builder-aadl_ba.ads  ocarina-builder-aadl_ba.ali
+W ocarina.me_aadl_ba%s	ocarina-me_aadl_ba.ads	ocarina-me_aadl_ba.ali
+W ocarina.me_aadl_ba.ba_tree%s  ocarina-me_aadl_ba-ba_tree.ads  ocarina-me_aadl_ba-ba_tree.ali
+W ocarina.me_aadl_ba.ba_tree.nodes%s  ocarina-me_aadl_ba-ba_tree-nodes.adb  ocarina-me_aadl_ba-ba_tree-nodes.ali
+W ocarina.me_aadl_ba.ba_tree.nutils%s  ocarina-me_aadl_ba-ba_tree-nutils.adb  ocarina-me_aadl_ba-ba_tree-nutils.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+
+U ocarina.builder.aadl_ba.specifications%s  ocarina-builder-aadl_ba-specifications.ads  a28214c1 EE NE OO PK IS
+W locations%s		locations.adb		locations.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.builder.aadl_ba%s  ocarina-builder-aadl_ba.ads  ocarina-builder-aadl_ba.ali
+W ocarina.me_aadl_ba%s	ocarina-me_aadl_ba.ads	ocarina-me_aadl_ba.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-builder.ads	20110516190002 04a77d1b
+D ocarina-builder-aadl_ba.ads  20110516190002 cf1c8ac2
+D ocarina-builder-aadl_ba-specifications.ads  20110516190002 cc0b8e78
+D ocarina-builder-aadl_ba-specifications.adb  20110516190002 4e641841
+D ocarina-me_aadl_ba.ads  20110516190002 34273658
+D ocarina-me_aadl_ba-ba_tree.ads  20110516190002 a4cd2059
+D ocarina-me_aadl_ba-ba_tree-nodes.ads  20110516191755 e6e7c350
+D ocarina-me_aadl_ba-ba_tree-nutils.ads  20110516190002 8ced5999
+D ocarina-me_aadl_ba-ba_tree-nutils.adb  20110516190002 6f832384
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-memory.ads		20090417131547 c68306b3
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-stalib.ads		20090422095703 9cbc334a
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 6 locations.ads
+36K9*Locations 74e14 11|35w6 42r8
+38R9*Location 47e14 11|46r21 61r22 74r21 87r25 93r29 114r26 12|47r21 103r22
+. 156r21 207r25 234r29 317r26
+X 8 ocarina.ads
+34K9*Ocarina 63e12 11|37r6 39r9 43r8 119r5 12|34r6 35r6 37r5 38r5 40r14 346r5
+X 9 ocarina-builder.ads
+34K17*Builder 8|34k9 9|35e20 11|39r17 119r13 12|40r22 346r13
+X 10 ocarina-builder-aadl_ba.ads
+34K25*Aadl_Ba 9|34k17 10|36e28 11|39r25 119r21 12|40r30 346r21
+X 11 ocarina-builder-aadl_ba-specifications.ads
+39K33*Specifications 10|34k25 11|119l29 119e43 12|40b38 346l29 346t43
+45V13*Add_New_Behavior_Annex{24|197I9} 46>7 47>7 48>7 49>7 50>7 12|46b13
+. 70l8 70t30
+46r7 Loc{6|38R9} 12|47b7 57r72
+47i7 Container{24|197I9} 12|48b7 60r31
+48i7 Variables{24|210I9} 12|49b7 61r31
+49i7 States{24|210I9} 12|50b7 62r31
+50i7 Transitions{24|210I9} 12|51b7 63r31
+53U14*Add_New_Behavior_Annex 54>7 55>7 56>7 57>7 58>7 12|59r7 76b14 97l8
+. 97t30
+54i7 Behavior_Annex{24|197I9} 12|77b7 84r28 87r25 91r22 95r27
+55i7 Container{24|197I9} 12|78b7 83r28
+56i7 Variables{24|210I9} 12|79b7 86r24 87r41
+57i7 States{24|210I9} 12|80b7 90r24 91r38
+58i7 Transitions{24|210I9} 12|81b7 94r24 95r43
+60V13*Add_New_Behavior_Variable{24|197I9} 61>7 62>7 63>7 64>7 12|102b13 124l8
+. 124t33
+61r7 Loc{6|38R9} 12|103b7 112r40
+62i7 Container{24|197I9} 12|104b7 109r28 115r34
+63i7 Ident_List{24|210I9} 12|105b7 116r34
+64i7 Class_Ref{24|197I9} 12|106b7 117r34
+67U14*Add_New_Behavior_Variable 68>7 69>7 70>7 71>7 12|114r7 130b14 149l8
+. 149t33
+68i7 Behavior_Variable{24|197I9} 12|131b7 136r28 139r28 143r27 147r30
+69i7 Container{24|197I9} 12|132b7 138r10 139r47
+70i7 Ident_List{24|210I9} 12|133b7 142r24 143r46
+71i7 Class_Ref{24|197I9} 12|134b7 146r10 147r49
+73V13*Add_New_Behavior_State{24|197I9} 74>7 75>7 76>7 77>7 12|155b13 176l8
+. 176t30
+74r7 Loc{6|38R9} 12|156b7 164r72
+75i7 Container{24|197I9} 12|157b7 162r28 167r31
+76i7 Ident_List{24|210I9} 12|158b7 168r31
+77e7 State_Kind{13|36E9} 12|159b7 169r31
+80U14*Add_New_Behavior_State 81>7 82>7 83>7 84>7 12|166r7 182b14 200l8 200t30
+81i7 Behavior_State{24|197I9} 12|183b7 188r28 191r28 195r27 198r23
+82i7 Container{24|197I9} 12|184b7 190r10 191r44
+83i7 Ident_List{24|210I9} 12|185b7 194r24 195r43
+84e7 State_Kind{13|36E9} 12|186b7 198r64
+86V13*Add_New_Behavior_Transition{24|197I9} 87>7 88>7 89>7 12|206b13 227l8
+. 227t35
+87r7 Loc{6|38R9} 12|207b7 215r42
+88i7 Container{24|197I9} 12|208b7 212r28
+89i7 Transition_Node{24|197I9} 12|209b7 217r10 218r47 219r28
+92V13*Add_New_Execute_Transition{24|197I9} 93>7 94>7 95>7 96>7 97>7 98>7
+. 99>7 100>7 12|233b13 263l8 263t34
+93r7 Loc{6|38R9} 12|234b7 247r52
+94i7 Container{24|197I9} 12|235b7 250r35
+95i7 Transition_Idt{24|197I9} 12|236b7 251r35
+96i7 Transition_Priority{24|197I9} 12|237b7 252r35
+97i7 Sources{24|210I9} 12|238b7 253r35
+98i7 Behavior_Condition{24|197I9} 12|239b7 254r35
+99i7 Destination{24|197I9} 12|240b7 255r35
+100i7 Behavior_Act_List{24|210I9} 12|241b7 256r35
+103U14*Add_New_Execute_Transition 104>7 105>7 106>7 107>7 108>7 109>7 110>7
+. 111>7 12|249r7 269b14 310l8 310t34
+104i7 Execute_Transition{24|197I9} 12|270b7 279r28 283r28 287r39 291r44 296r23
+. 300r34 304r27 308r32
+105i7 Container{24|197I9} 12|271b7 282r10 283r48
+106i7 Transition_Idt{24|197I9} 12|272b7 286r10 287r59
+107i7 Transition_Priority{24|197I9} 12|273b7 290r10 292r44
+108i7 Sources{24|210I9} 12|274b7 295r24 296r43
+109i7 Behavior_Condition{24|197I9} 12|275b7 299r10 300r54
+110i7 Destination{24|197I9} 12|276b7 303r10 304r47
+111i7 Behavior_Act_List{24|210I9} 12|277b7 307r24 308r52
+113V13*Add_New_Behavior_Condition{24|197I9} 114>7 115>7 116>7 12|316b13 344l8
+. 344t34
+114r7 Loc{6|38R9} 12|317b7 328r58
+115i7 Container{24|197I9} 12|318b7 322r26 323r38 330r19 331r48
+116i7 Condition_Node{24|197I9} 12|319b7 324r28 325r28 334r10 335r45 336r28
+X 12 ocarina-builder-aadl_ba-specifications.adb
+57i7 Behavior_Annex{24|197I9} 59r31 65r14 68r17
+111i7 Behavior_Variable{24|197I9} 114r34 119r14 122r17
+164i7 Behavior_State{24|197I9} 166r31 171r14 174r17
+214i7 Behavior_Transition{24|197I9} 218r26 219r45 222r14 226r14
+246i7 Execute_Transition{24|197I9} 249r35 258r14 261r17
+327i7 Behavior_Condition{24|197I9} 331r28 335r25 336r44 339r14 343r14
+X 13 ocarina-me_aadl_ba.ads
+34K17*ME_AADL_BA 11|37w14 43r16 12|34r14 35r14 37r13 38r13 13|129e23
+36E9*Behavior_State_Kind 11|77r21 84r24 12|159r21 186r24 198r39 13|45e17
+37n7*BSK_Error{36E9} 11|84r47 12|186r47
+X 14 ocarina-me_aadl_ba-ba_tree.ads
+34K28*BA_Tree 12|34r25 35r25 37r24 38r24 14|35e31
+X 15 ocarina-me_aadl_ba-ba_tree-nodes.ads
+12K36*Nodes 12|34w33 38r32 15|855e37
+20n7*K_Behavior_Annex{14E9} 12|57r54 84r46 109r41 162r41 212r41
+22n7*K_Behavior_Variable{14E9} 12|112r19 136r49
+23n7*K_Behavior_State{14E9} 12|164r54 188r46
+24n7*K_Behavior_Transition{14E9} 12|215r19 323r51
+25n7*K_Execution_Behavior_Transition{14E9} 12|247r19 280r24
+26n7*K_Behavior_Condition{14E9} 12|327r58
+28n7*K_Dispatch_Condition{14E9} 12|324r46
+46n7*K_Value_Expression{14E9} 12|325r46
+576V13*Kind{14E9} 12|84r22 109r22 136r22 162r22 188r22 212r22 279r22 323r32
+. 324r22 325r22
+592U14*Set_BE_Container 12|139r10 191r10 219r10 283r10 331r10 336r10
+616U14*Set_Variables 12|87r10
+619U14*Set_States 12|91r10
+622U14*Set_Transitions 12|95r10
+637U14*Set_Identifiers 12|143r10 195r10
+640U14*Set_Classifier_Ref 12|147r10
+643U14*Set_State_Kind 12|198r7
+646U14*Set_Transition 12|218r10
+649U14*Set_Sources 12|296r10
+652U14*Set_Destination 12|304r10
+655U14*Set_Behavior_Condition 12|300r10
+658U14*Set_Behavior_Actions 12|308r10
+661U14*Set_Behavior_Transition_Idt 12|287r10
+664U14*Set_Behavior_Transition_Priority 12|291r10
+667U14*Set_Condition 12|335r10
+X 16 ocarina-me_aadl_ba-ba_tree-nutils.ads
+39K36*Nutils 12|35w33 37r32 16|101e38
+77V13*Is_Empty{boolean} 12|86r14 90r14 94r14 142r14 194r14 295r14 307r14
+83V13*New_Node{24|197I9} 12|57r44 112r9 164r44 215r9 247r9 327r48
+X 24 types.ads
+36K9*Types 11|34w6 41r8 24|306e10
+51I9*Int<integer>
+197I9*Node_Id<51I9> 11|47r21 51r13 54r24 55r24 62r22 64r22 65r13 68r27 69r27
+. 71r27 75r21 78r13 81r24 82r24 88r25 89r25 90r13 94r29 95r29 96r29 98r29
+. 99r29 101r13 104r29 105r29 106r29 107r29 109r29 110r29 115r26 116r26 117r13
+. 12|48r21 52r13 57r33 77r24 78r24 104r22 106r22 107r13 111r36 131r27 132r27
+. 134r27 157r21 160r13 164r33 183r24 184r24 208r25 209r25 210r13 214r38 235r29
+. 236r29 237r29 239r29 240r29 242r13 246r37 270r29 271r29 272r29 273r29 275r29
+. 276r29 318r26 319r26 320r13 327r37
+198i4*No_Node{197I9} 11|55r35 69r38 71r38 82r47 105r40 106r40 107r40 109r40
+. 110r40 12|66r17 78r35 120r17 132r38 134r38 138r23 146r23 172r17 184r47
+. 190r23 217r29 223r17 259r17 271r40 272r40 273r40 275r40 276r40 282r23 286r28
+. 290r33 299r32 303r25 334r28 340r17
+200V13*Present{boolean} 12|330r10
+203V13*No{boolean} 12|65r10 119r10 171r10 222r10 258r10 322r22 339r10
+210I9*List_Id<197I9> 11|48r21 49r21 50r21 56r24 57r24 58r24 63r22 70r27 76r21
+. 83r24 97r29 100r29 108r29 111r29 12|49r21 50r21 51r21 79r24 80r24 81r24
+. 105r22 133r27 158r21 185r24 238r29 241r29 274r29 277r29
+211i4*No_List{210I9} 11|56r35 57r35 58r35 83r47 108r40 111r40 12|79r35 80r35
+. 81r35 185r47 274r40 277r40
+

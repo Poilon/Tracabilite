@@ -1,0 +1,220 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrvnnnnnnnnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.backends.pok_c.naming%b  ocarina-backends-pok_c-naming.adb  15715e84 NE OO PK IS
+W locations%s		locations.adb		locations.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.backends%s	ocarina-backends.adb	ocarina-backends.ali
+W ocarina.backends.c_common%s  ocarina-backends-c_common.ads  ocarina-backends-c_common.ali
+W ocarina.backends.c_common.mapping%s  ocarina-backends-c_common-mapping.adb  ocarina-backends-c_common-mapping.ali
+W ocarina.backends.c_tree%s  ocarina-backends-c_tree.ads  ocarina-backends-c_tree.ali
+W ocarina.backends.c_tree.nodes%s  ocarina-backends-c_tree-nodes.adb  ocarina-backends-c_tree-nodes.ali
+W ocarina.backends.c_tree.nutils%s  ocarina-backends-c_tree-nutils.adb  ocarina-backends-c_tree-nutils.ali
+W ocarina.backends.pok_c%s  ocarina-backends-pok_c.adb  ocarina-backends-pok_c.ali
+W ocarina.backends.properties%s  ocarina-backends-properties.adb  ocarina-backends-properties.ali
+W ocarina.me_aadl%s	ocarina-me_aadl.ads	ocarina-me_aadl.ali
+W ocarina.me_aadl.aadl_instances%s  ocarina-me_aadl-aadl_instances.ads  ocarina-me_aadl-aadl_instances.ali
+W ocarina.me_aadl.aadl_instances.entities%s  ocarina-me_aadl-aadl_instances-entities.adb  ocarina-me_aadl-aadl_instances-entities.ali
+W ocarina.me_aadl.aadl_instances.nodes%s  ocarina-me_aadl-aadl_instances-nodes.adb  ocarina-me_aadl-aadl_instances-nodes.ali
+W ocarina.me_aadl.aadl_instances.nutils%s  ocarina-me_aadl-aadl_instances-nutils.adb  ocarina-me_aadl-aadl_instances-nutils.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+
+U ocarina.backends.pok_c.naming%s  ocarina-backends-pok_c-naming.ads  11c9b7c3 EE NE OO PK IS
+W ocarina.backends.pok_c%s  ocarina-backends-pok_c.adb  ocarina-backends-pok_c.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-backends.ads	20110516190004 d555a6b1
+D ocarina-backends-c_common.ads  20110516190004 e2dd3210
+D ocarina-backends-c_common-mapping.ads  20110516190004 9ccf58cc
+D ocarina-backends-c_tree.ads  20110516190004 282ddef8
+D ocarina-backends-c_tree-nodes.ads  20110516191755 d51a9e55
+D ocarina-backends-c_tree-nutils.ads  20110516190004 208eba30
+D ocarina-backends-pok_c.ads  20110516190004 a0b4ffdf
+D ocarina-backends-pok_c-naming.ads  20110516190004 b17d481c
+D ocarina-backends-pok_c-naming.adb  20110516190004 315f55bd
+D ocarina-backends-properties.ads  20110516190004 7d8de08a
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-aadl_instances.ads  20110516190002 0d8589ff
+D ocarina-me_aadl-aadl_instances-entities.ads  20110516190002 30203e25
+D ocarina-me_aadl-aadl_instances-nodes.ads  20110516191754 a1724caa
+D ocarina-me_aadl-aadl_instances-nutils.ads  20110516190002 d8e59cd8
+D ocarina-me_aadl-aadl_instances-nutils.adb  20110516190002 06d1821f
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-memory.ads		20090417131547 c68306b3
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-stalib.ads		20090422095703 9cbc334a
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+D utils.ads		20110516190003 96e9264b
+X 6 locations.ads
+36K9*Locations 74e14 17|34w6 46r8
+49r4*No_Location{38R9} 17|156r57 173r53 213r49
+X 8 ocarina.ads
+34K9*Ocarina 63e12 16|34r9 43r5 17|35r6 36r6 37r6 38r6 39r6 40r6 41r6 42r6
+. 44r14 47r8 48r8 49r8 50r8 51r8 52r8 54r24 55r25 56r24 394r5
+X 9 ocarina-backends.ads
+43K17*Backends 8|34k9 9|100e21 16|34r17 43r13 17|39r14 40r14 41r14 42r14
+. 44r22 50r16 51r16 52r16 56r32 394r13
+X 10 ocarina-backends-c_common.ads
+34K26*C_Common 35e30 17|40r23 50r25
+X 11 ocarina-backends-c_common-mapping.ads
+36K35*Mapping 381e38 17|40w32 50r34
+50V13*Map_Distributed_Application{31|197I9} 17|184r41
+51V13*Map_HI_Node{31|197I9} 17|194r15 316r50
+52b26 Kernel{boolean} 17|194r31
+54V13*Map_HI_Unit{31|197I9} 17|197r15 320r15
+X 12 ocarina-backends-c_tree.ads
+37K26*C_Tree 38e28 17|41r23 42r23 51r25 56r41
+X 13 ocarina-backends-c_tree-nodes.ads
+12K33*Nodes 1152e34 17|41w30 56r48
+82n7*K_HI_Tree_Bindings{14E9} 17|152r29 169r29 211r29
+885V13*HI_Nodes{31|210I9} 17|222r38
+1089V13*Deployment_Node{31|197I9} 17|335r38
+1090U14*Set_Deployment_Node 17|217r14
+1099U14*Set_Naming_Node 17|218r14
+1101V13*Processes{31|210I9} 17|135r32 365r30
+1102U14*Set_Processes 17|158r14 175r14 215r14
+X 14 ocarina-backends-c_tree-nutils.ads
+36K33*Nutils 614e35 17|42w30 51r32
+292U14*Append_Node_To_List 17|222r10
+296U14*Push_Entity 17|191r10 192r10 195r10 198r10 319r10 321r10 338r10 339r10
+297U14*Pop_Entity 17|224r10 225r10 226r10 325r10 326r10 352r10 353r10
+305V13*New_Node{31|197I9} 17|152r15 169r15 211r15
+563U14*Set_Naming_Header 17|323r10
+X 15 ocarina-backends-pok_c.ads
+34K26*POK_C 9|43k17 15|61e27 16|34r26 43r22 17|44r31 394r22
+58i4 C_Root{31|197I9} 17|191r23 222r48 338r23
+X 16 ocarina-backends-pok_c-naming.ads
+34K32*Naming 15|34k26 16|43l28 43e34 17|44b37 394l28 394t34
+36K12*Header_File 41l8 41e19 17|62b17 393l8 393t19
+38U17*Visit_First_Pass 38>35 17|81b17 85r16 93l11 93t27 206r16 256r19
+38i35 E{31|197I9} 17|81b35 83r21 85r47 88r44
+39U17*Visit_Second_Pass 39>36 17|268b17 272r16 280l11 280t28 347r16 368r16
+39i36 E{31|197I9} 17|268b36 270r21 272r48 275r45
+X 17 ocarina-backends-pok_c-naming.adb
+54K12 AIN=54:55 154r10 156r42 171r10 173r38 220r10 366r18 368r35 369r21
+55K12 AINU=55:56 138r15 140r10 156r27 173r23 200r17 213r23 237r17 241r19
+. 243r22 250r17 255r19 341r17 382r17 386r19
+56K12 CTN=56:48 135r28 152r25 158r10 169r25 175r10 211r25 215r10 217r10 218r10
+. 222r34 335r34 365r26
+64U17 Visit_First_Pass_Component 64>45 88r16 99b17 125l11 125t37
+64i45 E{31|197I9} 99b45 101r42 105r41 108r52 111r52 114r44 117r38 120r52
+65U17 Visit_First_Pass_System 65>42 105r16 233b17 262l11 262t34
+65i42 E{31|197I9} 233b42 237r47 238r45 250r47 251r45
+66U17 Visit_First_Pass_Process_Or_Device 66>53 108r16 111r16 131b17 142l11
+. 142t45
+66i53 E{31|197I9} 131b53 136r61 138r41
+67U17 Visit_First_Pass_Processor 67>45 114r16 183b17 227l11 227t37 242r19
+67i45 E{31|197I9} 183b45 184r70 194r28 197r28 200r47 201r45 220r44
+68U17 Visit_First_Pass_Bus 68>39 117r16 148b17 159l11 159t31 244r19
+68i39 E{31|197I9} 148b39 154r65
+69U17 Visit_First_Pass_Virtual_Processor 69>53 120r16 165b17 177l11 177t45
+69i53 E{31|197I9} 165b53 171r44
+71U17 Visit_Second_Pass_Component 71>46 275r16 286b17 309l11 309t38
+71i46 E{31|197I9} 286b46 288r42 292r42 295r53 298r53 301r45 304r53
+72U17 Visit_Second_Pass_System 72>43 292r16 378b17 392l11 392t35
+72i43 E{31|197I9} 378b43 382r47 383r45
+73U17 Visit_Second_Pass_Process_Or_Device 73>54 295r16 298r16 315b17 327l11
+. 327t46
+73i54 E{31|197I9} 315b54 316r63 320r28
+74U17 Visit_Second_Pass_Processor 74>46 301r16 333b17 354l11 354t38 387r19
+74i46 E{31|197I9} 333b46 336r40 341r47 342r45
+75U17 Visit_Second_Pass_Virtual_Processor 75>54 304r16 360b17 372l11 372t46
+75i54 E{31|197I9} 360b54 364r48 365r67
+100e10 Category{19|55E9} 103r15
+132i10 N{31|197I9} 138m10 141r14
+133i10 Processes_List{31|210I9} 135m10 141r17
+149i10 N{31|197I9} 152m10 154r70 158r29
+150i10 Accessed_List{31|210I9} 156m10 158r32
+166i10 Processes{31|210I9} 173m10 175r32
+167i10 N{31|197I9} 169m10 171r48 175r29
+184i10 A{31|197I9} 192r23 217r38 222r31
+185i10 S{31|197I9} 201m13 202r28 206r58 207m16 207r32
+186i10 P{31|197I9} 194m10 195r23
+187i10 U{31|197I9} 197m10 198r23 218r34
+188i10 N{31|197I9} 211m10 215r29 217r35 218r31 220r48
+189i10 Processes{31|210I9} 213m10 215r32
+234i10 S{31|197I9} 238m13 239r28 240r62 246m16 246r32 251m13 252r28 255r70
+. 256r61 258m16 258r32
+235i10 Component_Instance{31|197I9} 240m16 241r38 242r47 243r35 244r41
+287e10 Category{19|55E9} 290r15
+316i10 P{31|197I9} 319r23
+317i10 U{31|197I9} 320m10 321r23 323r29
+334i10 S{31|197I9} 342m13 343r28 347r59 348m16 348r32
+335i10 A{31|197I9} 339r23
+361i10 Processes{31|210I9} 365m13 366r34
+362i10 S{31|197I9} 366m13 367r28 368r45 369m16 369r36
+379i10 Component_Instance{31|197I9} 385m16 386r38 387r48
+380i10 S{31|197I9} 383m13 384r28 385r62 389m16 389r32
+X 18 ocarina-backends-properties.ads
+38K26*Properties 17|39w23 52r25 18|817e32
+524V13*Get_Bound_Processor{31|197I9} 17|136r40
+X 19 ocarina-me_aadl.ads
+34K17*ME_AADL 17|35w14 36r14 37r14 38r14 47r16 48r16 49r16 54r32 55r33 19|102e20
+55E9*Component_Category 17|100r30 287r30 19|71e18
+63n7*CC_Process{55E9} 17|107r18 294r18
+65n7*CC_Processor{55E9} 17|113r18 300r18
+66n7*CC_Virtual_Processor{55E9} 17|119r18 303r18
+67n7*CC_Bus{55E9} 17|116r18
+69n7*CC_Device{55E9} 17|110r18 297r18
+70n7*CC_System{55E9} 17|104r18 291r18
+X 20 ocarina-me_aadl-aadl_instances.ads
+34K25*AADL_Instances 17|36r22 37r22 38r22 48r24 49r24 54r40 55r41 20|35e35
+X 21 ocarina-me_aadl-aadl_instances-entities.ads
+36K40*Entities 17|38w37 49r39 21|111e44
+76V13*Get_Category_Of_Component{19|55E9} 17|101r15 288r15
+X 22 ocarina-me_aadl-aadl_instances-nodes.ads
+12K40*Nodes 17|36w37 48r39 54r55 22|599e41
+16n7*K_List_Id{14E9} 17|156r46 173r42 213r38
+21n7*K_Architecture_Instance{14E9} 17|84r18 271r18
+25n7*K_Component_Instance{14E9} 17|87r18 274r18
+391V13*Kind{14E9} 17|83r15 270r15
+397V13*Next_Node{31|197I9} 17|207r21 246r21 258r21 348r21 369r25 389r21
+400V13*First_Node{31|197I9} 17|201r18 238r18 251r18 342r18 366r22 383r18
+409V13*Identifier{31|197I9} 17|136r28 154r32 171r32 220r32 336r28 364r36
+. 365r55
+430V13*Backend_Node{31|197I9} 17|136r14 336r14 364r22 365r41
+431U14*Set_Backend_Node 17|154r14 171r14 220r14
+433V13*Item{31|197I9} 17|368r39
+439V13*Root_System{31|197I9} 17|85r34 272r35
+463V13*Subcomponents{31|210I9} 17|200r32 201r30 237r32 238r30 250r32 251r30
+. 341r32 342r30 382r32 383r30
+484V13*Parent_Subcomponent{31|197I9} 17|154r44
+493V13*Corresponding_Instance{31|197I9} 17|206r34 240r38 255r46 256r37 347r35
+. 385r38
+X 23 ocarina-me_aadl-aadl_instances-nutils.ads
+39K40*Nutils 17|37w37 55r56 23|155e42
+52U14*Append_Node_To_List 17|140r15
+77V13*Is_Empty{boolean} 17|200r22 237r22 250r22 341r22 382r22
+86V13*New_List{31|210I9} 17|156r32 173r28 213r28
+89V13*Make_Node_Container{31|197I9} 17|138r20
+148V13*Is_Process_Or_Device{boolean} 17|255r24
+151V13*Is_Processor{boolean} 17|241r24 386r24
+152V13*Is_Bus{boolean} 17|243r27
+X 31 types.ads
+51I9*Int<integer>
+197I9*Node_Id<51I9> 16|38r39 39r40 17|64r49 65r46 66r57 67r49 68r43 69r57
+. 71r50 72r47 73r58 74r50 75r58 81r39 99r49 131r57 132r14 148r43 149r14 165r57
+. 167r22 183r49 184r30 185r21 186r21 187r21 188r22 233r46 234r21 235r31 268r40
+. 286r50 315r58 316r39 317r30 333r50 334r14 335r23 360r58 362r24 378r47 379r33
+. 380r33
+200V13*Present{boolean} 17|202r19 239r19 252r19 343r19 364r13 367r19 384r19
+210I9*List_Id<197I9> 17|133r27 150r26 166r22 189r22 361r24
+

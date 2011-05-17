@@ -1,0 +1,147 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnvnrnnvnrvvnnnnnrnnnnnnnvnnrnnnnnnnnnnvnvvnvnnnnnnnnnnnnnnnn
+
+U ocarina.annotations%b	ocarina-annotations.adb	d58ff47c OO PK IS
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.unchecked_conversion%s
+W gnat%s		gnat.ads		gnat.ali
+W gnat.table%s
+W interfaces%s		interfac.ads		interfac.ali
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W system%s		system.ads		system.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.memory%s	s-memory.adb		s-memory.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+
+U ocarina.annotations%s	ocarina-annotations.ads	832af7cb EE NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-unccon.ads		20070406091342 51e09df2
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20080408064830 4cacb2f1
+D g-table.adb		20080820135520 18951c21
+D interfac.ads		20090409232307 a69cad5c
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-annotations.ads  20110516190002 dd7478b6
+D ocarina-annotations.adb  20110516190002 a4688e3f
+D system.ads		20110401034433 15e10948
+D s-assert.ads		20090409232307 5f25a194
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-imgint.ads		20090409232307 f77d133c
+D s-memory.ads		20090409232307 04574b64
+D s-parame.ads		20090409232307 f32e56e9
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-stalib.ads		20090409232307 52b793d5
+D s-traent.ads		20090409232307 bd5f2753
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 4 gnat.ads
+36K9*GNAT 39e9 11|34r6 50r11
+X 5 g-table.ads
+58k14*Table 203e15 11|34w11 50r16
+106A9*Table_Type(11|42R9)<10|47I9>
+108A12*Big_Table_Type{106A9[11|49]}<10|47I9>
+117P9*Table_Ptr(108A12[11|49])
+122p4*Table{117P9[11|49]} 11|80r7[49] 90r16[49] 91r22[49] 93r10[49] 115r20[49]
+. 116r19[49] 131r20[49] 132r19[49] 147r10[49] 163r10[49] 182r14[49] 197r14[49]
+. 206r14[49] 215r14[49] 224r14[49]
+142V13*Last{10|47I9} 11|80r14[49] 85r55[49] 93r32[49]
+171U14*Increment_Last 11|79r7[49]
+X 8 namet.ads
+38K9*Namet 237e10 11|36w6 36r18
+91V13*Get_Name_Table_Info{21|51I9} 11|103r29
+104V13*Name_Find{21|184I9} 11|68r14
+149U14*Add_Str_To_Name_Buffer 11|67r7
+153U14*Set_Str_To_Name_Buffer 11|66r7
+157U14*Set_Name_Table_Info 11|85r10
+X 9 ocarina.ads
+34K9*Ocarina 63e12 10|45r9 71r5 11|38r14 227r5
+X 10 ocarina-annotations.ads
+45K17*Annotations 9|34k9 10|71l13 71e24 11|38b22 227l13 227t24
+47I9*Annotation_Id<integer> 48r29 55r64 56r64 60r34 61r34 66r51 67r35 67r57
+. 11|46r14 50r42 76r15 101r51 103r14 110r64 111r15 126r64 127r15 143r24 159r24
+. 175r24 190r24 204r34 213r34 222r34 222r56
+48i4*No_Annotation{47I9}
+50U14*Annotate 50>24 50>37 50>50 11|142b14 152l8 152t16
+50i24 N{21|197I9} 11|142b24 143r59 150r21
+50i37 A{21|197I9} 11|142b37 143r62 150r33
+50i50 I{21|197I9} 11|142b50 147r32 150r61
+51U14*Annotate 51>24 51>37 51>50 11|158b14 168l8 168t16
+51i24 N{21|197I9} 11|158b24 159r59 166r21
+51i37 A{21|184I9} 11|158b37 159r62 166r50
+51i50 I{21|197I9} 11|158b50 163r32 166r61
+55V13*Annotation_Index{47I9} 55>31 55>44 11|110b13 120l8 120t24 143r41 175r41
+55i31 N{21|197I9} 11|110b31 111r50
+55i44 A{21|197I9} 11|110b44 115r41
+56V13*Annotation_Index{47I9} 56>31 56>44 11|126b13 136l8 136t24 159r41 190r41
+56i31 N{21|197I9} 11|126b31 127r50
+56i44 A{21|184I9} 11|126b44 131r41
+60V13*Annotation_Node{21|197I9} 60>30 11|204b13 207l8 207t23
+60i30 I{47I9} 11|204b30 206r21
+61V13*Annotation_Name{21|184I9} 61>30 11|213b13 216l8 216t23
+61i30 I{47I9} 11|213b30 215r21
+63V13*Annotation_Info{21|197I9} 63>30 63>43 11|174b13 183l8 183t23
+63i30 N{21|197I9} 11|174b30 175r59
+63i43 A{21|197I9} 11|174b43 175r62
+64V13*Annotation_Info{21|197I9} 64>30 64>43 11|189b13 198l8 198t23
+64i30 N{21|197I9} 11|189b30 190r59
+64i43 A{21|184I9} 11|189b43 190r62
+66V13*First_Annotation{47I9} 66>31 11|76r32 101b13 104l8 104t24 111r32 127r32
+66i31 N{21|197I9} 11|101b31 103r65
+67V13*Next_Annotation{47I9} 67>31 11|222b13 225l8 225t23
+67i31 I{47I9} 11|222b30 224r21
+X 11 ocarina-annotations.adb
+40a4 Prefix{string} 66r31
+42R9 Annotation_Record 47e14 50r23 56r42 75r42
+43i7*Node{21|197I9} 115r34 150r25 166r25 206r24
+44i7*Name{21|184I9} 131r34 150r36 166r42 215r24
+45i7*Info{21|197I9} 147m24 150r53 163m24 166r53 182r28 197r28
+46i7*Next{10|47I9} 90r30 91r36 93m24 116r33 132r33 150r64 166r64 224r24
+49K12 Annotation_Table[5|58] 51r8
+53V13 Internal_Name{21|184I9} 53>28 64b13 69l8 69t21 85r31 103r50
+53i28 N{21|197I9} 64b28 67r31
+56U14 Append_To 56>25 56>38 75b14 95l8 95t17 150r10 166r10
+56i25 N{21|197I9} 75b25 76r50 85r46
+56r38 A{42R9} 75b38 80r23
+76i7 Index{10|47I9} 84r10 90r23 91m13 91r29 93r17
+111i7 Index{10|47I9} 114r13 115r27 116m10 116r26 119r14
+127i7 Index{10|47I9} 130r13 131r27 132m10 132r26 135r14
+143i7 Index{10|47I9} 146r10 147r17
+159i7 Index{10|47I9} 162r10 163r17
+175i7 Index{10|47I9} 178r10 182r21
+190i7 Index{10|47I9} 193r10 197r21
+X 21 types.ads
+36K9*Types 10|43w6 43r17 21|306e10
+51I9*Int<integer> 11|85r50
+184I9*Name_Id<integer> 10|51r41 56r48 61r56 64r47 11|44r14 53r48 64r48 126r48
+. 158r41 189r47 213r56
+190i4*No_Name{184I9} 11|150r44
+197I9*Node_Id<51I9> 10|50r28 50r41 50r54 51r28 51r54 55r35 55r48 56r35 60r56
+. 63r34 63r47 63r63 64r34 64r63 66r35 11|43r14 45r14 53r32 56r29 64r32 75r29
+. 101r35 110r35 110r48 126r35 142r28 142r41 142r54 158r28 158r54 174r34 174r47
+. 174r63 189r34 189r63 204r56
+198i4*No_Node{197I9} 10|50r65 51r65 11|142r65 158r65 166r33
+

@@ -1,0 +1,42 @@
+data message
+properties 
+  Data_Model::Data_Representation => integer;
+end message;
+
+data internal_data
+properties
+  Data_Model::Data_Representation => integer;
+end internal_data;
+
+data shared_data
+features
+  method : subprogram update;
+properties
+  Concurrency_Control_Protocol => Protected_Access;
+end shared_data;
+
+data implementation shared_data.i
+subcomponents
+  Field : data internal_data;
+properties
+  Data_Model::Data_Representation => struct;
+end shared_data.i;
+
+subprogram update
+features
+  this : requires data access shared_data.i;
+  I    : in parameter message; 
+properties
+  source_language => Ada95;
+  source_name => "Repository.Update";
+end update;
+
+subprogram transmit_message
+features
+  msg_in  : in parameter message;
+  msg_out : out parameter message;
+  mem     : requires data access shared_data.i;
+properties
+  source_language => Ada95;
+  source_name => "Repository.Transmit_Message";
+end transmit_message;

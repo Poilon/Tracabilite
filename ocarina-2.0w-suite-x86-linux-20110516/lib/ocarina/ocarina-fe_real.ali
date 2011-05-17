@@ -1,0 +1,67 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.fe_real%b	ocarina-fe_real.adb	772c3115 NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.fe_real%s	ocarina-fe_real.adb	ocarina-fe_real.ali
+W ocarina.fe_real.parser%s  ocarina-fe_real-parser.adb  ocarina-fe_real-parser.ali
+W ocarina.me_real%s	ocarina-me_real.ads	ocarina-me_real.ali
+W ocarina.me_real.tokens%s  ocarina-me_real-tokens.adb  ocarina-me_real-tokens.ali
+W output%s		output.adb		output.ali
+
+U ocarina.fe_real%s	ocarina-fe_real.ads	f2813c19 EE NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D gnat.ads		20050905075125 96410e68
+D g-os_lib.ads		20090409150019 c015094d
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D locations.ads		20110516190003 a3dd4cff
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-fe_real.ads	20110516190002 9ab0d9b8
+D ocarina-fe_real.adb	20110516190002 833002a6
+D ocarina-fe_real-parser.ads  20110516190002 f951bb5d
+D ocarina-files.ads	20110516190002 e29905b0
+D ocarina-me_real.ads	20110516190002 4b14dbfa
+D ocarina-me_real-tokens.ads  20110516190002 e09e1416
+D output.ads		20110516190003 77634540
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-memory.ads		20090417131547 c68306b3
+D s-os_lib.ads		20091027135146 6320e1c3
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-stalib.ads		20090422095703 9cbc334a
+D s-string.ads		20090417130712 14d97e8c
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 9 ocarina.ads
+34K9*Ocarina 63e12 10|34r9 44r5 11|36r6 37r6 39r14 49r7 50r7 74r5
+X 10 ocarina-fe_real.ads
+34K17*FE_REAL 9|34k9 10|44l13 44e20 11|36r14 39b22 50r15 74l13 74t20
+36U14*Init 11|47b14 51l8 51t12
+39U14*Reset 11|57b14 62l8 62t13
+42U14*Usage 11|68b14 72l8 72t13
+X 12 ocarina-fe_real-parser.ads
+39K25*Parser 11|36w22 50r23 12|52e27
+49U14*Init 11|50r30
+X 14 ocarina-me_real.ads
+34K17*ME_REAL 11|37r14 49r15 14|35e20
+X 15 ocarina-me_real-tokens.ads
+40K25*Tokens 11|37w22 49r23 15|249e27
+231U14*Init_Tokens 11|49r30
+X 16 output.ads
+42K9*Output 11|34w6 41r8 16|105e11
+87U14*Write_Line 11|70r7
+

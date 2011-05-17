@@ -1,0 +1,23 @@
+@smallexample
+
+-----------------------
+-- @i{Concurrent_Update --}
+-----------------------
+
+@b{procedure} Concurrent_Update (arg : @b{in} @b{out} Partition.Counter_Type)
+@b{is}
+   Sum  : Partition.Integer_Type;
+@b{begin}
+   -- @i{ data initialization}
+   Partition.Set_Field (Data, 0);
+
+   @b{for} I @b{in} 0 .. 100 @b{loop}
+      Partition.Increment (Data);
+      Partition.Get_Field (Data, Sum);
+      @b{if} Integer (Sum) = 100 @b{then}
+         @b{exit};
+      @b{end} @b{if};
+   @b{end} @b{loop};
+@b{end} Concurrent_Update;
+
+@end smallexample

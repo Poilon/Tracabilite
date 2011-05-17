@@ -1,0 +1,20 @@
+@smallexample
+
+@b{thread} P
+features
+  Data_Source : @b{event} @b{out} @b{data} @b{port} Simple_Type;
+@b{end} P;
+
+@b{thread} @b{implementation} P.Impl
+@b{calls} @{
+  -- @i{ ...}
+@};
+@b{connections}
+  -- @i{ ...}
+@b{properties}
+  Dispatch_Protocol => Periodic;
+  Period            => 1000 Ms;
+@b{end} P.Impl;
+
+
+@end smallexample

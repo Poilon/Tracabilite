@@ -1,0 +1,25 @@
+SCENARIO_1 :
+	   
+   - One thread by process   
+   - Periodic and aperiodic tasks
+   - Single-call sequence
+   - Unicast inter-process connexions
+
+   Code generation specific :
+     - Node Location
+
+   PN specific : 
+     - Symbolic special values for data
+
+SCENARIO_1_UDP :
+	       
+   SCENARIO_1 + :
+   
+   Code generation specific :
+     - Parametrized protocol name (DIOP)
+
+SCENARIO_2 :
+	   
+   SCENARIO_1 + :   
+   - Multiples threads by process
+   - Unicast inter-threads and inter-process connexions 

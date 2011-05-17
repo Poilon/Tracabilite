@@ -1,0 +1,160 @@
+V "GNAT Lib v4.5"
+A -O2
+A -fPIC
+A -gnat05
+A -gnata
+A -gnatp
+A -gnatn
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.builder.aadl.annexes%b  ocarina-builder-aadl-annexes.adb  9d6ccde6 NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.builder%s	ocarina-builder.ads	ocarina-builder.ali
+W ocarina.builder.aadl%s  ocarina-builder-aadl.ads  ocarina-builder-aadl.ali
+W ocarina.builder.aadl.components%s  ocarina-builder-aadl-components.adb  ocarina-builder-aadl-components.ali
+W ocarina.builder.aadl.namespaces%s  ocarina-builder-aadl-namespaces.adb  ocarina-builder-aadl-namespaces.ali
+W ocarina.me_aadl%s	ocarina-me_aadl.ads	ocarina-me_aadl.ali
+W ocarina.me_aadl.aadl_tree%s  ocarina-me_aadl-aadl_tree.ads  ocarina-me_aadl-aadl_tree.ali
+W ocarina.me_aadl.aadl_tree.nodes%s  ocarina-me_aadl-aadl_tree-nodes.adb  ocarina-me_aadl-aadl_tree-nodes.ali
+W ocarina.me_aadl.aadl_tree.nutils%s  ocarina-me_aadl-aadl_tree-nutils.adb  ocarina-me_aadl-aadl_tree-nutils.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+
+U ocarina.builder.aadl.annexes%s  ocarina-builder-aadl-annexes.ads  f4042084 EE NE OO PK IS
+W locations%s		locations.adb		locations.ali
+W ocarina.builder.aadl%s  ocarina-builder-aadl.ads  ocarina-builder-aadl.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20090506092935 afec5ecc
+D g-table.adb		20090506092935 436f58ca
+D locations.ads		20110516190003 a3dd4cff
+D namet.ads		20110516190003 e03fb004
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-builder.ads	20110516190002 04a77d1b
+D ocarina-builder-aadl.ads  20110516190002 ad3a7356
+D ocarina-builder-aadl-annexes.ads  20110516190002 cc8c75f1
+D ocarina-builder-aadl-annexes.adb  20110516190002 05a68f37
+D ocarina-builder-aadl-components.ads  20110516190002 c8abd019
+D ocarina-builder-aadl-namespaces.ads  20110516190002 b88cbb47
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-aadl_tree.ads  20110516190002 4be6b0c7
+D ocarina-me_aadl-aadl_tree-nodes.ads  20110516191754 5cf9a699
+D ocarina-me_aadl-aadl_tree-nutils.ads  20110516190002 7898fae7
+D ocarina-me_aadl-aadl_tree-nutils.adb  20110516190002 1764ba82
+D system.ads		20090410155748 83f59500
+D s-assert.ads		20090417131547 4c8d26a1
+D s-exctab.ads		20090417131547 4b7fd51d
+D s-memory.ads		20090417131547 c68306b3
+D s-scaval.ads		20090409150019 1bd0ed08
+D s-stalib.ads		20090422095703 9cbc334a
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+D utils.ads		20110516190003 96e9264b
+X 6 locations.ads
+36K9*Locations 74e14 11|38w6 52r20 67r20 82r26 12|43r20 55r20 138r20 160r20
+. 183r26
+38R9*Location 47e14 11|52r30 67r30 82r36 12|43r30 55r30 138r30 160r30 183r36
+X 8 ocarina.ads
+34K9*Ocarina 63e12 11|40r9 94r5 12|34r6 35r6 37r6 38r6 40r14 46r20 58r20
+. 63r11 64r11 65r11 66r11 119r11 120r11 145r11 167r11 190r11 191r11 207r5
+X 9 ocarina-builder.ads
+34K17*Builder 8|34k9 9|35e20 11|40r17 94r13 12|34r14 35r14 40r22 63r19 64r19
+. 207r13
+X 10 ocarina-builder-aadl.ads
+34K25*AADL 9|34k17 10|35e25 11|40r25 94r21 12|34r22 35r22 40r30 63r27 64r27
+. 207r21
+X 11 ocarina-builder-aadl-annexes.ads
+40K30*Annexes 10|34k25 11|94l26 94e33 12|40b35 207l26 207t33
+42V13*Set_Annex_Content{boolean} 43>7 44>7 12|113b13 131l8 131t25
+43i7 Annex{26|197I9} 12|114b7 122r22 123r38 124r46 126r69 129r26
+44i7 Text{26|184I9} 12|115b7 128r30
+51V13*Add_New_Annex_Subclause{26|197I9} 52>7 53>7 54>7 55>7 12|137b13 153l8
+. 153t31
+52r7 Loc{6|38R9} 12|138b7 148r29
+53i7 Annex_Name{26|197I9} 12|139b7 149r29
+54i7 Namespace{26|197I9} 12|140b7 150r29
+55i7 In_Modes{26|197I9} 12|141b7 152r29
+66V13*Add_New_Annex_Library{26|197I9} 67>7 68>7 69>7 70>7 12|159b13 176l8
+. 176t29
+67r7 Loc{6|38R9} 12|160b7 169r49
+68i7 Annex_Name{26|197I9} 12|161b7 170r49
+69i7 Namespace{26|197I9} 12|162b7 171r49
+70b7 Is_Private{boolean} 12|163b7 174r29
+81V13*Add_New_Annex_Path{26|197I9} 82>7 83>7 84>7 85>7 12|182b13 205l8 205t26
+82r7 Loc{6|38R9} 12|183b7 196r58
+83i7 Container{26|197I9} 12|184b7 193r22 200r38
+84i7 Annex_Identifier{26|197I9} 12|185b7 201r29
+85i7 List_Identifiers{26|210I9} 12|186b7 194r36 202r30
+X 12 ocarina-builder-aadl-annexes.adb
+42V13 Add_New_Annex{26|197I9} 43>7 44>7 45>7 46>7 47>7 54b13 107l8 107t21
+. 148r14 169r34
+43r7 Loc{6|38R9} 55b7 80r56
+44i7 Annex_Name{26|197I9} 56b7 68r22 69r37 83r29 84r33
+45i7 Namespace{26|197I9} 57b7 70r22 72r39 73r47 74r47 77r35 78r42 88r16 89r23
+. 91r39 92r38 94r19 95r23 96r23 98r41 99r32
+46e7 Annex_Kind{17|14E9} 58b7 71r23 76r20 80r44
+47i7 In_Modes{26|197I9} 59b7 86r27
+80i7 Node{26|197I9} 83r23 84r45 85r26 86r21 91r33 92r49 98r35 99r43 103r17
+81b7 Success{boolean} 92m10 99m10 102r10
+126i7 Content{26|197I9} 128r21 129r33
+169i7 Node{26|197I9} 174r23 175r14
+196i7 Node{26|197I9} 200r32 201r23 202r24 204r14
+X 13 ocarina-builder-aadl-components.ads
+39K30*Components 12|35w27 63r32 13|213e36
+46V13*Add_Annex{boolean} 12|99r21
+X 14 ocarina-builder-aadl-namespaces.ads
+39K30*Namespaces 12|34w27 64r32 14|120e36
+41V13*Add_Declaration{boolean} 12|92r21
+X 15 ocarina-me_aadl.ads
+34K17*ME_AADL 12|37r14 38r14 46r28 58r28 65r19 66r19 119r19 120r19 145r19
+. 167r19 190r19 191r19 15|102e20
+X 16 ocarina-me_aadl-aadl_tree.ads
+34K25*AADL_Tree 12|37r22 38r22 46r36 58r36 65r27 66r27 119r27 120r27 145r27
+. 167r27 190r27 191r27 16|35e30
+X 17 ocarina-me_aadl-aadl_tree-nodes.ads
+12K35*Nodes 12|37w32 46r46 58r46 65r37 119r37 145r37 167r37 190r37 17|1877e36
+14E9*Node_Kind 12|46r52 58r52 17|117e24
+19n7*K_Identifier{14E9} 12|69r51
+26n7*K_AADL_Specification{14E9} 12|78r55 88r29
+29n7*K_Package_Specification{14E9} 12|77r48 89r36
+34n7*K_Component_Type{14E9} 12|73r60 94r32
+35n7*K_Component_Implementation{14E9} 12|72r52 95r36
+59n7*K_Feature_Group_Type{14E9} 12|75r57 96r36
+109n7*K_Annex_Content{14E9} 12|126r47
+110n7*K_Annex_Subclause{14E9} 12|71r36 123r47 151r29
+111n7*K_Annex_Library{14E9} 12|76r33 124r55 172r49
+112n7*K_Annex_Path{14E9} 12|196r44
+1427V13*Kind{14E9} 12|69r31 72r33 73r41 74r41 77r29 78r36 88r10 89r17 94r13
+. 95r17 96r17 123r32 124r40
+1430V13*Loc{6|38R9} 12|126r64
+1443U14*Set_Corresponding_Entity 12|84r7
+1467U14*Set_Identifier 12|83r7 201r7
+1476U14*Set_Is_Private 12|174r7
+1512U14*Set_Identifiers 12|202r7
+1581U14*Set_Container_Component 12|98r10 200r7
+1626U14*Set_In_Modes 12|86r7
+1827U14*Set_Raw_Text 12|128r7
+1830U14*Set_Annex_Content 12|85r7 129r7
+1836U14*Set_Container_Package 12|91r10
+X 18 ocarina-me_aadl-aadl_tree-nutils.ads
+38K35*Nutils 12|38w32 66r37 120r37 191r37 18|120e37
+76V13*Is_Empty{boolean} 12|194r26
+86V13*New_Node{26|197I9} 12|80r34 126r37 196r34
+X 26 types.ads
+36K9*Types 11|37w6 43r15 44r15 53r20 54r20 55r20 56r13 68r20 69r20 71r13
+. 83r26 84r26 85r26 86r13 12|44r20 45r20 47r20 47r37 48r13 56r20 57r20 59r20
+. 59r37 60r13 62r11 114r15 115r15 118r11 139r20 140r20 141r20 142r13 144r11
+. 161r20 162r20 164r13 166r11 184r26 185r26 186r26 187r13 189r11 26|306e10
+51I9*Int<integer>
+184I9*Name_Id<integer> 11|44r21 12|115r21
+197I9*Node_Id<51I9> 11|43r21 53r26 54r26 55r26 56r19 68r26 69r26 71r19 83r32
+. 84r32 86r19 12|44r26 45r26 47r26 48r19 56r26 57r26 59r26 60r19 80r23 114r21
+. 126r26 139r26 140r26 141r26 142r19 161r26 162r26 164r19 169r23 184r32 185r32
+. 187r19 196r23
+198i4*No_Node{197I9} 12|47r43 59r43 68r36 70r35 85r32 105r17 122r31 193r35
+210I9*List_Id<197I9> 11|85r32 12|186r32
+

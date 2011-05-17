@@ -1,0 +1,238 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.builder.aadl_ba.expressions%b  ocarina-builder-aadl_ba-expressions.adb  e440376b NE OO PK IS
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.builder.aadl_ba%s  ocarina-builder-aadl_ba.ads  ocarina-builder-aadl_ba.ali
+W ocarina.me_aadl_ba%s	ocarina-me_aadl_ba.ads	ocarina-me_aadl_ba.ali
+W ocarina.me_aadl_ba.ba_tree%s  ocarina-me_aadl_ba-ba_tree.ads  ocarina-me_aadl_ba-ba_tree.ali
+W ocarina.me_aadl_ba.ba_tree.nodes%s  ocarina-me_aadl_ba-ba_tree-nodes.adb  ocarina-me_aadl_ba-ba_tree-nodes.ali
+W ocarina.me_aadl_ba.ba_tree.nutils%s  ocarina-me_aadl_ba-ba_tree-nutils.adb  ocarina-me_aadl_ba-ba_tree-nutils.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+
+U ocarina.builder.aadl_ba.expressions%s  ocarina-builder-aadl_ba-expressions.ads  78379073 EE NE OO PK IS
+W locations%s		locations.adb		locations.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.builder.aadl_ba%s  ocarina-builder-aadl_ba.ads  ocarina-builder-aadl_ba.ali
+W ocarina.me_aadl_ba%s	ocarina-me_aadl_ba.ads	ocarina-me_aadl_ba.ali
+W types%s		types.adb		types.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20080408064830 4cacb2f1
+D locations.ads		20110516190003 a3dd4cff
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-builder.ads	20110516190002 04a77d1b
+D ocarina-builder-aadl_ba.ads  20110516190002 cf1c8ac2
+D ocarina-builder-aadl_ba-expressions.ads  20110516190002 16be0aca
+D ocarina-builder-aadl_ba-expressions.adb  20110516190002 98f4a768
+D ocarina-me_aadl_ba.ads  20110516190002 34273658
+D ocarina-me_aadl_ba-ba_tree.ads  20110516190002 a4cd2059
+D ocarina-me_aadl_ba-ba_tree-nodes.ads  20110516191755 e6e7c350
+D ocarina-me_aadl_ba-ba_tree-nutils.ads  20110516190002 8ced5999
+D system.ads		20110401034433 15e10948
+D s-assert.ads		20090409232307 5f25a194
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-stalib.ads		20090409232307 52b793d5
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 5 locations.ads
+36K9*Locations 74e14 9|35w6 42r8
+38R9*Location 47e14 9|46r22 56r23 62r23 69r26 75r21 81r21 90r25 97r21 104r21
+. 110r21 117r21 10|47r22 91r23 126r23 166r26 201r21 236r21 287r25 322r21
+. 348r21 377r23 409r21
+X 6 ocarina.ads
+34K9*Ocarina 63e12 9|37r6 39r9 43r8 122r5 10|34r6 35r6 37r14 39r8 40r8 433r5
+X 7 ocarina-builder.ads
+34K17*Builder 6|34k9 7|35e20 9|39r17 122r13 10|37r22 433r13
+X 8 ocarina-builder-aadl_ba.ads
+34K25*Aadl_Ba 7|34k17 8|36e28 9|39r25 122r21 10|37r30 433r21
+X 9 ocarina-builder-aadl_ba-expressions.ads
+39K33*Expressions 8|34k25 9|122l29 122e40 10|37b38 433l29 433t40
+45V13*Add_New_Value_Holder{20|197I9} 46>7 47>7 48>7 49>7 50>7 51>7 52>7 10|46b13
+. 84l8 84t28
+46r7 Loc{5|38R9} 10|47b7 65r68
+47i7 Container{20|197I9} 10|48b7 56r26 57r38 58r38 67r19 68r42
+48i7 Ident{20|197I9} 10|49b7 59r28 60r38 71r37 72r25
+49i7 Target_Node{20|197I9} 10|50b7 61r26 62r37 63r37 74r19 75r36 76r28
+50b7 Is_A_Count{boolean} 10|51b7 79r35
+51b7 Is_A_Fresh{boolean} 10|52b7 80r35
+52b7 Is_A_Interro{boolean} 10|53b7 81r43
+55V13*Add_New_Value_Expression{20|197I9} 56>7 57>7 58>7 10|90b13 119l8 119t32
+56r7 Loc{5|38R9} 10|91b7 101r70
+57i7 Container{20|197I9} 10|92b7 96r26 97r38 98r38 104r19 105r40
+58i7 Relation_List{20|210I9} 10|93b7 99r36 108r34
+61V13*Add_New_Relation{20|197I9} 62>7 63>7 64>7 65>7 10|125b13 159l8 159t24
+62r7 Loc{5|38R9} 10|126b7 135r65
+63i7 Container{20|197I9} 10|127b7 132r26 133r38 138r19 139r43 146r27
+64b7 Bool_Value{boolean} 10|128b7 142r41
+65i7 Spl_Expr_List{20|210I9} 10|129b7 144r40
+68V13*Add_New_Simple_Expression{20|197I9} 69>7 70>7 71>7 10|165b13 194l8
+. 194t33
+69r7 Loc{5|38R9} 10|166b7 175r72
+70i7 Container{20|197I9} 10|167b7 171r26 172r36 178r19 179r41
+71i7 Simple_Expr_List{20|210I9} 10|168b7 173r36 182r43
+74V13*Add_New_Term{20|197I9} 75>7 76>7 77>7 10|200b13 229l8 229t20
+75r7 Loc{5|38R9} 10|201b7 210r57
+76i7 Container{20|197I9} 10|202b7 206r26 207r36 213r19 214r39
+77i7 Factor_List{20|210I9} 10|203b7 208r36 217r31
+80V13*Add_New_Factor{20|197I9} 81>7 82>7 83>7 84>7 85>7 86>7 10|235b13 280l8
+. 280t22
+81r7 Loc{5|38R9} 10|236b7 261r61
+82i7 Container{20|197I9} 10|237b7 244r26 245r36 263r19 264r41
+83b7 Is_Abs_Bool{boolean} 10|238b7 267r32
+84b7 Is_Not_Bool{boolean} 10|239b7 268r32
+85i7 Low_Primary{20|197I9} 10|240b7 247r28 248r36 249r36 250r36 251r36 252r36
+. 270r39 271r25
+86i7 Upp_Primary{20|197I9} 10|241b7 254r26 255r36 256r36 257r36 258r36 259r36
+. 273r19 274r42 275r28
+89V13*Add_New_Property_Constant{20|197I9} 90>7 91>7 92>7 93>7 10|286b13 315l8
+. 315t33
+90r7 Loc{5|38R9} 10|287b7 299r52
+91i7 Container{20|197I9} 10|288b7 293r26 294r38 295r38 301r19 302r42
+92i7 Property_Set_Id{20|197I9} 10|289b7 308r19 309r42 310r28
+93i7 Property_Cst_Id{20|197I9} 10|290b7 296r28 305r37 306r25
+96V13*Add_New_Integer_Range{20|197I9} 97>7 98>7 99>7 100>7 10|321b13 341l8
+. 341t29
+97r7 Loc{5|38R9} 10|322b7 330r70
+98i7 Container{20|197I9} 10|323b7 328r26 329r38 332r19 333r43
+99i7 Lower_Bound{20|197I9} 10|324b7 336r41
+100i7 Upper_Bound{20|197I9} 10|325b7 337r41
+103V13*Add_New_Integer_Value{20|197I9} 104>7 105>7 106>7 10|347b13 370l8
+. 370t29
+104r7 Loc{5|38R9} 10|348b7 359r68
+105i7 Container{20|197I9} 10|349b7 353r26 354r38 361r19 362r41
+106i7 Entity_Node{20|197I9} 10|350b7 355r28 356r38 365r32 366r25
+109V13*Add_New_Behavior_Time{20|197I9} 110>7 111>7 112>7 113>7 10|376b13
+. 402l8 402t29
+110r7 Loc{5|38R9} 10|377b7 389r53
+111i7 Container{20|197I9} 10|378b7 383r26 384r38 391r19 392r43
+112i7 Integer_Val{20|197I9} 10|379b7 385r28 395r41 396r25 397r43 398r25
+113i7 Unit_Ident{20|197I9} 10|380b7 386r28
+116V13*Add_New_Operator{20|197I9} 117>7 118>7 119>7 10|408b13 431l8 431t24
+117r7 Loc{5|38R9} 10|409b7 420r65
+118i7 Container{20|197I9} 10|410b7 414r26 415r38 416r38 417r38 418r38 422r19
+. 423r43
+119e7 Operat_Kind{11|73E9} 10|411b7 427r49
+X 10 ocarina-builder-aadl_ba-expressions.adb
+65i7 Value_Holder{20|197I9} 68r28 71r23 72r32 75r22 76r41 79r21 80r21 81r29
+. 83r14
+101i7 Value_Expr{20|197I9} 105r28 108r22 110r43 112r39 117r14
+102i7 List_Node{20|197I9} 110m7 111r22 112r28 114m10 114r34
+135i7 Relation_Node{20|197I9} 139r28 142r26 144r25 145r38 149r49 151r42 157r14
+136i7 List_Node{20|197I9} 149m10 150r25 151r31 153m13 153r37
+175i7 Simple_Expr{20|197I9} 179r28 182r30 183r43 184r54 186r42 192r14
+176i7 List_Node{20|197I9} 184m10 185r25 186r31 188m13 188r37
+210i7 Term_Node{20|197I9} 214r28 217r20 218r33 219r44 221r42 227r14
+211i7 List_Node{20|197I9} 219m10 220r25 221r31 223m13 223r37
+261i7 Factor_Node{20|197I9} 264r28 267r19 268r19 270r26 271r38 274r29 275r41
+. 278r14
+298i7 Property_Cst{20|197I9} 302r28 305r23 306r42 309r28 310r45 313r14
+330i7 Integer_Range{20|197I9} 333r28 336r26 337r26 339r14
+359i7 Integer_Val{20|197I9} 362r28 365r19 366r38 368r14
+388i7 Behavior_Time{20|197I9} 392r28 395r26 396r38 397r28 398r38 400r14
+420i7 Operator_Node{20|197I9} 423r28 426r30 429r14
+X 11 ocarina-me_aadl_ba.ads
+34K17*ME_AADL_BA 9|37w14 43r16 10|34r14 35r14 39r16 40r16 11|129e23
+73E9*Operator_Kind 9|119r21 10|411r21 427r30 11|107e14
+X 12 ocarina-me_aadl_ba-ba_tree.ads
+34K28*BA_Tree 10|34r25 35r25 39r27 40r27 12|35e31
+X 13 ocarina-me_aadl_ba-ba_tree-nodes.ads
+12K36*Nodes 10|34w33 40r35 13|855e37
+19n7*K_Identifier{14E9} 10|247r43 255r51 296r47 386r42
+38n7*K_Range{14E9} 10|329r51
+39n7*K_Assignment_Action{14E9} 10|98r51
+41n7*K_Timed_Action{14E9} 10|384r51
+43n7*K_Data_Component_Reference{14E9} 10|60r47 63r52
+44n7*K_Id{14E9} 10|59r37 62r52
+45n7*K_Value_Holder{14E9} 10|65r52 248r51
+46n7*K_Value_Expression{14E9} 10|101r50 133r51 252r51 259r51 417r51
+47n7*K_Relation{14E9} 10|135r53 172r49 416r51
+48n7*K_Simple_Expression{14E9} 10|175r51 207r49 418r51
+49n7*K_Term{14E9} 10|210r49 245r49 415r51
+50n7*K_Factor{14E9} 10|57r51 97r51 261r51 294r51
+51n7*K_Property_Constant{14E9} 10|251r51 258r51 298r52 355r43
+52n7*K_Operator{14E9} 10|420r53
+53n7*K_Boolean_Literal{14E9} 10|250r51 257r51
+54n7*K_Integer_Range{14E9} 10|330r53 354r51
+55n7*K_Integer_Value{14E9} 10|58r51 295r51 359r51 385r43
+56n7*K_Behavior_Time{14E9} 10|388r53
+57n7*K_Literal{14E9} 10|249r51 256r51 356r53
+576V13*Kind{14E9} 10|57r32 58r32 59r22 60r32 62r31 63r31 97r32 98r32 133r32
+. 172r30 207r30 245r30 247r22 248r30 249r30 250r30 251r30 252r30 255r30 256r30
+. 257r30 258r30 259r30 294r32 295r32 296r22 329r32 354r32 355r22 356r32 384r32
+. 385r22 386r22 415r32 416r32 417r32 418r32
+582V13*Next_Node{20|197I9} 10|114r23 153r26 188r26 223r26
+585V13*First_Node{20|197I9} 10|110r20 149r23 184r23 219r23
+592U14*Set_BE_Container 10|68r10 72r7 76r10 105r10 112r10 139r10 151r13 179r10
+. 186r13 214r10 221r13 264r10 271r7 275r10 302r10 306r7 310r10 333r10 362r10
+. 366r7 392r10 396r7 398r7 423r10
+598U14*Set_Identifier 10|71r7 305r7
+736U14*Set_Entity 10|365r7
+739U14*Set_Target 10|75r10
+772U14*Set_Is_Count 10|79r7
+775U14*Set_Is_Fresh 10|80r7
+778U14*Set_Is_Interrogative 10|81r7
+780V13*Relations{20|210I9} 10|110r32
+781U14*Set_Relations 10|108r7
+784U14*Set_Boolean_Value 10|142r7
+786V13*Simple_Exprs{20|210I9} 10|145r24 149r35
+787U14*Set_Simple_Exprs 10|144r7
+789V13*Term_And_Operator{20|210I9} 10|183r24 184r35
+790U14*Set_Term_And_Operator 10|182r7
+792V13*Factors{20|210I9} 10|218r24 219r35
+793U14*Set_Factors 10|217r7
+796U14*Set_Is_Abs 10|267r7
+799U14*Set_Is_Not 10|268r7
+802U14*Set_Lower_Primary 10|270r7
+805U14*Set_Upper_Primary 10|274r10
+808U14*Set_Property_Set 10|309r10
+811U14*Set_Operator_Category 10|426r7
+817U14*Set_Lower_Int_Val 10|336r7
+820U14*Set_Upper_Int_Val 10|337r7
+823U14*Set_Integer_Value 10|395r7
+826U14*Set_Unit_Identifier 10|397r7
+X 14 ocarina-me_aadl_ba-ba_tree-nutils.ads
+39K36*Nutils 10|35w33 39r35 14|101e38
+77V13*Is_Empty{boolean} 10|99r26 145r14 173r26 183r14 208r26 218r14
+83V13*New_Node{20|197I9} 10|65r42 101r40 135r43 175r41 210r39 261r41 298r42
+. 330r43 359r41 388r43 420r43
+X 20 types.ads
+36K9*Types 9|34w6 41r8 20|306e10
+51I9*Int<integer>
+197I9*Node_Id<51I9> 9|47r22 48r22 49r22 53r13 57r23 59r13 63r23 66r13 70r26
+. 72r13 76r21 78r13 82r21 85r21 86r21 87r13 91r25 92r25 93r25 94r13 98r21
+. 99r21 100r21 101r13 105r21 106r21 107r13 111r21 112r21 113r21 114r13 118r21
+. 120r13 10|48r22 49r22 50r22 54r13 65r31 92r23 94r13 101r29 102r20 127r23
+. 130r13 135r32 136r23 167r26 169r13 175r30 176r21 202r21 204r13 210r28 211r21
+. 237r21 240r21 241r21 242r13 261r30 288r25 289r25 290r25 291r13 298r31 323r21
+. 324r21 325r21 326r13 330r32 349r21 350r21 351r13 359r30 378r23 379r23 380r23
+. 381r13 388r32 410r21 412r13 420r32
+198i4*No_Node{197I9} 9|49r34 10|50r34
+200V13*Present{boolean} 10|67r10 74r10 104r10 111r13 138r10 146r18 150r16
+. 178r10 185r16 213r10 220r16 263r10 273r10 301r10 308r10 332r10 361r10 391r10
+. 422r10
+203V13*No{boolean} 10|56r22 61r22 96r22 132r22 171r22 206r22 244r22 254r22
+. 293r22 328r22 353r22 383r22 414r22
+210I9*List_Id<197I9> 9|58r23 65r23 71r26 77r21 10|93r23 129r23 168r26 203r21
+211i4*No_List{210I9} 9|65r36 10|129r36
+

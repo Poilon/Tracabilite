@@ -1,0 +1,36 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.instances.processor%s  ocarina-instances-processor.ads  ba1cc5b1 NE OO PK IS
+W ocarina.instances%s	ocarina-instances.adb	ocarina-instances.ali
+
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-instances.ads	20110516190002 f54a56e8
+D ocarina-instances-processor.ads  20110516190002 4f569359
+D system.ads		20110401034433 15e10948
+D s-scaval.ads		20090409232307 1bd0ed08
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 1 ocarina.ads
+34K9*Ocarina 63e12 3|34r9 35r5
+X 2 ocarina-instances.ads
+36K17*Instances 1|34k9 2|115e22 3|34r17 35r13
+X 3 ocarina-instances-processor.ads
+34K27*Processor 2|36k17 3|35l23 35e32
+

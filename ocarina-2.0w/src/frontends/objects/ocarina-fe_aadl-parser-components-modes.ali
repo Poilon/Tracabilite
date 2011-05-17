@@ -1,0 +1,283 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnvnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.fe_aadl.parser.components.modes%b  ocarina-fe_aadl-parser-components-modes.adb  4e3862c3 NE OO PK IS
+W interfaces%s		interfac.ads		interfac.ali
+W locations%s		locations.adb		locations.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.builder%s	ocarina-builder.ads	ocarina-builder.ali
+W ocarina.builder.aadl%s  ocarina-builder-aadl.ads  ocarina-builder-aadl.ali
+W ocarina.builder.aadl.components%s  ocarina-builder-aadl-components.adb  ocarina-builder-aadl-components.ali
+W ocarina.builder.aadl.components.modes%s  ocarina-builder-aadl-components-modes.adb  ocarina-builder-aadl-components-modes.ali
+W ocarina.fe_aadl%s	ocarina-fe_aadl.adb	ocarina-fe_aadl.ali
+W ocarina.fe_aadl.lexer%s  ocarina-fe_aadl-lexer.adb  ocarina-fe_aadl-lexer.ali
+W ocarina.fe_aadl.parser%s  ocarina-fe_aadl-parser.adb  ocarina-fe_aadl-parser.ali
+W ocarina.fe_aadl.parser.components%s  ocarina-fe_aadl-parser-components.adb  ocarina-fe_aadl-parser-components.ali
+W ocarina.fe_aadl.parser.identifiers%s  ocarina-fe_aadl-parser-identifiers.adb  ocarina-fe_aadl-parser-identifiers.ali
+W ocarina.fe_aadl.parser.properties%s  ocarina-fe_aadl-parser-properties.adb  ocarina-fe_aadl-parser-properties.ali
+W ocarina.me_aadl%s	ocarina-me_aadl.ads	ocarina-me_aadl.ali
+W ocarina.me_aadl.aadl_tree%s  ocarina-me_aadl-aadl_tree.ads  ocarina-me_aadl-aadl_tree.ali
+W ocarina.me_aadl.aadl_tree.nodes%s  ocarina-me_aadl-aadl_tree-nodes.adb  ocarina-me_aadl-aadl_tree-nodes.ali
+W ocarina.me_aadl.aadl_tree.nutils%s  ocarina-me_aadl-aadl_tree-nutils.adb  ocarina-me_aadl-aadl_tree-nutils.ali
+W ocarina.me_aadl.tokens%s  ocarina-me_aadl-tokens.adb  ocarina-me_aadl-tokens.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+
+U ocarina.fe_aadl.parser.components.modes%s  ocarina-fe_aadl-parser-components-modes.ads  f2c2be3f BN EE NE OO PK IS
+W ocarina.fe_aadl.parser.components%s  ocarina-fe_aadl-parser-components.adb  ocarina-fe_aadl-parser-components.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D gnat.ads		20050905075125 96410e68
+D g-table.ads		20080408064830 4cacb2f1
+D interfac.ads		20090409232307 a69cad5c
+D locations.ads		20110516190003 a3dd4cff
+D ocarina.ads		20110516190002 6831e5a1
+D ocarina-builder.ads	20110516190002 04a77d1b
+D ocarina-builder-aadl.ads  20110516190002 ad3a7356
+D ocarina-builder-aadl-components.ads  20110516190002 c8abd019
+D ocarina-builder-aadl-components-modes.ads  20110516190002 c675a899
+D ocarina-fe_aadl.ads	20110516190002 a9954967
+D ocarina-fe_aadl-lexer.ads  20110516190002 b70ccc7d
+D ocarina-fe_aadl-parser.ads  20110516190002 1813b861
+D ocarina-fe_aadl-parser-components.ads  20110516190002 5f77b1a1
+D ocarina-fe_aadl-parser-components-modes.ads  20110516190002 adb50f9e
+D ocarina-fe_aadl-parser-components-modes.adb  20110516190002 3bf84aec
+D ocarina-fe_aadl-parser-identifiers.ads  20110516190002 d7882fed
+D ocarina-fe_aadl-parser-properties.ads  20110516190002 2477b1c3
+D ocarina-fe_aadl-parser_errors.ads  20110516190002 3c139e93
+D ocarina-files.ads	20110516190002 e29905b0
+D ocarina-me_aadl.ads	20110516190002 6bef7dae
+D ocarina-me_aadl-aadl_tree.ads  20110516190002 4be6b0c7
+D ocarina-me_aadl-aadl_tree-nodes.ads  20110516191754 5cf9a699
+D ocarina-me_aadl-aadl_tree-nutils.ads  20110516190002 7898fae7
+D ocarina-me_aadl-tokens.ads  20110516190002 dd4fcdfa
+D system.ads		20110401034433 15e10948
+D s-assert.ads		20090409232307 5f25a194
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-stalib.ads		20090409232307 52b793d5
+D types.ads		20110516190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 6 locations.ads
+36K9*Locations 74e14 17|34w6 84r11 210r11 302r11 456r11 524r11 657r11
+38R9*Location 47e14 17|96r19 97r19 219r19 316r26 466r13 536r22 663r22
+X 7 ocarina.ads
+34K9*Ocarina 63e12 16|36r9 54r5 17|35r6 36r6 38r6 39r6 40r6 41r6 42r6 44r14
+. 85r11 86r11 87r11 89r11 211r11 212r11 214r11 303r11 304r11 305r11 307r11
+. 308r11 388r31 404r23 432r23 457r11 458r11 460r11 461r11 525r11 526r11 527r11
+. 530r11 626r11 627r11 628r11 654r11 655r11 658r11 659r11 709r5
+36n31*AADL_V1{36E9} 17|322r15 355r39 473r33 570r18 632r15
+36n40*AADL_V2{36E9} 17|329r15 373r39 576r18 578r34 635r15
+42e4*AADL_Version{36E9} 17|321r12 355r24 373r24 473r18 569r15 578r19 631r12
+X 8 ocarina-builder.ads
+34K17*Builder 35e20 17|42r14 308r19 659r19
+X 9 ocarina-builder-aadl.ads
+34K25*AADL 35e25 17|42r22 308r27 659r27
+X 10 ocarina-builder-aadl-components.ads
+39K30*Components 213e36 17|42r27 308r32 659r32
+X 11 ocarina-builder-aadl-components-modes.ads
+37K41*Modes 82e42 17|42w38 308r43 659r43
+48V13*Add_New_Mode{32|197I9} 17|387r15
+49r7 Loc{6|38R9} 17|387r29
+50i7 Identifier{32|197I9} 17|389r29
+51i7 Component{32|197I9} 17|390r29
+62V13*Add_New_Mode_Transition{32|197I9} 17|431r21
+63r7 Loc{6|38R9} 17|432r16
+64i7 Component{32|197I9} 17|433r16
+75V13*Add_New_Mode_Transition_Trigger{32|197I9} 17|697r15
+X 12 ocarina-fe_aadl.ads
+36K17*FE_AADL 7|34k9 12|46e20 16|36r17 54r13 17|39r14 40r14 41r14 44r22 89r19
+. 307r19 461r19 530r19 628r19 658r19 709r13
+X 13 ocarina-fe_aadl-lexer.ads
+44K25*Lexer 92e26 17|39w22 88r11 215r11 306r11 459r11 528r11 656r11
+50e4*Token{26|40E9} 17|107r10 114r10 122r10 133r16 157r16 162r16 179r10 228r10
+. 252r10 323r16 330r16 333r19 350r12 354r16 364r19 372r19 379r19 407r16 424r19
+. 472r10 480r13 489r13 551r10 558r10 568r10 595r10 673r10 675r13 683r13
+51r4*Token_Location=51:58{6|38R9} 17|475r62
+67U14*Save_Lexer=68:28 17|104r7 119r7 130r13 154r13 250r7 352r13 469r7 566r7
+. 593r7 670r7
+70U14*Restore_Lexer=71:28 17|125r10 134r16 138r13 158r16 254r10 383r16 495r10
+. 573r16 577r16 590r10 597r10 678r10
+76U14*Scan_Token 17|105r7 112r7 120r7 131r13 155r13 177r7 227r7 251r7 331r16
+. 349r7 353r13 363r16 470r7 478r10 487r10 557r7 567r7 594r7 671r7 682r10
+83U14*Skip_Tokens 17|149r16 163r16 172r13 239r10 359r19 366r19 376r16 417r19
+. 426r19 438r13 547r10 553r10 560r10 685r13 693r10 701r10
+89U14*Skip_Tokens 17|325r16 337r19
+X 14 ocarina-fe_aadl-parser.ads
+44K25*Parser 12|36k17 14|136e27 16|36r25 54r21 17|40r22 41r22 44r30 89r27
+. 213r11 307r27 461r27 529r11 530r27 628r27 658r27 709r21
+110V13 P_Items_List{32|210I9} 17|409r36 539r21
+X 15 ocarina-fe_aadl-parser-components.ads
+42K32*Components 14|44k25 15|64e38 16|36r32 54r28 17|44r37 709r28
+X 16 ocarina-fe_aadl-parser-components-modes.ads
+36K43*Modes 15|42k32 16|54l39 54e44 17|44b48 709l39 709t44
+38V13*P_In_Modes{32|197I9} 38>25 17|82b13 190l8 190t18
+38e25 Code{20|42E9} 17|82b25 91r22 92r30 108r15 115r15 140r16 141r44 171r18
+. 180r15
+43V13*P_Mode_Or_Mode_Transition{32|197I9} 44>7 45>7 17|297b13 441l8 441t33
+44i7 Container{32|197I9} 17|298b7 390r42 433r29
+45b7 Refinable{boolean} 17|299b7 357r23 392r61
+50V13*P_Mode_Or_Transition{32|197I9} 50>35 51r19 17|143r24 455b13 500l8 500t28
+50i35 Container{32|197I9} 17|455b35 463r28
+X 17 ocarina-fe_aadl-parser-components-modes.adb
+46V13 P_Mode{32|197I9} 46>21 47>21 48>21 49>21 204b13 261l8 261t14 392r20
+46i21 Mode{32|197I9} 204b21 243r38 258r26 259r23 260r14
+47b21 Is_Refinement{boolean} 205b21 221r10 229r32 243r48 258r32
+48b21 Is_Initial{boolean} 206b21 229r13 259r29
+49b21 Refinable{boolean} 207b21 232r16
+55V13 P_Mode_Transition{32|197I9} 56>7 57>7 434r20 520b13 606l8 606t25
+56i7 Mode_Transition{32|197I9} 521b7 532r22 579r50 601r25 602r21 603r29 605r14
+57i7 Source_Modes{32|210I9} 522b7 601r42
+61V13 P_Unique_Port_Or_Transition_Trigger{32|197I9} 62>7 539r35 622b13 638l8
+. 638t43
+62i7 Container{32|197I9} 623b7 636r47
+67V13 P_Mode_Transition_Trigger{32|197I9} 68>7 636r20 650b13 707l8 707t33
+68i7 Container{32|197I9} 651b7 661r28
+94i7 In_Modes{32|197I9} 186m7 187r18 189r14
+95i7 Mode_List{32|210I9} 123m10 127m10 147r43 150m16 164m16 168r23 187r28
+96r7 Start_Loc{6|38R9} 104m19 123r44 127r44 186r41
+97r7 Loc{6|38R9} 119m19 125r25 130m25 134r31 138r28 154m25 158r31
+98i7 Item{32|197I9} 141m16 143m16 146r25 147r37
+217e7 Code{20|42E9} 222m10 224m10 230r18 244r50 253r15
+218b7 OK{boolean} 243m7 246r14
+219r7 Loc{6|38R9} 250m19 254r25
+310i7 Identifier{32|197I9} 343m7 344r14 388r68 389r43 404r60 405r34 432r60
+311i7 Identifiers_List{32|210I9} 409m16 415r23 421r49
+312i7 Source_Modes{32|210I9} 402m13 405r46 422r37 434r45
+313b7 Is_Refinement{boolean} 370m16 392r34
+314b7 Is_Initial{boolean} 380m16 392r49
+315b7 Is_Requires{boolean} 334m19 396r16
+316r7 Loc{6|38R9} 352m25 383r31
+317i7 Node{32|197I9} 386m13 392r28 431m13 434r39
+465i7 Mode_Tran{32|197I9} 475m10 477r13 486r13 490m13 496m10 499r14
+466r7 Loc{6|38R9} 469m19 495r25
+534i7 List_Ident{32|210I9} 539m7 545r14 602r38
+535i7 Destination{32|197I9} 564m7 603r46
+536r7 Loc{6|38R9} 566m19 573r31 577r31 590r25 593m19 597r25
+537b7 OK{boolean} 579m19 584r26
+663r7 Loc{6|38R9} 670m19 678r25 697r48
+664i7 Node{32|197I9} 697m7 699r14 705r14
+665i7 Identifier{32|197I9} 690m7 691r14 697r53
+666b7 Is_Self{boolean} 674m10 681r10 698r48
+667b7 Is_Processor{boolean} 676m10 681r26 698r57
+X 18 ocarina-fe_aadl-parser-identifiers.ads
+34K32*Identifiers 17|41w29 89r34 307r34 461r34 530r34 628r34 658r34 18|93e39
+45V13*Make_Current_Identifier{32|197I9} 17|564r22
+62V13*P_Identifier{32|197I9} 17|343r21 409r50
+86V13*P_Entity_Reference{32|197I9} 17|141r24 477r24 486r24 496r23 633r20
+. 690r21
+X 19 ocarina-fe_aadl-parser-properties.ads
+40K32*Properties 17|40w29 213r18 529r18 19|85e38
+43n7*PAT_Simple{42E9} 17|244r38 581r50
+70V13*P_Property_Associations{boolean} 17|243r13 579r25
+X 20 ocarina-fe_aadl-parser_errors.ads
+42E9*Parsing_Code 16|38r32 17|82r32 217r19 20|257e41
+140n7*PC_Mode{42E9} 17|224r18 233r21 235r21 324r21 358r24 375r21
+141n7*PC_Mode_Refinement{42E9} 17|222r18 365r24
+142n7*PC_In_Modes{42E9} 17|91r29 140r23
+143n7*PC_In_Modes_And_Transitions{42E9} 17|92r37
+144n7*PC_Mode_Or_Mode_Transition{42E9} 17|413r50 437r18 477r44 486r44 543r35
+145n7*PC_Mode_Or_Transition{42E9} 17|481r18 491r18 496r43
+146n7*PC_Mode_Transition{42E9} 17|416r24 425r24 546r15 552r15 559r15 582r50
+. 596r15
+147n7*PC_Mode_Transition_Trigger{42E9} 17|684r18 690r41 692r15 700r15
+148n7*PC_Requires_Modes_Subclause{42E9} 17|336r24 397r21
+162n7*PC_Unique_Port_Identifier{42E9} 17|633r40
+226n7*PC_Property_Association{42E9} 17|571r21
+269n7*EMC_Refinement_Is_Not_Allowed{261E9} 17|358r33 375r30
+272n7*EMC_Not_Allowed_In_AADL_V2{261E9} 17|324r30 572r21
+274n7*EMC_Mode_Transition_Not_Allowed_In_Requires_Modes{261E9} 17|398r21
+283U14*DPE=284:14 17|324r16 358r19 375r16 397r16 571r16
+289U14*DPE=289:48 17|700r10
+313U14*DPE=314:56 17|108r10 115r10 171r13 180r10 230r13 253r10 336r19 365r19
+. 416r19 425r19 481r13 491r13 546r10 552r10 559r10 596r10 684r13 692r10
+320U14*DPE=322:14 17|233r16 235r16 437r13
+X 22 ocarina-me_aadl.ads
+34K17*ME_AADL 17|35r14 36r14 38r14 85r19 86r19 87r19 211r19 212r19 214r19
+. 303r19 304r19 305r19 388r39 404r31 432r31 457r19 458r19 460r19 525r19 526r19
+. 527r19 626r19 627r19 654r19 655r19 22|102e20
+X 23 ocarina-me_aadl-aadl_tree.ads
+34K25*AADL_Tree 17|35r22 36r22 85r27 86r27 211r27 212r27 303r27 304r27 388r47
+. 404r39 432r39 457r27 458r27 525r27 526r27 626r27 654r27 23|35e30
+X 24 ocarina-me_aadl-aadl_tree-nodes.ads
+12K35*Nodes 17|35w32 85r37 211r37 303r37 388r57 404r49 432r49 457r37 525r37
+. 626r37 654r37 24|1877e36
+16n7*K_List_Id{14E9} 17|123r33 127r33
+24n7*K_Pair_Of_Entity_References{14E9} 17|475r33
+25n7*K_Identifiers_List{14E9} 17|403r23
+50n7*K_In_Modes{14E9} 17|186r29
+1430V13*Loc{6|38R9} 17|388r63 404r55 432r55
+1436V13*First_Node{32|197I9} 17|421r37
+1503U14*Set_First_Reference 17|476r10
+1506U14*Set_Second_Reference 17|485r10
+1557U14*Set_Modes 17|187r7
+1587U14*Set_Is_Refinement 17|258r7
+1632U14*Set_Is_Initial 17|259r7
+1635U14*Set_Source_Modes 17|601r7
+1638U14*Set_Triggers 17|602r7
+1641U14*Set_Destination_Mode 17|603r7
+X 25 ocarina-me_aadl-aadl_tree-nutils.ads
+38K35*Nutils 17|36w32 86r37 212r37 304r37 458r37 526r37 25|120e37
+50U14*Append_Node_To_List 17|147r16 405r13 421r16
+76V13*Is_Empty{boolean} 17|168r13
+86V13*New_Node{32|197I9} 17|186r19 475r23
+89V13*New_List{32|210I9} 17|123r23 127r23 403r13
+X 26 ocarina-me_aadl-tokens.ads
+36K25*Tokens 17|38w22 87r27 214r27 305r27 460r27 527r27 627r27 655r27 26|271e27
+42n7*T_Identifier{40E9} 17|171r24 416r44 546r35 558r19 559r35 692r43
+50n7*T_Comma{40E9} 17|162r25 394r37 407r24 411r50 541r35
+57n7*T_Dot{40E9} 17|683r22 684r46
+58n7*T_Colon{40E9} 17|351r15 437r47
+59n7*T_Semicolon{40E9} 17|239r23 252r19 253r21 325r37 337r40 359r32 366r32
+. 376r29 417r32 426r32 438r26 547r23 553r23 560r23 595r19 596r35 685r26 693r23
+. 701r23
+66n7*T_Direct_Connection{40E9} 17|480r22
+72n7*T_Left_Parenthesis{40E9} 17|114r19 115r21 472r18
+74n7*T_Left_Curly_Bracket{40E9} 17|568r18
+75n7*T_Left_Step_Bracket{40E9} 17|394r15 412r50 424r28 425r44 437r56
+78n7*T_Right_Parenthesis{40E9} 17|133r24 149r29 157r24 163r29 172r26 179r19
+. 180r21 481r42 489r22 491r42
+81n7*T_Right_Step_Bracket{40E9} 17|542r35 551r19 552r35
+106n7*T_End{40E9} 17|325r30 337r33
+120n7*T_Initial{40E9} 17|233r39 235r39 379r27
+125n7*T_Mode{40E9} 17|228r19 230r24 233r31 235r31
+126n7*T_Modes{40E9} 17|107r19 108r21 333r27 336r53
+127n7*T_None{40E9} 17|122r18
+138n7*T_Processor{40E9} 17|675r21
+147n7*T_Refined{40E9} 17|233r50 354r24 372r27
+150n7*T_Requires{40E9} 17|323r24 330r24
+151n7*T_Self{40E9} 17|673r18
+160n7*T_To{40E9} 17|364r28 365r44
+X 32 types.ads
+36K9*Types 16|44r19 50r47 17|56r25 62r19 68r19 455r47 623r19 651r19 32|306e10
+51I9*Int<integer>
+197I9*Node_Id<51I9> 16|38r53 44r25 46r13 50r53 50r69 17|46r37 50r27 56r31
+. 58r13 62r25 63r13 68r25 69r13 82r53 94r19 98r19 204r37 208r27 298r19 300r13
+. 310r26 317r26 455r53 455r69 465r19 521r25 523r13 535r22 623r25 624r13 651r25
+. 652r13 664r22 665r22
+198i4*No_Node{197I9} 17|109r17 116r17 143r46 173r20 181r17 240r17 247r17
+. 255r17 326r23 338r26 343r35 346r17 360r26 367r26 377r23 399r23 410r50 418r26
+. 427r26 439r20 482r20 490r26 532r41 540r35 548r17 554r17 561r17 564r47 574r23
+. 585r29 598r17 686r20 694r17 702r17
+200V13*Present{boolean} 17|146r16
+203V13*No{boolean} 17|344r10 415r19 545r10 691r10 699r10
+210I9*List_Id<197I9> 17|57r22 95r19 311r26 312r26 522r22 534r22
+211i4*No_List{210I9} 17|150r29 164r29
+

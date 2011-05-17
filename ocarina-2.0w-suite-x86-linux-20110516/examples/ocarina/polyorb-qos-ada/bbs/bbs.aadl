@@ -1,0 +1,155 @@
+--  Simple example of a BBS application
+--  David Abad-Garcia <abadgarc@enst.fr>
+--  Thomas Vergnaud <thomas.vergnaud@enst.fr>
+
+--  The data type exchanged between clients and servers
+
+package Commons
+public
+  data bbs_msg
+  properties
+    Data_Model::Data_Representation => integer;
+  end bbs_msg;
+end Commons;
+
+package Commons::Subprograms
+public
+  
+  --  The Subprograms called by the clients and servers
+  
+  subprogram bbs_program
+  features
+    ingoing_msg : in parameter Commons::bbs_msg;
+    outgoing_msg : out parameter Commons::bbs_msg;
+  properties
+    source_language => Ada95;
+    source_name => "Repository.BBS_Program";
+  end bbs_program;
+  
+  subprogram post_program
+  features
+    outgoing_msg : out parameter Commons::bbs_msg;
+  properties
+    source_language => Ada95;
+    source_name => "Repository.Post_Program";
+  end post_program;
+  
+  subprogram get_program
+  features
+    ingoing_msg : in parameter Commons::bbs_msg;
+  properties
+    source_language => Ada95;
+    source_name => "Repository.Get_Program";
+  end get_program;
+end Commons::Subprograms;
+
+--  The BBS server
+
+thread black_board_server
+features
+  req_penpal : in event data port Commons::bbs_msg;
+  bcast_penpal : out event data port Commons::bbs_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end black_board_server;
+
+thread implementation black_board_server.i
+calls {
+  up : subprogram Commons::Subprograms::bbs_program;
+  };
+connections
+  parameter req_penpal -> up.ingoing_msg;
+  parameter up.outgoing_msg -> bcast_penpal;
+end black_board_server.i;
+
+process bbs_server
+features
+  p_req_penpal : in event data port Commons::bbs_msg;
+  p_bcast_penpal : out event data port Commons::bbs_msg;
+end bbs_server;
+
+process implementation bbs_server.i
+subcomponents
+  t_bbs   : thread black_board_server.i;
+connections
+  event data port p_req_penpal -> t_bbs.req_penpal;
+  event data port t_bbs.bcast_penpal -> p_bcast_penpal;
+end bbs_server.i;
+
+--  The BBS client
+
+thread penpale
+features
+  penpalpost : out event data port Commons::bbs_msg;
+end penpale;
+
+thread implementation penpale.i
+calls {
+  up : subprogram Commons::Subprograms::post_program;
+  };
+connections
+  parameter up.outgoing_msg -> penpalpost;
+properties
+  Dispatch_Protocol => Periodic;
+  Period => 300 Ms;
+end penpale.i;
+
+thread penpalr
+features
+  inbox : in event data port Commons::bbs_msg;
+end penpalr;
+
+thread implementation penpalr.i
+calls {
+  up : subprogram Commons::Subprograms::get_program;
+};
+connections
+  parameter inbox -> up.ingoing_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end penpalr.i;
+
+process bbs_client
+features
+  p_inbox : in event data port Commons::bbs_msg;
+  p_penpalpost : out event data port Commons::bbs_msg;
+end bbs_client;
+
+process implementation bbs_client.i
+subcomponents
+  t_receiver : thread penpalr.i;
+  t_sender : thread penpale.i;
+connections
+  event data port p_inbox -> t_receiver.inbox;
+  event data port t_sender.penpalpost -> p_penpalpost;
+end bbs_client.i;
+
+--  The processor
+
+processor a_processor
+properties
+  Deployment::location => "127.0.0.1";
+end a_processor;
+
+--  The top-level system
+
+system bbs_sys
+end bbs_sys;
+
+system implementation bbs_sys.impl
+subcomponents 
+  bbs_serv_1 : process bbs_server.i {Deployment::port_number => 3200;};
+  bbs_cli_1 : process bbs_client.i {Deployment::port_number => 3401;};
+  bbs_cli_2 : process bbs_client.i {Deployment::port_number => 3402;};
+  proc_1 : processor a_processor;
+connections
+  event data port bbs_cli_1.p_penpalpost -> bbs_serv_1.p_req_penpal;
+  event data port bbs_serv_1.p_bcast_Penpal -> bbs_cli_1.p_inbox;
+  event data port bbs_cli_2.p_penpalpost -> bbs_serv_1.p_req_penpal;
+  event data port bbs_serv_1.p_bcast_Penpal -> bbs_cli_2.p_inbox;
+properties
+  actual_processor_binding => reference proc_1 applies to bbs_serv_1;
+  actual_processor_binding => reference proc_1 applies to bbs_cli_1;
+  actual_processor_binding => reference proc_1 applies to bbs_cli_2;
+end bbs_sys.impl;
+
