@@ -1,0 +1,114 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnvnnnnnrnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.backends.real.debug%b  ocarina-backends-real-debug.adb  93754f4b NE OO PK IS
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.backends.real%s  ocarina-backends-real.adb  ocarina-backends-real.ali
+W ocarina.me_real%s	ocarina-me_real.ads	ocarina-me_real.ali
+W ocarina.me_real.real_tree%s  ocarina-me_real-real_tree.ads  ocarina-me_real-real_tree.ali
+W ocarina.me_real.real_tree.nodes%s  ocarina-me_real-real_tree-nodes.adb  ocarina-me_real-real_tree-nodes.ali
+W output%s		output.adb		output.ali
+W system.assertions%s	s-assert.adb		s-assert.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ocarina.backends.real.debug%s  ocarina-backends-real-debug.ads  11380841 EE NE OO PK IS
+W ocarina.backends.real%s  ocarina-backends-real.adb  ocarina-backends-real.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D gnat.ads		20050905075125 96410e68
+D g-dyntab.ads		20080408064830 8c31b958
+D g-os_lib.ads		20090409232307 c015094d
+D g-table.ads		20080408064830 4cacb2f1
+D locations.ads		20110517190003 a3dd4cff
+D namet.ads		20110517190003 e03fb004
+D ocarina.ads		20110517190003 6831e5a1
+D ocarina-backends.ads	20110518222022 d555a6b1
+D ocarina-backends-real.ads  20110518222022 0285ea57
+D ocarina-backends-real-debug.ads  20110518222022 13bde216
+D ocarina-backends-real-debug.adb  20110518222022 ec592746
+D ocarina-instances.ads	20110517190002 f54a56e8
+D ocarina-instances-real_checker.ads  20110517190002 1c5a6973
+D ocarina-instances-real_checker-queries.ads  20110517190002 39efe8bd
+D ocarina-me_real.ads	20110517190002 4b14dbfa
+D ocarina-me_real-real_tree.ads  20110517190002 1be7d4ef
+D ocarina-me_real-real_tree-nodes.ads  20110517191754 fbcd7f5f
+D output.ads		20110517190003 77634540
+D system.ads		20110401034433 15e10948
+D s-assert.ads		20090409232307 5f25a194
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-os_lib.ads		20090409232307 719f619c
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-secsta.ads		20090409232307 7bae3621
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-string.ads		20090409232307 04f2ee70
+D types.ads		20110517190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 9 namet.ads
+38K9*Namet 237e10 14|35w6 40r8
+78V13*Get_Name_String{string} 14|55r22
+X 10 ocarina.ads
+34K9*Ocarina 63e12 13|34r9 40r5 14|36r6 38r14 39r8 65r5
+X 11 ocarina-backends.ads
+43K17*Backends 10|34k9 11|100e21 13|34r17 40r13 14|38r22 65r13
+X 12 ocarina-backends-real.ads
+38K26*REAL 11|43k17 12|73e26 13|34r26 40r22 14|38r31 65r22
+63A9 Set_Table(17|39R9)<integer>
+66P9 Set_Table_Access(63A9)
+71p4 Set_Array{66P9} 14|57r23
+X 13 ocarina-backends-real-debug.ads
+34K31*Debug 12|38k26 13|40l27 40e32 14|38b36 65l27 65t32
+36U14*Print_All_Sets 36>30 14|47b14 63l8 63t22
+36i30 R{32|197I9} 14|47b30 48r28 52r34
+X 14 ocarina-backends-real-debug.adb
+50i7 N{32|197I9} 52m7 53r22 55r57 57r62 61m10 61r26
+X 17 ocarina-instances-real_checker-queries.ads
+39R9*Result_Set
+163U14*Display_Set 14|57r10
+X 18 ocarina-me_real.ads
+34K17*ME_REAL 14|36r14 39r16 18|35e20
+X 19 ocarina-me_real-real_tree.ads
+34K25*REAL_Tree 14|36r22 39r24 19|35e30
+X 20 ocarina-me_real-real_tree-nodes.ads
+12K35*Nodes 14|36w32 39r34 20|572e36
+41n7*K_Theorem{14E9} 14|48r33
+370V13*Kind{14E9} 14|48r22
+376V13*Next_Node{32|197I9} 14|61r15
+379V13*Name{32|184I9} 14|55r39
+382V13*First_Node{32|197I9} 14|52r12
+391V13*Identifier{32|197I9} 14|55r45
+403V13*Annotation{32|197I9} 14|57r50
+532V13*Used_Set{32|210I9} 14|52r24
+547V13*Index{32|218I9} 14|57r43
+X 21 output.ads
+42K9*Output 14|34w6 41r8 21|105e11
+87U14*Write_Line 14|55r10 59r10
+X 32 types.ads
+51I9*Int<integer>
+184I9*Name_Id<integer>
+197I9*Node_Id<51I9> 13|36r34 14|47r34 50r11
+200V13*Present{boolean} 14|53r13
+210I9*List_Id<197I9>
+218I9*Value_Id<51I9>
+

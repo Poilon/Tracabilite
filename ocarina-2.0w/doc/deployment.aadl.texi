@@ -1,0 +1,53 @@
+@smallexample
+
+@b{property} @b{set} Deployment @b{is}
+
+  Allowed_Transport_APIs : @b{type} @b{enumeration}
+    (BSD_Sockets,
+     SpaceWire);
+  -- @i{Supported transport API}
+
+  Transport_API : Deployment::Allowed_Transport_APIs @b{applies} @b{to} (bus);
+  -- @i{ Transport API of a bus}
+
+  Location : @b{aadlstring} @b{applies} @b{to} (processor, @b{device});
+  -- @i{ Processor IP address (BSD_Sockets specific)}
+
+  Port_Number : @b{aadlinteger} @b{applies} @b{to} (process, @b{device});
+  -- @i{ IP port number of a process (BSD_Sockets specific)}
+
+  Process_ID : @b{aadlinteger} @b{applies} @b{to} (process);
+  -- @i{ Process identifier (SpaceWire specific)}
+
+  Channel_Address : @b{aadlinteger} @b{applies} @b{to} (process);
+  -- @i{ Communication channel address (SpaceWire specific)}
+
+  Protocol_Type : @b{type} @b{enumeration} (iiop, diop);
+  -- @i{ Supported communication protocols}
+  Protocol : Deployment::Protocol_Type @b{applies} @b{to} (system);
+
+  Allowed_Execution_Platform : @b{type} @b{enumeration}
+   (Native,        -- @i{Native platforms (GNU/Linux, Solaris, Windows...)}
+    LEON_RTEMS,    -- @i{LEON2 board or tsim-leon (RTEMS)}
+    LEON_ORK,      -- @i{LEON2 board or tsim-leon (ORK)}
+    LEON_GNAT,     -- @i{LEON2 board or qemu (GNATPRO/HI-E)}
+    ERC32_ORK,     -- @i{ERC32 board or tsim-erc32 (ORK)}
+    ARM_DSLINUX,   -- @i{Nintendo DS (tm) (DSLinux)}
+    ARM_N770,      -- @i{Nokia N770 (tm)}
+    MARTE_OS,      -- @i{MaRTE OS}
+    VXWORKS        -- @i{VXWORKS}
+    );
+  -- @i{ Supported platforms}
+
+  Execution_Platform : Deployment::Allowed_Execution_Platform 
+    @b{applies} @b{to} (processor);
+  -- @i{ Execution platform of a processor}
+
+  Priority_Type : @b{type} @b{aadlinteger} 0 .. 255;
+ 
+  Priority : Deployment::Priority_Type @b{applies} @b{to} (data, @b{thread});
+  -- @i{ Thread and data component priority}
+
+@b{end} Deployment;
+
+@end smallexample

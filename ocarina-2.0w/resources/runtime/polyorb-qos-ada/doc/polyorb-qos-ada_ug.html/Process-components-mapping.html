@@ -1,0 +1,502 @@
+<html lang="en">
+<head>
+<title>Process components mapping - PolyORB AADL personality User's Guide</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="PolyORB AADL personality User's Guide">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Components-mapping-rules.html#Components-mapping-rules" title="Components mapping rules">
+<link rel="prev" href="Thread-components-mapping.html#Thread-components-mapping" title="Thread components mapping">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+Copyright (C) 2003-2009 E'cole
+nationale supe'rieure des te'le'communications
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.1 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being ``GNU Free Documentation License'', with the
+Front-Cover Texts being ``PolyORB High Integrity User's Guide'', and
+with no Back-Cover Texts.  A copy of the license is included in the
+section entitled ``GNU Free Documentation License''.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+body {}
+body {
+	background-color: white;
+	position: absolute;
+	font-size: medium;
+	font-family: Verdana;
+//	padding-left: 7em;
+	top: 3em;
+}
+
+div.navigation {
+	font-size: small; 
+	padding-left: 0; 
+	padding-right: 0; 
+	text-align: right
+}
+
+div#menu {
+	text-align: left;
+	position: fixed;
+	left: 1pt;
+	bottom: auto;
+	top: 2em;
+	right: auto;
+	padding-right: 1ex;
+	padding-left: 1em;
+	padding-top: 1ex;
+	padding-bottom: 1ex;
+	border-width: 3pt;
+	background-color: transparent;  
+	border-color: red; 
+	border-left-style: solid
+}
+
+div#menu span.item {
+	display: block;
+	background-color: transparent;  
+}
+
+table.navigation {
+	font-size: small
+} 
+
+
+/* Paragraphs */
+p, blockquote {
+	color: black; 
+	text-indent: 1em; 
+	text-align: justify
+}
+
+
+p {
+	margin-bottom: .5em; 
+	margin-top: 1px
+}
+
+p kbd 
+{
+  background-color: ivory
+}
+
+div.important {
+	background-color: lightgray; 
+	border-color: red; 
+	border-style: solid;  
+	border-width: 1pt
+}
+p.important {
+	color: red
+}
+p.brut {
+	text-indent: 0
+}
+p.brut:first-letter {
+	font-size: 100%; 
+	font-weight: normal
+}
+
+/* Sections */
+div {
+	border-style: none; 
+	padding-left: 1em; 
+	padding-right: 1em; 
+	margin-top: 2px; 
+	margin-bottom: 2px
+}
+
+
+/* Menus */
+
+div.action {
+	background-color: ivory; 
+	border-color: lightgray; 
+	border-style: solid; 
+	border-width: 1pt 1pt 1pt 1pt; 
+	font-size: small; 
+	text-align: left
+}
+
+div.special 
+{
+  border-color: lightgray; 
+  border-style: solid; 
+  border-width: 0 0 0 4pt
+}
+
+
+/* Docbook special settings */
+
+h3.subtitle {
+	text-align: center
+}
+
+h1.title {
+	margin-bottom: 10pt;
+}
+
+div.authorgroup {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	display: block;
+}
+
+div.author {
+	display: inline;
+}
+
+h3.author {
+	display: inline;
+	font-style: normal;
+	color: black;
+	font-size: medium;
+}
+
+p.copyright {
+	margin-top: 1em;
+	text-align: center;
+}
+
+/* End docbook settings */
+
+
+/* hors-texte */
+
+pre {
+	background-color: whitesmoke;
+	border-color: lightcoral;
+	border-style: solid;
+	border-width: 0pt 1pt 1pt 0pt;
+}
+
+.hors-texte {
+	background-color: lightgray;  
+	border-color: lightcoral; 
+	border-style: solid;
+	border-width: 1pt; 
+	padding-left: 1em; 	
+	padding-right: 1em; 
+	text-align: justify
+}
+
+/* Tables */
+
+table.hors-texte {
+	margin: auto; 
+	font-size: 100%;
+	border-width: 1pt 1pt 1pt 1pt
+}
+
+table.hors-texte td {
+	padding-left: 1ex; 
+	padding-right: 1ex
+}
+
+table.hors-texte tr.sep {
+	padding-top: 1ex
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold;
+  padding: 0pt
+}
+
+h1 {
+	font-size: larger larger larger;
+	text-align: center; 
+	margin-bottom: 24pt
+}
+h2 {
+	font-size: larger larger;
+	margin-left:      0; 
+	margin-top:       24pt; 
+	margin-bottom:    14pt;
+	border-color:     red;
+	border-bottom-style:     solid;
+	border-width:     1pt;
+	padding:          2pt; 
+	margin-left:      0; 
+	margin-right:     0; 
+}
+h3 {
+	font-size: larger;
+	margin-left: 1em; 
+	margin-bottom: 1ex;
+	color: red;	
+}
+h4, h5, h6 {
+	font-size: normal;
+	margin-left: 2em; 
+	margin-bottom: 1em
+}
+
+h4 {
+	text-decoration: underlined
+}
+h5 {
+	font-style: italic
+}
+
+
+h2.special 
+{
+  border-style:     solid;
+  border-width:	    1pt;
+  border-color:     lightgray;
+  padding:          2pt; 
+}
+
+img.flottant {
+	float: right;
+	clear: both;
+	margin: 2em;
+}
+
+/* Lists */
+
+li, dd 
+{
+  text-align: justify
+}
+
+dt {
+	font-style: normal; 
+	margin-top: 1em
+}
+dd {
+	font-style: normal; 
+	margin-left: 4em
+}
+
+dd.sdd {
+	margin-left: 5em
+}
+
+dd ul {margin-top: 0}
+li dl {margin-top: 0}
+ul {list-style-type: square}
+ul ul {list-style-type: disc}
+ul ul ul {list-style-type: circle}
+
+/* Addresses */
+
+address {
+	margin-top: 1ex; margin-bottom: 1ex
+}
+address.poste {
+	font-style: italic
+}
+address.email {
+	font-style: normal
+}
+address.phone {
+	font-style: oblic
+}
+
+/* Links */
+
+a:link, a:visited {
+	color: darkred;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color:  red;
+	padding-bottom: 0px
+}
+
+a:hover, a:active {
+	color: red; 
+	text-decoration: none;
+	border-bottom-color: black;
+	border-bottom-style: solid
+}
+
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Process-components-mapping"></a>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Thread-components-mapping.html#Thread-components-mapping">Thread components mapping</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Components-mapping-rules.html#Components-mapping-rules">Components mapping rules</a>
+<hr>
+</div>
+
+<h4 class="subsection">A.1.4 Process components mapping</h4>
+
+<p>The main component in this phase is the <code>process</code> component. The
+distributed application is a set of processes which communicate
+between each other. Each <code>process</code> is mapped to an Ada95 main
+subprogram which leads to an executable after being compiled.
+
+<h5 class="subsubsection">A.1.4.1 Shared variables declaration and initialization</h5>
+
+<p>In the case where a <code>process</code> contains shared variables declaration
+(which should always refers to local <code>data</code> components, as Ocarina does
+not support variables shared amongst multiples process), a variable is
+declared in the <samp><span class="file">proc_servant</span></samp> body package.
+
+   <p>If the shared variable has a protected access property, Ocarina will also
+add a <code>initialize</code> procedure to the package, and set it as the
+package initialization procedure for the middleware, which will ensure
+that it is ran before any usage of the package. This procedure calls
+protected type's <code>Build</code> interface (cf. <a href="Data-components-mapping.html#Data-components-mapping">Data components mapping</a>), initializing middleware's mutexes.
+
+   <p>Note that shared variables (either protected or not) are visible from
+any thread of the process. How those variables are accessed and
+updated is described in <a href="Thread-components-mapping.html#Thread-components-mapping">Thread components mapping</a>.
+
+   <p>Here is a AADL specification for declaring a data shared between two
+threads, with protected access in a process:
+
+<pre class="smallexample">     
+     -- <i> protected data type declaration</i>
+     
+     <b>data</b> <b>in</b>ternal_data
+     <b>properties</b>
+       ARAO::data_type =&gt; <b>in</b>teger;
+     <b>end</b> <b>in</b>ternal_data;
+     
+     <b>data</b> shared_data
+     <b>properties</b>
+       Concurrency_Control_Protocol =&gt; Protected_Access;
+     <b>end</b> shared_data;
+     
+     <b>data</b> <b>implementation</b> shared_data.i
+     <b>subcomponents</b>
+       Field : <b>data</b> <b>in</b>ternal_data;
+     <b>end</b> shared_data.i;
+     
+     -- <i> Process declaration</i>
+     
+     <b>process</b> transmitter_node
+     <b>features</b>
+       msg_in : <b>in</b> <b>event</b> <b>data</b> <b>port</b> message;
+       msg_out : <b>out</b> <b>event</b> <b>data</b> <b>port</b> message;
+     <b>end</b> transmitter_node;
+     
+     <b>process</b> <b>implementation</b> transmitter_node.complex
+     <b>subcomponents</b>
+       th1 : <b>thread</b> transmitter.simple;
+       th2 : <b>thread</b> transmitter.simple;
+       sh_mem : <b>data</b> shared_data.i;
+     <b>connections</b>
+       <b>event</b> <b>data</b> <b>port</b> msg_in -&gt; th1.msg_in;
+       <b>event</b> <b>data</b> <b>port</b> th1.msg_out -&gt; th2.msg_in;
+       <b>event</b> <b>data</b> <b>port</b> th2.msg_out -&gt; msg_out;
+       <b>data</b> <b>access</b> sh_mem -&gt; th1.mem;
+       <b>data</b> <b>access</b> sh_mem -&gt; th2.mem;
+     <b>end</b> transmitter_node.complex;
+</pre>
+   <p>and here is the related code generated by Ocarina :
+
+<pre class="smallexample">     
+     <b>package</b> <b>body</b> Tr_Servants <b>is</b>
+     
+        -- <i> Shared variable declaration</i>
+     
+        Sh_Mem : Partition.Shared_Data_I;
+     
+        -- <i> Initialization procedure declaration and description</i>
+     
+        <b>procedure</b> Initialize;
+     
+        ----------------
+        -- <i>Initialize --</i>
+        ----------------
+     
+        <b>procedure</b> Initialize <b>is</b>
+        <b>begin</b>
+           Partition.Builder
+             (Sh_Mem);
+        <b>end</b> Initialize;
+     
+        -- <i> Threads-related code</i>
+        -- <i> (...)</i>
+     
+        -- <i> Bind initialization function with middleware initialization</i>
+     <b>begin</b>
+        <b>declare</b>
+           <b>use</b> PolyORB.Utils.Strings;
+           <b>use</b> PolyORB.Utils.Strings.Lists;
+        <b>begin</b>
+           PolyORB.Initialization.Register_Module
+             (PolyORB.Initialization.Module_Info'
+              (Name =&gt; + "<i>tr_Servants</i>",
+               Conflicts =&gt; PolyORB.Utils.Strings.Lists.Empty,
+               Depends =&gt; + "<i>any</i>",
+               Provides =&gt; PolyORB.Utils.Strings.Lists.Empty,
+               Implicit =&gt; False,
+               Init =&gt; Initialize'Access,
+               Shutdown =&gt; <b>null</b>));
+        <b>end</b>;
+     <b>end</b> Tr_Servants;
+     
+</pre>
+   <h5 class="subsubsection">A.1.4.2 AADL Properties support</h5>
+
+<p>Available properties for process components can be found in SAE
+AS5506, in 5.5 page 77 and in Appendix A, pages 197-218.
+
+   <p><table summary=""><tr align="left"><td valign="top" width="50%">Active_Thread_Handling_Protocol
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Active_Thread_Queue_Handling_Protocol
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Actual_Connection_Binding
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Actual_Memory_Binding
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Actual_Processor_Binding
+</td><td valign="top" width="60%">Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Allowed_Connection_Protocol
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Load_Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Load_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Not_Collocated
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Period
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Runtime_Protection
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Server_Subprogram_Call_Binding
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Code_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Data_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Stack_Size
+</td><td valign="top" width="60%">Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Name
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Text
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Language
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Synchronized_Component
+</td><td valign="top" width="60%">Not Supported
+   <br></td></tr></table>
+
+   </body></html>
+

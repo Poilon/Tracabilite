@@ -1,0 +1,58 @@
+@smallexample
+
+@b{data} Integer_Type 
+@b{properties}
+  ARAO::data_type => @b{in}teger;
+@b{end} Integer_Type;
+
+@b{data} Counter_Type
+@b{features}
+  Increment : @b{subprogram} Increment;
+@b{subcomponents}
+  field : @b{data} Integer_Type;
+@b{properties}
+  Concurency_Control_Protocol => Protected_Access;
+@b{end} Counter_Type;
+
+@b{subprogram} Increment
+@b{features}
+  this : @b{requires} @b{data} @b{access} Counter_Type;
+@b{properties}
+  @b{source}_language => Ada95;
+  @b{source}_name => "@i{Repository}";
+@b{end} Increment;
+
+@b{subprogram} Concurrent_Update
+@b{features}
+  arg : @b{requires} @b{data} @b{access} Counter_Type;
+@b{properties}
+  @b{source}_language => Ada95;
+  @b{source}_name => "@i{Repository}";
+@b{end} Concurrent_Update;
+
+@b{thread} Task
+@b{features}
+  sh_data : @b{requires} @b{data} @b{access} Counter_Type;
+@b{properties}
+  Dispatch_Protocol => Periodic;
+  Period => 1000 Ms;
+@b{end} Task;
+
+@b{thread} @b{implementation} Task.impl
+@b{calls} @{
+  sp1 : @b{subprogram} Concurrent_Update;
+@};
+@b{connections}
+  Cnx_Th_dat : @b{data} @b{access} sh_data -> sp1.arg;
+@b{end} Task.impl;
+
+@b{process} @b{implementation} global.impl
+@b{subcomponents}
+  th1 : @b{thread} Task.impl;
+  th2 : @b{thread} Task.impl;
+  dat : @b{data} Counter_Type;
+@b{connections}
+  Cnx_1 : @b{data} @b{access} dat -> th1.sh_data;
+  Cnx_2 : @b{data} @b{access} dat -> th2.sh_data;
+@b{end} global.impl;
+@end smallexample

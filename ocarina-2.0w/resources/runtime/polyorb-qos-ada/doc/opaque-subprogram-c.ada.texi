@@ -1,0 +1,6 @@
+@smallexample
+
+@b{procedure} sp_impl (e : @b{in} message; s : @b{out} message);
+@b{pragma} Import (C, sp_impl, "@i{implem}");
+
+@end smallexample

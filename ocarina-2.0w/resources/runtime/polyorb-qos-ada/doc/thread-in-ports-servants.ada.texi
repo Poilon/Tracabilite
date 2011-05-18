@@ -1,0 +1,34 @@
+@smallexample
+
+@b{with} Partition;
+
+@b{with} PolyORB.Components;
+@b{with} PolyORB.Servants;
+@b{with} PolyORB.References;
+
+@b{package} proc_Servants @b{is}
+   ...
+   @b{procedure} th2_Ctrler;
+
+   @b{type} th2_Object @b{is} @b{new} Servant @b{with} @b{null} @b{record};
+
+   th2_Ref : PolyORB.References.Ref;
+
+   @b{function} Execute_Servant
+     (Obj : @b{access} th2_Object;
+      Msg : PolyORB.Components.Message'Class)
+     @b{return} PolyORB.Components.Message'Class;
+
+   @b{type} th2_msg_in_buf_type @b{is} @b{array} (1 .. 1) @b{of} Partition.message;
+
+   @b{protected} th2_Ports @b{is}
+      @b{procedure} Put_msg_in (msg_in : Partition.message);
+      @b{procedure} Get_msg_in (msg_in : @b{out} Partition.message);
+      @b{procedure} Push_Back_msg_in (msg_in : @b{out} Partition.message);
+   @b{private}
+      msg_in_Buf : Th2_Msg_In_Buf_Type.Table;
+   @b{end} th2_Ports;
+   ...
+@b{end} proc_Servants;
+
+@end smallexample

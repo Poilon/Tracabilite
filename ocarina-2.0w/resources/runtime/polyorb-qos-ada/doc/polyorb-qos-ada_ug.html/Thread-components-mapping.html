@@ -1,0 +1,595 @@
+<html lang="en">
+<head>
+<title>Thread components mapping - PolyORB AADL personality User's Guide</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content="PolyORB AADL personality User's Guide">
+<meta name="generator" content="makeinfo 4.8">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Components-mapping-rules.html#Components-mapping-rules" title="Components mapping rules">
+<link rel="prev" href="Subprogram-components-mapping.html#Subprogram-components-mapping" title="Subprogram components mapping">
+<link rel="next" href="Process-components-mapping.html#Process-components-mapping" title="Process components mapping">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+Copyright (C) 2003-2009 E'cole
+nationale supe'rieure des te'le'communications
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.1 or
+any later version published by the Free Software Foundation; with the
+Invariant Sections being ``GNU Free Documentation License'', with the
+Front-Cover Texts being ``PolyORB High Integrity User's Guide'', and
+with no Back-Cover Texts.  A copy of the license is included in the
+section entitled ``GNU Free Documentation License''.-->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+body {}
+body {
+	background-color: white;
+	position: absolute;
+	font-size: medium;
+	font-family: Verdana;
+//	padding-left: 7em;
+	top: 3em;
+}
+
+div.navigation {
+	font-size: small; 
+	padding-left: 0; 
+	padding-right: 0; 
+	text-align: right
+}
+
+div#menu {
+	text-align: left;
+	position: fixed;
+	left: 1pt;
+	bottom: auto;
+	top: 2em;
+	right: auto;
+	padding-right: 1ex;
+	padding-left: 1em;
+	padding-top: 1ex;
+	padding-bottom: 1ex;
+	border-width: 3pt;
+	background-color: transparent;  
+	border-color: red; 
+	border-left-style: solid
+}
+
+div#menu span.item {
+	display: block;
+	background-color: transparent;  
+}
+
+table.navigation {
+	font-size: small
+} 
+
+
+/* Paragraphs */
+p, blockquote {
+	color: black; 
+	text-indent: 1em; 
+	text-align: justify
+}
+
+
+p {
+	margin-bottom: .5em; 
+	margin-top: 1px
+}
+
+p kbd 
+{
+  background-color: ivory
+}
+
+div.important {
+	background-color: lightgray; 
+	border-color: red; 
+	border-style: solid;  
+	border-width: 1pt
+}
+p.important {
+	color: red
+}
+p.brut {
+	text-indent: 0
+}
+p.brut:first-letter {
+	font-size: 100%; 
+	font-weight: normal
+}
+
+/* Sections */
+div {
+	border-style: none; 
+	padding-left: 1em; 
+	padding-right: 1em; 
+	margin-top: 2px; 
+	margin-bottom: 2px
+}
+
+
+/* Menus */
+
+div.action {
+	background-color: ivory; 
+	border-color: lightgray; 
+	border-style: solid; 
+	border-width: 1pt 1pt 1pt 1pt; 
+	font-size: small; 
+	text-align: left
+}
+
+div.special 
+{
+  border-color: lightgray; 
+  border-style: solid; 
+  border-width: 0 0 0 4pt
+}
+
+
+/* Docbook special settings */
+
+h3.subtitle {
+	text-align: center
+}
+
+h1.title {
+	margin-bottom: 10pt;
+}
+
+div.authorgroup {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	display: block;
+}
+
+div.author {
+	display: inline;
+}
+
+h3.author {
+	display: inline;
+	font-style: normal;
+	color: black;
+	font-size: medium;
+}
+
+p.copyright {
+	margin-top: 1em;
+	text-align: center;
+}
+
+/* End docbook settings */
+
+
+/* hors-texte */
+
+pre {
+	background-color: whitesmoke;
+	border-color: lightcoral;
+	border-style: solid;
+	border-width: 0pt 1pt 1pt 0pt;
+}
+
+.hors-texte {
+	background-color: lightgray;  
+	border-color: lightcoral; 
+	border-style: solid;
+	border-width: 1pt; 
+	padding-left: 1em; 	
+	padding-right: 1em; 
+	text-align: justify
+}
+
+/* Tables */
+
+table.hors-texte {
+	margin: auto; 
+	font-size: 100%;
+	border-width: 1pt 1pt 1pt 1pt
+}
+
+table.hors-texte td {
+	padding-left: 1ex; 
+	padding-right: 1ex
+}
+
+table.hors-texte tr.sep {
+	padding-top: 1ex
+}
+
+
+h1, h2, h3, h4, h5, h6 
+{
+  color: black; 
+  text-decoration: none; 
+  font-weight: bold;
+  padding: 0pt
+}
+
+h1 {
+	font-size: larger larger larger;
+	text-align: center; 
+	margin-bottom: 24pt
+}
+h2 {
+	font-size: larger larger;
+	margin-left:      0; 
+	margin-top:       24pt; 
+	margin-bottom:    14pt;
+	border-color:     red;
+	border-bottom-style:     solid;
+	border-width:     1pt;
+	padding:          2pt; 
+	margin-left:      0; 
+	margin-right:     0; 
+}
+h3 {
+	font-size: larger;
+	margin-left: 1em; 
+	margin-bottom: 1ex;
+	color: red;	
+}
+h4, h5, h6 {
+	font-size: normal;
+	margin-left: 2em; 
+	margin-bottom: 1em
+}
+
+h4 {
+	text-decoration: underlined
+}
+h5 {
+	font-style: italic
+}
+
+
+h2.special 
+{
+  border-style:     solid;
+  border-width:	    1pt;
+  border-color:     lightgray;
+  padding:          2pt; 
+}
+
+img.flottant {
+	float: right;
+	clear: both;
+	margin: 2em;
+}
+
+/* Lists */
+
+li, dd 
+{
+  text-align: justify
+}
+
+dt {
+	font-style: normal; 
+	margin-top: 1em
+}
+dd {
+	font-style: normal; 
+	margin-left: 4em
+}
+
+dd.sdd {
+	margin-left: 5em
+}
+
+dd ul {margin-top: 0}
+li dl {margin-top: 0}
+ul {list-style-type: square}
+ul ul {list-style-type: disc}
+ul ul ul {list-style-type: circle}
+
+/* Addresses */
+
+address {
+	margin-top: 1ex; margin-bottom: 1ex
+}
+address.poste {
+	font-style: italic
+}
+address.email {
+	font-style: normal
+}
+address.phone {
+	font-style: oblic
+}
+
+/* Links */
+
+a:link, a:visited {
+	color: darkred;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color:  red;
+	padding-bottom: 0px
+}
+
+a:hover, a:active {
+	color: red; 
+	text-decoration: none;
+	border-bottom-color: black;
+	border-bottom-style: solid
+}
+
+--></style>
+</head>
+<body>
+<div class="node">
+<p>
+<a name="Thread-components-mapping"></a>
+Next:&nbsp;<a rel="next" accesskey="n" href="Process-components-mapping.html#Process-components-mapping">Process components mapping</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Subprogram-components-mapping.html#Subprogram-components-mapping">Subprogram components mapping</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Components-mapping-rules.html#Components-mapping-rules">Components mapping rules</a>
+<hr>
+</div>
+
+<h4 class="subsection">A.1.3 Thread components mapping</h4>
+
+<p>The mapping of thread components is a little bit more complicated than
+the mapping of data components. Threads are mapped to an Ada95
+parameter-less procedure which executes the thread work (periodically
+or aperiodically depending on the thread nature). For each periodic
+thread, a middleware thread is created using the API described in
+<a href="Description-of-the-ARAO-API.html#Description-of-the-ARAO-API">Description of the ARAO API</a>. For example~:
+
+<pre class="smallexample">     
+     <b>thread</b> sender
+     <b>features</b>
+       msg_out : <b>out</b> <b>event</b> <b>data</b> <b>port</b> message;
+     <b>properties</b>
+       Dispatch_Protocol =&gt; Periodic;
+       Period =&gt; 1000 Ms;
+     <b>end</b> sender;
+     
+</pre>
+   <h5 class="subsubsection">A.1.3.1 Servant mapping</h5>
+
+<p>If this thread belongs to a process <code>proc</code>, and if <code>th1</code> is the
+name of the thread subcomponent of <code>proc</code> having the type
+<code>sender</code>, then a package <code>proc_Servants</code> is created:
+
+<pre class="smallexample">     
+     <b>package</b> proc_Servants <b>is</b>
+        ...
+        <b>procedure</b> th1_Ctrler;
+        ...
+     <b>end</b> proc_Servants;
+     
+</pre>
+   <p>In the main subprogram <code>proc</code> we find:
+
+<pre class="smallexample">     
+     Aadl_Periodic_Threads.Create_Periodic_Thread
+       (TP =&gt; sn_Servants.th1_Ctrler'Access);
+     
+</pre>
+   <p>The thread &ldquo;in&rdquo; or &ldquo;in out&rdquo; ports are mapped in an Ada protected
+object which allows a protected access to these ports. For each port,
+a buffer having the port stack size is created, implemented with a
+cyclic array. Since these ports are the destination of other
+components requests, for each in port, a PolyORB Reference is created
+and for each thread containing in ports, a servant is created to handle
+the incoming requests; Example:
+
+<pre class="smallexample">     
+     <b>thread</b> receiver
+     <b>features</b>
+       msg_in : <b>in</b> <b>event</b> <b>data</b> <b>port</b> message;
+     <b>end</b> receiver;
+     
+</pre>
+   <p>If this thread belongs to a process <code>proc</code>, and if <code>th2</code> is the
+name of the thread subcomponent of <code>proc</code> having the type
+<code>receiver</code>, then the following declarations will be generated in the
+<code>proc_Servants</code> package spec:
+
+<pre class="smallexample">     
+     <b>with</b> Partition;
+     
+     <b>with</b> PolyORB.Components;
+     <b>with</b> PolyORB.Servants;
+     <b>with</b> PolyORB.References;
+     
+     <b>package</b> proc_Servants <b>is</b>
+        ...
+        <b>procedure</b> th2_Ctrler;
+     
+        <b>type</b> th2_Object <b>is</b> <b>new</b> Servant <b>with</b> <b>null</b> <b>record</b>;
+     
+        th2_Ref : PolyORB.References.Ref;
+     
+        <b>function</b> Execute_Servant
+          (Obj : <b>access</b> th2_Object;
+           Msg : PolyORB.Components.Message'Class)
+          <b>return</b> PolyORB.Components.Message'Class;
+     
+        <b>type</b> th2_msg_in_buf_type <b>is</b> <b>array</b> (1 .. 1) <b>of</b> Partition.message;
+     
+        <b>protected</b> th2_Ports <b>is</b>
+           <b>procedure</b> Put_msg_in (msg_in : Partition.message);
+           <b>procedure</b> Get_msg_in (msg_in : <b>out</b> Partition.message);
+           <b>procedure</b> Push_Back_msg_in (msg_in : <b>out</b> Partition.message);
+        <b>private</b>
+           msg_in_Buf : Th2_Msg_In_Buf_Type.Table;
+        <b>end</b> th2_Ports;
+        ...
+     <b>end</b> proc_Servants;
+     
+</pre>
+   <p>For each &ldquo;out&rdquo; or &ldquo;in out&rdquo; port, we declare reference variable for
+each &ldquo;in&rdquo; or &ldquo;in out&rdquo; port connected to this port.
+
+<h5 class="subsubsection">A.1.3.2 Shared variables access</h5>
+
+<p>In order to comply to the AADL <i>input-processing-output</i> algorithm,
+shared data (either access-protected or not) are not read or written
+directly, but through temporary variables.
+
+   <p>As seen in <a href="Process-components-mapping.html#Process-components-mapping">Process components mapping</a>, any thread can access
+shared variables. In order to ensure protected access when needed,
+Ocarina will declare a local variable in the <code>thread_controler</code>
+function, whose type is the variable internal type (if the variable
+has the protected access property) or the variable real type.
+
+   <p>Each time the thread controller is activated (i.e. each time the
+related servant is called), the local variable is put to shared
+variable value by its <code>Setter</code> procedure, then processing is done
+using the proper user-defined procedure. Then the <code>Getter</code> is
+used to update the shared variable.
+
+   <p>Note that both <code>Setter</code> and <code>Getter</code> procedures are
+generated by Ocarina and ensure access protection, as described in
+<a href="Data-components-mapping.html#Data-components-mapping">Data components mapping</a>.
+
+   <p>Here is an example of generated code of the <code>thread_controler</code>
+procedure which manage a <code>mem_sh</code> variable.
+
+<pre class="smallexample">     
+     
+     <b>procedure</b> Th1_Controller <b>is</b>
+        Msg_In : Partition.Message;
+        Msg_In_Present : Standard.Boolean;
+        Msg_Out : Partition.Message;
+     
+        -- <i>local temporary variable definition</i>
+        Mem : Partition.Internal_Data;
+     <b>begin</b>
+        -- <i> Read shared data and store it in local variable</i>
+        Partition.Get_Field (Sh_Mem, Mem);
+     
+        -- <i> Read in IN ports</i>
+        Tr_Servants.Th1_IN_Ports.Get_Msg_In
+          (Msg_In,
+           Msg_In_Present);
+        <b>if</b> (True
+            <b>and</b> <b>then</b> Msg_In_Present)
+        <b>then</b>
+           -- <i> Processing local variable</i>
+           Repository.Transmit_Message
+             (Msg_In =&gt; Msg_In,
+              Msg_Out =&gt; Msg_Out,
+              Mem =&gt; Mem);
+     
+           -- <i> Write in OUT ports</i>
+           ARAO.Requests.Emit_Msg
+             (Tr_Helpers.To_Any
+              (Msg_Out),
+              Tr_Th2_Ref,
+              "<i>msg_in</i>");
+        <b>else</b>
+           <b>if</b> Msg_In_Present
+           <b>then</b>
+              Tr_Servants.Th1_IN_Ports.Push_Back_Msg_In (Msg_In);
+           <b>end</b> <b>if</b>;
+        <b>end</b> <b>if</b>;
+     
+        -- <i> Write back local variable into shared data</i>
+        Partition.Set_Field (Sh_Mem, Mem);
+     <b>end</b> Th1_Controller;
+     
+     
+</pre>
+   <h5 class="subsubsection">A.1.3.3 AADL Properties support</h5>
+
+<p>Available properties for thread components can be found in SAE AS5506,
+in 5.3 page 61 and in Appendix A, pages 197-218.
+
+   <p><table summary=""><tr align="left"><td valign="top" width="50%">Activate_Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Activate_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Activate_Entrypoint
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Active_Thread_Handling_Protocol
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Active_Thread_Queue_Handling_Protocol
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Actual_Connection_Binding
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Actual_Memory_Binding
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Actual_Processor_Binding
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Allowed_Connection_Protocol
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Client_Subprogram_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Compute_Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Compute_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Concurrency_Control_Protocol
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Deactivate_Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Deactivate_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Deactivate_Entrypoint
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Dispatch_Protocol
+</td><td valign="top" width="60%">Supported (Periodic, Aperiodic)
+<br></td></tr><tr align="left"><td valign="top" width="50%">Finalize_Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Finalize_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Finalize_Entrypoint
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Initialize_Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Initialize_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Initialize_Entrypoint
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Not_Collocated
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Period
+</td><td valign="top" width="60%">Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Queue_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Recover_Deadline
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Recover_Execution_Time
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Server_Subprogram_Call_Binding
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Code_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Data_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Heap_Size
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Stack_Size
+</td><td valign="top" width="60%">Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Name
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Text
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Source_Language
+</td><td valign="top" width="60%">Not Supported
+<br></td></tr><tr align="left"><td valign="top" width="50%">Synchronized_Component
+</td><td valign="top" width="60%">Not Supported
+   <br></td></tr></table>
+
+   </body></html>
+

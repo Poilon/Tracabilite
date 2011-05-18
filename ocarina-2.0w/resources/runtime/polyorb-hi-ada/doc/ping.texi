@@ -1,0 +1,20 @@
+@smallexample
+
+@b{system} PING
+@b{end} PING;
+
+@b{system} @b{implementation} PING.Impl
+@b{subcomponents}
+  -- @i{ Nodes}
+  Node_A : @b{process} A.Impl;
+  Node_B : @b{process} B.Impl @{ARAO::port_number => 12002;@};
+
+  -- @i{ Processors}
+  -- @i{ ...}
+@b{connections}
+  -- @i{ ...}
+@b{properties}
+  -- @i{ ...}
+@b{end} PING.Impl;
+
+@end smallexample

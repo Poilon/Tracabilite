@@ -1,0 +1,36 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnnnnnnnrnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnn
+
+U ocarina.backends.c_common%s  ocarina-backends-c_common.ads  378894a1 NE OO PK IS
+W ocarina.backends%s	ocarina-backends.adb	ocarina-backends.ali
+
+D ocarina.ads		20110517190003 6831e5a1
+D ocarina-backends.ads	20110518222022 d555a6b1
+D ocarina-backends-c_common.ads  20110518222022 e2dd3210
+D system.ads		20110401034433 15e10948
+D s-scaval.ads		20090409232307 1bd0ed08
+D types.ads		20110517190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 1 ocarina.ads
+34K9*Ocarina 63e12 3|34r9 35r5
+X 2 ocarina-backends.ads
+43K17*Backends 1|34k9 2|100e21 3|34r17 35r13
+X 3 ocarina-backends-c_common.ads
+34K26*C_Common 2|43k17 3|35l22 35e30
+

@@ -1,0 +1,8 @@
+@smallexample
+
+@b{thread} receiver
+@b{features}
+  msg_in : @b{in} @b{event} @b{data} @b{port} message;
+@b{end} receiver;
+
+@end smallexample

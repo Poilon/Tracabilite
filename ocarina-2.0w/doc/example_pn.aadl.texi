@@ -1,0 +1,62 @@
+@smallexample
+
+@b{thread} micro_broker @b{end} micro_broker;
+
+@b{thread} @b{implementation} micro_broker.receiver
+@b{subcomponents}
+  buffer : data @b{data}_buffer;
+@b{calls}
+  @b{list}en : @{get_data : @b{subprogram} protocol.simple;@};
+  compute : @{execute : @b{subprogram} execution.simple;@};
+@b{connections}
+  @b{data} @b{access} buffer -> get_data.buffer;
+  @b{data} @b{access} buffer -> execute.buffer;
+@b{properties}
+  Dispatch_Protocol => background;
+  Ocarina::formal_implementation => "@i{broker.pn}";
+@b{end} micro_broker.receiver;
+
+@b{data} data_buffer @b{end} @b{data}_buffer;
+
+@b{subprogram} protocol
+@b{features}
+  buffer : @b{requires} data @b{access} @b{data}_buffer;
+@b{end} protocol;
+
+@b{subprogram} @b{implementation} protocol.simple
+@b{calls}
+  @{get_data : @b{subprogram} transport;@};
+@b{connections}
+  @b{data} @b{access} buffer -> get_data.buffer;
+@b{end} protocol.simple;
+
+@b{subprogram} transport
+@b{features}
+  buffer : @b{requires} data @b{access} @b{data}_buffer;
+@b{end} transport;
+
+@b{subprogram} execution
+@b{features}
+  req : @b{in} @b{parameter} message;
+@b{end} execution;
+
+@b{subprogram} @b{implementation} execution.simple
+@b{calls}
+  @{get_message : @b{subprogram} arguments;
+    @b{process}_message : @b{subprogram} application;@};
+@b{connections}
+  @b{data} @b{access} buffer -> get_message.buffer;
+  @b{parameter} get_message.req -> process_message.msg;
+@b{end} execution.simple;
+
+@b{subprogram} arguments
+@b{features}
+  req : @b{out} @b{parameter} message;
+  buffer : @b{requires} data @b{access} @b{data}_buffer;
+@b{end} arguments;
+
+@b{subprogram} application
+@b{features}
+  msg : @b{in} @b{parameter} message;
+@b{end} application;
+@end smallexample

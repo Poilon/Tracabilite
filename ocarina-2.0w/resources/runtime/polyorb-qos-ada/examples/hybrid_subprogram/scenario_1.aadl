@@ -1,0 +1,18 @@
+--  This is a scenario file describing the AADL 
+--  application hybrid_subprogram
+
+--  $Id: scenario_1.aadl 4631 2008-09-23 16:17:39Z zalila $
+
+system hybrid_subprogram
+properties
+  Ocarina_Config::AADL_Files           => 
+    ("hybrid_subprogram.aadl", "software.aadl", "hardware.aadl");
+  Ocarina_Config::Generator            => polyorb_qos_ada;
+  Ocarina_Config::Needed_Property_Sets => 
+    (value (Ocarina_Config::Data_Model),
+     value (Ocarina_Config::Deployment));
+end hybrid_subprogram;
+
+system implementation hybrid_subprogram.Impl
+end  hybrid_subprogram.Impl;
+

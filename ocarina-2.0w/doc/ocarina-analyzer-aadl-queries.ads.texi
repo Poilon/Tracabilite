@@ -1,0 +1,367 @@
+@subsubsection Ocarina.Analyzer.AADL.Queries 
+This package contains routines that are used to get several
+information from the AADL tree.
+
+This package defines the following subprograms:
+
+@strong{Is_An_Extension}: Returns True if Component is an extension of Ancestor, whether
+by the keyword 'extends' or because Ancestor is a corresponding
+component type.
+
+@example
+@b{function }Is_An_Extension
+     (Component : Node_Id;
+      Ancest@b{or } : Node_Id)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Needed_By}: Return True iff N is needed by Entity (for example Entity has a
+subcompnent of type N). It also return True if N is needed
+indirectly by Entity (through another intermediate need). In
+order for this function to work fine, the AADL tree must have
+been expanded. However, since it acts only on the AADL syntax
+tree, this function is put in this package.
+NOTE: If N is a property *declaration* node, the result will be
+True reguardless the actual need of Entity to N.
+
+@example
+@b{function }Needed_By (N : Node_Id; Entity : Node_Id) @b{return }Boolean;
+@end example
+
+
+@strong{Property_Can_Apply_To_Entity}: Return True if the property association Property can be applied
+to Entity. Otherwise, return False. Beware that this function
+performs exact verification; a property cannot apply to a
+package.
+
+@example
+@b{function }Property_Can_Apply_To_Entity
+     (Property : Node_Id;
+      Entity   : Node_Id)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_Property}: Return True if the property named 'Name' is defined for the
+AADL entity 'Entity'. If 'In_Mode' is a valid name, consider
+only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_String_Property}: Return True if the aadlstring property named 'Name' is defined
+for the AADL entity 'Entity'. If 'In_Mode' is a valid name,
+consider only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_String_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_Integer_Property}: Return True if the aadlinteger property named 'Name' is defined
+for the AADL entity 'Entity'. If 'In_Mode' is a valid name,
+consider only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_Integer_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_Boolean_Property}: Return True if the aadlboolean property named 'Name' is defined
+for the AADL entity 'Entity'. If 'In_Mode' is a valid name,
+consider only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_Boolean_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_Float_Property}: Return True if the aadlreal property named 'Name' is defined
+for the AADL entity 'Entity'. If 'In_Mode' is a valid name,
+consider only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_Float_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_Reference_Property}: Return True if the component reference property named 'Name' is
+defined for the AADL entity 'Entity'. If 'In_Mode' is a valid
+name, consider only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_Reference_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_Classifier_Property}: Return True if the component classifier property named 'Name' is
+defined for the AADL entity 'Entity'. If 'In_Mode' is a valid
+name, consider only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_Classifier_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_Range_Property}: Return True if the component range property named 'Name' is
+defined for the AADL entity 'Entity'. If 'In_Mode' is a valid
+name, consider only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_Range_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_List_Property}: Return True if the 'list of XXX' property named 'Name' is
+defined for the AADL entity 'Entity'. If 'In_Mode' is a valid
+name, consider only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_List_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Is_Defined_Enumeration_Property}: Return True if the enumeration property named 'Name' is defined
+for the AADL entity 'Entity'. If 'In_Mode' is a valid name,
+consider only the property defined for the given mode.
+
+@example
+@b{function }Is_Defined_Enumeration_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Get_Property_Association}: Return the property association node corresponding to Name. If
+the propoerty designed by name is not present for Entity,
+return No_Node. If 'In_Mode' is a valid name, consider only
+the property defined for the given mode.
+
+@example
+@b{function }Get_Property_Association
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Get_Value_Of_Property_Association}: Return the value of the property association named 'Name' if it
+is defined defined for 'Entity'.  Otherwise, return No_Node. If
+'In_Mode' is a valid name, consider only the property defined
+for the given mode.
+
+@example
+@b{function }Get_Value_Of_Property_Association
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Get_String_Property}: Return the value of the aadlstring property association named
+'Name' if it is defined defined for 'Entity'.  Otherwise,
+return "". If 'In_Mode' is a valid name, consider only the
+property defined for the given mode.
+
+@example
+@b{function }Get_String_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }String;
+@end example
+
+
+@strong{Get_String_Property}: Return the value of the aadlstring property association named
+'Name' if it is defined defined for 'Entity'.  Otherwise,
+return No_Name. If 'In_Mode' is a valid name, consider only
+the property defined for the given mode.
+
+@example
+@b{function }Get_String_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Name_Id;
+@end example
+
+
+@strong{Get_Integer_Property}: Return the value of the aadlinteger property association named
+'Name' if it is defined defined for 'Entity'.  Otherwise,
+return 0. If 'In_Mode' is a valid name, consider only the
+property defined for the given mode.
+
+@example
+@b{function }Get_Integer_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Unsigned_Long_Long;
+@end example
+
+
+@strong{Get_Float_Property}: Return the value of the aadlreal property association named
+'Name' if it is defined defined for 'Entity'.  Otherwise,
+return 0.0. If 'In_Mode' is a valid name, consider only the
+property defined for the given mode.
+
+@example
+@b{function }Get_Float_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Long_Long_Float;
+@end example
+
+
+@strong{Get_Boolean_Property}: Return the value of the aadlboolean property association named
+'Name' if it is defined defined for 'Entity'.  Otherwise,
+return False. If 'In_Mode' is a valid name, consider only the
+property defined for the given mode.
+
+@example
+@b{function }Get_Boolean_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Get_Reference_Property}: Return the value of the component reference property
+association named 'Name' if it is defined for 'Entity'.
+Otherwise, return No_Node. If 'In_Mode' is a valid name,
+consider only the property defined for the given mode.
+
+@example
+@b{function }Get_Reference_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Get_Classifier_Property}: Return the value of the component classifier property
+association named 'Name' if it is defined for 'Entity'.
+Otherwise, return No_Node. If 'In_Mode' is a valid name,
+consider only the property defined for the given mode.
+
+@example
+@b{function }Get_Classifier_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Get_List_Property}: Return the value of the 'list of XXX' property association
+named 'Name' if it is defined for 'Entity'. The returned list
+is a Node_Container list. Otherwise, return No_List. If
+'In_Mode' is a valid name, consider only the property defined
+for the given mode.
+
+@example
+@b{function }Get_List_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }List_Id;
+@end example
+
+
+@strong{Get_Range_Property}: Return the values of the range property association named
+'Name' if it is defined for 'Entity'.  Otherwise, return
+No_List. If 'In_Mode' is a valid name, consider only the
+property defined for the given mode.
+
+@example
+@b{function }Get_Range_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Get_Enumeration_Property}: Return the value of the enumeration property association named
+'Name' if it is defined defined for 'Entity'. Otherwise, return
+"". If 'In_Mode' is a valid name, consider only the property
+defined for the given mode.
+
+@example
+@b{function }Get_Enumeration_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }String;
+@end example
+
+
+@strong{Get_Enumeration_Property}: Return the value of the enumeration property association named
+'Name' if it is defined defined for 'Entity'. Otherwise, return
+No_Name. If 'In_Mode' is a valid name, consider only the
+property defined for the given mode.
+
+@example
+@b{function }Get_Enumeration_Property
+     (Entity  : Node_Id;
+      Name    : Name_Id;
+      In_Mode : Name_Id := No_Name)
+     @b{return }Name_Id;
+@end example
+
+
+@strong{Compute_Property_Value}: Compute the value of a property value and return a Node_Id
+containing this value. This value does not contain any
+reference (value ()).
+
+@example
+@b{function }Compute_Property_Value (Property_Value : Node_Id) @b{return }Node_Id;
+@end example
+
+

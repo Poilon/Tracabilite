@@ -1,0 +1,50 @@
+@smallexample
+
+@b{data} @b{in}t
+@b{properties}
+  GAIA::Data_Type => Integer;
+@b{end} @b{in}t;
+
+@b{subprogram} spA
+@b{features}
+  a : in @b{parameter} @b{in}t;
+  d : @b{out} @b{parameter} @b{in}t;
+@b{end} spA;
+
+@b{subprogram} spB
+@b{features}
+  e : in @b{parameter} @b{in}t;
+  s : @b{out} @b{parameter} @b{in}t;
+@b{end} spB;
+
+@b{subprogram} spC
+@b{features}
+  s : @b{out} @b{parameter} @b{in}t;
+@b{end} spC;
+
+@b{subprogram} spD
+@b{features}
+  e : in @b{parameter} @b{in}t;
+  s : @b{out} @b{parameter} @b{in}t;
+@b{end} spD;
+
+@b{subprogram} @b{implementation} spA.impl
+@b{properties}
+  Source_Language => Ada95;
+  Source_Name     => "@i{Repository.SpA_Impl}"
+@b{calls}
+  seq1 : @{spB1 : @b{subprogram} spB;@};
+  seq2 : @{spC2 : @b{subprogram} spC;
+          spB2 : @b{subprogram} spB;@};
+  seq3 : @{spD3 : @b{subprogram} spD;@};
+@b{connections}
+  cnx1 : @b{parameter} a -> apB1.e;
+  cnx2 : @b{parameter} spB1.s -> spD3.e;
+
+  cnx3 : @b{parameter} spC2.s -> spB2.e;
+  cnx4 : @b{parameter} spB2.s -> spD3.e;
+
+  cnx5 : @b{parameter} spd3.s -> d;
+@b{end} spA.impl;
+
+@end smallexample

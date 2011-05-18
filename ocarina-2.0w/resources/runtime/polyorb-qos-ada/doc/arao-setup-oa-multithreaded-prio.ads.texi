@@ -1,0 +1,18 @@
+@subsubsection ARAO.Setup.OA.Multithreaded.Prio 
+Setup an object adapter for multithread processes with request
+priority management.
+
+This package defines the following subprograms:
+
+@strong{Initialize}: Create a Real-Time Object Adapter (RTPOA) for each IN port of
+the caller process. This procedure assumes that PolyORB was
+correctly setup, and particulary that PolyORB.RT_POA was
+previously withed. The RTPOAs will be created with respect to
+in port thread priority, stack size and number of connected out
+ports.
+
+@example
+@b{procedure }Initialize;
+@end example
+
+

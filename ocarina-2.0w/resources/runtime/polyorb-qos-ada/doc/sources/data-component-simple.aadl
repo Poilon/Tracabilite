@@ -1,0 +1,4 @@
+data message
+properties
+  ARAO::data_type => integer;
+end message;

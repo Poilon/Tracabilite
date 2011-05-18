@@ -1,0 +1,22 @@
+SCENARIO_1 :
+	   
+   - Multiples threads by process   
+   - Periodic and aperiodic tasks
+   - Single-call sequence
+   - Multicast inter-process out connexions (one-to-many)
+   - Ports receive data from multiple connexions (many-to-one)
+
+   Code generation specific :
+     - Node Location
+
+SCENARIO_2 :
+	   
+   SCENARIO_1 + :   
+   - Record data type
+   - multiples data connexion management
+
+SCENARIO_2_UDP :
+
+   SCENARIO_2 + :   
+   Code generation specific :
+     - Parametrized protocol name (DIOP)

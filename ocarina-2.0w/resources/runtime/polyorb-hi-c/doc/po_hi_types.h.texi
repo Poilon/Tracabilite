@@ -1,0 +1,89 @@
+@smallexample
+
+/*
+ * This is a part of PolyORB-HI-C distribution, a minimal
+ * middleware written for generated code from AADL models.
+ * You should use it with the Ocarina toolsuite.
+ *
+ * For more informations, please visit http://ocarina.enst.fr
+ *
+ * Copyright (C) 2007-2009, GET-Telecom Paris.
+ */
+
+#ifndef __PO_HI_TYPES_H_
+#define __PO_HI_TYPES_H_
+
+#include"@i{po_hi_config.h}"
+
+#ifdef HAVE_STDINT_H
+#include <stdint.h>
+#endif
+
+#ifdef HAVE_STDBOOL_H
+#include <stdbool.h>
+#endif
+
+#define __PO_HI_UNUSED_NODE -1
+
+/*
+ * Types are configured according to the ones available
+ * on the target host.
+ */
+
+
+#ifdef HAVE_STDBOOL_H
+@b{typedef} bool __po_hi_bool_t;
+#else
+#error This configuration is not supported
+#endif
+
+@b{typedef} @b{float}  __po_hi_float32_t;
+@b{typedef} double __po_hi_float64_t;
+
+#ifdef HAVE_STDINT_H
+  @b{typedef} @b{int}8_t     __po_hi_int8_t;
+  @b{typedef} @b{int}16_t    __po_hi_int16_t;
+  @b{typedef} @b{int}32_t    __po_hi_int32_t;
+  @b{typedef} @b{int}64_t    __po_hi_int64_t;
+  @b{typedef} @b{uint8_t}    __po_hi_uint8_t;
+  @b{typedef} @b{uint16_t}   __po_hi_uint16_t;
+  @b{typedef} uint32_t   __po_hi_uint32_t;
+  @b{typedef} uint64_t   __po_hi_uint64_t;
+#else
+
+/*
+ * Most modern compilers have stdint.h header file.
+ */
+
+#error This configuration is not supported
+
+  #if SIZEOF_INT == 4
+  @b{typedef} @b{int}                    __po_hi_int32_t;
+  #elif SIZEOF_LONG_INT == 4
+  @b{typedef} long @b{int}               __po_hi_int32_t;
+  #elif SIZEOF_SHORT_INT == 4
+  @b{typedef} short @b{int}              __po_hi_int32_t;
+  #endif
+
+  #if SIZEOF_INT == 2
+  @b{typedef} @b{int}                    __po_hi_int16_t;
+  @b{typedef} unsigned @b{int}           __po_hi_uint16_t;
+  #elif SIZEOF_SHORT_INT == 2
+  @b{typedef} short @b{int}              __po_hi_int16_t;
+  @b{typedef} unsigned short @b{int}     __po_hi_uint16_t;
+  #elif SIZEOF_LONG_INT == 2
+  @b{typedef} long @b{int}               __po_hi_int16_t;
+  @b{typedef} unsigned long @b{int}      __po_hi_uint16_t;
+  #endif
+
+  #if SIZEOF_CHAR == 1
+    @b{typedef} @b{char}                 __po_hi_int8_t;
+    @b{typedef} unsigned @b{char}        __po_hi_uint8_t;
+  #endif
+#endif
+
+@b{void} __po_hi_copy_array (void* dst, @b{void}* src, __po_hi_uint16_t size);
+
+#endif /* __PO_HI_TYPES_H_ */
+
+@end smallexample

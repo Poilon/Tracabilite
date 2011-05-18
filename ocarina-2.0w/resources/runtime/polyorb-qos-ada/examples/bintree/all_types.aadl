@@ -1,0 +1,473 @@
+----------
+-- data --
+----------
+
+data bool_msg
+properties
+  Data_Model::Data_Representation => boolean;
+end bool_msg;
+
+data int_msg
+properties
+  Data_Model::Data_Representation => integer;
+end int_msg;
+
+data float_msg
+properties
+  Data_Model::Data_Representation => float;
+end float_msg;
+
+data str_msg
+properties
+  Data_Model::Data_Representation => string;
+  Data_Model::Dimension => (30);
+end str_msg;
+
+--  A record structure
+
+data record_msg_p
+end record_msg_p;
+
+data implementation record_msg_p.basic
+subcomponents
+  field_1 : data bool_msg;
+  field_2 : data float_msg;
+  field_3 : data int_msg;
+  field_4 : data str_msg;
+properties
+  Data_Model::Data_Representation => struct;
+end record_msg_p.basic;
+
+data record_msg extends record_msg_p
+end record_msg;
+
+data implementation record_msg.basic extends record_msg_p.basic
+end record_msg.basic;
+
+-----------------
+-- subprograms --
+-----------------
+
+-- Receiver subprograms
+
+subprogram receive_bool
+features
+  msg_in : in parameter bool_msg;
+properties
+  source_language => Ada95;
+  source_name     => "Bool_Pkg.Receive_Bool";
+end receive_bool;
+
+subprogram receive_int
+features
+  msg_in : in parameter int_msg;
+properties
+  source_language => Ada95;
+  source_name     => "Int_Pkg.Receive_Int";
+end receive_int;
+
+subprogram receive_float
+features
+  msg_in : in parameter float_msg;
+properties
+  source_language => Ada95;
+  source_name     => "Float_Pkg.Receive_Float";
+end receive_float;
+
+subprogram receive_str
+features
+  msg_in : in parameter str_msg;
+properties
+  source_language => Ada95;
+  source_name     => "Str_Pkg.Receive_Str";
+end receive_str;
+
+subprogram receive_record
+features
+  msg_in : in parameter record_msg.basic;
+properties
+  source_language => Ada95;
+  source_name     => "Record_Pkg.Receive_Record";
+end receive_record;
+
+--  Transmitter subprograms
+
+subprogram message_to_bool
+features
+  msg_in  : in  parameter message;
+  msg_out : out parameter bool_msg;
+properties
+  source_language => Ada95;
+  source_name     => "Msg_Bool_Pkg.Message_To_Bool";
+end message_to_bool;
+
+subprogram message_to_int
+features
+  msg_in  : in  parameter message;
+  msg_out : out parameter int_msg;
+properties
+  source_language => Ada95;
+  source_name     => "Msg_Int_Pkg.Message_To_Int";
+end message_to_int;
+
+subprogram message_to_float
+features
+  msg_in  : in  parameter message;
+  msg_out : out parameter float_msg;
+properties
+  source_language => Ada95;
+  source_name     => "Msg_Float_Pkg.Message_To_Float";
+end message_to_float;
+
+subprogram message_to_str
+features
+  msg_in  : in  parameter message;
+  msg_out : out parameter str_msg;
+properties
+  source_language => Ada95;
+  source_name => "Msg_Str_Pkg.Message_To_Str";
+end message_to_str;
+
+subprogram all_to_record
+features
+  msg_in_bool  : in  parameter bool_msg;
+  msg_in_float : in  parameter float_msg;
+  msg_in_int   : in  parameter int_msg;
+  msg_in_str   : in  parameter str_msg;
+  msg_out_rec  : out parameter record_msg.basic;
+properties
+  source_language => Ada95;
+  source_name => "Record_Pkg.All_To_Record";
+end all_to_record;
+
+-------------
+-- threads --
+-------------
+
+--  Receiver threads
+
+thread bool_receiver
+features
+  msg_in : in event data port bool_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end bool_receiver;
+
+thread implementation bool_receiver.impl
+calls {
+  call_1 : subprogram receive_bool;
+};
+connections
+  connecx_1 : parameter msg_in -> call_1.msg_in;
+end bool_receiver.impl;
+
+thread int_receiver
+features
+  msg_in : in event data port int_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end int_receiver;
+
+thread implementation int_receiver.impl
+calls {
+  call_1 : subprogram receive_int;
+};
+connections
+  connecx_1 : parameter msg_in -> call_1.msg_in;
+end int_receiver.impl;
+
+thread float_receiver
+features
+  msg_in : in event data port float_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end float_receiver;
+
+thread implementation float_receiver.impl
+calls {
+  call_1 : subprogram receive_float;
+};
+connections
+  connecx_1 : parameter msg_in -> call_1.msg_in;
+end float_receiver.impl;
+
+thread str_receiver
+features
+  msg_in : in event data port str_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end str_receiver;
+
+thread implementation str_receiver.impl
+calls {
+  call_1 : subprogram receive_str;
+};
+connections
+  connecx_1 : parameter msg_in -> call_1.msg_in;
+end str_receiver.impl;
+
+thread record_receiver
+features
+  msg_in : in event data port record_msg.basic;
+properties
+  Dispatch_Protocol => Aperiodic;
+end record_receiver;
+
+thread implementation record_receiver.impl
+calls {
+  call_1 : subprogram receive_record;
+};
+connections
+  connecx_1 : parameter msg_in -> call_1.msg_in;
+end record_receiver.impl;
+
+--  Transmitter threads
+
+thread bool_transmitter
+features
+  msg_in  : in  event data port message;
+  msg_out : out event data port bool_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end bool_transmitter;
+
+thread implementation bool_transmitter.impl
+calls {
+  call_1 : subprogram message_to_bool;
+};
+connections
+  connex_1 : parameter msg_in -> call_1.msg_in;
+  connex_2 : parameter call_1.msg_out -> msg_out;
+end bool_transmitter.impl;
+
+thread int_transmitter
+features
+  msg_in  : in  event data port message;
+  msg_out : out event data port int_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end int_transmitter;
+
+thread implementation int_transmitter.impl
+calls {
+  call_1 : subprogram message_to_int;
+};
+connections
+  connex_1 : parameter msg_in -> call_1.msg_in;
+  connex_2 : parameter call_1.msg_out -> msg_out;
+end int_transmitter.impl;
+
+thread float_transmitter
+features
+  msg_in  : in  event data port message;
+  msg_out : out event data port float_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end float_transmitter;
+
+thread implementation float_transmitter.impl
+calls {
+  call_1 : subprogram message_to_float;
+};
+connections
+  connex_1 : parameter msg_in -> call_1.msg_in;
+  connex_2 : parameter call_1.msg_out -> msg_out;
+end float_transmitter.impl;
+
+thread str_transmitter
+features
+  msg_in  : in  event data port message;
+  msg_out : out event data port str_msg;
+properties
+  Dispatch_Protocol => Aperiodic;
+end str_transmitter;
+
+thread implementation str_transmitter.impl
+calls {
+  call_1 : subprogram message_to_str;
+};
+connections
+  connex_1 : parameter msg_in -> call_1.msg_in;
+  connex_2 : parameter call_1.msg_out -> msg_out;
+end str_transmitter.impl;
+
+thread record_transmitter
+features
+  msg_in_bool  : in  event data port bool_msg;
+  msg_in_float : in  event data port float_msg;
+  msg_in_int   : in  event data port int_msg;
+  msg_in_str   : in  event data port str_msg;
+  msg_out_rec  : out event data port record_msg.basic;
+properties
+  Dispatch_Protocol => Aperiodic;
+end record_transmitter;
+
+thread implementation record_transmitter.impl
+calls {
+  call_1 : subprogram all_to_record;
+};
+connections
+  connex_1 : parameter msg_in_bool        -> call_1.msg_in_bool;
+  connex_2 : parameter msg_in_float       -> call_1.msg_in_float;
+  connex_3 : parameter msg_in_int         -> call_1.msg_in_int;
+  connex_4 : parameter msg_in_str         -> call_1.msg_in_str;
+  connex_5 : parameter call_1.msg_out_rec -> msg_out_rec;
+end record_transmitter.impl;
+
+---------------
+-- processes --
+---------------
+
+--  Sender
+
+process sender_only
+features
+  msg_out : out event data port message;
+end sender_only;
+
+process implementation sender_only.simple
+subcomponents
+  th_1 : thread sender.simple;
+connections
+  event data port th_1.msg_out -> msg_out;
+end sender_only.simple;
+
+--  Receiver processes
+
+process bool_receiver_p
+features
+  msg_in  : in event data port bool_msg;
+end bool_receiver_p;
+
+process implementation bool_receiver_p.impl_1
+subcomponents
+  th_1 : thread bool_receiver.impl;
+connections
+  connex_1 : event data port msg_in -> th_1.msg_in;
+end bool_receiver_p.impl_1;
+
+process int_receiver_p
+features
+  msg_in  : in event data port int_msg;
+end int_receiver_p;
+
+process implementation int_receiver_p.impl_1
+subcomponents
+  th_1 : thread int_receiver.impl;
+connections
+  connex_1 : event data port msg_in -> th_1.msg_in;
+end int_receiver_p.impl_1;
+
+process float_receiver_p
+features
+  msg_in  : in event data port float_msg;
+end float_receiver_p;
+
+process implementation float_receiver_p.impl_1
+subcomponents
+  th_1 : thread float_receiver.impl;
+connections
+  connex_1 : event data port msg_in -> th_1.msg_in;
+end float_receiver_p.impl_1;
+
+process str_receiver_p
+features
+  msg_in  : in event data port str_msg;
+end str_receiver_p;
+
+process implementation str_receiver_p.impl_1
+subcomponents
+  th_1 : thread str_receiver.impl;
+connections
+  connex_1 : event data port msg_in -> th_1.msg_in;
+end str_receiver_p.impl_1;
+
+process record_receiver_p
+features
+  msg_in  : in event data port record_msg.basic;
+end record_receiver_p;
+
+process implementation record_receiver_p.impl_1
+subcomponents
+  th_1 : thread record_receiver.impl;
+connections
+  connex_1 : event data port msg_in -> th_1.msg_in;
+end record_receiver_p.impl_1;
+
+--  Transmitter processes
+
+process bool_transmitter_p
+features
+  msg_in  : in  event data port message;
+  msg_out : out event data port bool_msg;
+end bool_transmitter_p;
+
+process implementation bool_transmitter_p.impl_1
+subcomponents
+  th_1 : thread bool_transmitter.impl;
+connections
+  connex_1 : event data port msg_in -> th_1.msg_in;
+  connex_2 : event data port th_1.msg_out -> msg_out;
+end bool_transmitter_p.impl_1;
+
+process int_transmitter_p
+features
+  msg_in  : in  event data port message;
+  msg_out : out event data port int_msg;
+end int_transmitter_p;
+
+process implementation int_transmitter_p.impl_1
+subcomponents
+  th_1 : thread int_transmitter.impl;
+connections
+  connex_1 : event data port msg_in -> th_1.msg_in;
+  connex_2 : event data port th_1.msg_out -> msg_out;
+end int_transmitter_p.impl_1;
+
+process float_transmitter_p
+features
+  msg_in  : in  event data port message;
+  msg_out : out event data port float_msg;
+end float_transmitter_p;
+
+process implementation float_transmitter_p.impl_1
+subcomponents
+  th_1 : thread float_transmitter.impl;
+connections
+  connex_1 : event data port msg_in -> th_1.msg_in;
+  connex_2 : event data port th_1.msg_out -> msg_out;
+end float_transmitter_p.impl_1;
+
+process str_transmitter_p
+features
+  msg_in  : in  event data port message;
+  msg_out : out event data port str_msg;
+end str_transmitter_p;
+
+process implementation str_transmitter_p.impl_1
+subcomponents
+  th_1 : thread str_transmitter.impl;
+connections
+  connex_1 : event data port msg_in -> th_1.msg_in;
+  connex_2 : event data port th_1.msg_out -> msg_out;
+end str_transmitter_p.impl_1;
+
+process record_transmitter_p
+features
+  msg_in_bool  : in  event data port bool_msg;
+  msg_in_float : in  event data port float_msg;
+  msg_in_int   : in  event data port int_msg;
+  msg_in_str   : in  event data port str_msg;
+  msg_out_rec  : out event data port record_msg.basic;
+end record_transmitter_p;
+
+process implementation record_transmitter_p.impl_1
+subcomponents
+  th_1 : thread record_transmitter.impl;
+connections
+  connex_1 : event data port msg_in_bool      -> th_1.msg_in_bool;
+  connex_2 : event data port msg_in_float     -> th_1.msg_in_float;
+  connex_3 : event data port msg_in_int       -> th_1.msg_in_int;
+  connex_4 : event data port msg_in_str       -> th_1.msg_in_str;
+  connex_5 : event data port th_1.msg_out_rec -> msg_out_rec;
+end record_transmitter_p.impl_1;

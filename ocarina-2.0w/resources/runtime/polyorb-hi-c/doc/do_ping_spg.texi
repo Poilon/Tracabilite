@@ -1,0 +1,12 @@
+@smallexample
+
+@b{subprogram} Do_Ping_Spg
+features
+  Data_Source : @b{out} @b{parameter} Simple_Type;
+@b{properties}
+  @b{source}_language => C;
+  @b{source}_name     => "@i{user_ping}";
+@b{end} Do_Ping_Spg;
+
+
+@end smallexample

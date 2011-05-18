@@ -1,0 +1,9 @@
+This examples tests a monolithic multithreaded application using
+PolyORB-QoS as to handle thread communications.
+
+We use PolyORB-QoS references to handle communications between
+threds. Therefore, a process that has threads wi IN ports must have
+been assigned a port number even if this process does not have IN
+ports.
+
+

@@ -1,0 +1,8 @@
+@smallexample
+
+@b{data} message
+@b{properties}
+  ARAO::data_type => @b{in}teger;
+@b{end} message;
+
+@end smallexample

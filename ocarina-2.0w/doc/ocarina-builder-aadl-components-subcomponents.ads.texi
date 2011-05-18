@@ -1,0 +1,41 @@
+@subsubsection Ocarina.Builder.AADL.Components.Subcomponents 
+
+
+This package defines the following subprograms:
+
+@strong{Add_Property_Association}: Add a property association to the subcomponent
+declaration. Subcomponent must reference a Subcomponent
+declaration. Property_Association references the property
+association. Return True if everything went right, else False.
+
+@example
+@b{function }Add_Property_Association
+     (Subcomponent         : Node_Id;
+      Property_Association : Node_Id)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Add_New_Subcomponent}: Create and add a new subcomponent into a component
+implementation. Loc is the location of the subcomponent in the
+parsed text. Name references an identifier which contains the
+name of the subcomponent. Comp_Impl references the component
+implementation. Category is the type of the
+subcomponent. Is_Refinement indicates wether the connection is
+a refinement or not. In_Modes contains the list of the modes
+associated to the connection. Return the Node_Id of the newly
+created subcomponent if everything went right, else No_Node.
+
+@example
+@b{function }Add_New_Subcomponent
+     (Loc                 : Location;
+      Name                : Node_Id;
+      Comp_Impl           : Node_Id;
+      Category            : Ocarina.ME_AADL.Component_Category;
+      Is_Refinement       : Boolean := False;
+      In_Modes            : Node_Id := No_Node;
+      Prototypes_Bindings : List_Id := No_List)
+     @b{return }Node_Id;
+@end example
+
+

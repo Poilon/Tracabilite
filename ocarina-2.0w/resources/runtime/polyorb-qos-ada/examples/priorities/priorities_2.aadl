@@ -1,0 +1,21 @@
+system priorities
+end priorities;
+
+system implementation priorities.impl2
+subcomponents
+  sn : process sender_node.impl {Deployment::port_number => 3200;};
+  r1 : process receiver_node.impl1 {Deployment::port_number => 4001;};
+  r2 : process receiver_node.impl2 {Deployment::port_number => 4002;};
+  proc_1 : processor a_processor;
+connections
+  event data port r1.msg_out -> sn.msg_in_1;
+  event data port r2.msg_out -> sn.msg_in_2;
+  event data port sn.msg_out -> r1.msg_in;
+  event data port sn.msg_out -> r2.msg_in;
+properties
+  actual_processor_binding => reference proc_1 applies to sn;
+  actual_processor_binding => reference proc_1 applies to r1;
+  actual_processor_binding => reference proc_1 applies to r2;
+  Deployment::Protocol => diop;
+end priorities.impl2;
+

@@ -1,0 +1,4 @@
+thread receiver
+features
+  msg_in : in event data port message;
+end receiver;

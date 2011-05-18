@@ -1,0 +1,156 @@
+V "GNAT Lib v4.4"
+A -fPIC
+A -fstack-check
+A -g
+A -g
+A -gnatf
+A -gnaty
+A -gnatwa
+A -gnatwe
+A -gnato
+A -gnata
+A -gnaty
+A -gnatyu
+A -gnatys
+A -gnat05
+A -gnatA
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnrnnnnrnvnnnnnrnnnnvnnvnnrnnnnnnnnnnvnnvnvvnnnnnnnnnnnnnnn
+
+U ocarina.backends.stats%b  ocarina-backends-stats.adb  9cc13bd3 NE OO PK IS
+W ada.tags%s		a-tags.adb		a-tags.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.command_line%s	g-comlin.adb		g-comlin.ali
+W interfaces%s		interfac.ads		interfac.ali
+W namet%s		namet.adb		namet.ali
+W ocarina%s		ocarina.adb		ocarina.ali
+W ocarina.backends%s	ocarina-backends.adb	ocarina-backends.ali
+W ocarina.backends.expander%s  ocarina-backends-expander.adb  ocarina-backends-expander.ali
+W ocarina.backends.messages%s  ocarina-backends-messages.adb  ocarina-backends-messages.ali
+W ocarina.backends.stats%s  ocarina-backends-stats.adb  ocarina-backends-stats.ali
+W ocarina.backends.stats.main%s  ocarina-backends-stats-main.adb  ocarina-backends-stats-main.ali
+W ocarina.backends.utils%s  ocarina-backends-utils.adb  ocarina-backends-utils.ali
+W ocarina.backends.xml_tree%s  ocarina-backends-xml_tree.ads  ocarina-backends-xml_tree.ali
+W ocarina.backends.xml_tree.generator%s  ocarina-backends-xml_tree-generator.adb  ocarina-backends-xml_tree-generator.ali
+W ocarina.instances%s	ocarina-instances.adb	ocarina-instances.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U ocarina.backends.stats%s  ocarina-backends-stats.ads  453a0176 EE OO PK IS
+W ocarina.backends%s	ocarina-backends.adb	ocarina-backends.ali
+W system.scalar_values%s  s-scaval.adb		s-scaval.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-charac.ads		20070912115821 506ce725
+D a-chlat1.ads		20070912115821 e9ee6d0a
+D a-comlin.ads		20090409232307 3b71d99c
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-stream.ads		20090409232307 34aca5be
+D a-string.ads		20070406091342 87b4230b
+D a-strmap.ads		20090409232307 5253a637
+D a-tags.ads		20090409232307 bfa07446
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D gnat.ads		20050905075125 96410e68
+D g-comlin.ads		20080914062112 b24642a5
+D g-dirope.ads		20080408065739 92471343
+D g-os_lib.ads		20090409232307 c015094d
+D g-regexp.ads		20080820135520 a4b9afe8
+D g-table.ads		20080408064830 4cacb2f1
+D interfac.ads		20090409232307 a69cad5c
+D locations.ads		20110517190003 a3dd4cff
+D namet.ads		20110517190003 e03fb004
+D ocarina.ads		20110517190003 6831e5a1
+D ocarina-backends.ads	20110518222022 d555a6b1
+D ocarina-backends-expander.ads  20110518222022 4105642c
+D ocarina-backends-messages.ads  20110518222022 a1bc8a23
+D ocarina-backends-properties.ads  20110518222022 7d8de08a
+D ocarina-backends-stats.ads  20110518222022 906fa7c7
+D ocarina-backends-stats.adb  20110518222022 6237ef85
+D ocarina-backends-stats-main.ads  20110518222022 33b957ba
+D ocarina-backends-utils.ads  20110518222022 b73e6aee
+D ocarina-backends-xml_tree.ads  20110518222022 d64c1b3e
+D ocarina-backends-xml_tree-generator.ads  20110518222022 ad940483
+D ocarina-instances.ads	20110517190002 f54a56e8
+D system.ads		20110401034433 15e10948
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-os_lib.ads		20090409232307 719f619c
+D s-parame.ads		20090409232307 f32e56e9
+D s-regexp.ads		20080731102612 1ac245ef
+D s-scaval.ads		20090409232307 1bd0ed08
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-string.ads		20090409232307 04f2ee70
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D types.ads		20110517190003 366f6adc
+D unchdeal.ads		20070406091342 66b7fd29
+X 14 gnat.ads
+36K9*GNAT 39e9 29|41r6 41r29
+X 15 g-comlin.ads
+247K14*Command_Line 854e22 29|41w11 41r34
+264U14*Initialize_Option_Scan 29|106r7
+330V13*Getopt{character} 29|108r15
+429V13*Parameter{string} 29|117r42
+X 22 namet.ads
+38K9*Namet 237e10 29|43w6 43r17
+95V13*Get_String_Name{53|184I9} 29|105r38 120r53
+X 23 ocarina.ads
+34K9*Ocarina 63e12 28|34r9 50r5 29|34r6 35r6 36r6 37r6 38r6 39r6 45r14 47r8
+. 48r8 49r8 50r8 51r8 52r8 151r5
+X 24 ocarina-backends.ads
+43K17*Backends 23|34k9 24|100e21 28|34r17 50r13 29|35r14 36r14 37r14 38r14
+. 39r14 45r22 48r16 49r16 50r16 51r16 52r16 151r13
+61n7*Statistics{50E9} 29|129r51
+72U14*Register_Backend 29|129r7
+X 25 ocarina-backends-expander.ads
+38K26*Expander 45e30 29|36w23 49r25
+40U14*Expand 29|72r7
+X 26 ocarina-backends-messages.ads
+36K26*Messages 62e30 29|35w23 50r25
+38U14*Display_Error 29|78r10
+40b7 Fatal{boolean} 29|78r57
+X 28 ocarina-backends-stats.ads
+34K26*Stats 24|43k17 28|50l22 50e27 29|38r23 45b31 48r25 151l22 151t27
+36U14*Generate 36>24 29|66b14 97l8 97t16 129r34
+36i24 AADL_Root{53|197I9} 29|66b24 70r43
+39U14*Init 29|103b14 130l8 130t12
+44U14*Reset 29|136b14 139l8 139t13
+47i4 XML_Root{53|197I9} 29|77r14 91r39
+X 29 ocarina-backends-stats.adb
+54b4 Remove_Generated_Sources{boolean} 88r14 113m16
+55i4 Generated_Sources_Directory{53|184I9} 86r24 105m7 120m22
+57U14 Visit_Architecture_Instance 57>43 74r7 145b14 149l8 149t35
+57i43 E{53|197I9} 145b43 147r19
+67i7 Instance_Root{53|197I9} 70m7 72r15 74r36
+117a19 D{string} 119r22 120r70
+X 30 ocarina-backends-stats-main.ads
+38K32*Main 29|38w29 48r31 147r7 30|44e32
+42U14*Visit 29|147r12
+X 31 ocarina-backends-utils.ads
+36K26*Utils 29|39w23 52r25 31|480e27
+47U14*Enter_Directory 29|86r7
+51U14*Leave_Directory 29|96r7
+X 32 ocarina-backends-xml_tree.ads
+37K26*XML_Tree 29|37r23 51r25 91r10 32|38e30
+X 33 ocarina-backends-xml_tree-generator.ads
+34K35*Generator 29|37w32 51r34 91r19 33|44e40
+39U14*Generate 29|91r29
+X 34 ocarina-instances.ads
+36K17*Instances 29|34w14 47r16 34|115e22
+38V13*Instantiate_Model{53|197I9} 29|70r24
+X 53 types.ads
+51I9*Int<integer>
+184I9*Name_Id<integer> 29|55r34
+190i4*No_Name{184I9} 29|55r45
+197I9*Node_Id<51I9> 28|36r36 47r15 29|57r47 66r36 67r23 145r47
+203V13*No{boolean} 29|77r10
+

@@ -1,0 +1,49 @@
+@smallexample
+
+-- @i{ Ada restrictions to be supported by the PolyORB HI, common restrictions}
+
+-- @i{ For each restriction, we list its definition place in the Ada 2005}
+-- @i{ reference manual.}
+
+@b{pragma} Restrictions (No_Allocators);                  -- @i{H.4 (7)}
+@b{pragma} Restrictions (No_Floating_Point);              -- @i{H.4 (14)}
+-- @i{ pragma Restrictions (No_Access_Subprograms);          -- H.4 (17)}
+@b{pragma} Restrictions (No_Unchecked_Access);            -- @i{H.4 (18)}
+@b{pragma} Restrictions (No_Dispatch);                    -- @i{H.4 (19)}
+@b{pragma} Restrictions (No_IO);                          -- @i{H.4 (20)}
+@b{pragma} Restrictions (No_Recursion);                   -- @i{H.4 (22)}
+
+-- @i{ pragma Partition_Elaboration_Policy (Sequential); -- H.6 (3)}
+-- @i{ This policy eases task initial synchronization and the bootstrap}
+-- @i{ of the VM, see Ada 2005 Rationale for more details). (Not yet}
+-- @i{ supported by GNAT)}
+
+-- @i{ pragma Restriction_Warnings (No_Implementation_Attributes);   -- 13.12 (2)}
+-- @i{ Style-check to enforce compliance with pure Ada, but also to avoid}
+-- @i{ the 'Unrestricted_Access attribute, which is GNAT specific.}
+
+-- @i{ pragma Restrictions (No_Obsolescent_Features);        -- 13.12 (4)}
+-- @i{Deactivated as of 20090702: GPL 2009 deprecated}
+-- @i{GNAT.Sockets.Initialize, but it might still be required for older}
+-- @i{compilers supported.}
+
+@b{pragma} Restrictions (No_Unchecked_Deallocation);      -- @i{J.13 (4)}
+-- @i{ Sibling of the No_Allocators restriction.}
+-- @i{ XXX to be replaced with a No_Dependence restriction}
+
+-- @i{ GNAT Specific restrictions}
+
+-- @i{ pragma Restrictions (No_Streams);                     -- GNAT specific}
+
+-- @i{ pragma Restrictions (No_Direct_Boolean_Operators);    -- GNAT specific}
+-- @i{ For the use of "@i{and then}" and "@i{or else}" in boolean operations}
+
+-- @i{ pragma Restrictions (No_Enumeration_Maps);            -- GNAT specific}
+-- @i{Forbids <type>'Image for enumeration types. Cannot be supported}
+-- @i{because some examples use it}
+
+-- @i{ pragma Restrictions (No_Implicit_Conditionals);     -- GNAT specific}
+-- @i{ pragma Restrictions (No_Implicit_Loops);            -- GNAT specific}
+-- @i{ pragma Restrictions (No_Enumeration_Maps);          -- GNAT specific}
+
+@end smallexample

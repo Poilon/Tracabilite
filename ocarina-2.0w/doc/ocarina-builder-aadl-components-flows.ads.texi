@@ -1,0 +1,66 @@
+@subsubsection Ocarina.Builder.AADL.Components.Flows 
+
+
+This package defines the following subprograms:
+
+@strong{Add_Property_Association}: Add a property association to the flow declaration. Flow must
+reference a flow implementation or a flow
+specification. Property_Association references the property
+association. Return True if everything went right, else False.
+
+@example
+@b{function }Add_Property_Association
+     (Flow                 : Node_Id;
+      Property_Association : Node_Id)
+     @b{return }Boolean;
+@end example
+
+
+@strong{Add_New_Flow_Spec}: Create a new flow specification inside a component type
+
+@example
+@b{function }Add_New_Flow_Spec
+     (Loc           : Location;
+      Name          : Node_Id;
+      Comp_Type     : Node_Id;
+      Category      : Flow_Category;
+      Source_Flow   : Node_Id;
+      Sink_Flow     : Node_Id;
+      Is_Refinement : Boolean := False)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Add_New_Flow_Implementation}: Create a new flow implementation inside a component
+implementation
+
+@example
+@b{function }Add_New_Flow_Implementation
+     (Loc           : Location;
+      Container     : Node_Id;
+      Name          : Node_Id;
+      Category      : Flow_Category;
+      In_Modes      : Node_Id;
+      Is_Refinement : Boolean;
+      Source_Flow   : Node_Id;
+      Sink_Flow     : Node_id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Add_New_End_To_End_Flow_Spec}: Create a new end to end flow specification inside a component
+implementation
+
+@example
+@b{function }Add_New_End_To_End_Flow_Spec
+     (Loc           : Location;
+      Container     : Node_Id;
+      Name          : Node_Id;
+      In_Modes      : Node_Id;
+      Is_Refinement : Boolean;
+      Source_Flow   : Node_Id;
+      Sink_Flow     : Node_id)
+     @b{return }Node_Id;
+@end example
+
+

@@ -1,0 +1,9 @@
+@smallexample
+
+@b{processor} the_processor
+@b{properties}
+  ARAO::location           => "@i{127.0.0.1}";
+  ARAO::Execution_Platform => Native;
+@b{end} the_processor;
+
+@end smallexample

@@ -1,0 +1,25 @@
+@smallexample
+
+@b{package} PING_Package
+@b{public}
+  @b{system} @b{implementation} PING.Native
+  @b{subcomponents}
+    Node_A : @b{process} A.Impl;
+    Node_B : @b{process} B.Impl
+      @{Deployment::port_number => 12002;@};
+    CPU : @b{process}or the_processor
+      @{Priority_Range => 0 .. 255;@};
+    the_bus : @b{bus} Ethernet_Bus;
+  @b{connections}
+    @b{bus} @b{access} the_bus -> CPU.ETH;
+    @b{port} Node_A.Out_Port -> Node_B.In_Port
+      @{Actual_Connection_Binding => (reference ( the_bus ));@};
+  @b{properties}
+    actual_processor_binding => (reference ( CPU ))
+      @b{applies} @b{to} Node_A;
+    actual_processor_binding => (reference ( CPU ))
+      @b{applies} @b{to} Node_B;
+  @b{end} PING.Native;
+@b{end} PING_Package;
+
+@end smallexample

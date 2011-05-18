@@ -1,0 +1,19 @@
+@subsubsection ARAO.Periodic_Threads 
+
+
+This package defines the following subprograms:
+
+@strong{Create_Periodic_Thread}: This procedure creates a periodic thread. The fact that the
+thread is periodic is handled in the TP procedure. Also, we
+assume that the PolyORB thread pool was properly created during
+the setup phase. Storage_size 0 is default size (not really 0
+bit).
+
+@example
+@b{procedure }Create_Periodic_Thread
+     (TP           : Parameterless_Procedure;
+      Priority     : System.Any_Priority := System.Default_Priority;
+      Storage_Size : Integer := 0);
+@end example
+
+

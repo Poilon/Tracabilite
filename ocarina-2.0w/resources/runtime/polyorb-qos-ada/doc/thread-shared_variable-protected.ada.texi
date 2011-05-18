@@ -1,0 +1,46 @@
+@smallexample
+
+
+@b{procedure} Th1_Controller @b{is}
+   Msg_In : Partition.Message;
+   Msg_In_Present : Standard.Boolean;
+   Msg_Out : Partition.Message;
+
+   -- @i{local temporary variable definition}
+   Mem : Partition.Internal_Data;
+@b{begin}
+   -- @i{ Read shared data and store it in local variable}
+   Partition.Get_Field (Sh_Mem, Mem);
+
+   -- @i{ Read in IN ports}
+   Tr_Servants.Th1_IN_Ports.Get_Msg_In
+     (Msg_In,
+      Msg_In_Present);
+   @b{if} (True
+       @b{and} @b{then} Msg_In_Present)
+   @b{then}
+      -- @i{ Processing local variable}
+      Repository.Transmit_Message
+        (Msg_In => Msg_In,
+         Msg_Out => Msg_Out,
+         Mem => Mem);
+
+      -- @i{ Write in OUT ports}
+      ARAO.Requests.Emit_Msg
+        (Tr_Helpers.To_Any
+         (Msg_Out),
+         Tr_Th2_Ref,
+         "@i{msg_in}");
+   @b{else}
+      @b{if} Msg_In_Present
+      @b{then}
+         Tr_Servants.Th1_IN_Ports.Push_Back_Msg_In (Msg_In);
+      @b{end} @b{if};
+   @b{end} @b{if};
+
+   -- @i{ Write back local variable into shared data}
+   Partition.Set_Field (Sh_Mem, Mem);
+@b{end} Th1_Controller;
+
+
+@end smallexample

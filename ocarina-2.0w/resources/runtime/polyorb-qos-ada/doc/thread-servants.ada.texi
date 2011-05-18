@@ -1,0 +1,9 @@
+@smallexample
+
+@b{package} proc_Servants @b{is}
+   ...
+   @b{procedure} th1_Ctrler;
+   ...
+@b{end} proc_Servants;
+
+@end smallexample
