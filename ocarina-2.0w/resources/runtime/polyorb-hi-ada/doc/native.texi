@@ -1,8 +1,0 @@
-@smallexample
-
--- @i{ Ada restrictions to be supported by PolyORB HI, for native targets}
- 
--- @i{ pragma Profile_Warnings (Ravenscar);              -- D.13.1}
- 
-
-@end smallexample

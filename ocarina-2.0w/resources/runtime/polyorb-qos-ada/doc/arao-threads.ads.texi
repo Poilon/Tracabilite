@@ -1,4 +1,0 @@
-@subsubsection ARAO.Threads 
-This package defines data type for thread properties
-
-This package defines no subprogram

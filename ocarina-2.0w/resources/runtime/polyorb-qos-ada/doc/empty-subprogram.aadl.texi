@@ -1,9 +1,0 @@
-@smallexample
-
-@b{subprogram} sp
-@b{features}
-  e : @b{in} @b{parameter} message;
-  s : @b{out} @b{parameter} message;
-@b{end} sp;
-
-@end smallexample

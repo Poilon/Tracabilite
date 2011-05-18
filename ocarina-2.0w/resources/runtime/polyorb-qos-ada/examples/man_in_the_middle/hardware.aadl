@@ -1,4 +1,0 @@
-processor the_processor
-properties
-  Deployment::location => "127.0.0.1";
-end the_processor;

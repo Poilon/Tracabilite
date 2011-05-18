@@ -1,4 +1,0 @@
---  Ada restrictions to be supported by PolyORB HI, for native targets
- 
---  pragma Profile_Warnings (Ravenscar);              -- D.13.1
- 

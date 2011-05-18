@@ -1,9 +1,0 @@
-@smallexample
-
-@b{procedure} sp (e : @b{in} message; s : @b{out} message) @b{is}
-  NYI : @b{exception};
-@b{begin}
-  @b{raise} NYI;
-@b{end} sp;
-
-@end smallexample

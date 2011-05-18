@@ -1,9 +1,0 @@
-SCENARIO :
-	   
-   - Multiples threads by process   
-   - Periodic and aperiodic tasks
-   - Single-call sequence
-   - Unicast inter-process and inter-thread connexions
-
-   Code generation specific :
-     - Node Location

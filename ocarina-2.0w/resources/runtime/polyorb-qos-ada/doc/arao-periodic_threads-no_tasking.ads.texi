@@ -1,6 +1,0 @@
-@subsubsection ARAO.Periodic_Threads.No_Tasking 
-This package sets the pointer to the procedure that creates a
-periodic thread. It also provides routines to create a periodic
-thread under the no tasking profile.
-
-This package defines no subprogram

@@ -1,7 +1,0 @@
-SCENARIO :
-	   
-   - multiples threads by process 
-   - Periodic and aperiodic tasks
-   - Single-call sequence
-   - Unicast inter-process connexions
-   - shared protected data

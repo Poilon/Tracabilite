@@ -1,8 +1,0 @@
-TARGET_CFLAGS   = -DPOSIX
-TARGET_LDFLAGS  =  -lpthread -lrt
-SIMULINK_LDFLAGS  = -lm
-CC              = gcc
-LD              = ld
-
-target-clean:
-
