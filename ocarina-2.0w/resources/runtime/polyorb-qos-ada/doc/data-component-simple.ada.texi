@@ -1,5 +1,0 @@
-@smallexample
-
-@b{type} message @b{is} @b{new} Integer;
-
-@end smallexample

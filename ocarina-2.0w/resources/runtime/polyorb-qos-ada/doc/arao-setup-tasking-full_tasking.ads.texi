@@ -1,4 +1,0 @@
-@subsubsection ARAO.Setup.Tasking.Full_Tasking 
-Set up a full tasking profile
-
-This package defines no subprogram

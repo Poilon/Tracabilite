@@ -1,4 +1,0 @@
-@c FILE GENERATED AUTOMATICALLY DO NOT EDIT
-@menu
-@end menu
-
