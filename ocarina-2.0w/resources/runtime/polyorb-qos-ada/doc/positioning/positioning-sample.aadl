@@ -1,0 +1,9 @@
+
+system implementation position.impl
+subcomponents
+  proc : process sender_node.simple {ARAO::port_number => 3200;};
+  proc_1 : processor a_processor {ARAO::location => "127.0.0.1"};
+properties
+  actual_processor_binding => reference proc_1 applies to proc;
+end position.impl;
+

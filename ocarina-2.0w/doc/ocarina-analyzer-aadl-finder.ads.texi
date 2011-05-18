@@ -1,0 +1,250 @@
+@subsubsection Ocarina.Analyzer.AADL.Finder 
+This package provides functions to search nodes in the abstract
+tree. The functions return No_Node if nothing was found.
+
+This package defines the following subprograms:
+
+@strong{Select_Nodes}: Build a list (chained using the accessor Next_Entity) from
+Decl_List and appends it to Last_Node. This list will contain
+the nodes whose kinds correspond to Kinds.
+
+@example
+@b{procedure }Select_Nodes
+     (Decl_List  :        List_Id;
+      Kinds      :        Node_Kind_Array;
+      First_Node : @b{in }@b{out }Node_Id;
+      Last_Node  : @b{in }@b{out }Node_Id);
+@end example
+
+
+@strong{Find_Property_Entity}: Find a property entity (type, name or constant). If
+Property_Set_Identifier is No_Node and the current scope is the
+one of a property set, try to find the property in it. Finally,
+look for the implicit property sets (AADL_Project and
+AADL_Properties).
+
+@example
+@b{function }Find_Property_Entity
+     (Root                    : Node_Id;
+      Property_Set_Identifier : Node_Id;
+      Property_Identifier     : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Component_Classifier}: Same as above, but find a component classifier
+
+@example
+@b{function }Find_Component_Classifier
+     (Root                 : Node_Id;
+      Package_Identifier   : Node_Id;
+      Component_Identifier : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Port_Group_Classifier}: Same as above, but find a port group
+
+@example
+@b{function }Find_Port_Group_Classifier
+     (Root                  : Node_Id;
+      Package_Identifier    : Node_Id;
+      Port_Group_Identifier : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Feature}: Find a feature in a component type or implementation
+
+@example
+@b{function }Find_Feature
+     (Component          : Node_Id;
+      Feature_Identifier : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Mode}: Same as above, but find a mode
+
+@example
+@b{function }Find_Mode
+     (Component       : Node_Id;
+      Mode_Identifier : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Subcomponent}: Find a subcomponent in a component implementation. If In_Modes
+is specified, return the subcomponent that are set in the
+given modes.
+
+@example
+@b{function }Find_Subcomponent
+     (Component               : Node_Id;
+      Subcomponent_Identifier : Node_Id;
+      In_Modes                : Node_Id := No_Node)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Subprogram_Call}: Same as above but find a subprogram call
+
+@example
+@b{function }Find_Subprogram_C@b{all }     (Component       : Node_Id;
+      Call_Identifier : Node_Id;
+      In_Modes        : Node_Id := No_Node)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Connection}: Same as above but find a connection
+
+@example
+@b{function }Find_Connection
+     (Component             : Node_Id;
+      Connection_Identifier : Node_Id;
+      In_Modes              : Node_Id := No_Node)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Flow_Spec}: Find a flow in a component type or implementation
+
+@example
+@b{function }Find_Flow_Spec
+     (Component       : Node_Id;
+      Flow_Identifier : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Subclause}: Same as above but find a subclause
+
+@example
+@b{function }Find_Subcla@b{use }     (Component  : Node_Id;
+      Identifier : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_All_Declarations}: Returns the first node of a list of declarations corresponding
+to the Kinds requested. Following nodes are accessed through
+the Next_Entity accessor. If no Kinds are requested, then
+return all the declarations found. If the Namespace is not
+given, search the declaration in the whole AADL specification
+declarations and its namespaces. Otherwise, search the
+declaration in the given namespace.
+
+@example
+@b{function }Find_All_Declarations
+     (Root      : Node_Id;
+      Kinds     : Node_Kind_Array;
+      Namespace : Node_Id := No_Node)
+     @b{return }Node_List;
+@end example
+
+
+@strong{Find_All_Component_Types}: Return the first component type found in the Namespace. If
+Namespace is No_Node, then return the first component type
+declaration in the whole AADL specification. Following
+declarations are accessed using the Next_Entity accessor.
+
+@example
+@b{function }Find_All_Component_Types
+     (Root      : Node_Id;
+      Namespace : Node_Id := No_Node)
+     @b{return }Node_List;
+@end example
+
+
+@strong{Find_All_Root_Systems}: Return all systems implementations whose component type do not
+have any feature. Those systems correspond to the roots of the
+instantiated architecture.
+
+@example
+@b{function }Find_All_Root_Systems (Root : Node_Id) @b{return }Node_List;
+@end example
+
+
+@strong{Find_All_Subclauses}: General function that returns the first node of a list of
+subclauses corresponding to the Kinds requested. Following
+nodes are accessed through the Next_Entity accessor.
+
+@example
+@b{function }Find_All_Subclauses
+     (AADL_Declaration : Node_Id;
+      Kinds            : Node_Kind_Array)
+     @b{return }Node_List;
+@end example
+
+
+@strong{Find_All_Features}: Applicable to component types and implementations, and port
+group types.
+
+@example
+@b{function }Find_All_Features
+     (AADL_Declaration : Node_Id)
+     @b{return }Node_List;
+@end example
+
+
+@strong{Find_All_Subclause_Declarations_Except_Properties}: Applicable to component types and implementations, and port
+group types.
+
+@example
+@b{function }Find_All_Subclause_Declarations_Except_Properties
+     (AADL_Declaration : Node_Id)
+     @b{return }Node_List;
+@end example
+
+
+@strong{Find_All_Property_Associations}: Applicable to component types and implementations, and port
+group types.
+
+@example
+@b{function }Find_All_Property_Associations
+     (AADL_Declaration : Node_Id)
+     @b{return }Node_List;
+@end example
+
+
+@strong{Find_Property_Association}: Find the property association named
+Property_Association_Name. Return No_Node if nothing was found.
+
+@example
+@b{function }Find_Property_Association
+     (AADL_Declaration          : Node_Id;
+      Property_Association_Name : Name_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_Property_Enumeration}: The kind of Package_Container is K_Package_Specification,
+the kind of Node is K_Identifier or K_ENtity_Reference,
+return True if the Node is 'with' in Package_Container
+'with' declarations.
+
+@example
+@b{function }Find_Property_Enumeration
+     (Root               : Node_Id;
+      Container          : Node_Id;
+      Property_Container : Node_Id;
+      Default_Value      : Node_Id;
+      Designat@b{or }        : Node_Id)
+     @b{return }Node_Id;
+@end example
+
+
+@strong{Find_In_Import_Declaration}: The kind of Package_Container is K_Package_Specification,
+the kind of Node is K_Identifier or K_ENtity_Reference,
+return True if the Node is 'with' in Package_Container
+'with' declarations.
+
+@example
+@b{function }Find_In_Import_Declaration
+     (Package_Container : Node_Id;
+      Node              : Node_Id)
+     @b{return }Boolean;
+@end example
+
+

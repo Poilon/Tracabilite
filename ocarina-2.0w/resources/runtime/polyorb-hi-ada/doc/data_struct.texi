@@ -1,0 +1,9 @@
+@smallexample
+
+@b{type} Data_Struct @b{is} @b{record}
+   Component_1 : String_Data;
+   Component_2 : W_String_Data;
+   Component_3 : Data_Array_i;
+@b{end} @b{record};
+
+@end smallexample

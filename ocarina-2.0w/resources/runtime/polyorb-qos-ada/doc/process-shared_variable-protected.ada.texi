@@ -1,0 +1,44 @@
+@smallexample
+
+@b{package} @b{body} Tr_Servants @b{is}
+
+   -- @i{ Shared variable declaration}
+
+   Sh_Mem : Partition.Shared_Data_I;
+
+   -- @i{ Initialization procedure declaration and description}
+
+   @b{procedure} Initialize;
+
+   ----------------
+   -- @i{Initialize --}
+   ----------------
+
+   @b{procedure} Initialize @b{is}
+   @b{begin}
+      Partition.Builder
+        (Sh_Mem);
+   @b{end} Initialize;
+
+   -- @i{ Threads-related code}
+   -- @i{ (...)}
+
+   -- @i{ Bind initialization function with middleware initialization}
+@b{begin}
+   @b{declare}
+      @b{use} PolyORB.Utils.Strings;
+      @b{use} PolyORB.Utils.Strings.Lists;
+   @b{begin}
+      PolyORB.Initialization.Register_Module
+        (PolyORB.Initialization.Module_Info'
+         (Name => + "@i{tr_Servants}",
+          Conflicts => PolyORB.Utils.Strings.Lists.Empty,
+          Depends => + "@i{any}",
+          Provides => PolyORB.Utils.Strings.Lists.Empty,
+          Implicit => False,
+          Init => Initialize'Access,
+          Shutdown => @b{null}));
+   @b{end};
+@b{end} Tr_Servants;
+
+@end smallexample

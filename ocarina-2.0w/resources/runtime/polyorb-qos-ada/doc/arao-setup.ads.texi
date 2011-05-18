@@ -1,0 +1,4 @@
+@subsubsection ARAO.Setup 
+ARAO : AADL Runtime API for Ocarina
+
+This package defines no subprogram

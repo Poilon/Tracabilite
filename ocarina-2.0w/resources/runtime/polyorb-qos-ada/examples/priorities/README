@@ -1,0 +1,14 @@
+
+SCENARIO :
+   - Multiples threads by process   
+   - Single subprogram call
+   - Multicast inter-process and inter-thread out connexions (one-to-many)
+   - Wait on multiple channels (C's select-like, many-to-one)
+   - request priority assignement (differents)
+   - IIOP communications
+
+SCENARIO_INV :
+   - requests priority are the same, so chances of requests 
+     'collisions' (two request arriving to a POA at the same time)
+     are higher.
+   - DIOP communications

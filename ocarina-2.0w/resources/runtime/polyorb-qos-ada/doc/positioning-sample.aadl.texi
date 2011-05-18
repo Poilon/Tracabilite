@@ -1,0 +1,13 @@
+@smallexample
+
+
+@b{system} @b{implementation} position.impl
+@b{subcomponents}
+  proc : @b{process} sender_node.simple @{ARAO::port_number => 3200;@};
+  proc_1 : @b{process}or a_processor @{ARAO::location => "@i{127.0.0.1}"@};
+@b{properties}
+  actual_processor_binding => @b{reference} proc_1 @b{applies} @b{to} proc;
+@b{end} position.impl;
+
+
+@end smallexample

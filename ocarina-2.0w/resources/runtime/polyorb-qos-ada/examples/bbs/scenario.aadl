@@ -1,0 +1,18 @@
+--  This is a scenario file describing the AADL 
+--  application bbs
+
+--  $Id: scenario.aadl 4631 2008-09-23 16:17:39Z zalila $
+
+system bbs
+properties
+  Ocarina_Config::AADL_Files           => 
+    ("bbs.aadl");
+  Ocarina_Config::Generator            => polyorb_qos_ada;
+  Ocarina_Config::Needed_Property_Sets => 
+    (value (Ocarina_Config::Data_Model),
+     value (Ocarina_Config::Deployment));
+end bbs;
+
+system implementation bbs.Impl
+end  bbs.Impl;
+

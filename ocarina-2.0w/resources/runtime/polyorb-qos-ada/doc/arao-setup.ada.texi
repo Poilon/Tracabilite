@@ -1,0 +1,30 @@
+@smallexample
+
+
+@b{with} ARAO.Setup.Base;
+@b{pragma} Warnings (Off, ARAO.Setup.Base);
+@b{pragma} Elaborate_All (ARAO.Setup.Base);
+@b{with} PolyORB.Setup.IIOP;
+@b{pragma} Warnings (Off, PolyORB.Setup.IIOP);
+@b{pragma} Elaborate_All (PolyORB.Setup.IIOP);
+@b{with} PolyORB.Setup.Access_Points.IIOP;
+@b{pragma} Warnings (Off, PolyORB.Setup.Access_Points.IIOP);
+@b{pragma} Elaborate_All (PolyORB.Setup.Access_Points.IIOP);
+-- @i{ ORB controller : workers}
+@b{with} PolyORB.ORB_Controller.Workers;
+@b{pragma} Warnings (Off, PolyORB.ORB_Controller.Workers);
+@b{pragma} Elaborate_All (PolyORB.ORB_Controller.Workers);
+-- @i{ Multithreaded no priority mode package}
+@b{with} ARAO.Setup.Ocarina_OA;
+@b{pragma} Warnings (Off, ARAO.Setup.Ocarina_OA);
+@b{pragma} Elaborate_All (ARAO.Setup.Ocarina_OA);
+
+@b{package} @b{body} ARAO.Setup.Application @b{is}
+
+   -- @i{ No protocol set : default : GIOP/IIOP}
+
+   -- @i{ No request priority management}
+
+@b{end} ARAO.Setup.Application;
+
+@end smallexample

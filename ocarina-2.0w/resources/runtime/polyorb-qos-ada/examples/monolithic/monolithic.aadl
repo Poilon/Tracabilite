@@ -1,0 +1,16 @@
+--  $Id: monolithic.aadl 4631 2008-09-23 16:17:39Z zalila $
+
+system monolithic
+end monolithic;
+
+system implementation monolithic.impl
+subcomponents
+  node : process multithreaded_node.simple {Deployment::port_number => 3200;};
+  --  Although node does not have any interface with the external
+  --  world, the assignment of the port number is necessary here to
+  --  enable communication between threads.
+
+  proc_1 : processor a_processor;
+properties
+  actual_processor_binding => reference proc_1 applies to node;
+end monolithic.impl;

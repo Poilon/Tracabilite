@@ -1,0 +1,7 @@
+thread sender
+features
+  msg_out : out event data port message;
+properties
+  Dispatch_Protocol => Periodic;
+  Period => 1000 Ms;
+end sender;

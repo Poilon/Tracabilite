@@ -1,0 +1,11 @@
+@smallexample
+
+@b{thread} sender
+@b{features}
+  msg_out : @b{out} @b{event} @b{data} @b{port} message;
+@b{properties}
+  Dispatch_Protocol => Periodic;
+  Period => 1000 Ms;
+@b{end} sender;
+
+@end smallexample

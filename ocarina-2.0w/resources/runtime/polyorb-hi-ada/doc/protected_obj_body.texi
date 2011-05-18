@@ -1,0 +1,28 @@
+@smallexample
+
+@b{protected} @b{body} Protected_Object_Impl @b{is}
+
+   ------------
+   -- @i{Update --}
+   ------------
+
+   @b{procedure} Update (P : @b{in} Field_Type) @b{is}
+   @b{begin}
+      Repository.Protected_Update
+        (P,      -- @i{ in}
+         Field); -- @i{ in out}
+   @b{end} Update;
+
+   ----------
+   -- @i{Read --}
+   ----------
+
+   @b{procedure} Read (P : @b{out} Field_Type) @b{is}
+   @b{begin}
+      Repository.Protected_Read
+        (P,      -- @i{    out}
+         Field); -- @i{ in}
+   @b{end} Read;
+@b{end} Protected_Object_Impl;
+
+@end smallexample

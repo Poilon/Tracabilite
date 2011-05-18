@@ -1,0 +1,93 @@
+@smallexample
+
+
+@b{with} ARAO.Setup.Base;
+@b{pragma} Warnings (Off, ARAO.Setup.Base);
+@b{pragma} Elaborate_All (ARAO.Setup.Base);
+@b{with} PolyORB.Setup.IIOP;
+@b{pragma} Warnings (Off, PolyORB.Setup.IIOP);
+@b{pragma} Elaborate_All (PolyORB.Setup.IIOP);
+@b{with} PolyORB.Setup.Access_Points.IIOP;
+@b{pragma} Warnings (Off, PolyORB.Setup.Access_Points.IIOP);
+@b{pragma} Elaborate_All (PolyORB.Setup.Access_Points.IIOP);
+
+-- @i{ ORB controller : workers}
+@b{with} PolyORB.ORB_Controller.Workers;
+@b{pragma} Warnings (Off, PolyORB.ORB_Controller.Workers);
+@b{pragma} Elaborate_All (PolyORB.ORB_Controller.Workers);
+
+-- @i{ Multithreaded mode package}
+@b{with} ARAO.Setup.OA.Multithreaded.Prio;
+@b{pragma} Warnings (Off, ARAO.Setup.OA.Multithreaded.Prio);
+@b{pragma} Elaborate_All (ARAO.Setup.OA.Multithreaded.Prio);
+
+-- @i{ Packages related to Obect Adapter Setup}
+@b{with} PolyORB.Types;
+@b{with} System;
+@b{with} ARAO.Threads;
+@b{with} PolyORB.Setup.OA.Basic_RT_Poa;
+@b{with} ARAO.Setup.OA.Multithreaded;
+
+-- @i{ Packages related to PolyORB initialization mechanism}
+@b{with} PolyORB.Utils.Strings;
+@b{with} PolyORB.Utils.Strings.Lists;
+@b{with} PolyORB.Initialization;
+
+@b{package} @b{body} ARAO.Setup.Application @b{is}
+
+   -- @i{ No protocol set : default : GIOP/IIOP}
+
+   -- @i{ Threads data}
+   Threads_Array_Ü : @b{constant} ARAO.Threads.Threads_Properties_Array :=
+     ((Standard.Natural
+        (1),           -- @i{ th1 priority}
+      Standard.Natural
+        (0),
+      PolyORB.Types.To_PolyORB_String
+        ("@i{th1}"),
+      Standard.Natural
+        (1)),
+      (Standard.Natural
+        (32),           -- @i{ th2 priority}
+      Standard.Natural
+        (0),
+      PolyORB.Types.To_PolyORB_String
+        ("@i{th2}"),
+      Standard.Natural
+        (0)));
+
+   -- @i{ Build custom Object Adapter}
+   @b{package} Priority_Manager @b{is}
+     @b{new} ARAO.Setup.OA.Multithreaded.Prio
+        (Threads_Array_Ü);
+
+   @b{procedure} Initialize;
+
+   ----------------
+   -- @i{Initialize --}
+   ----------------
+
+   @b{procedure} Initialize @b{is}
+   @b{begin}
+      Priority_Manager.Initialize;
+   @b{end} Initialize;
+
+@b{begin}
+   @b{declare}
+      @b{use} PolyORB.Utils.Strings;
+      @b{use} PolyORB.Utils.Strings.Lists;
+   @b{begin}
+      PolyORB.Initialization.Register_Module
+        (PolyORB.Initialization.Module_Info'
+           (Name => + "@i{ARAO.Setup.Application}",
+            Conflicts => PolyORB.Utils.Strings.Lists.Empty,
+            Depends => (+ "@i{arao.setup.oa.multithreaded}" & "@i{rt_poa}"),
+            Provides => PolyORB.Utils.Strings.Lists.Empty,
+            Implicit => False,
+            Init => Initialize'Access,
+            Shutdown => @b{null}));
+   @b{end};
+@b{end} ARAO.Setup.Application;
+
+
+@end smallexample

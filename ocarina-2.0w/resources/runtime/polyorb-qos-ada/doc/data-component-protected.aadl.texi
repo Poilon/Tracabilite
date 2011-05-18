@@ -1,0 +1,17 @@
+@smallexample
+
+@b{data} @b{in}ternal_message
+@b{properties}
+  ARAO::data_type => @b{in}teger;
+@b{end} @b{in}ternal_message;
+
+@b{data} message
+@b{subcomponents}
+  Field : @b{data} @b{in}ternal_message;
+@b{features}
+  method : @b{subprogram} update;
+@b{properties}
+  ARAO::Access_Control_Protocol => Protected_Access;
+@b{end} message;
+
+@end smallexample

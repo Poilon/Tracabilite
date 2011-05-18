@@ -1,0 +1,11 @@
+@smallexample
+
+@b{type} Integer_Type @b{is} @b{new} Integer;
+
+@b{type} Structure_Impl @b{is}
+   @b{record}
+  D1 : Integer_Type;
+  D2 : Integer_Type;
+   @b{end} @b{record};
+
+@end smallexample

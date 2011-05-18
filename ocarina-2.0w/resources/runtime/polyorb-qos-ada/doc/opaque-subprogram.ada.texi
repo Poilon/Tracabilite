@@ -1,0 +1,8 @@
+@smallexample
+
+@b{with} Repository;
+...
+@b{procedure} sp_impl (e : @b{in} message; s : @b{out} message)
+  @b{renames} Repository.Sp_Impl;
+
+@end smallexample

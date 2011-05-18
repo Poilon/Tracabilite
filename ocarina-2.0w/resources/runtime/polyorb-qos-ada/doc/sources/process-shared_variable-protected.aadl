@@ -1,0 +1,37 @@
+--  protected data type declaration
+
+data internal_data
+properties
+  ARAO::data_type => integer;
+end internal_data;
+
+data shared_data
+properties
+  Concurrency_Control_Protocol => Protected_Access;
+end shared_data;
+
+data implementation shared_data.i
+subcomponents
+  Field : data internal_data;
+end shared_data.i;
+
+--  Process declaration
+
+process transmitter_node
+features
+  msg_in : in event data port message;
+  msg_out : out event data port message;
+end transmitter_node;
+
+process implementation transmitter_node.complex
+subcomponents
+  th1 : thread transmitter.simple;
+  th2 : thread transmitter.simple;
+  sh_mem : data shared_data.i;
+connections
+  event data port msg_in -> th1.msg_in;
+  event data port th1.msg_out -> th2.msg_in;
+  event data port th2.msg_out -> msg_out;
+  data access sh_mem -> th1.mem;
+  data access sh_mem -> th2.mem;
+end transmitter_node.complex;
