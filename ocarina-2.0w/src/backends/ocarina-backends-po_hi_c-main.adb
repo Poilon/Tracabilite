@@ -149,23 +149,7 @@ package body Ocarina.Backends.PO_HI_C.Main is
          case Get_Thread_Dispatch_Protocol (E) is
             when Thread_Periodic =>
                Set_Str_To_Name_Buffer
-                 ("Making Periodic task plusdAweg Ewa Gewag wes");
-               Add_Str_To_Name_Buffer
-                 ("Making Periodic task plusdAweg Ewa Gewag wes");
-               Add_Str_To_Name_Buffer
-                 ("Making Periodic task plusdAweg Ewa Gewag wes");
-               Add_Str_To_Name_Buffer
-                 ("Making Periodic task plusdAweg Ewa Gewag wes");
-               Add_Str_To_Name_Buffer
-                 ("Making Periodic task plusdAweg Ewa Gewag wes");
-               Add_Str_To_Name_Buffer
-                 ("Making Periodic task plusdAweg Ewa Gewag wes");
-               Add_Str_To_Name_Buffer
-                 ("Making Periodic task plusdAweg Ewa Gewag wes");
-               Add_Str_To_Name_Buffer
-                 ("Making Periodic task plusdAweg Ewa Gewag wes");
-               Add_Str_To_Name_Buffer
-                 ("Making Periodic task plusdAweg Ewa Gewag wes");
+                 ("Making Periodic task");
                N := Make_Doxygen_C_Comment (Name_Find, False);
                Append_Node_To_List (N, CTN.Statements (Main_Function));
                Append_Node_To_List
